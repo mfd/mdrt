@@ -1,0 +1,26 @@
+---
+title: Каталог
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+    {% include "partials/_sidebar.html" %}
+	<main class="catalogPage">
+		<div class="page__title">
+			<h1>Каталог</h1>
+			<div class="sorting">
+				<ul class="inline left sortfrom">
+				  <li><p>Сортировка:</p></li>
+				  <li><a href=""><span>По новизне</span></a></li>
+				  <li class="active"><a href="#"><span>Цена</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="page__content">
+			<div class="row">
+
+			</div>
+		</div>
+	</main>
+
+{% endblock %}

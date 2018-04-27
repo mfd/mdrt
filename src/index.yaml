@@ -1,0 +1,11 @@
+ProjectTitle: madyart
+
+PageList:
+- file: 01_home.html
+  ready: 100
+- file: 02_catalog.html
+  ready: 100
+- file: 03_item.html
+  ready: 50
+- file: 04_collection.html
+  ready: 50

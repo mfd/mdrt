@@ -1,0 +1,43 @@
+---
+title: Главная
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+    {% include "partials/_sidebar_index.html" %}
+	<main class="indexPage">
+		<div class="page__hero">
+			<div class="row">
+	<div class="slider__wrapslides owl-carousel  owl-oneslide">
+
+		<div class="slider__item" style="background-image: url('img/assets/model02_alpha.png')">
+
+			<div class="slider__info">
+				<div class="slider__title">Платье-футляр за 4999 р</div>
+				<a href="#" class="slider__link">Подробнее</a>
+
+			</div>
+
+		</div>
+		<div class="slider__item" style="background-image: url('img/assets/model01_alpha.png')">
+
+			<div class="slider__info">
+				<div class="slider__title">ВЕСНА 2018</div>
+				<a href="#" class="slider__link">Подробнее</a>
+			</div>
+
+		</div>
+    	<!-- //promo-header -->
+
+			</div>
+		</div>
+		<h1 class="page__title">Новинки <a href="#" class="title__viewAll">Смотреть все</a></h1>
+		<h1 class="page__title">Распродажа<a href="#" class="title__viewAll">Смотреть все</a></h1>
+
+	</main>
+
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}

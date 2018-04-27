@@ -1,0 +1,105 @@
+@import header_promo
+header
+    font-size: 16px;
+    color: #949494;
+    +md
+
+    .logo
+        float: left;
+        display: block;
+
+        width: 225px;
+        height: 50px;
+        //margin: 2em 0;
+        background: url('../img/logo.png') no-repeat 50% 50%;
+        background-size: contain;
+        margin-right: 5em;
+        +sm
+            width: 140px;
+            margin: 0;
+            margin-left: 1em;
+
+        span,
+        .pic
+            text-indent: -1984px;
+            display: block;
+            height: 40px;
+        small,
+        .title
+            display: block;
+            text-align: center;
+            font-size: 13px;
+            height: 20px;
+            line-height: 20px;
+            color: #ababab;
+            letter-spacing: .05em;
+            +sm
+                display: none;
+
+    .location
+        float: left;
+        margin-right: 1em;
+        margin-top: 1em;
+        &--change
+            border-bottom: 1px dashed #bbb
+            position: relative;
+            margin-left: 15px;
+            .fa
+                position: absolute;
+                left: -13px;
+        +md
+            display: none;
+    .userArea
+        float: right;
+        margin-right: 1em;
+        margin-top: 1em;
+        position: relative;
+        &__sign
+            .icon-sign
+                fill: #000;
+                display: none
+                +sm
+                    display: block
+            &-title
+                +sm
+                    display: none
+
+    .basket
+        float: right;
+        margin-right: 2em;
+        margin-top: 1em;
+        &--order
+            background: url('../img/basket.svg') no-repeat right 0;
+            position: relative;
+            display: block;
+            padding-right: 25px;
+            height: 25px;
+        &-title
+            display: block;
+            +sm
+                display: none;
+        &--count
+            position: absolute;
+            right: -10px;
+            top: 0
+
+            border-radius: 50%;
+            background: #000;
+            color: #fff;
+            font-size: 10px;
+            width: 20px;
+            line-height: 20px;
+            height: 20px;
+            text-align: center;
+
+
+
+.js-toggle-nav
+    display: none
+    +sm
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translate(0,-50%);
+        font-size: 7px;

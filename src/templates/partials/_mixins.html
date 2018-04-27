@@ -1,0 +1,13 @@
+{% macro icon(i) %}
+<svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
+{% endmacro %}
+
+
+{% macro footer_soc(mod="") %}
+<ul class="soc {{mod}}">
+  <li><a href="#">{{icon('fb')}}</a></li>
+  <li><a href="#">{{icon('ok')}}</a></li>
+  <li><a href="#">{{icon('vk')}}</a></li>
+  <li><a href="#">{{icon('insta')}}</a></li>
+</ul>
+{% endmacro %}
