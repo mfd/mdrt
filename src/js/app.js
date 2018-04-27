@@ -6,3 +6,4 @@ window.jQuery = jQuery;
 import common from './common';
 
 $(document).ready(common);
+

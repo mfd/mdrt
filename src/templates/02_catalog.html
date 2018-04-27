@@ -6,21 +6,22 @@ title: Каталог
 {% block content %}
     {% include "partials/_sidebar.html" %}
 	<main class="catalogPage">
-		<div class="page__title">
-			<h1>Каталог</h1>
-			<div class="sorting">
-				<ul class="inline left sortfrom">
-				  <li><p>Сортировка:</p></li>
-				  <li><a href=""><span>По новизне</span></a></li>
-				  <li class="active"><a href="#"><span>Цена</span></a></li>
-				</ul>
-			</div>
+		<h1 class="page__title">{{ title }}<a href="#" class="title__viewAll">Смотреть все</a></h1>
+		<div class="page__catalog row">
+				{% include "partials/_card-item.html" %}
+				{% include "partials/_card-item.html" %}
+				{% include "partials/_card-item.html" %}
+				{% include "partials/_card-item.html" %}
+				{% include "partials/_card-item.html" %}
+				{% include "partials/_card-item.html" %}
 		</div>
-		<div class="page__content">
-			<div class="row">
+		<p>
+			Выглядеть стильно и привлекательно - просто! Достаточно правильно подобрать одежду, ориентируясь на
+особенности своей фигуры.
 
-			</div>
-		</div>
+Мы расскажем, какими приемами пользуются профессиональные стилисты.
+
+Узкие плечи можно корректировать с помощью свитеров и блуз с продольным вырезом и рукавами-буф,</p>
 	</main>
 
 {% endblock %}

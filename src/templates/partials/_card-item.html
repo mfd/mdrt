@@ -1,31 +1,39 @@
-<!-- begin item -->
-<div class="supercards__item">
-    <div class="supercards__title">
-        <div class="supercards__title-wrap">
-            <div class="supercards__handle">{{mixins.icon('handle')}}</div>
-            <span>{% if(supertitle) %} {{supertitle}} {% else %}Debit MasterCard<br>Unembossed{% endif%}</span>
+{% set items = [
+    { 'path': 'item01.jpeg', title:'Юбка с высокой талией', price: "6995р", type:1},
+    { 'path':'item02.jpeg', title:'Пальто утепленное', price: "1995р", type:1, sale:'9995р  -30%'},
+    { 'path':'item03.jpeg', title:'Яркое платье', price: "995р", type:2, sale:'195р  -90%'},
+    { 'path': 'item04.jpeg', title:'Юбка с высокой талией', price: "6995р", type:1},
+    { 'path':'item05.jpeg', title:'Пальто утепленное', price: "1995р", type:1},
+    { 'path':'item06.jpeg', title:'Яркое платье', price: "995р", type:2}
+
+] %}
+{% for item in items %}
+    <!-- begin item -->
+    <div class="item">
+        <div class="item__row">
+            <figure class="img-block"><img src="img/assets/{{ item.path }}" alt=""></figure>
+            {% if item.type == 1 %}<div class="item__type new">Распродажа</div>{% endif %}
+            {% if item.type == 2 %}<div class="item__type hit">Хит!</div>{% endif %}
+            {% if item.type == 3 %}<div class="item__type hit">Новинка</div>{% endif %}
+        </div>
+        <div class="item__row">
+            <h3 class="item__title"><a href="#">{{ item.title | safe }}</a></h3>
+
+            <p class="item__price">
+                {% if item.sale %}
+                    <strike>{{ item.price }}</strike>
+                    <span class="item__price--sale">{{ item.sale | safe }}</span>
+                {% else %}
+                    {{ item.price }}
+                {% endif %}
+
+            </p>
+        </div>
+
+        <div class="item__actions">
+            <a href="#" class="btn btn-default">В корзину</a>
+            <a href="#" class="btn btn-info">Подробнее</a>
         </div>
     </div>
-    <div class="supercards__row supercards__row-card">
-        <img src="img/card.png" alt="">
-    </div>
-    <div class="supercards__row">
-        <div class="supercards__row-wrap">Безкоштовно</div>
-    </div>
-    <div class="supercards__row">
-        <div class="supercards__row-wrap">Безкоштовно</div>
-    </div>
-    <div class="supercards__row">
-        <div class="supercards__row-wrap">Нi</div>
-    </div>
-    <div class="supercards__row">
-        <div class="supercards__row-wrap">Нi</div>
-    </div>
-    <div class="supercards__row">
-        <div class="supercards__row-wrap">Нi</div>
-    </div>
-    <div class="superacard__row supercards__row-last">
-        <a href="#" class="button">Замовити{{mixins.icon('arr-r')}}</a>
-    </div>
-</div>
-<!-- end item -->
+    <!-- end item -->
+{% endfor %}

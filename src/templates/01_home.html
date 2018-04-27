@@ -32,8 +32,19 @@ title: Главная
 			</div>
 		</div>
 		<h1 class="page__title">Новинки <a href="#" class="title__viewAll">Смотреть все</a></h1>
-		<h1 class="page__title">Распродажа<a href="#" class="title__viewAll">Смотреть все</a></h1>
+		<div class="page__catalog row">
+				{% include "partials/_card-item.html" %}
+		</div>
 
+		<h1 class="page__title">Распродажа<a href="#" class="title__viewAll">Смотреть все</a></h1>
+		<div class="page__catalog row">
+				{% include "partials/_card-item.html" %}
+				{% include "partials/_card-item.html" %}
+				{% include "partials/_card-item.html" %}
+				{% include "partials/_card-item.html" %}
+				{% include "partials/_card-item.html" %}
+				{% include "partials/_card-item.html" %}
+		</div>
 	</main>
 
 {% endblock %}
