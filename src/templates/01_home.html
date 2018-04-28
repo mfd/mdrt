@@ -9,23 +9,20 @@ title: Главная
 		<div class="page__hero">
 			<div class="row">
 	<div class="slider__wrapslides owl-carousel  owl-oneslide">
-
-		<div class="slider__item" style="background-image: url('img/assets/model02_alpha.png')">
-
+		<div class="slider__item">
+			<div class="slider__img" style="background-image: url('img/assets/model02_alpha.png')"></div>
 			<div class="slider__info">
 				<div class="slider__title">Платье-футляр за 4999 р</div>
 				<a href="#" class="slider__link">Подробнее</a>
-
 			</div>
 
 		</div>
-		<div class="slider__item" style="background-image: url('img/assets/model01_alpha.png')">
-
+		<div class="slider__item">
+				<div class="slider__img" style="background-image: url('img/assets/model01_alpha.png')"></div>
 			<div class="slider__info">
 				<div class="slider__title">ВЕСНА 2018</div>
 				<a href="#" class="slider__link">Подробнее</a>
 			</div>
-
 		</div>
     	<!-- //promo-header -->
 
@@ -33,22 +30,19 @@ title: Главная
 		</div>
 		<h1 class="page__title">Новинки <a href="#" class="title__viewAll">Смотреть все</a></h1>
 		<div class="page__catalog row">
-				{% include "partials/_card-item.html" %}
+				{% include "partials/_item.html" %}
 		</div>
 
 		<h1 class="page__title">Распродажа<a href="#" class="title__viewAll">Смотреть все</a></h1>
 		<div class="page__catalog row">
-				{% include "partials/_card-item.html" %}
-				{% include "partials/_card-item.html" %}
-				{% include "partials/_card-item.html" %}
-				{% include "partials/_card-item.html" %}
-				{% include "partials/_card-item.html" %}
-				{% include "partials/_card-item.html" %}
+				{% include "partials/_item.html" %}
+				{% include "partials/_item.html" %}
+				{% include "partials/_item.html" %}
+				{% include "partials/_item.html" %}
+				{% include "partials/_item.html" %}
+				{% include "partials/_item.html" %}
 		</div>
 	</main>
 
 {% endblock %}
 
-{% block footer %}
-
-{% endblock %}

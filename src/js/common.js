@@ -3,8 +3,12 @@ import jQuery from 'jquery';
 window.$ = $;
 window.jQuery = jQuery;
 
+import debounce from 'js-util/debounce';
+//const debounce = require('js-util/debounce');
+import FixBody from 'js-util/FixBody';
+const Sticky = require('sticky-js');
 import 'owl.carousel';
-
+import PerfectScrollbar from 'perfect-scrollbar';
 
 export default () => {
   const BODY = $('body');
@@ -15,6 +19,13 @@ export default () => {
 
   //toggle mobile
   //import {scrollHidden, scrollVisible} from './hiddenShowScrollBar';
+
+
+
+  // Sticky
+  new Sticky('.sidebar', {marginTop: 90});
+
+
 
   const btn = '.js-toggle-nav';
   const $btn = $(btn);
@@ -36,9 +47,15 @@ export default () => {
     $nav.toggleClass('is-active');
     BODY.toggleClass('is-hidden');
     BODY.toggleClass('is-nav');
+    //$('.sidebar_mobile').wrapInner( "<div class='sidebar--scroll-wrap'></div>");
+    //$('.sidebar--scroll-wrap').css({ height: '100px'});
+    const ps = new PerfectScrollbar('.sidebar_mobile');
+    const fixBody = new FixBody();
+    fixBody.set();
     //scrollHidden();
     if (!($(this).hasClass('is-active'))) {
-      //scrollVisible();
+      console.log('fixBody.cancel');
+      fixBody.cancel();
     }
   });
 
@@ -50,6 +67,9 @@ export default () => {
     // console.log((index*10)+10);
     // $(this).find('a').css('z-index','999');
   });
+
+
+
   $(document).on({
     mouseenter: function() {
       $(this).addClass('isOpenMenu');
@@ -61,25 +81,8 @@ export default () => {
     }
   }, '.sidebar .menu .subMenu, .sidebar .smenu .subMenu');
 
-  //   $('.sidebar .menu .subMenu > a, .sidebar .smenu .subMenu > a').each(function( index ) {
-  //     $(this).on('click', function(e) {
-  //       //$('.menu').find('.subMenu').removeClass('isOpenMenu');
-  //       //$('.menu').find('.subMenu a').css('z-index','0');
-  //
-  //       let ifOpen = $(this).parent().hasClass('isOpenMenu');
-  //       console.log(ifOpen);
-  //       if (ifOpen) {
-  //         $(this).parent().removeClass('isOpenMenu');
-  //         $(this).css('z-index','0');
-  //       } else {
-  //         $(this).parent().addClass('isOpenMenu');
-  //         $(this).css('z-index','999');
-  //
-  //       }
-  //       //$(this).parent().toggleClass('isOpenMenu');
-  //       e.preventDefault();
-  //     });
-  //   });
+
+
 
 
   function initHomePromo() {
@@ -89,9 +92,11 @@ export default () => {
       $('.owl-item.active').find('.slider__title')
         .addClass('animated flipInX');
 
-      let owlItem = $('.page__hero').width();
-      console.log(owlItem);
-      $owl.find('.slider__item').css('width',owlItem);
+      let owlItemW = Math.round($('.page__hero').width());
+      let owlItemH = ($(window).width() < 768 ) ? 200 : Math.round($(window).height()/1.5);
+      console.log(owlItemW, owlItemH);
+      $owl.find('.slider__item').css('width',owlItemW);
+      $owl.find('.slider__item').css('height',owlItemH);
     });
 
 
@@ -123,18 +128,18 @@ export default () => {
       //   }
       // }
     });
-
-    $('.custom-slick-next').click(function() {
-      $owl.trigger('next.owl.carousel');
-    });
+    // $('.custom-slick-next').click(function() {
+    //   $owl.trigger('next.owl.carousel');
+    // });
   }
 
   initHomePromo();
-  $(window).on('resize', function() {
-    $.debounce(initHomePromo, 300);
 
-  });
+  window.addEventListener('resize', debounce(() => {
+    $('.owl-carousel').trigger('destroy.owl.carousel');
+    initHomePromo();
 
+  }), 10000);
 
 
 };
