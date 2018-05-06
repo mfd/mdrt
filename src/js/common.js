@@ -82,11 +82,44 @@ export default () => {
   }, '.sidebar .menu .subMenu, .sidebar .smenu .subMenu');
 
 
+  $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+    $(this)
+      .addClass('active').siblings().removeClass('active')
+      .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+    $('.owl-carousel').trigger('destroy.owl.carousel');
+    initSlderGallery();
+  });
 
 
+
+
+  function initSlderGallery() {
+    $('.owl-gallery').owlCarousel({
+      loop: true,
+      //margin: 10,
+      stagePadding: 10,
+      dots: false,
+      responsiveClass:true,
+      responsive:{
+        0:{
+          items:1,
+          nav:true
+        },
+        600:{
+          items:3,
+          nav:false
+        },
+        1000:{
+          items:3,
+          nav:true,
+          loop:false
+        }
+      }
+    });
+  }
 
   function initHomePromo() {
-    let $owl = $('.slider__wrapslides');
+    let $owl = $('.owl-oneslide');
 
     $owl.on('initialized.owl.carousel',function() {
       $('.owl-item.active').find('.slider__title')
@@ -95,13 +128,13 @@ export default () => {
       let owlItemW = Math.round($('.page__hero').width());
       let owlItemH = ($(window).width() < 768 ) ? 200 : Math.round($(window).height()/1.5);
       console.log(owlItemW, owlItemH);
-      $owl.find('.slider__item').css('width',owlItemW);
-      $owl.find('.slider__item').css('height',owlItemH);
+      $owl.find('.hero__item').css('width',owlItemW);
+      $owl.find('.hero__item').css('height',owlItemH);
     });
 
 
     $owl.owlCarousel({
-      loop: true,
+      loop: false,
       responsiveClass:true,
       nav: true,
       navigation: true,
@@ -109,36 +142,20 @@ export default () => {
       autoplay:true,
       items: 1,
       autoplayTimeout: 6000, //6s
-      // responsive:{
-      //   0:{
-      //     items:1,
-      //     margin: 10,
-      //     dots: true,
-      //   },
-      //   668:{
-      //     margin: 0,
-      //     items:1,
-      //     dots: true
-      //   },
-      //   1480:{
-      //     items:1,
-      //     autoWidth: true,
-      //     dots: true,
-      //     margin: 40
-      //   }
-      // }
     });
+
     // $('.custom-slick-next').click(function() {
     //   $owl.trigger('next.owl.carousel');
     // });
   }
 
   initHomePromo();
+  initSlderGallery();
 
   window.addEventListener('resize', debounce(() => {
     $('.owl-carousel').trigger('destroy.owl.carousel');
     initHomePromo();
-
+    initSlderGallery();
   }), 10000);
 
 
