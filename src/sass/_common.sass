@@ -16,7 +16,49 @@ body
 
 h1, .h1
     font-size: 36px;
+    font-weight: normal;
+    .indexPage &
+        font-size: 48px;
+        line-height: 36px;
+.page_title
+    //margin-bottom: 2em;
+
 p
-    +fs(11);
+    //+fs(11);
+    color: #949494;
+    font-size: 16px;
 p+p
     margin-bottom: 10px;
+
+
+//tabs
+.tabs
+    +clr
+    &__caption
+        +clr
+        margin-bottom: .5em;
+        border-bottom: 1px solid #ABABAB;
+        li
+            float: left;
+            color: #ABABAB;
+            //border-bottom: 1px solid #ABABAB;
+            font-size: 16px;
+            text-transform: uppercase;
+            padding: .5em 0;
+            margin-right: 2em;
+            cursor: pointer;
+            //padding-left: 1em;
+    &__caption
+        li.active
+            color: #333;
+            border-bottom: 2px solid #333;
+            margin-bottom: -1px;
+            font-weight: bold;
+    &__content
+        +clr
+        display: none;
+        color: #949494;
+
+    &__content.active
+        display: block;
+

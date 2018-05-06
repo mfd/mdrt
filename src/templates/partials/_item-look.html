@@ -1,0 +1,22 @@
+{% set items = [
+    { 'path': 'item01.jpg', title:'LOOK 36', price: "6995р"},
+    { 'path':'item02.jpg', title:'LOOK 32', price: "1995р", type:1, sale:'9995р  -30%'},
+    { 'path':'item03.jpg', title:'LOOK 30', price: "995р", type:2, sale:'195р  -90%'},
+    { 'path': 'item04.jpg', title:'LOOK 333', price: "6995р"},
+    { 'path':'item05.jpg', title:'LOOK 23', price: "1995р", type:1},
+    { 'path':'item06.jpg', title:'LOOK 34', price: "995р", type:2}
+
+] %}
+{% for item in items %}
+    <!-- begin item -->
+    <div class="item-look">
+        <div class="item-look__row">
+            <figure class="img-block"><img src="img/assets/{{ item.path }}" alt=""></figure>
+        </div>
+        <div class="item-look__row">
+            <h3 class="item-look__title"><a href="#">{{ item.title | safe }}</a></h3>
+        </div>
+
+    </div>
+    <!-- end item -->
+{% endfor %}

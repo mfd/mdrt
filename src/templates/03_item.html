@@ -4,14 +4,122 @@ title: Карточка товара
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-    {% include "partials/_sidebar.html" %}
+
 	<main class="itemPage">
-		<div class="page__title">
-			<h1>{{ title }}</h1>
-		</div>
 		<div class="page__content">
 			<div class="row">
+				<div class="oneitem__body">
+					<div class="oneitem__gallery">
 
+					</div>
+					<div class="oneitem__desc">
+						<h1 class="oneitem__title">Яркое платье</h1>
+
+						<dl>
+							<dt>Артикул:</dt>
+							<dd>03-900-0387*1</dd>
+						</dl>
+						<dl>
+							<dt>Цвет:</dt>
+							<dd>Желтый</dd>
+						</dl>
+						<dl>
+							<dt>Размеры:</dt>
+							<dd>03-900-0387*1</dd>
+						</dl>
+						<div class="oneitem__price">5200 р. <span class="bonus">+52 бонуса</span></div>
+						<button class="btn btn-incart">В корзину</button> <br>
+						<button class="btn btn-buyexpress">Быстрая покупка</button>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="tabs">
+				  <ul class="tabs__caption">
+				    <li class="active">Описание</li>
+				    <li>Состав</li>
+				    <li>Уход</li>
+				    <li>Доставка и оплата</li>
+				  </ul>
+
+				  <div class="tabs__content active">
+					<p>Абстрактный принт по популярности может посоперничать с цветами и геометрией: этим летом он повсюду. Особенно хорошо такие рисунки смотрятся на деловой одежде: например, на платье фасона "футляр". Ткань - испанский набивной бифлекс.</p>
+						<p>Данные предоставлены по состоянию на 01.05.2016 года. Остаток товара уточняйте у оператора интернет магазина</p>
+				  </div>
+
+				  <div class="tabs__content">
+				    Содержимое второго блока
+				  </div>
+				  <div class="tabs__content">
+				    Содержимое блока Состав
+				  </div>
+				  <div class="tabs__content">
+				    Содержимое блока Уход
+				  </div>
+				  <div class="tabs__content">
+				    Содержимое блока Доставка и оплата
+				  </div>
+				</div><!-- .tabs-->
+			</div>
+			<div class="row">
+				<div class="tabs">
+
+				  <ul class="tabs__caption">
+				    <li class="active">Отзывы</li>
+				    <li>Вопросы</li>
+				  </ul>
+
+				  <div class="tabs__content active">
+					Абстрактный принт по популярности может посоперничать с цветами и геометрией: этим летом он повсюду. Особенно хорошо такие рисунки смотрятся на деловой одежде: например, на платье фасона "футляр". Ткань - испанский набивной бифлекс.
+
+				  </div>
+
+				  <div class="tabs__content">
+				    Содержимое второго блока
+				  </div>
+
+				</div><!-- .tabs-->
+
+			</div>
+			<div class="row">
+				<div class="tabs">
+
+				  <ul class="tabs__caption">
+				    <li class="active">Рекомендации</li>
+				    <li>Похожие товары</li>
+				    <li>Вы недавно просматривали</li>
+				    <li>Доставка и оплата</li>
+				  </ul>
+
+				  <div class="tabs__content active">
+					<div class="row page__catalog">
+						<div class="owl-carousel owl-theme owl-gallery ">
+							{% include "partials/_item.html" %}
+							{% include "partials/_item.html" %}
+						</div>
+					</div>
+				  </div>
+
+				  <div class="tabs__content">
+				    Содержимое блока Похожие товары
+				  </div>
+				  <div class="tabs__content">
+				    Содержимое блока Вы недавно просматривали
+				  </div>
+				  <div class="tabs__content">
+				    Доставка и оплата
+				  </div>
+
+				  <div class="tabs__content">
+					<div class="row page__catalog">
+						<div class="owl-carousel owl-theme owl-gallery ">
+							{% include "partials/_item.html" %}
+							{% include "partials/_item.html" %}
+						</div>
+					</div>
+				  </div>
+
+				</div><!-- .tabs-->
 			</div>
 		</div>
 	</main>
