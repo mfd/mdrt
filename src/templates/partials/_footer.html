@@ -1,46 +1,44 @@
 {% import "data/footer.html" as tests %}
 <!-- footer -->
 <footer class="footer">
-    <div class="footer__in">
-        <div class="phone">
-          <a href="tel:8 (800) 700-00-10" class="tel">8 (800) 700-00-10</a>
-          <p class="phone__desc">Звонок по РФ бесплатный <br/> По будням с 8 до 18 (мск)</p>
-        </div>
-        <div class="footer__soc--md">
-            {{mixins.footer_soc()}}
-        </div>
-        <div class="footer__nav">
-            <ul>
-                <li><a href="#">Руководство по покупке</a></li>
-                <li><a href="#">Пользовательское соглашение</a></li>
-                <li><a href="#">Порядок совершения покупки</a></li>
-                <li><a href="#">Доставка заказа</a></li>
-            </ul>
-        </div>
-        <div class="footer__nav">
-            <ul>
-                <li><a href="#">Отказ от товара, возврат, обмен</a></li>
-                <li><a href="#">Оплата товара</a></li>
-                <li><a href="#">Политика конфиденциальности</a></li>
-            </ul>
-        </div>
+    <div class="container">
+        <div class="footer__in">
+            <div class="footer__soc--md">
+                {{mixins.footer_soc()}}
+            </div>
+            <div class="footer__nav">
+                <ul>
+                    <li><a href="#">Руководство по покупке</a></li>
+                    <li><a href="#">Пользовательское соглашение</a></li>
+                    <li><a href="#">Порядок совершения покупки</a></li>
+                    <li><a href="#">Доставка заказа</a></li>
+                </ul>
+            </div>
+            <div class="footer__nav">
+                <ul>
+                    <li><a href="#">Отказ от товара, возврат, обмен</a></li>
+                    <li><a href="#">Оплата товара</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                </ul>
+            </div>
 
-        <div class="footer__nav2">
-            <h3>Нашим партнерам</h3>
-            <ul>
-                <li><a href="#">Новости бренда</a></li>
-                <li><a href="#">Блог</a></li>
-                <li><a href="#">Салоны</a></li>
-                <li><a href="#">Контакты</a></li>
-                <li>{{mixins.footer_soc()}}</li>
-            </ul>
-        </div>
-        <div class="footer__nav2">
-            <h3>Оптовым покупателям</h3>
-            <ul>
-                <li><a href="#">Каталог</a></li>
-                <li><a href="#">Отдел оптовых продаж на сайте</a></li>
-            </ul>
+            <div class="footer__nav2">
+                <h3>Нашим партнерам</h3>
+                <ul>
+                    <li><a href="#">Новости бренда</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Салоны</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li>{{mixins.footer_soc()}}</li>
+                </ul>
+            </div>
+            <div class="footer__nav2">
+                <h3>Оптовым покупателям</h3>
+                <ul>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Отдел оптовых продаж на сайте</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </footer>

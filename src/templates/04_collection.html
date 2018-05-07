@@ -20,9 +20,52 @@ title: Коллекции
 				  </ul>
 
 				  <div class="tabs__content active">
-			<div class="owl-carousel owl-theme owl-gallery ">
-				{% include "partials/_item-look.html" %}
-			</div>
+					<div class="owl-carousel owl-theme owl-gallery owl-gallery-look"  data-count="1|2|6">
+						{% include "partials/_item-look.html" %}
+						{% include "partials/_item-look.html" %}
+						{% include "partials/_item-look.html" %}
+					</div>
+					<div class="look__element">
+						<div class="look__full">
+							<figure class="img-block"><img src="img/assets/Look.jpg" alt=""></figure>
+						</div>
+						<ul class="look__parts">
+							<li class="look__parts-element">
+								<div class="look__parts-element-pic">
+									<figure class="img-block"><img src="img/assets/Look_0.jpg" alt=""></figure>
+								</div>
+								<div class="look__parts-element-title">
+									Блузка
+									<p class="price">
+						                1995р
+									</p>
+								</div>
+							</li>
+							<li class="look__parts-element">
+								<div class="look__parts-element-pic">
+									<figure class="img-block"><img src="img/assets/Look_1.jpg" alt=""></figure>
+								</div>
+								<div class="look__parts-element-title">
+									Брюки
+									<p class="price">
+						                <strike>1995р</strike>
+						                <span class="sale">9995р -30%</span>
+									</p>
+								</div>
+							</li>
+							<li class="look__parts-element">
+								<div class="look__parts-element-pic">
+									<figure class="img-block"><img src="img/assets/Look_2.jpg" alt=""></figure>
+								</div>
+								<div class="look__parts-element-title">
+									Прямая юбка
+									<p class="price">
+						                1995р
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
 
 				  </div>
 

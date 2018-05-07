@@ -23,10 +23,10 @@
             max-height: 350px;
             overflow: hidden;
             .owl-carousel
-                width: calc(100% - 170px);
-                margin-left: 140px;
+                width: calc(100% - 140px);
+                margin-left: 120px;
 
-            .owl-carousel div
+            .owl-carousel .oneitem__itemPic
                 width: 100%;
 
             .owl-carousel .owl-controls .owl-dot
@@ -36,13 +36,15 @@
             .owl-carousel .owl-dots
                 position: absolute;
                 top: 0;
-                left: -120px;
-                width: 150px;
-                height: 100%;
+                left: -100px;
+                width: 95px;
+                //height: 100%;
+                height: 350px;
+                overflow: hidden;
 
             .owl-carousel .owl-dot
-              width: 110px;
-              height: 50px;
+              width: 80px;
+              height: 80px!important;
               display: block;
               margin-bottom: 5px;
 
@@ -92,3 +94,20 @@
                     border: none;
                 &-buyexpress
                     background: url('../img/buy-express.svg') no-repeat 10px 50%;
+
+
+    .opinion
+        border: 1px solid #ccc;
+        margin: .5em;
+        padding: 1em;
+        dt
+            float: left;
+            width: 200px;
+            border-right: 1px solid #ccc;
+            color: #333333;
+            time
+                color: #ABABAB;
+
+        dd
+            //float: left;
+            margin-left: 220px;

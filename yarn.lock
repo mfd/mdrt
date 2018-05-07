@@ -33,6 +33,10 @@
     normalize-path "^2.0.1"
     through2 "^2.0.3"
 
+"@ryancavanaugh/jquery.prettyphoto@^3.1.14-alpha":
+  version "3.1.14-alpha"
+  resolved "https://registry.yarnpkg.com/@ryancavanaugh/jquery.prettyphoto/-/jquery.prettyphoto-3.1.14-alpha.tgz#029d03489bdb604bda27c5d3878c849d83157e49"
+
 a-sync-waterfall@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/a-sync-waterfall/-/a-sync-waterfall-1.0.0.tgz#38e8319d79379e24628845b53b96722b29e0e47c"

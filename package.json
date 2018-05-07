@@ -70,6 +70,7 @@
     "webpack-bundle-analyzer": "^2.11.1"
   },
   "dependencies": {
+    "@ryancavanaugh/jquery.prettyphoto": "^3.1.14-alpha",
     "sticky-js": "^1.2.0",
     "stickybits": "^3.3.0"
   }

@@ -131,17 +131,37 @@
         <div class="page__content">
           <div class="row">
             <div class="oneitem__body">
+              <ul class="breadcrumbs">
+                <li>
+                  <a href="#">Главная</a>
+                </li>
+                <li>
+                  <a href="#">Каталог</a>
+                </li>
+                <li class="active">
+                  <a href="#">Яркое платье</a>
+                </li>
+              </ul>
               <div class="oneitem__gallery">
                 <div class="oneitem__gallery-carousel">
                   <div class="owl-carousel">
                     <!-- <div> <img src="https://dummyimage.com/800x600/ef3e3e/231f20.png&text=Pic1"> </div> -->
-                    <div>
+                    <div class="oneitem__itemPic">
                       <img src="img/assets/item01.jpg" />
                     </div>
-                    <div>
+                    <div class="oneitem__itemPic">
                       <img src="img/assets/item02.jpg" />
                     </div>
-                    <div>
+                    <div class="oneitem__itemPic">
+                      <img src="img/assets/item03.jpg" />
+                    </div>
+                    <div class="oneitem__itemPic">
+                      <img src="img/assets/item01.jpg" />
+                    </div>
+                    <div class="oneitem__itemPic">
+                      <img src="img/assets/item02.jpg" />
+                    </div>
+                    <div class="oneitem__itemPic">
                       <img src="img/assets/item03.jpg" />
                     </div>
                   </div>
@@ -198,7 +218,38 @@
                 <li class="active">Отзывы</li>
                 <li>Вопросы</li>
               </ul>
-              <div class="tabs__content active"> Абстрактный принт по популярности может посоперничать с цветами и геометрией: этим летом он повсюду. Особенно хорошо такие рисунки смотрятся на деловой одежде: например, на платье фасона "футляр". Ткань - испанский набивной бифлекс. </div>
+              <div class="tabs__content active">
+                <dl class="opinion">
+                  <dt>
+                    <div class="opin__auth"> Алевтина Иннокентиевна </div>
+                    <time> 12.11.2017 </time>
+                  </dt>
+                  <dd>
+                    <p> Абстрактный принт по популярности может посоперничать с цветами и геометрией: этим летом он повсюду. Особенно хорошо такие рисунки смотрятся на деловой одежде: например, на платье фасона "футляр". Ткань - испанский набивной бифлекс.
+                      </p>
+                  </dd>
+                </dl>
+                <dl class="opinion">
+                  <dt>
+                    <div class="opin__auth"> Алевтина Иннокентиевна </div>
+                    <time> 12.11.2017 </time>
+                  </dt>
+                  <dd>
+                    <p> Абстрактный принт по популярности может посоперничать с цветами и геометрией: этим летом он повсюду. Особенно хорошо такие рисунки смотрятся на деловой одежде: например, на платье фасона "футляр". Ткань - испанский набивной бифлекс.
+                      </p>
+                  </dd>
+                </dl>
+                <dl class="opinion">
+                  <dt>
+                    <div class="opin__auth"> Алевтина Иннокентиевна </div>
+                    <time> 12.11.2017 </time>
+                  </dt>
+                  <dd>
+                    <p> Абстрактный принт по популярности может посоперничать с цветами и геометрией: этим летом он повсюду. Особенно хорошо такие рисунки смотрятся на деловой одежде: например, на платье фасона "футляр". Ткань - испанский набивной бифлекс.
+                      </p>
+                  </dd>
+                </dl>
+              </div>
               <div class="tabs__content"> Содержимое второго блока </div>
             </div>
             <!-- .tabs-->
@@ -213,7 +264,7 @@
               </ul>
               <div class="tabs__content active">
                 <div class="row page__catalog">
-                  <div class="owl-carousel owl-theme owl-gallery ">
+                  <div class="owl-carousel owl-theme owl-gallery" data-count="1|3|6">
                     <!-- begin item -->
                     <div class="item">
                       <div class="item__row">
@@ -467,10 +518,10 @@
               </div>
               <div class="tabs__content"> Содержимое блока Похожие товары </div>
               <div class="tabs__content"> Содержимое блока Вы недавно просматривали </div>
-              <div class="tabs__content"> Доставка и оплата </div>
+              <div class="tabs__content"> Доставка и оплата1 </div>
               <div class="tabs__content">
                 <div class="row page__catalog">
-                  <div class="owl-carousel owl-theme owl-gallery ">
+                  <div class="owl-carousel owl-theme owl-gallery" data-count="1|4|6">
                     <!-- begin item -->
                     <div class="item">
                       <div class="item__row">
@@ -731,132 +782,129 @@
     </div>
     <!-- footer -->
     <footer class="footer">
-      <div class="footer__in">
-        <div class="phone">
-          <a href="tel:8 (800) 700-00-10" class="tel">8 (800) 700-00-10</a>
-          <p class="phone__desc">Звонок по РФ бесплатный
-            <br/> По будням с 8 до 18 (мск)</p>
-        </div>
-        <div class="footer__soc--md">
-          <ul class="soc ">
-            <li>
-              <a href="#">
-                <svg class="icon icon-fb">
-                  <use xlink:href="img/sprite.svg#icon-fb"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="icon icon-ok">
-                  <use xlink:href="img/sprite.svg#icon-ok"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="icon icon-vk">
-                  <use xlink:href="img/sprite.svg#icon-vk"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="icon icon-insta">
-                  <use xlink:href="img/sprite.svg#icon-insta"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__nav">
-          <ul>
-            <li>
-              <a href="#">Руководство по покупке</a>
-            </li>
-            <li>
-              <a href="#">Пользовательское соглашение</a>
-            </li>
-            <li>
-              <a href="#">Порядок совершения покупки</a>
-            </li>
-            <li>
-              <a href="#">Доставка заказа</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__nav">
-          <ul>
-            <li>
-              <a href="#">Отказ от товара, возврат, обмен</a>
-            </li>
-            <li>
-              <a href="#">Оплата товара</a>
-            </li>
-            <li>
-              <a href="#">Политика конфиденциальности</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__nav2">
-          <h3>Нашим партнерам</h3>
-          <ul>
-            <li>
-              <a href="#">Новости бренда</a>
-            </li>
-            <li>
-              <a href="#">Блог</a>
-            </li>
-            <li>
-              <a href="#">Салоны</a>
-            </li>
-            <li>
-              <a href="#">Контакты</a>
-            </li>
-            <li>
-              <ul class="soc ">
-                <li>
-                  <a href="#">
-                    <svg class="icon icon-fb">
-                      <use xlink:href="img/sprite.svg#icon-fb"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <svg class="icon icon-ok">
-                      <use xlink:href="img/sprite.svg#icon-ok"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <svg class="icon icon-vk">
-                      <use xlink:href="img/sprite.svg#icon-vk"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <svg class="icon icon-insta">
-                      <use xlink:href="img/sprite.svg#icon-insta"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__nav2">
-          <h3>Оптовым покупателям</h3>
-          <ul>
-            <li>
-              <a href="#">Каталог</a>
-            </li>
-            <li>
-              <a href="#">Отдел оптовых продаж на сайте</a>
-            </li>
-          </ul>
+      <div class="container">
+        <div class="footer__in">
+          <div class="footer__soc--md">
+            <ul class="soc ">
+              <li>
+                <a href="#">
+                  <svg class="icon icon-fb">
+                    <use xlink:href="img/sprite.svg#icon-fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="icon icon-ok">
+                    <use xlink:href="img/sprite.svg#icon-ok"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="icon icon-vk">
+                    <use xlink:href="img/sprite.svg#icon-vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="icon icon-insta">
+                    <use xlink:href="img/sprite.svg#icon-insta"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__nav">
+            <ul>
+              <li>
+                <a href="#">Руководство по покупке</a>
+              </li>
+              <li>
+                <a href="#">Пользовательское соглашение</a>
+              </li>
+              <li>
+                <a href="#">Порядок совершения покупки</a>
+              </li>
+              <li>
+                <a href="#">Доставка заказа</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__nav">
+            <ul>
+              <li>
+                <a href="#">Отказ от товара, возврат, обмен</a>
+              </li>
+              <li>
+                <a href="#">Оплата товара</a>
+              </li>
+              <li>
+                <a href="#">Политика конфиденциальности</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__nav2">
+            <h3>Нашим партнерам</h3>
+            <ul>
+              <li>
+                <a href="#">Новости бренда</a>
+              </li>
+              <li>
+                <a href="#">Блог</a>
+              </li>
+              <li>
+                <a href="#">Салоны</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+              <li>
+                <ul class="soc ">
+                  <li>
+                    <a href="#">
+                      <svg class="icon icon-fb">
+                        <use xlink:href="img/sprite.svg#icon-fb"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg class="icon icon-ok">
+                        <use xlink:href="img/sprite.svg#icon-ok"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg class="icon icon-vk">
+                        <use xlink:href="img/sprite.svg#icon-vk"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg class="icon icon-insta">
+                        <use xlink:href="img/sprite.svg#icon-insta"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__nav2">
+            <h3>Оптовым покупателям</h3>
+            <ul>
+              <li>
+                <a href="#">Каталог</a>
+              </li>
+              <li>
+                <a href="#">Отдел оптовых продаж на сайте</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>

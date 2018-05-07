@@ -9,13 +9,21 @@ title: Карточка товара
 		<div class="page__content">
 			<div class="row">
 				<div class="oneitem__body">
+					<ul class="breadcrumbs">
+						<li><a href="#">Главная</a></li>
+						<li><a href="#">Каталог</a></li>
+					    <li class="active"><a href="#">Яркое платье</a></li>
+					</ul>
 					<div class="oneitem__gallery">
 						<div class="oneitem__gallery-carousel">
 						  <div class="owl-carousel">
 						    <!-- <div> <img src="https://dummyimage.com/800x600/ef3e3e/231f20.png&text=Pic1"> </div> -->
-						    <div><img src="img/assets/item01.jpg" /></div>
-						    <div><img src="img/assets/item02.jpg" /></div>
-						    <div><img src="img/assets/item03.jpg" /></div>
+						    <div class="oneitem__itemPic"><img src="img/assets/item01.jpg" /></div>
+						    <div class="oneitem__itemPic"><img src="img/assets/item02.jpg" /></div>
+						    <div class="oneitem__itemPic"><img src="img/assets/item03.jpg" /></div>
+						    <div class="oneitem__itemPic"><img src="img/assets/item01.jpg" /></div>
+						    <div class="oneitem__itemPic"><img src="img/assets/item02.jpg" /></div>
+						    <div class="oneitem__itemPic"><img src="img/assets/item03.jpg" /></div>
 						  </div>
 						</div>
 					</div>
@@ -79,7 +87,54 @@ title: Карточка товара
 				  </ul>
 
 				  <div class="tabs__content active">
-					Абстрактный принт по популярности может посоперничать с цветами и геометрией: этим летом он повсюду. Особенно хорошо такие рисунки смотрятся на деловой одежде: например, на платье фасона "футляр". Ткань - испанский набивной бифлекс.
+					<dl class="opinion">
+						<dt>
+							<div class="opin__auth">
+								Алевтина Иннокентиевна
+							</div>
+							<time>
+								12.11.2017
+							</time>
+
+						</dt>
+						<dd>
+							<p>
+								Абстрактный принт по популярности может посоперничать с цветами и геометрией: этим летом он повсюду. Особенно хорошо такие рисунки смотрятся на деловой одежде: например, на платье фасона "футляр". Ткань - испанский набивной бифлекс.
+							</p>
+						</dd>
+					</dl>
+					<dl class="opinion">
+						<dt>
+							<div class="opin__auth">
+								Алевтина Иннокентиевна
+							</div>
+							<time>
+								12.11.2017
+							</time>
+
+						</dt>
+						<dd>
+							<p>
+								Абстрактный принт по популярности может посоперничать с цветами и геометрией: этим летом он повсюду. Особенно хорошо такие рисунки смотрятся на деловой одежде: например, на платье фасона "футляр". Ткань - испанский набивной бифлекс.
+							</p>
+						</dd>
+					</dl>
+					<dl class="opinion">
+						<dt>
+							<div class="opin__auth">
+								Алевтина Иннокентиевна
+							</div>
+							<time>
+								12.11.2017
+							</time>
+
+						</dt>
+						<dd>
+							<p>
+								Абстрактный принт по популярности может посоперничать с цветами и геометрией: этим летом он повсюду. Особенно хорошо такие рисунки смотрятся на деловой одежде: например, на платье фасона "футляр". Ткань - испанский набивной бифлекс.
+							</p>
+						</dd>
+					</dl>
 
 				  </div>
 
@@ -102,7 +157,7 @@ title: Карточка товара
 
 				  <div class="tabs__content active">
 					<div class="row page__catalog">
-						<div class="owl-carousel owl-theme owl-gallery ">
+						<div class="owl-carousel owl-theme owl-gallery" data-count="1|3|6">
 							{% include "partials/_item.html" %}
 							{% include "partials/_item.html" %}
 						</div>
@@ -116,12 +171,12 @@ title: Карточка товара
 				    Содержимое блока Вы недавно просматривали
 				  </div>
 				  <div class="tabs__content">
-				    Доставка и оплата
+				    Доставка и оплата1
 				  </div>
 
 				  <div class="tabs__content">
 					<div class="row page__catalog">
-						<div class="owl-carousel owl-theme owl-gallery ">
+						<div class="owl-carousel owl-theme owl-gallery" data-count="1|4|6">
 							{% include "partials/_item.html" %}
 							{% include "partials/_item.html" %}
 						</div>

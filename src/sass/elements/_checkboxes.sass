@@ -1,0 +1,45 @@
+$gray: #ccc;
+$accent: #B09C6D;
+.checkbox
+    min-height: 18px
+    display: inline-block
+    cursor: pointer
+    user-select: none
+    input
+        position: absolute
+        visibility: hidden
+        opacity: 0
+        &:checked
+            + span
+                &:before
+                    display: block
+        + span
+            position: relative
+            padding-left: 30px
+            display: inline-block
+            &:after
+                content: ''
+                position: absolute
+                left: 0
+                top: 2px
+                height: 18px
+                width: 18px
+                border: 1px solid $gray
+                top: 50%
+                margin-top: -9px
+            &:before
+                content: ''
+                position: absolute
+                top: 6px
+                left: 4px
+                width: 10px
+                height: 10px
+                background: $accent
+                display: none
+                top: 50%
+                margin-top: -5px
+    &:hover
+        input + span:after
+            border: 1px solid darken($gray,10%)
+
+

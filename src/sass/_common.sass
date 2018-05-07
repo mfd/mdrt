@@ -32,6 +32,24 @@ p+p
     margin-bottom: 10px;
 
 
+//beadcrumbs
+.breadcrumbs
+    +clr
+    margin-bottom: 1em;
+    li
+        float: left;
+        font-size: 11px;
+        padding-right: 15px;
+        position: relative;
+        +pseudo
+        &:before
+            display: none;
+        &:after
+            right: 5px;
+            left: initial;
+            content: '|'
+
+        a
 //pagination
 .pagination
     +clr
@@ -81,4 +99,37 @@ p+p
 
     &__content.active
         display: block;
+
+
+.newsletter .input-wrapper
+    position: relative;
+    max-width: 340px;
+
+.newsletter [type=email]
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 20px;
+    font-size: 14px;
+    box-sizing: border-box;
+.newsletter .input-wrapper
+    position: relative;
+    .btn
+        height: 50px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50px;
+        background: #B09C6D;
+        color: #fff;
+        font-size: 18px;
+    .checkbox
+        color: #949494;
+        font-size: 16px;
+        margin-top: 10px;
+    .checkbox input+span
+        position: relative;
+        padding-left: 25px;
+        display: inline-block;
 

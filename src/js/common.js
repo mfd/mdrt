@@ -102,12 +102,11 @@ export default () => {
 
     var dotcount = 1;
 
-    $('.owl-dot').each(function() {
+    $('.oneitem__gallery-carousel .owl-dot').each(function() {
       $( this ).addClass( 'dotnumber' + dotcount);
       $( this ).attr('data-info', dotcount);
       dotcount=dotcount+1;
     });
-
     var slidecount = 1;
 
     $('.owl-item').not('.cloned').each(function() {
@@ -123,10 +122,27 @@ export default () => {
 
     var amount = $('.owl-dot').length;
     var gotowidth = 100/amount;
-    jQuery('.owl-dot').css('height', gotowidth+'%');
+    $('.owl-dot').css('height', gotowidth+'%');
+
+    //$('.owl-dots').wrapInner( "<div class='scroll-wrap'></div>");
+    //$('.owl-dots').find('.scroll-wrap').css({ height: $('.oneitem__gallery-carousel').height()});
+    const owlDotScroll = new PerfectScrollbar('.oneitem__gallery-carousel .owl-dots',{
+      wheelSpeed: 2,
+      wheelPropagation: true,
+      minScrollbarLength: 10,
+      suppressScrollX: true,
+      useBothWheelAxes: true
+    });
+
   }
 
   function initSliderGallery() {
+    let cc = $('.owl-gallery').attr('data-count');
+    if (cc) {
+      var count = $('.owl-gallery').attr('data-count').split('|');
+    } else {
+      var count = ['1', '3', '3'];
+    }
     $('.owl-gallery').owlCarousel({
       loop: true,
       //margin: 10,
@@ -135,15 +151,16 @@ export default () => {
       responsiveClass:true,
       responsive:{
         0:{
-          items:1,
-          nav:true
+          items:count[0],
+          nav:true,
+          //dots: true,
         },
         600:{
-          items:3,
+          items:count[1],
           nav:false
         },
         1000:{
-          items:3,
+          items:count[2],
           nav:true,
           loop:false
         }
@@ -169,8 +186,8 @@ export default () => {
     $owl.owlCarousel({
       loop: false,
       responsiveClass:true,
-      nav: true,
-      navigation: true,
+      nav: false,
+      navigation: false,
       dots: true,
       autoplay:true,
       items: 1,
@@ -184,13 +201,17 @@ export default () => {
 
   initHomePromo();
   initSliderGallery();
-  initOneItemGallery();
+  if ($('.oneitem__gallery-carousel').length > 0) {
+    initOneItemGallery();
+  }
 
   window.addEventListener('resize', debounce(() => {
     $('.owl-carousel').trigger('destroy.owl.carousel');
     initHomePromo();
     initSliderGallery();
-    initOneItemGallery();
+    if ($('.oneitem__gallery-carousel').length > 0) {
+      initOneItemGallery();
+    }
 
   }), 10000);
 
