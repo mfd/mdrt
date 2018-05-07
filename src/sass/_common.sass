@@ -1,6 +1,6 @@
 body
     background: #F2F2F2;
-    font-family: Gals;
+    font-family: Gals, Arial, sans-serif;
     //font-size: 18px;
     +fs(16);
     //+f(Gals);
@@ -38,7 +38,8 @@ p+p
     margin-bottom: 1em;
     li
         float: left;
-        font-size: 11px;
+        font-size: 10px;
+        text-transform: uppercase;
         padding-right: 15px;
         position: relative;
         +pseudo
@@ -47,7 +48,7 @@ p+p
         &:after
             right: 5px;
             left: initial;
-            content: '|'
+            content: '/'
 
         a
 //pagination
