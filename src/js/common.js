@@ -86,14 +86,47 @@ export default () => {
     $(this)
       .addClass('active').siblings().removeClass('active')
       .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
-    $('.owl-carousel').trigger('destroy.owl.carousel');
-    initSlderGallery();
+    $('.owl-gallery').trigger('destroy.owl.carousel');
+    initSliderGallery();
   });
 
 
+  function initOneItemGallery() {
+    $('.oneitem__gallery-carousel .owl-carousel').owlCarousel({
+      loop:true,
+      items:1,
+      margin:0,
+      stagePadding: 0,
+      autoplay:false
+    });
 
+    var dotcount = 1;
 
-  function initSlderGallery() {
+    $('.owl-dot').each(function() {
+      $( this ).addClass( 'dotnumber' + dotcount);
+      $( this ).attr('data-info', dotcount);
+      dotcount=dotcount+1;
+    });
+
+    var slidecount = 1;
+
+    $('.owl-item').not('.cloned').each(function() {
+      $(this).addClass( 'slidenumber' + slidecount);
+      slidecount=slidecount+1;
+    });
+
+    $('.owl-dot').each(function() {
+      var grab = $(this).data('info');
+      var slidegrab = $('.slidenumber'+ grab +' img').attr('src');
+      $(this).css('background-image', 'url('+slidegrab+')');
+    });
+
+    var amount = $('.owl-dot').length;
+    var gotowidth = 100/amount;
+    jQuery('.owl-dot').css('height', gotowidth+'%');
+  }
+
+  function initSliderGallery() {
     $('.owl-gallery').owlCarousel({
       loop: true,
       //margin: 10,
@@ -150,12 +183,15 @@ export default () => {
   }
 
   initHomePromo();
-  initSlderGallery();
+  initSliderGallery();
+  initOneItemGallery();
 
   window.addEventListener('resize', debounce(() => {
     $('.owl-carousel').trigger('destroy.owl.carousel');
     initHomePromo();
-    initSlderGallery();
+    initSliderGallery();
+    initOneItemGallery();
+
   }), 10000);
 
 

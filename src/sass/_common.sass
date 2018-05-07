@@ -27,10 +27,30 @@ p
     //+fs(11);
     color: #949494;
     font-size: 16px;
+    margin-bottom: 20px;
 p+p
     margin-bottom: 10px;
 
 
+//pagination
+.pagination
+    +clr
+    margin-bottom: 1em;
+    li
+        float: left;
+        a
+            border-radius: 5px;
+            border: 1px solid #BDBDBD;
+            color: #949494;
+            line-height: 24px;
+            font-size: 14px;
+            padding: 6px 12px;
+            margin-right: 5px;
+    li.active
+        a
+            color: #FFFFFF;
+            background: #B09C6D;
+            border: 1px solid #B09C6D;
 //tabs
 .tabs
     +clr
