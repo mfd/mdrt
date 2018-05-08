@@ -5,6 +5,34 @@
         <div class="location">
             Выбор города:
             <a href="#" class="location--change"><i class="fa fa-map-marker"></i> Москва и Московская область</a>
+            <div class="location__choose">
+                <h5 class="location__choose-title">Выберите свой город</h5>
+                {%
+                set cities =
+                    [
+                    'Москва','Екатеринбург','Уфа','Нижний Новгород','Пермь','Ростов-на-Дону',
+                    'Самара','Стерлитамак','Сургут','Тольятти','Тюмень','Челябинск'
+                    ]
+                %}
+                <ul class="location__choose-location">
+                    {% for item in cities %}
+                        <li class="location__choose-location-item {% if loop.last %}is-active{% endif %}">
+                            <div class="input-group">
+                                <label class="radio">
+                                    <input type="radio" {% if loop.first %}checked{% endif %} name="selectLocation"/>
+                                    <span>{{item}}</span>
+                                </label>
+                             </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <h5 class="location__choose-title">Или укажите в поле</h5>
+                <div class="input">
+                    <input type="text" class="input__short" placeholder="Введите название города" />
+                    <button class="btn">Выбрать</button>
+                </div>
+                <div class="location__choose-close btn-close">Закрыть</div>
+            </div>
          </div>
         <div class="header__right">
             <div class="userArea">

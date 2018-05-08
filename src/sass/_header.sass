@@ -38,6 +38,7 @@ header
         float: left;
         margin-right: 1em;
         margin-top: 1em;
+        position: relative;
         &--change
             border-bottom: 1px dashed #bbb
             position: relative;
@@ -47,6 +48,84 @@ header
                 left: -13px;
         +md
             display: none;
+
+        .location__choose
+            background: rgba(51, 51, 51, 0.8);
+            backdrop-filter: blur(15px);
+            border-radius: 2px;
+            color: #fff;
+            padding: 1em 1.5em;
+            width: 670px;
+        .location__choose
+            position: absolute
+            top: 30px;
+            left: 0;
+            transform: translate(0, 20px);
+            padding-top: 14px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .3s cubic-bezier(.01,.32,.11,.99),transform .3s cubic-bezier(.01,.32,.11,.99);
+
+            &-title
+                font-size: 24px;
+                font-weight: normal;
+                margin-bottom: .5em;
+            &-location
+                +clr
+                margin-bottom: 1em
+
+            &-location-item
+                float: left;
+                width: 24%;
+                font-size: 16px;
+                line-height: 14px
+                margin-bottom: .5em;
+                a
+                    color: #FFFFFF;
+            .input
+                margin-bottom: 1em;
+            .input input
+                font-size: 14px;
+                padding: 0 10px;
+                width: 40%;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            .btn
+                font-size: 14px;
+                text-align: center;
+                padding: 0px 30px;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                line-height: 44px;
+                height: 44px;
+
+            &-close
+                position: absolute;
+                right: 16px;
+                top: 16px;
+                width: 16px;
+                height: 16px;
+                opacity: 0.5;
+                text-indent: -1984px;
+                cursor: pointer;
+
+                &:hover
+                    opacity: 1;
+                &:before, &:after
+                    position: absolute;
+                    left: 8px;
+                    content: ' ';
+                    height: 18px;
+                    width: 4px;
+                    background-color: #FFF;
+                &:before
+                    transform: rotate(45deg);
+                &:after
+                    transform: rotate(-45deg);
+            .isLocationSwitch &
+                pointer-events: auto;
+                opacity: 1;
+                transform: none
     .header__right
         float: right;
     .userArea

@@ -1,6 +1,7 @@
 $gray: #ccc;
 $accent: #B09C6D;
-.checkbox
+$white: #fff;
+.radio
     min-height: 18px
     display: inline-block
     cursor: pointer
@@ -15,37 +16,36 @@ $accent: #B09C6D;
                     display: block
         + span
             position: relative
-            padding-left: 30px
+            padding-left: 25px
             display: inline-block
-            &:after, &:before
-                margin-top: 2px
             &:after
                 content: ''
                 position: absolute
                 left: 0
-                top: 0
+                top: 2px
                 height: 18px
                 width: 18px
-                //border: 1px solid $gray
-                background: url(../img/uncheck.svg);
-                top: 0
-                //margin-top: -9px
+                border: 1px solid $gray
+                top: 50%
+                margin-top: -9px
+                border-radius: 50%;
+                background: $white
                 z-index: 0;
             &:before
                 content: ''
                 position: absolute
-                top: 0px
-                left: 0px
-                width: 18px
-                height: 18px
-                //background: $accent
-                background: url(../img/check.svg);
+                top: 6px
+                left: 4px
+                width: 10px
+                height: 10px
+                background: $accent
                 display: none
-                top: 0;
+                top: 50%
+                margin-top: -5px
+                border-radius: 50%;
                 z-index: 1;
-                //margin-top: -5px
     &:hover
         input + span:after
-            //border: 1px solid darken($gray,10%)
+            border: 1px solid darken($gray,10%)
 
 

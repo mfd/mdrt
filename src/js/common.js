@@ -218,6 +218,33 @@ export default () => {
     initOneItemGallery();
   }
 
+
+  function selectLocation() {
+    let $body = $('body');
+    $('.location--change').on('click', (event) => {
+      event.preventDefault();
+      if ($body.hasClass('isLocationSwitch')) {
+        $body.removeClass('isLocationSwitch');
+      } else {
+        $body.addClass('isLocationSwitch');
+      }
+    });
+    $('.location--change').on('click', function(e) {
+      console.log('click');
+      $('label.radio', $(this)).trigger('click');
+    });
+
+    $('.location--change label.radio').on('click', function(e) {
+      e.stopPropagation();
+    });
+    $('.location__choose-close').on('click', (event) => {
+      event.preventDefault();
+      $body.removeClass('isLocationSwitch');
+    });
+  }
+
+  selectLocation();
+
   window.addEventListener('resize', debounce(() => {
     $('.owl-carousel').trigger('destroy.owl.carousel');
     initHomePromo();
