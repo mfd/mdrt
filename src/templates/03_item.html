@@ -1,7 +1,12 @@
 ---
 title: Карточка товара
+opinNames: ['Евлампий Петрович','Алевтина Иннокентиевна','Константин Констаниновский']
+breadcrumbs: ['Главная','Каталог','Яркое платье']
 ---
 {% extends "layouts/_layout.html" %}
+{% block header %}
+{% include "partials/_footer.html" %}
+{% endblock %}
 
 {% block content %}
 <!--
@@ -11,6 +16,26 @@ title: Карточка товара
 	    <li class="active"><a href="#">Яркое платье</a></li>
 	</ul>
 -->
+{% macro opinion(mod="") %}
+	{% for name in opinNames %}
+		<table class="opinion">
+			<tr>
+				<td class="opinion__author">
+					<div class="opin__authName">
+						{{name}}
+					</div>
+					<time>12.11.2017</time>
+					{{mixins.rating()}}
+				</td>
+				<td class="opinion__text">
+					<p>
+						Абстрактный принт по популярности может посоперничать с цветами и геометрией: этим летом он повсюду. Особенно хорошо такие рисунки смотрятся на деловой одежде: например, на платье фасона "футляр". Ткань - испанский набивной бифлекс.
+					</p>
+				</td>
+			</tr>
+		</table>
+	{% endfor %}
+{% endmacro %}
 	<main class="itemPage">
 		<div class="page__content">
 			<div class="row">
@@ -83,7 +108,75 @@ title: Карточка товара
 				</div>
 			</div>
 			<div class="row">
-
+				<div class="oneitem__whereBuy">
+					<a href="#">Где купить?</a>
+					<table class="oneitem__whereBuy-table">
+					  <tr>
+					    <th class="place">Место хранения \ Размер</th>
+					    <th>42</th>
+					    <th>44</th>
+					    <th>46</th>
+					    <th>48</th>
+					    <th>50</th>
+					    <th>52</th>
+					    <th>54</th>
+					    <th>56</th>
+					    <th>58</th>
+					  </tr>
+					  <tr>
+					    <td class="place">ТК «Центральный»</td>
+					    <td></td>
+					    <td></td>
+					    <td></td>
+					    <td></td>
+					    <td></td>
+					    <td>x</td>
+					    <td></td>
+					    <td>x</td>
+					    <td></td>
+					  </tr>
+					  <tr>
+					    <td class="place">ЦТиР «Мир»</td>
+					    <td></td>
+					    <td></td>
+					    <td>x</td>
+					    <td>x</td>
+					    <td>x</td>
+					    <td>x</td>
+					    <td></td>
+					    <td>x</td>
+					    <td></td>
+					  </tr>
+					  <tr>
+					    <td class="place">ТРЦ «Планета»</td>
+					    <td></td>
+					    <td>x</td>
+					    <td>x</td>
+					    <td>x</td>
+					    <td>x</td>
+					    <td>x</td>
+					    <td></td>
+					    <td>x</td>
+					    <td></td>
+					  </tr>
+					  <tr>
+					    <td class="place">Интернет-магазин</td>
+					    <td></td>
+					    <td></td>
+					    <td></td>
+					    <td></td>
+					    <td></td>
+					    <td></td>
+					    <td></td>
+					    <td></td>
+					    <td></td>
+					  </tr>
+					</table>
+					<p>
+						Данные предоставлены по состоянию на 01.05.2016 года.
+						Остаток товара уточняйте у оператора интернет магазина
+					</p>
+				</div>
 			</div>
 			<div class="row">
 				<div class="tabs">
@@ -94,59 +187,41 @@ title: Карточка товара
 				  </ul>
 
 				  <div class="tabs__content active">
-					<dl class="opinion">
-						<dt>
-							<div class="opin__auth">
-								Алевтина Иннокентиевна
-							</div>
-							<time>
-								12.11.2017
-							</time>
-
-						</dt>
-						<dd>
-							<p>
-								Абстрактный принт по популярности может посоперничать с цветами и геометрией: этим летом он повсюду. Особенно хорошо такие рисунки смотрятся на деловой одежде: например, на платье фасона "футляр". Ткань - испанский набивной бифлекс.
-							</p>
-						</dd>
-					</dl>
-					<dl class="opinion">
-						<dt>
-							<div class="opin__auth">
-								Алевтина Иннокентиевна
-							</div>
-							<time>
-								12.11.2017
-							</time>
-
-						</dt>
-						<dd>
-							<p>
-								Абстрактный принт по популярности может посоперничать с цветами и геометрией: этим летом он повсюду. Особенно хорошо такие рисунки смотрятся на деловой одежде: например, на платье фасона "футляр". Ткань - испанский набивной бифлекс.
-							</p>
-						</dd>
-					</dl>
-					<dl class="opinion">
-						<dt>
-							<div class="opin__auth">
-								Алевтина Иннокентиевна
-							</div>
-							<time>
-								12.11.2017
-							</time>
-
-						</dt>
-						<dd>
-							<p>
-								Абстрактный принт по популярности может посоперничать с цветами и геометрией: этим летом он повсюду. Особенно хорошо такие рисунки смотрятся на деловой одежде: например, на платье фасона "футляр". Ткань - испанский набивной бифлекс.
-							</p>
-						</dd>
-					</dl>
-
+					{{opinion()}}
 				  </div>
 
 				  <div class="tabs__content">
-				    Содержимое второго блока
+					<table class="opinion">
+						<tr>
+							<td class="opinion__author">
+								<div class="opin__authName">
+									Инокентий Петрович
+								</div>
+								<time>12.11.2017</time>
+								{{mixins.rating()}}
+							</td>
+							<td class="opinion__text">
+								<p>
+									Абстрактный принт по популярности может посоперничать с цветами и геометрией: этим летом он повсюду. Особенно хорошо такие рисунки смотрятся на деловой одежде: например, на платье фасона "футляр". Ткань - испанский набивной бифлекс.
+								</p>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="opinion__author">
+								<div class="opin__authName">
+									Алевтина Иннокентиевна
+								</div>
+								<time>12.11.2017</time>
+								{{mixins.rating()}}
+							</td>
+							<td class="opinion__text">
+								<p>
+									Абстрактный принт по популярности может посоперничать с цветами и геометрией: этим летом он повсюду. Особенно хорошо такие рисунки смотрятся на деловой одежде: например, на платье фасона "футляр". Ткань - испанский набивной бифлекс.
+								</p>
+							</td>
+						</tr>
+					</table>
 				  </div>
 
 				</div><!-- .tabs-->
@@ -196,3 +271,7 @@ title: Карточка товара
 	</main>
 
 {% endblock %}
+
+      {% block footer %}
+      	{{mixins.footer__block(phone="8 (866) 700-00-10")}}
+      {% endblock %}

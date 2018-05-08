@@ -25,8 +25,6 @@ export default () => {
   // Sticky
   new Sticky('.sidebar', {marginTop: 90});
 
-
-
   const btn = '.js-toggle-nav';
   const $btn = $(btn);
   const nav = '.js-nav';
@@ -137,13 +135,14 @@ export default () => {
   }
 
   function initSliderGallery() {
-    let cc = $('.owl-gallery').attr('data-count');
-    if (cc) {
-      var count = $('.owl-gallery').attr('data-count').split('|');
-    } else {
-      var count = ['1', '3', '3'];
-    }
-    $('.owl-gallery').owlCarousel({
+    let $this = $('.owl-gallery');
+
+    let isData = $('.owl-gallery[data-count]').length;
+    let count  = isData ? $this.attr('data-count').split('|') : ['1', '3', '3'];
+
+    var isGalleryLook = $this.hasClass('owl-gallery-look');
+
+    $this.owlCarousel({
       loop: true,
       //margin: 10,
       stagePadding: 10,
@@ -166,6 +165,19 @@ export default () => {
         }
       }
     });
+
+    if (isGalleryLook) {
+      $this.find('.owl-stage >:first-child').addClass('activeLook');
+      $this.find('.owl-stage .owl-item').on('click', function() {
+        $(this).siblings().removeClass('activeLook');
+        $(this).addClass('activeLook');
+        var n = $(this).index();
+        console.log(n);
+        $this.trigger('to.owl.carousel', [n, 500, true]);// 500 is the speed of the transition in ms
+        return false;
+      });
+    }
+
   }
 
   function initHomePromo() {
@@ -201,6 +213,7 @@ export default () => {
 
   initHomePromo();
   initSliderGallery();
+
   if ($('.oneitem__gallery-carousel').length > 0) {
     initOneItemGallery();
   }
