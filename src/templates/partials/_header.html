@@ -1,7 +1,7 @@
 <!-- header -->
 <header class="header js-header">
     <div class="container">
-        <a href="01_home.html" class="logo"><span>Madyart</span> <small>интернет-магазин женской одежды</small></a>
+        <a href="01_home.html" class="logo"><span>Madyart</span> <small>Интернет-магазин женской одежды</small></a>
         <div class="location">
             Выбор города:
             <a href="#" class="location--change"><i class="fa fa-map-marker"></i> Москва и Московская область</a>
@@ -34,6 +34,7 @@
                 <div class="location__choose-close btn-close">Закрыть</div>
             </div>
          </div>
+        {% if breadCrumbsItems %}{{mixins.breadcrumbs(breadCrumbsItems)}}{% endif %}
         <div class="header__right">
             <div class="userArea">
                 <a href="#" class="userArea__sign">

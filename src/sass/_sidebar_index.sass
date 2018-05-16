@@ -14,6 +14,20 @@
     .menu, .smenu
         .subMenu > a
             //z-index: 1;
+        .subMenu > a
+            &:before
+                height: 2px;
+                background: #797979;
+                bottom: -1px;
+                opacity: .5;
+                left: 0;
+                top: initial;
+                width: 0%;
+                transition: width .25s,
+        .subMenu.isOpenMenu > a
+            &:before
+                width: 100%;
+
         .subMenuBlock
             z-index: 100;
             position: absolute;
@@ -25,17 +39,32 @@
             background: rgba(255, 255, 255, 0.95);
             width: 500px;
             //padding-top: 30px;
+            padding: 20px;
             padding-left: 140px;
+            padding-bottom: 10px;
+
             ul
-                width: 35%;
+                width: 50%;
                 float: left;
-                margin-right: 0;
+                margin: 0;
+                margin-bottom: 15px;
                 li
                     display: block;
+                    font-size: 18px;
+                    margin-bottom: 12px;
+                    a
+                        color: #333333;
         .subMenuBlock
-            display: none;
+            //display: none;
+            transition: opacity .35s cubic-bezier(0,0,.58,1), transform .005s;
+            opacity: 0;
+            //transform: scale(.1);
+            transform: translateX(-2000px);
         .isOpenMenu .subMenuBlock
-            display: block;
+            //display: block;
+            opacity: 1;
+            transform: scale(1);
+
         .isOpenMenu a
             z-index: 101;
     .smenu
@@ -44,3 +73,8 @@
             margin-top: 1em;
             margin-left: 1em;
             font-size: 16px;
+        .subMenuBlock
+            ul
+                li
+                    font-size: 16px;
+                    margin-bottom: 12px;

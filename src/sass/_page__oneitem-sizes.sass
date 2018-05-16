@@ -1,0 +1,53 @@
+$gray: #ccc;
+$accent: #B09C6D;
+$white: #fff;
+$size: 30px;
+$border-radius: 5px
+.radio
+    min-height: $size
+    input
+        opacity: 0
+        &:checked
+            + span
+                color: #fff;
+                &:before
+                    display: block
+        + span
+            height: $size
+            width: $size
+            line-height: $size
+            font-size: 14px
+            position: relative
+            padding-left: 0
+            display: block
+            text-align: center;
+            &:after
+                content: ''
+                position: absolute
+                left: 0
+                top: 0
+                height: $size
+                width: $size
+                border: 1px solid $gray
+                top: 0
+                margin-top: 0
+                border-radius: $border-radius;
+                background: $white
+                z-index: -2;
+            &:before
+                content: ''
+                position: absolute
+                height: $size
+                width: $size
+                background: $accent
+                display: none
+                top: 0
+                left: 0
+                margin-top: 0
+                border-radius: $border-radius;
+                z-index: -1;
+    &:hover
+        input + span:after
+            border: 1px solid darken($gray,10%)
+
+

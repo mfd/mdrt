@@ -11,7 +11,10 @@
     <!-- begin item -->
     <div class="item">
         <div class="item__row">
-            <figure class="img-block"><img src="img/assets/{{ item.path }}" alt="" /></figure>
+            <!-- <figure class="img-block"><img src="img/assets/{{ item.path }}" alt="" /></figure> -->
+            <figure class="img-block"><img src="img/assets/item0{{ range(1, 6) | random }}.jpg" alt="" /></figure>
+
+
             {% if item.type == 1 %}<div class="item__type new">Распродажа</div>{% endif %}
             {% if item.type == 2 %}<div class="item__type hit">Хит!</div>{% endif %}
             {% if item.type == 3 %}<div class="item__type hit">Новинка</div>{% endif %}
@@ -31,8 +34,8 @@
         </div>
 
         <div class="item__actions">
-            <a href="#" class="btn btn-default">В корзину</a>
-            <a href="03_item.html" class="btn btn-info">Подробнее</a>
+            <a href="03_item.html" class="btn btn-default">Подробнее</a>
+            <a href="03_item.html" class="btn btn-info">В корзину</a>
         </div>
     </div>
     <!-- end item -->

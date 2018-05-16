@@ -26,12 +26,8 @@ $icon: 1.25em;
         float: left;
         width: 22%;
         margin-right: 1em;
-    &.footer__wide .footer__nav, .footer__nav2
-        width: 14%;
-        +md
-            width: 40%;
-            margin-right: 5%;
-            min-height: 200px;
+        min-height: 150px;
+        margin-bottom: 1em;
         h3
             font-size: 15px;
             margin-bottom: 15px;
@@ -42,6 +38,21 @@ $icon: 1.25em;
             margin-bottom: 1em;
             font-size: 16px;
             line-height: 14px;
+
+        +md
+            width: 45%;
+        +sm
+            width: 100%;
+            min-height: initial;
+            margin-bottom: 0;
+
+    &.footer__wide .footer__nav,
+    &.footer__wide .footer__nav2
+        width: 14%;
+        +md
+            width: 40%;
+            margin-right: 5%;
+            min-height: 200px;
     .soc
         li
             float: left;

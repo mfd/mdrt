@@ -87,3 +87,16 @@
 </footer>
 
 {% endmacro %}
+
+
+{% macro breadcrumbs(items) %}
+    <ul class="breadcrumbs">
+        {% for item in items %}
+            <li class="breadcrumbs-item{% if loop.last %} is-active{% endif %}">
+              <a href="#" class="breadcrumbs-link">{{item}}</a>
+            </li>
+        {% else %}
+          <li>Null breadcrumbs</li>
+        {% endfor %}
+    </ul>
+{% endmacro %}
