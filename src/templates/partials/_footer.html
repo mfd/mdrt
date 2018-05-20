@@ -1,3 +1,54 @@
 {% import "data/footer.html" as tests %}
-{{mixins.footer__block()}}
+{% macro footer__block(phone) %}
+<!-- footer -->
+<footer class="footer {% if(phone) %}footer__wide{% endif %}">
+    <div class="container">
+        <div class="footer__in">
+            {% if(phone) %}
+              <div class="phone">
+                <a href="tel:8 (800) 700-00-10" class="tel">{{phone}}</a>
+                <p class="phone__desc">Звонок по РФ бесплатный <br/> По будням с 8 до 18 (мск)</p>
+              </div>
+            {% endif %}
+            <div class="footer__nav">
+                <ul>
+                    <li><a href="#">Руководство по покупке</a></li>
+                    <li><a href="#">Пользовательское соглашение</a></li>
+                    <li><a href="#">Порядок совершения покупки</a></li>
+                    <li><a href="#">Доставка заказа</a></li>
+                </ul>
+            </div>
+            <div class="footer__nav">
+                <ul>
+                    <li><a href="#">Отказ от товара, возврат, обмен</a></li>
+                    <li><a href="#">Оплата товара</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__nav2">
+                <h3>Нашим партнерам</h3>
+                <ul>
+                    <li><a href="12-1_news-list.html">Новости бренда</a></li>
+                    <li><a href="13-1_blog-list.html">Блог</a></li>
+                    <li><a href="09_stores.html">Салоны</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li>{{mixins.footer_soc()}}</li>
+                </ul>
+            </div>
+            <div class="footer__nav2">
+                <h3>Оптовым покупателям</h3>
+                <ul>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="08_opt.html">Отдел оптовых продаж на сайте</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+{% endmacro %}
+
+
+{{footer__block()}}
 <!-- //.footer -->
