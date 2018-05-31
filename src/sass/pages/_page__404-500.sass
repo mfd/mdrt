@@ -1,0 +1,35 @@
+.innerPage.page404
+    float: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh
+    margin: 0
+    padding: 0 2em
+
+.page404
+    .content
+        +pseudo
+        &:before
+            width: 260px;
+            height: 230px;
+            left: -180px;
+            top: -70px;
+            background: url('../img/logo_butterfly.png');
+            background-size: cover;
+            +md
+
+            +sm
+        &:after
+            background: url('../img/logo_gray.png');
+            background-size: cover;
+            width: 180px;
+            height: 30px;
+            left: 40px;
+            top: 120px;
+            +sm
+                bottom: -30px;
+                top: initial;
+        h1
+            line0height

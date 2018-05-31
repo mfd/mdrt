@@ -12,7 +12,9 @@ $accent: #B09C6D;
         &:checked
             + span
                 &:before
-                    display: block
+                    //display: block
+                    opacity: 1;
+                    transform: scale(1);
         + span
             position: relative
             padding-left: 30px
@@ -40,9 +42,13 @@ $accent: #B09C6D;
                 height: 18px
                 //background: $accent
                 background: url(../img/check.svg);
-                display: none
                 top: 0;
                 z-index: 1;
+
+                //display: none
+                transition: transform 0.3s, opacity .3s
+                transform: scale(0.2)
+                opacity: 0
                 //margin-top: -5px
     &:hover
         input + span:after

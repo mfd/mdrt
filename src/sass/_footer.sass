@@ -5,6 +5,10 @@ $icon: 1.25em;
         float: left;
         margin-right: 2em;
         width: 260px;
+        +md
+            width: 180px
+        +sm
+            width: 100%
         .tel
             font-size: 24px
             line-height: 30px;
@@ -50,9 +54,13 @@ $icon: 1.25em;
     &.footer__wide .footer__nav2
         width: 14%;
         +md
-            width: 40%;
-            margin-right: 5%;
+            width: 15%;
+            margin-right: 3%;
             min-height: 200px;
+        +sm
+            width: 100%;
+            min-height: initial;
+            margin-bottom: .5em;
     .soc
         li
             float: left;

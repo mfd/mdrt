@@ -1,12 +1,13 @@
 {% import "data/footer.html" as tests %}
+
 {% macro footer__block(phone) %}
-<!-- footer -->
-<footer class="footer {% if(phone) %}footer__wide{% endif %}">
+<!-- footer {% if(footerWide) %}footer__wide{% endif %} -->
+<footer class="footer {% if(footerWide) %}footer__wide{% endif %}">
     <div class="container">
         <div class="footer__in">
-            {% if(phone) %}
+            {% if(footerWide) %}
               <div class="phone">
-                <a href="tel:8 (800) 700-00-10" class="tel">{{phone}}</a>
+                <a href="tel:88007000010" class="tel">{{phone}}</a>
                 <p class="phone__desc">Звонок по РФ бесплатный <br/> По будням с 8 до 18 (мск)</p>
               </div>
             {% endif %}
@@ -50,5 +51,5 @@
 {% endmacro %}
 
 
-{{footer__block()}}
+{{footer__block('8 (866) 700-00-10')}}
 <!-- //.footer -->

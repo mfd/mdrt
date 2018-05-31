@@ -5,18 +5,30 @@ breadCrumbsItems: ['Главная']
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-    {% include "partials/_sidebar.html" %}
+    {% include "partials/_sidebar_catalog.html" %}
 	<main class="innerPage">
-        <h1 class="page__title">{{ title }}</h1>
-		<p>
-			Выглядеть стильно и привлекательно - просто! Достаточно правильно подобрать одежду, ориентируясь на
-особенности своей фигуры.		</p>
-		<p>
-Мы расскажем, какими приемами пользуются профессиональные стилисты.
-		</p>
-		<p>
-Узкие плечи можно корректировать с помощью свитеров и блуз с продольным вырезом и рукавами-буф,
-</p>
+        {{mixins.pageTitle(title)}}
+        <div class="page__row">
+          <div class="col col-photo">
+            <img src="img/assets/photo01.jpg" />
+          </div>
+          <div class="col col-content">
+            <p>По вопросам оптового сотрудничества звоните по телефонам</p>
+            <p class="tel">
+                8-987-254-54-84 <br/>
+                8 (347) 294-54-84 <br/>
+                8 (347) 246-46-15 (14), доп. номер 118,<br/>
+            </p>
+            <p>либо пишите по адресу:</p>
+            <p class="email">
+                <a href="mailto:opt@madyart.ru">opt@madyart.ru</a>
+            </p>
+            <p>
+                Менеджер по работе с оптовыми клиентами Клеванская Наталья
+            </p>
+            <a href="#" class="btn">Получить прайс</a>
+          </div>
+        </div>
 	</main>
 
 {% endblock %}

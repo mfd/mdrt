@@ -7,6 +7,16 @@ var prettify       = require('gulp-prettify');
 var frontMatter    = require('gulp-front-matter');
 var config         = require('../config');
 
+var shuffle = require('lodash/shuffle');
+//import { shuffle } from 'lodash';
+
+function manageEnvironment(environment) {
+  // {% for story in stories | shuffle %}  {% endfor %}
+  environment.addFilter('shuffle', function(arr) {
+    return shuffle(arr);
+  });
+}
+
 function renderHtml(onlyChanged) {
     nunjucksRender.nunjucks.configure({
         watch: false,
@@ -23,7 +33,8 @@ function renderHtml(onlyChanged) {
         .pipe(frontMatter({ property: 'data' }))
         .pipe(nunjucksRender({
             PRODUCTION: config.production,
-            path: [config.src.templates]
+            path: [config.src.templates],
+            manageEnv: manageEnvironment
         }))
         .pipe(prettify({
             indent_size: 2,

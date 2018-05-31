@@ -13,6 +13,14 @@ owlOneSlide: [
 
 {% block content %}
     {% include "partials/_sidebar.html" %}
+<!-- 	<div class="page__fullpage">
+		<div class="section full">
+
+		</div>
+		<div class="section with-overflow">
+
+		</div>
+	</div> -->
 	<main class="indexPage">
 		<div class="page__hero">
 			<div class="row">
@@ -25,10 +33,10 @@ owlOneSlide: [
 				</div>
 				<!-- //hero__item -->
 			</div>
-			<div class="row">
+			<!--
+ 			<div class="row">
 				<div class="owl-carousel owl-theme owl-oneslide">
 					{% for item in owlOneSlide %}
-					<!-- BEGIN hero__item -->
 					<div class="hero__item">
 						<div class="hero__img" style="background-image: url('{{item.pic | safe}}')"></div>
 						<div class="hero__info">
@@ -36,54 +44,55 @@ owlOneSlide: [
 							<a href="{{item.href | safe}}" class="hero__link">Подробнее</a>
 						</div>
 					</div>
-					<!-- //END hero__item -->
+
 					{% endfor %}
 				</div>
 			</div>
-			<h1 class="page__title">Новинки <a href="#" class="title__viewAll">Смотреть все</a></h1>
-			<div class="row page__catalog">
-				<div class="owl-carousel owl-theme owl-gallery ">
-					{% include "partials/_item.html" %}
-					{% include "partials/_item.html" %}
-				</div>
-			</div>
+			 -->
+		</div>
 
-			<h1 class="page__title">Распродажа<a href="#" class="title__viewAll">Смотреть все</a></h1>
-			<div class="row page__catalog">
-				<div class="owl-carousel owl-theme owl-gallery">
-					{% include "partials/_item.html" %}
-					{% include "partials/_item.html" %}
-					{% include "partials/_item.html" %}
-				</div>
+		<h1 class="page__title">Новинки <a href="#" class="title__viewAll">Смотреть все</a></h1>
+		<div class="row grid__catalog">
+			<div class="owl-carousel owl-theme owl-gallery ">
+				{{ mixins.catalogItems(10) }}
 			</div>
-			<h1 class="page__title">Новости<a href="#" class="title__viewAll">Смотреть все</a></h1>
-			<div class="row page__news">
-				<div class="news__item">
-					<h5><a href="#">Новый салон MADYART  в Москве</a></h5>
-					<p>Милые дамы, обращаем ваше внимание на то, что наш салон в Москве переехал из ТРК “БУМ”. Ждем вас за покупками.
-					</p>
-					<a href="#" class="readmore">Подробнее</a>
-				</div>
-				<div class="news__item">
-					<h5><a href="#">Новый салон MADYART  в Москве</a></h5>
-					<p>Милые дамы, обращаем ваше внимание на то, что наш салон в Москве переехал из ТРК “БУМ”. Ждем вас за покупками.
-					</p>
-					<a href="#" class="readmore">Подробнее</a>
-				</div>
+		</div>
+
+		<h1 class="page__title">Распродажа<a href="#" class="title__viewAll">Смотреть все</a></h1>
+		<div class="row grid__catalog">
+			<div class="owl-carousel owl-theme owl-gallery">
+				{{ mixins.catalogItems(10) }}
 			</div>
-			<h1 class="page__title">Узнайте первыми </h1>
-			<p class="title__viewAll">Только самое важное и никакого спама</p>
-			<div class="newsletter">
-				<div class="input-wrapper">
-					<input id="newsletterInput" type="email" placeholder="Введите email" />
-					<button class="btn"><span class="fa fa-envelope"></span></button>
-					<div class="input-group">
-						<label class="checkbox">
-							<input type="checkbox" checked="" />
-							<span>Согласен с политикой конфиденциальности</span>
-						</label>
-					 </div>
-				</div>
+		</div>
+
+		<h1 class="page__title">Новости<a href="#" class="title__viewAll">Смотреть все</a></h1>
+		<div class="row page__news">
+			<div class="news__item">
+				<h5><a href="#">Новый салон MADYART  в Москве</a></h5>
+				<p>Милые дамы, обращаем ваше внимание на то, что наш салон в Москве переехал из ТРК “БУМ”. Ждем вас за покупками.
+				</p>
+				<a href="#" class="readmore">Подробнее</a>
+			</div>
+			<div class="news__item">
+				<h5><a href="#">Новый салон MADYART  в Москве</a></h5>
+				<p>Милые дамы, обращаем ваше внимание на то, что наш салон в Москве переехал из ТРК “БУМ”. Ждем вас за покупками.
+				</p>
+				<a href="#" class="readmore">Подробнее</a>
+			</div>
+		</div>
+
+		<h1 class="page__title">Узнайте первыми </h1>
+		<p class="title__viewAll">Только самое важное и никакого спама</p>
+		<div class="newsletter">
+			<div class="input-wrapper">
+				<input id="newsletterInput" type="email" placeholder="Введите email" />
+				<button class="btn"><span class="fa fa-envelope"></span></button>
+				<div class="input-group">
+					<label class="checkbox">
+						<input type="checkbox" checked="" />
+						<span>Согласен с политикой конфиденциальности</span>
+					</label>
+				 </div>
 			</div>
 		</div>
 	</main>

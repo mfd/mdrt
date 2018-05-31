@@ -1,0 +1,238 @@
+.grid__catalog
+    //+clr
+    margin-bottom: 1em;
+    .item
+        float: left;
+        background: transparent;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 20px;
+        margin-top: 0;
+        padding: 15px;
+        width: 33%;
+        z-index: 1;
+        position: relative;
+        +md
+            width: 48%
+        +sm
+            width: 100%
+
+        &__row
+            //min-height: 55px;
+            min-height: 40px;
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            position: relative;
+        .img-block
+            +pseudo
+            //background: white;
+            text-align: center;
+            position: relative;
+            width: 100%;
+            //border: 5px solid #f4f4f4;
+            //height: 300px;
+            display: table;
+            img
+                width: 100%;
+                height: auto;
+
+        $like_btn: 40px;
+        &__like
+            position: absolute
+            right: 0;
+            top: 0;
+            text-indent: -1984px;
+            width: $like_btn;
+            height: $like_btn;
+            overflow: hidden;
+            z-index: 100;
+        &__like
+            +pseudo
+            &:before, &:after
+                width: $like_btn;
+                height: $like_btn;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                transition: opacity .35s cubic-bezier(0, 0, 0.58, 1), transform 500ms cubic-bezier(.17,.67,.6,1.3);
+            &:before
+                background-image: url("data:image/svg+xml,%3Csvg width='15' height='14' viewBox='0 0 15 14' fill='%23000' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.4773 4.21974L14.4788 4.2366L14.4814 4.25331C14.4893 4.3029 14.56 4.7992 14.3607 5.64617L14.3607 5.64632C14.074 6.86614 13.4109 7.98083 12.4355 8.86873L7.45798 13.3263L2.56602 8.86988L2.56574 8.86962C1.5897 7.98186 0.926112 6.86644 0.639271 5.64629L0.639249 5.6462C0.439827 4.79863 0.510762 4.30267 0.518597 4.25427L0.521408 4.23691L0.522992 4.21938C0.723332 2.00297 2.2601 0.5 4.08423 0.5C5.29411 0.5 6.38394 1.14777 7.02646 2.25144L7.45384 2.98554L7.88824 2.25558C8.53472 1.16925 9.67722 0.500286 10.9157 0.500286C12.7401 0.500286 14.2766 2.00326 14.4773 4.21974Z' transform='translate%2815%29 scale%28-1 1%29' stroke='%23333333'/%3E%3C/svg%3E%0A");
+            &:after
+                background-image: url("data:image/svg+xml,%3Csvg width='15' height='14' viewBox='0 0 15 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.4773 4.21974L14.4788 4.2366L14.4814 4.25331C14.4893 4.3029 14.56 4.7992 14.3607 5.64617L14.3607 5.64632C14.074 6.86614 13.4109 7.98083 12.4355 8.86873L7.45798 13.3263L2.56602 8.86988L2.56574 8.86962C1.5897 7.98186 0.926112 6.86644 0.639271 5.64629L0.639249 5.6462C0.439827 4.79863 0.510762 4.30267 0.518597 4.25427L0.521408 4.23691L0.522992 4.21938C0.723332 2.00297 2.2601 0.5 4.08423 0.5C5.29411 0.5 6.38394 1.14777 7.02646 2.25144L7.45384 2.98554L7.88824 2.25558C8.53472 1.16925 9.67722 0.500286 10.9157 0.500286C12.7401 0.500286 14.2766 2.00326 14.4773 4.21974Z' transform='translate%2815%29 scale%28-1 1%29' stroke='%23333333'/%3E%3C/svg%3E%0A");
+            &:before
+                opacity: 0;
+            &:hover:before
+                opacity: 1;
+            &:hover:after
+                opacity: 0;
+
+            &:active:before
+                transform: scale(.6);
+            &:active:after
+                //transform: scale(9);
+                opacity: 0
+                //transition: opacity .2s, transform .2s cubic-bezier(.17,.67,.6,1.3);
+        &__actions
+            position: absolute;
+            left: 0; right: 0;
+            top: 40%;
+            z-index: 2;
+
+            .btn
+                font-size: 16px;
+                border: 1px solid #333
+                padding: 9px 18px;
+                width: 50%;
+                display: block;
+                font-size: 14px;
+                text-align: center;
+                margin: 0 auto;
+                margin-bottom: .5em;
+                border-radius: 5px;
+                padding: 0;
+                background: transparent;
+                color: #000;
+                height: 40px
+                line-height: 40px;
+
+                &.btn-info
+                    background: #333333;
+                    color: #fff;
+    //animate
+    .item
+        +pseudo
+        &:after
+            width: 100%;
+            height: 100%;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+            opacity: 0;
+            transition: opacity 0.35s cubic-bezier(0, 0, 0.58, 1);
+        &__actions
+            opacity: 0;
+            transform: scale(.1);
+            transition: transform .1s;
+            .btn
+                transition: transform .2s cubic-bezier(0.17, 0.67, 0.6, 1.3), background .3s;
+            .btn-info
+                transform: translateX(-50%);
+            .btn-default
+                transform: translateX(+50%);
+                background-color: rgba(238, 238, 238, 0.5)
+
+
+        .img-block
+            overflow: hidden;
+            &:before
+                background: #fff;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                opacity: 0;
+                transition: opacity 0.35s cubic-bezier(0, 0, 0.58, 1);
+                z-index: 1;
+            img
+                transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+        &:hover
+            &:after
+                opacity: 1;
+            .item__actions
+                opacity: 1;
+                transform: scale(1);
+                .btn-info, .btn-default
+                    transform: translate(0, 0);
+                    &:active
+                        transform: scale(.9);
+                        transition: transform 500ms cubic-bezier(.17,.67,.6,1.3), background .3s;
+                .btn-info
+                    &:hover
+                        background-color: #222
+                .btn-default
+                    &:hover
+                        background-color: rgba(238, 238, 238, 0.75)
+
+
+            .img-block
+                &:before
+                    opacity: .5;
+                img
+                    transform: scale(1.1);
+        &__type
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            font-size: 10px;
+            background: #eee;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            padding: .5em .75em;
+
+            &.hit
+                background: #949494;
+                color: #fff;
+            &.new
+                background: #B09C6D;
+                color: #fff;
+
+        &__title
+            font-size: 12px;
+            font-weight: normal;
+            color: #949494;
+            line-height: 14px;
+            height: 16px;
+            overflow: hidden;
+            text-transform: uppercase;
+            +md
+                height: 30px;
+            a
+                color: #949494;
+        &__price
+            color: #949494;
+            font-weight: 500;
+            &--sale
+                color: #F24B4B;
+
+.grid__catalog
+    .owl-gallery
+        .item
+            width: 100%
+            //height: 250px;
+    .owl-carousel .owl-nav
+        bottom: initial;
+        top: -100px;
+        right: 10%;
+        left: inherit;
+
+.catalog__sort
+    float: right;
+    font-size: 16px;
+    margin-top: .5em;
+    li
+        float: left;
+        margin-right: 2em;
+        list-style: none;
+        margin-bottom: 0;
+        a
+            color: #ABABAB;
+            +pseudo
+            &:after
+                +menuArrow
+                transform: rotate(45deg) scale(.6);
+                border-color: #ABABAB
+            &.clear
+                &:after
+                    display: none;
+    .active
+        a
+            color: #333333;
+            &:after
+                border-color: #333333
+
+
+.grid__catalog--col3
+    .item
+        width: 33%
+.grid__catalog--col2
+    .item
+        width: 49%

@@ -1,6 +1,7 @@
 .sidebar.sidebar--index
     .menu
         font-size: 24px;
+        margin-bottom: 80px;
     .phone
         float: left;
         margin-right: 2em;
@@ -32,7 +33,7 @@
             z-index: 100;
             position: absolute;
             left: -12px;
-            top: -70px;
+            top: -90px;
             background: red;
             border-radius: 2px;
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
@@ -41,7 +42,7 @@
             //padding-top: 30px;
             padding: 20px;
             padding-left: 140px;
-            padding-bottom: 10px;
+            padding-bottom: 0;
 
             ul
                 width: 50%;
@@ -60,7 +61,7 @@
             opacity: 0;
             //transform: scale(.1);
             transform: translateX(-2000px);
-        .isOpenMenu .subMenuBlock
+        .isOpenSubMenu .subMenuBlock
             //display: block;
             opacity: 1;
             transform: scale(1);
@@ -74,6 +75,7 @@
             margin-left: 1em;
             font-size: 16px;
         .subMenuBlock
+            top: -70px;
             ul
                 li
                     font-size: 16px;

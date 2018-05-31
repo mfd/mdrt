@@ -13,7 +13,9 @@ $white: #fff;
         &:checked
             + span
                 &:before
-                    display: block
+                    //display: block
+                    opacity: 1;
+                    transform: scale(1);
         + span
             position: relative
             padding-left: 25px
@@ -39,11 +41,16 @@ $white: #fff;
                 width: 10px
                 height: 10px
                 background: $accent
-                display: none
                 top: 50%
                 margin-top: -5px
                 border-radius: 50%;
                 z-index: 1;
+
+                //display: none
+                transition: transform 0.3s, opacity 0.3s;
+                transform: scale(0.2);
+                opacity: 0;
+
     &:hover
         input + span:after
             border: 1px solid darken($gray,10%)

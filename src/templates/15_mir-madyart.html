@@ -1,22 +1,90 @@
 ---
 title: Мир Madyart
-breadCrumbsItems: ['Главная']
+breadCrumbsItems: ['Главная', 'Мир Madyart']
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
     {% include "partials/_sidebar.html" %}
-	<main class="innerPage">
-        <h1 class="page__title">{{ title }}</h1>
-		<p>
-			Выглядеть стильно и привлекательно - просто! Достаточно правильно подобрать одежду, ориентируясь на
-особенности своей фигуры.		</p>
-		<p>
-Мы расскажем, какими приемами пользуются профессиональные стилисты.
-		</p>
-		<p>
-Узкие плечи можно корректировать с помощью свитеров и блуз с продольным вырезом и рукавами-буф,
-</p>
+	<main class="innerPage pageMirMDRT">
+        {{mixins.pageTitle(title)}}
+        <div class="grid__mirmdrt">
+        {%
+        set items =
+            [
+                {
+                    "title": "Блог",
+                    "subtitle": "Тренды и обзор коллекций",
+                    "ico": "img/mir_mdr/01_blog.png",
+                    "link": "13-1_blog-list.html"
+                },                            {
+                    "title": "История",
+                    "subtitle": "Все начиналось с крохотного по предприятия...",
+                    "ico": "img/mir_mdr/02_clock.png",
+                    "link": "10-2_text_two.html"
+                },                            {
+                    "title": "Дизайн-бюро",
+                    "subtitle": "Мы любим наших клиентов",
+                    "ico": "img/mir_mdr/03_dress.png",
+                    "link": "#"
+                },                            {
+                    "title": "Фабрика",
+                    "subtitle": "Так все устроено",
+                    "ico": "img/mir_mdr/04_fbr.png",
+                    "link": "#"
+                },                            {
+                    "title": "Дисконтная программа",
+                    "subtitle": "Мы любим наших клиентов",
+                    "ico": "img/mir_mdr/05_discount.png",
+                    "link": "14_discount.html"
+                },                            {
+                    "title": "Подарочный сертификат",
+                    "subtitle": "Лучший подарок",
+                    "ico": "img/mir_mdr/06_giftcard.png",
+                    "link": "10-1_text_one.html"
+                },                            {
+                    "title": "Новости",
+                    "subtitle": "Последние новости компании",
+                    "ico": "img/mir_mdr/07_news.png",
+                    "link": "12-1_news-list.html"
+                },                            {
+                    "title": "Салоны",
+                    "subtitle": "Как нас найти",
+                    "ico": "img/mir_mdr/08_stores.png",
+                    "link": "09_stores.html"
+                }
+            ]
+        %}
+        {% for item in items %}
+            <figure class="mirmdrt-item">
+                <a href="{{item.link}}" class="mirmdrt-item__link">{{item.title}}</a>
+                <div class="mirmdrt-item__pic"><img src="{{item.ico}}" alt="{{item.title}}" /></div>
+                <figcaption class="mirmdrt-item__title">
+                    <div class="mirmdrt-item__title-wrap">
+                        <h2 class="mirmdrt-item__title-text">{{item.title}}</h2>
+                        <p class="mirmdrt-item__title-content">{{item.subtitle}}</p>
+                    </div>
+                </figcaption>
+            </figure>
+        {% endfor %}
+
+        </div>
+
+        <h1 class="page__title">Узнайте первыми </h1>
+            <p class="title__viewAll">Только самое важное и никакого спама</p>
+            <div class="newsletter">
+                <div class="input-wrapper">
+                    <input id="newsletterInput" type="email" placeholder="Введите email" />
+                    <button class="btn"><span class="fa fa-envelope"></span></button>
+                    <div class="input-group">
+                        <label class="checkbox">
+                            <input type="checkbox" checked="" />
+                            <span>Согласен с политикой конфиденциальности</span>
+                        </label>
+                     </div>
+                </div>
+            </div>
+
 	</main>
 
 {% endblock %}

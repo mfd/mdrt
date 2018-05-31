@@ -1,22 +1,43 @@
 ---
 title: Гид по стилю
-breadCrumbsItems: ['Главная']
+breadCrumbsItems: ['Главная', 'Гид по стилю']
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-    {% include "partials/_sidebar_catalog.html" %}
-	<main class="innerPage">
-        <h1 class="page__title">{{ title }}</h1>
-		<p>
-			Выглядеть стильно и привлекательно - просто! Достаточно правильно подобрать одежду, ориентируясь на
-особенности своей фигуры.		</p>
-		<p>
-Мы расскажем, какими приемами пользуются профессиональные стилисты.
-		</p>
-		<p>
-Узкие плечи можно корректировать с помощью свитеров и блуз с продольным вырезом и рукавами-буф,
-</p>
+    {% include "partials/_sidebar.html" %}
+	<main class="innerPage pageStyleGuide">
+        {{mixins.pageTitle(title,'styleguide')}}
+        <div class="grid__styleguide">
+            <figure class="styleguide">
+                <a href="05-2_styleguide-decor.html" class="styleguide__link">Силуэт в стиле Dior</a>
+                <div class="styleguide__pic"><img src="img/assets/guide01.png" alt="" /></div>
+                <figcaption class="styleguide__title">
+                    <div class="styleguide__title-wrap">
+                        <h2 class="styleguide__title-text">Силуэт в стиле Dior</h2>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure class="styleguide">
+                <a href="05-2_styleguide-decor.html" class="styleguide__link">Цветочные принты</a>
+                <div class="styleguide__pic"><img src="img/assets/guide02.png" alt="Цветочные принты" /></div>
+                <figcaption class="styleguide__title">
+                    <div class="styleguide__title-wrap">
+                        <h2 class="styleguide__title-text">Цветочные принты</h2>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure class="styleguide">
+                <a href="05-2_styleguide-decor.html" class="styleguide__link">Силуэт в стиле Dior</a>
+                <div class="styleguide__pic"><img src="img/assets/guide01.png" alt="" /></div>
+                <figcaption class="styleguide__title">
+                    <div class="styleguide__title-wrap">
+                        <h2 class="styleguide__title-text">Силуэт в стиле Dior</h2>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+
 	</main>
 
 {% endblock %}

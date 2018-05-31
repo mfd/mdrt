@@ -259,37 +259,33 @@ footerWide: true
 				  </ul>
 
 				  <div class="tabs__content active">
-					<div class="row page__catalog">
+					<div class="row grid__catalog">
 						<div class="owl-carousel owl-theme owl-gallery" data-count="1|3|4">
-							{% include "partials/_item.html" %}
-							{% include "partials/_item.html" %}
+      						{{mixins.catalogItems(2)}}
 						</div>
 					</div>
 				  </div>
 
 				  <div class="tabs__content">
-					<div class="row page__catalog">
+					<div class="row grid__catalog">
 						<div class="owl-carousel owl-theme owl-gallery" data-count="1|3|4">
-							{% include "partials/_item.html" %}
-							{% include "partials/_item.html" %}
+      						{{mixins.catalogItems(2)}}
 						</div>
 					</div>
 				  </div>
 				  <div class="tabs__content">
-					<div class="row page__catalog">
+					<div class="row grid__catalog">
 						<div class="owl-carousel owl-theme owl-gallery" data-count="1|4|4">
-							{% include "partials/_item.html" %}
-							{% include "partials/_item.html" %}
+	      						{{mixins.catalogItems(2)}}
 						</div>
 					</div>
 				  </div>
 
 
 				  <div class="tabs__content">
-					<div class="row page__catalog">
+					<div class="row grid__catalog">
 						<div class="owl-carousel owl-theme owl-gallery" data-count="1|4|4">
-							{% include "partials/_item.html" %}
-							{% include "partials/_item.html" %}
+      						{{mixins.catalogItems(2)}}
 						</div>
 					</div>
 				  </div>
@@ -300,7 +296,3 @@ footerWide: true
 	</main>
 
 {% endblock %}
-
-      {% block footer %}
-      	{{mixins.footer__block(phone="8 (866) 700-00-10")}}
-      {% endblock %}

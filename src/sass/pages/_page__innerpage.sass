@@ -1,0 +1,39 @@
+.innerPage .page
+    &__row
+        display: flex
+        justify-content: space-between
+        align-items: stretch
+        +sm
+            display: block;
+        .col + .col
+            margin-left: 2rem
+            flex-grow: 1
+            +sm
+               margin: 0;
+               margin-top: 1em;
+
+
+    &__row
+        //padding: .5rem 0
+        border-radius: 5px
+        //background-color: #f6f6f6
+        +sm
+            padding: 0
+        .col
+            &-photo
+                width: 250px
+                img
+                    position: relative
+                    display: block
+                    max-width: 100%
+                    height: auto;
+            &-sidebar
+                width: 250px
+            &-content
+                //width: 70%
+                +sm
+                   width: 100%
+
+            .tel
+                font-size: 18px;
+                color: #333333;

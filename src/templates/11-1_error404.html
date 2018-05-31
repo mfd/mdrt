@@ -1,22 +1,18 @@
 ---
 title: 404 Страница не найдена
 breadCrumbsItems: ['Главная']
+footerWide: true
 ---
-{% extends "layouts/_layout.html" %}
+{% extends "layouts/_layout_blank.html" %}
 
+{% block header %}
+{% endblock %}
 {% block content %}
-    {% include "partials/_sidebar.html" %}
-	<main class="innerPage">
-        <h1 class="page__title">{{ title }}</h1>
-		<p>
-			Выглядеть стильно и привлекательно - просто! Достаточно правильно подобрать одежду, ориентируясь на
-особенности своей фигуры.		</p>
-		<p>
-Мы расскажем, какими приемами пользуются профессиональные стилисты.
-		</p>
-		<p>
-Узкие плечи можно корректировать с помощью свитеров и блуз с продольным вырезом и рукавами-буф,
-</p>
-	</main>
+    <main class="innerPage page404">
+        <div class="content">
+            <h1>Ошибка 404 - Страница недоступна или удалена</h1>
+            <p>Мы проводим технические работы чтобы сделать сайт еще лучше. Приходите к нам позже.</p>
+        </div>
+    </main>
 
 {% endblock %}

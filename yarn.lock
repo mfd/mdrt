@@ -2962,6 +2962,12 @@ fstream@^1.0.0, fstream@^1.0.2:
     mkdirp ">=0.5 0"
     rimraf "2"
 
+fullpage.js@^2.9.7:
+  version "2.9.7"
+  resolved "https://registry.yarnpkg.com/fullpage.js/-/fullpage.js-2.9.7.tgz#65b838a76a9cc459e6474d36ba54fd18aba52f3d"
+  dependencies:
+    jquery ">=1.6.0"
+
 functional-red-black-tree@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
@@ -4266,7 +4272,7 @@ jest-validate@^22.4.0, jest-validate@^22.4.3:
     leven "^2.1.0"
     pretty-format "^22.4.3"
 
-jquery@>=1.8.3, jquery@^3.1.1:
+jquery@>=1.6.0, jquery@>=1.8.3, jquery@^3.1.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
 

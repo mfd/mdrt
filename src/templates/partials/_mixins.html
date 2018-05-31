@@ -2,6 +2,34 @@
 <svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
 {% endmacro %}
 
+{% macro breadcrumbs(items) %}
+    <ul class="breadcrumbs">
+        {% for item in items %}
+            <li class="breadcrumbs-item{% if loop.last %} is-active{% endif %}">
+              <a href="#" class="breadcrumbs-link">{{item}}</a>
+            </li>
+        {% else %}
+          <li>Null breadcrumbs</li>
+        {% endfor %}
+    </ul>
+{% endmacro %}
+
+
+{% macro pageTabs(tabs) %}
+<div class="tabs">
+  <ul class="tabs__caption">
+    {% for item in tabs %}
+      <li>{{item}}</li>
+    {% endfor %}
+  </ul>
+  {% for item in tabs %}
+    {% set idx = loop.index %}
+    <div class="tabs__content" id="tab_{{idx}}">
+    </div>
+ {% endfor %}
+</div>
+{% endmacro %}
+
 
 {% macro footer_soc(mod="") %}
 <ul class="soc {{mod}}">
@@ -12,6 +40,63 @@
 </ul>
 {% endmacro %}
 
+{% macro pageTitle(title, titleMenu, subTitle) %}
+  <div class="page__title">
+    <h1 class="page__title-text">
+      {{title}}
+      {% if(subTitle) %} <a href="#" class="title__viewAll">{{subTitle}}}</a>{% endif %}
+    </h1>
+    {% if(titleMenu==='catalog') %}
+        <div class="page__title-right">
+          <ul class="catalog__sort">
+            <li><a href="#">Все предметы одежды</a></li>
+            <li class="active"><a href="#">Размеры</a></li>
+            <li><a href="#">Цена</a></li>
+            <li><a href="#" class="clear">Сбросить</a></li>
+          </ul>
+        </div>
+    {% endif %}
+    {% if(titleMenu==='novelty') %}
+        <div class="page__title-right">
+          <ul class="page__title-menu">
+            <li><a href="#">Блог</a></li>
+            <li class="active"><a href="#">Вернуться к покупкам</a></li>
+          </ul>
+        </div>
+    {% endif %}
+    {% if(titleMenu==='back') %}
+      <div class="page__title-right">
+        <ul class="page__title-menu">
+          <li class="active"><a href="javascript:history.back()">Вернуться к покупкам</a></li>
+        </ul>
+      </div>
+    {% endif %}
+    {% if(titleMenu==='search') %}
+      <div class="page__title-right">
+        <div class="search">
+          <input type="text" class="search__input js-search is-open" placeholder="Искать" name="q" />
+          <button type="submit" class="search__btn js-show-search"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+  <!-- //.page__title -->
+{% endmacro %}
+
+{% macro pagination() %}
+    <ul class="pagination inline">
+       <li><a href="#"><span>В начало</span></a></li>
+       <li><a href="#"><span>1</span></a></li>
+       <li class="active"><a href="#"><span>2</span></a></li>
+       <li><a href="#"><span>3</span></a></li>
+       <li><a href="#"><span>4</span></a></li>
+       <li><a href="#"><span>5</span></a></li>
+       <li><a href="#"><span>...</span></a>  </li>
+       <li><a href="#"><span>101</span></a></li>
+       <li><a href="#"><span>102</span></a></li>
+       <li><a href="#"><span>В конец</span></a></li>
+     </ul>
+{% endmacro %}
 
 {% macro rating(mod="") %}
 <fieldset class="rating">
@@ -39,64 +124,102 @@
 {% endmacro %}
 
 {% macro footer__block(phone) %}
-<!-- footer -->
-<footer class="footer {% if(phone) %}footer__wide{% endif %}">
-    <div class="container">
-        <div class="footer__in">
-            {% if(phone) %}
-              <div class="phone">
-                <a href="tel:8 (800) 700-00-10" class="tel">{{phone}}</a>
-                <p class="phone__desc">Звонок по РФ бесплатный <br/> По будням с 8 до 18 (мск)</p>
-              </div>
-            {% endif %}
-            <div class="footer__nav">
-                <ul>
-                    <li><a href="10-2_text_two.html">Руководство по покупке</a></li>
-                    <li><a href="#">Пользовательское соглашение</a></li>
-                    <li><a href="#">Порядок совершения покупки</a></li>
-                    <li><a href="10-1_text_one.html">Доставка заказа</a></li>
-                </ul>
-            </div>
-            <div class="footer__nav">
-                <ul>
-                    <li><a href="10-1_text_one.html">Отказ от товара, возврат, обмен</a></li>
-                    <li><a href="10-2_text_two.html">Оплата товара</a></li>
-                    <li><a href="10-1_text_one.html">Политика конфиденциальности</a></li>
-                </ul>
-            </div>
 
-            <div class="footer__nav2">
-                <h3>Нашим партнерам</h3>
-                <ul>
-                    <li><a href="12-1_news-list.html">Новости бренда</a></li>
-                    <li><a href="13-1_blog-list.html">Блог</a></li>
-                    <li><a href="09_stores.html">Салоны</a></li>
-                    <li><a href="#">Контакты</a></li>
-                    <li>{{footer_soc()}}</li>
-                </ul>
-            </div>
-            <div class="footer__nav2">
-                <h3>Оптовым покупателям</h3>
-                <ul>
-                    <li><a href="#">Каталог</a></li>
-                    <li><a href="08_opt.html">Отдел оптовых продаж на сайте</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
 
 {% endmacro %}
 
 
-{% macro breadcrumbs(items) %}
-    <ul class="breadcrumbs">
-        {% for item in items %}
-            <li class="breadcrumbs-item{% if loop.last %} is-active{% endif %}">
-              <a href="#" class="breadcrumbs-link">{{item}}</a>
-            </li>
-        {% else %}
-          <li>Null breadcrumbs</li>
+
+
+
+
+{% macro catalogItems(size) %}
+    {% for i in range(0, size) -%}
+        {% set outer_loop = loop %}
+        {% set items = [
+            { 'path': 'item01.jpg', title:'Юбка с высокой талией', price: "6995р"},
+            { 'path': 'item02.jpg', title:'Пальто утепленное', price: "1995р", type:1, sale:'9995р  -30%'},
+            { 'path': 'item03.jpg', title:'Яркое платье', price: "995р", type:2, sale:'195р  -90%'},
+            { 'path': 'item04.jpg', title:'Юбка с высокой талией', price: "6995р"},
+            { 'path': 'item05.jpg', title:'Пальто утепленное', price: "1995р", type:1},
+            { 'path': 'item06.jpg', title:'Яркое платье', price: "995р", type:2}
+        ] %}
+        {% for item in items | shuffle %}
+            {% set idx = outer_loop.index+loop.index-1 %}
+            <!-- BEGIN item-->
+            <div class="item">
+                <div class="item__row">
+                    <figure class="img-block"><img src="img/assets/{{ item.path }}" alt="" /></figure>
+                    <!-- <figure class="img-block"><img src="img/assets/item0{{ range(1, 6) | random }}.jpg" alt="" /></figure> -->
+                    {% if item.type == 1 %}<div class="item__type new">Распродажа</div>{% endif %}
+                    {% if item.type == 2 %}<div class="item__type hit">Хит!</div>{% endif %}
+                    {% if item.type == 3 %}<div class="item__type hit">Новинка</div>{% endif %}
+                    <a href="#" class="item__like">Добавить в избранное</a>
+                </div>
+                <div class="item__row">
+                    <h3 class="item__title"><a href="#">{{ item.title | safe }}</a></h3>
+                    <p class="item__price">
+                        {% if item.sale %}
+                            <s>{{ item.price }}</s>
+                            <span class="item__price--sale">{{ item.sale | safe }}</span>
+                        {% else %}
+                            {{ item.price }}
+                        {% endif %}
+
+                    </p>
+                </div>
+
+                <div class="item__actions">
+                    <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                    <a href="03_item.html" class="btn btn-info">В корзину</a>
+                </div>
+            </div>
+            <!-- END item-->
         {% endfor %}
-    </ul>
+    {%- endfor %}
+{% endmacro %}
+
+
+{% macro styleguideItems(size) %}
+    {% for i in range(0, size) -%}
+        {% set outer_loop = loop %}
+        {% set items = [
+            { 'path': 'item04.jpg', title:'Юбка с высокой талией', price: "6995р"},
+            { 'path': 'item05.jpg', title:'Пальто утепленное', price: "1995р", type:1},
+            { 'path': 'item06.jpg', title:'Яркое платье', price: "995р", type:2}
+        ] %}
+        {% for item in items | shuffle %}
+            {% set idx = outer_loop.index+loop.index-1 %}
+            <!-- BEGIN item-->
+            <div class="item">
+                <a href="#" class="item-link">
+                    <figure class="img-block"><img src="img/assets/{{ item.path }}" alt="" /></figure>
+                </a>
+            </div>
+            <!-- END item-->
+        {% endfor %}
+    {%- endfor %}
+{% endmacro %}
+
+{% macro newsItems(size, fullLink="#") %}
+        {% set items = [
+            { 'pic': 'news01.jpg', title:'MADYART 25 лет', date: "февраль 2018", text: 'Новый салон MADYART гостеприимно распахнул свои двери для покупателей в торговом центре Молл Парк Хаус на 2 этаже. Новая коллекция MADYART в новом салоне ждет Вас!!! Всем удачного шоппинга!'},
+            { 'pic': 'news04.jpg', title:'Новый салон MADYART в москве', date: "февраль 2018", text: 'Милые дамы! Обращаем ваше внимание на то, что наш салон в Москве ПЕРЕЕХАЛ из ТРК "БУМ". Ждем вас за покупками по новому адресу: ТРК Глобал Сити, Днепропетровская, 2, 1 этаж; м. Южная, выход направо. Тел. 8(499)3472062. В честь открытия действуют специальные скидки!'},
+            { 'pic': 'news02.jpg', title:'Открытие осеннего сезона', date: "февраль 2018", text: '2 августа открылся третий салон MADYART в САМАРЕ! На этот раз - в ТЦ Амбар, в одном из самых интересных торговых комплексов города. Кто побывал на открытии — оказался на зрелищном, ярком и необычном празднике,'},
+            { 'pic': 'news03.jpg', title:'"Гарантия восторженных взглядов" в Екатеринбурге', date: "февраль 2018", text: 'Милые дамы! Обращаем ваше внимание на то, что наш салон в Москве ПЕРЕЕХАЛ из ТРК "БУМ". Ждем вас за покупками по новому адресу: ТРК Глобал Сити, Днепропетровская, 2, 1 этаж; м. Южная, выход направо. Тел. 8(499)3472062. В честь открытия действуют специальные скидки!'}
+        ] %}
+
+        {% for item in items | shuffle %}
+            {% set idx = outer_loop.index+loop.index-1 %}
+            <!-- BEGIN item-->
+              <div class="news-item">
+                <figure class="news-item__pic">
+                  <img src="img/assets/{{ item.pic }}" alt="{{ item.title }}" />
+                </figure>
+                <h3 class="news-item__title"><a href="{{ fullLink }}">{{ item.title }}</a></h3>
+                <div class="news-item__date">{{ item.date }}</div>
+                <p class="news-item__text">{{ item.text }}</p>
+              </div>
+            <!-- END item-->
+        {% endfor %}
 {% endmacro %}

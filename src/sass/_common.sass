@@ -22,23 +22,59 @@ body
         z-index: -1;
         opacity: 0;
 h1, .h1
-    font-size: 36px;
-    font-weight: normal;
+    font-size: 36px
+    font-weight: normal
+    line-height: 32px
+    margin-bottom: 20px
     .indexPage &
-        font-size: 48px;
-        line-height: 36px;
-.page__title
-    margin-bottom: .25em;
-    //margin-left: -13px;
+        font-size: 48px
+        line-height: 36px
+        margin-bottom: 0
+main
+    h2
+        font-size: 24px;
+        line-height: 22px;
+        color: #333333;
+        margin-top: 10px
+        margin-bottom: 10px
+    h3
+        font-size: 16px;
+        color: #333333;
+        margin-top: 10px
+        margin-bottom: 10px
+    ul
+        margin-bottom: 10px;
+        li
+            color: #949494;
+            font-size: 16px;
+            margin-bottom: 10px;
+            margin-left: 15px;
+            list-style: disc;
+
+figure.img-full
+    margin-bottom: 1em;
+    img
+        position: relative;
+        display: block;
+        min-height: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    &:hover
+        img
+            transform: scale3d(1,1,1);
+            transition: transform .35s;
+
+
+
 
 p
     //+fs(11);
     color: #949494;
-    font-size: 16px;
-    margin-bottom: 20px;
     font-size: 18px;
+    margin-bottom: 20px;
+    //font-size: 18px;
     .itemPage &
-        font-size: 14px;
+        //font-size: 14px;
 p+p
     margin-bottom: 10px;
 
@@ -46,10 +82,10 @@ p+p
 //beadcrumbs
 .breadcrumbs
     +clr
-    margin-bottom: 1em;
+    margin: 0 0 1em 0;
     li
         float: left;
-        font-size: 10px;
+        font-size: 12px;
         text-transform: uppercase;
         padding-right: 15px;
         position: relative;
@@ -66,7 +102,10 @@ p+p
     +clr
     margin-bottom: 1em;
     li
-        float: left;
+        float: left
+        list-style: none
+        margin-left: 0
+        margin-bottom: .75em;
         a
             border-radius: 5px;
             border: 1px solid #BDBDBD;
@@ -88,25 +127,30 @@ p+p
         margin-bottom: .5em;
         border-bottom: 1px solid #ABABAB;
         li
+            list-style: none;
             float: left;
             color: #ABABAB;
             //border-bottom: 1px solid #ABABAB;
             font-size: 16px;
             //text-transform: uppercase;
-            padding: .5em 0;
-            margin-right: 2em;
+            padding: .25em 0;
+            margin-right: 1em;
+            margin-bottom: 0;
             cursor: pointer;
+        li:first-child
+            margin-left: 0;
             //padding-left: 1em;
     &__caption
         li.active
             color: #333;
             border-bottom: 2px solid #333;
             margin-bottom: -1px;
-            font-weight: bold;
+            //font-weight: bold;
     &__content
         +clr
-        display: none;
         color: #949494;
+        padding: .5em .5em;
+        display: none;
 
     &__content.active
         display: block;

@@ -1,22 +1,160 @@
 ---
-title: Салоны - Карта
-breadCrumbsItems: ['Главная']
+title: Салоны MADYART
+breadCrumbsItems: ['Главная', 'Салоны']
+footerWide: true
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-    {% include "partials/_sidebar.html" %}
-	<main class="innerPage">
-        <h1 class="page__title">{{ title }}</h1>
-		<p>
-			Выглядеть стильно и привлекательно - просто! Достаточно правильно подобрать одежду, ориентируясь на
-особенности своей фигуры.		</p>
-		<p>
-Мы расскажем, какими приемами пользуются профессиональные стилисты.
-		</p>
-		<p>
-Узкие плечи можно корректировать с помощью свитеров и блуз с продольным вырезом и рукавами-буф,
-</p>
-	</main>
+
+    <main class="innerPage pageStoreMap">
+        {{mixins.pageTitle(title, 'back')}}
+        <div class="page__row">
+          <div class="col col-sidebar">
+                {% macro stores(mod="") %}
+                    {%
+                    set items =
+                        [
+                          {
+                            "name": "Уфа",
+                            "stores": [
+                              {
+                                "title": "ТРЦ «Планета»",
+                                "addr": "ул. Энтузиастов, 20",
+                                "tel": "8 (347) 216-31-75"
+                              },
+                              {
+                                "title": "ТЦ «Мир»",
+                                "addr": "просп. Октября, 4/1",
+                                "tel": "8 (347) 274-26-05"
+                              },
+                              {
+                                "title": "ТРЦ «Центральный»",
+                                "addr": "ул. Цюрупы, 97, 2 этаж",
+                                "tel": "8 (347) 246-23-85"
+                              },
+                              {
+                                "title": "Madyart, ООО \"Статус\"",
+                                "addr": "просп. Октября, 107/3",
+                                "tel": " 8 (987) 254-54-84"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Екатеринбург",
+                            "stores": [
+                              {
+                                "title": "СИТИ-ЦЕНТР",
+                                "addr": "ул. Ленина, 50",
+                                "tel": "т.378-73-81"
+                              },
+                              {
+                                "title": "ТРЦ «Гринвич»",
+                                "addr": "ул. Ленина, 50",
+                                "tel": "т.378-73-81"
+                              },
+                              {
+                                "title": "ТРЦ «Карнавал»",
+                                "addr": "ул.Халтурина, 55",
+                                "tel": "8 (343) 253-84-50"
+                              },
+                              {
+                                "title": "Молл Парк-Хаус",
+                                "addr": "ул. Ленина, 50",
+                                "tel": "т.378-73-81"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Москва",
+                            "stores": [{}]
+                          },
+                          {
+                            "name": "Нижний Новгород",
+                            "stores": [{}]
+                          },
+                          {
+                            "name": "Пермь",
+                            "stores": [{}]
+                          },
+                          {
+                            "name": "Ростов-на-Дону",
+                            "stores": [{}]
+                          },
+                          {
+                            "name": "Самара",
+                            "stores": [{}]
+                          },
+                          {
+                            "name": "Стерлитамак",
+                            "stores": [{}]
+                          }
+                        ]
+                    %}
+                    <ul class="b-stores">
+                        {% for item in items %}
+                            <li class="store__item{% if loop.last %} is-active{% endif %}">
+                        <div class="ac">
+
+                        <input class="ac-input" id="city_{{loop.index}}" name="city_{{loop.index}}" type="checkbox" {% if loop.first %} checked{% endif %} />
+                        <label class="ac-label" for="city_{{loop.index}}">{{item.name}}</label>
+                        <article class="ac-text">
+                          <div class="ac-sub store-city">
+                          {% for store in item.stores %}
+                                <a href="#" class="store-city__item" data-latlon="[{},{}]">
+                                  <div class="store-city__name">{{store.title}}</div>
+                                  <div class="store-city__addr">{{store.addr}}<br/> т.{{store.tel}}</div>
+                                </a>
+                             {% endfor %}
+                          </div>
+                        </article><!--/ac-text-->
+
+                      </div><!--/ac-->
+                            </li>
+                        {% endfor %}
+
+
+                    </ul>
+                {% endmacro %}
+
+                {{stores()}}
+
+          </div>
+          <div class="col col-content">
+            <div id="map"></div>
+          </div>
+        </div>
+    </main>
+<style type="text/css">
+        #map {
+            width: 100%;
+            height: 530px;
+        }
+    </style>
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script type="text/javascript">
+var myMap;
+
+// Дождёмся загрузки API и готовности DOM.
+ymaps.ready(init);
+
+function init () {
+    // Создание экземпляра карты и его привязка к контейнеру с
+    // заданным id ("map").
+    myMap = new ymaps.Map('map', {
+        // При инициализации карты обязательно нужно указать
+        // её центр и коэффициент масштабирования.
+        center: [55.76, 37.64], // Москва
+        zoom: 10
+    }, {
+        searchControlProvider: 'yandex#search'
+    });
+
+
+
+}
+
+</script>
 
 {% endblock %}

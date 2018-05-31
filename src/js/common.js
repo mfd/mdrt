@@ -10,6 +10,10 @@ const Sticky = require('sticky-js');
 import 'owl.carousel';
 import PerfectScrollbar from 'perfect-scrollbar';
 
+import 'fullpage.js/dist/jquery.fullPage.js';
+
+
+
 export default () => {
   const BODY = $('body');
   const overlay = $('.js-overlay');
@@ -19,6 +23,9 @@ export default () => {
 
   //toggle mobile
   //import {scrollHidden, scrollVisible} from './hiddenShowScrollBar';
+
+
+
 
 
 
@@ -70,11 +77,11 @@ export default () => {
 
   $(document).on({
     mouseenter: function() {
-      $(this).addClass('isOpenMenu');
+      $(this).addClass('isOpenSubMenu');
       $(this).find('a').css('z-index','999');
     },
     mouseleave: function() {
-      $(this).removeClass('isOpenMenu');
+      $(this).removeClass('isOpenSubMenu');
       $(this).find('a').css('z-index','0');
     }
   }, '.sidebar .menu .subMenu, .sidebar .smenu .subMenu');
@@ -218,11 +225,29 @@ export default () => {
     initOneItemGallery();
   }
 
+  function showLoginform() {
+    let $body = $('body');
+    $('.js-sign').on('click', (event) => {
+      event.preventDefault();
+      $body.removeClass('isLocationSwitch');
+      if ($body.hasClass('isLoginform')) {
+        $body.removeClass('isLoginform');
+      } else {
+        $body.addClass('isLoginform');
+      }
+    });
+
+    $('.b-login-form--close').on('click', (event) => {
+      event.preventDefault();
+      $body.removeClass('isLoginform');
+    });
+  }
 
   function selectLocation() {
     let $body = $('body');
     $('.location--change').on('click', (event) => {
       event.preventDefault();
+      $body.removeClass('isLoginform');
       if ($body.hasClass('isLocationSwitch')) {
         $body.removeClass('isLocationSwitch');
       } else {
@@ -244,6 +269,7 @@ export default () => {
   }
 
   selectLocation();
+  showLoginform();
 
   window.addEventListener('resize', debounce(() => {
     $('.owl-carousel').trigger('destroy.owl.carousel');

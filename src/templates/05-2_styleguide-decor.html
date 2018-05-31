@@ -1,22 +1,65 @@
 ---
-title: Гид по стилю силуэт в стиле декор
-breadCrumbsItems: ['Главная']
+title: Силуэт в стиле Dior
+breadCrumbsItems: ['Главная', 'Гид по стилю']
+titleMenu: ['Вернуться к покупкам']
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
     {% include "partials/_sidebar_catalog.html" %}
-	<main class="innerPage">
-        <h1 class="page__title">{{ title }}</h1>
-		<p>
-			Выглядеть стильно и привлекательно - просто! Достаточно правильно подобрать одежду, ориентируясь на
-особенности своей фигуры.		</p>
-		<p>
-Мы расскажем, какими приемами пользуются профессиональные стилисты.
-		</p>
-		<p>
-Узкие плечи можно корректировать с помощью свитеров и блуз с продольным вырезом и рукавами-буф,
-</p>
-	</main>
+	<main class="innerPage pageStyleGuide">
+        {{mixins.pageTitle(title,'back')}}
+            <figure class="styleguide styleguide--noCaption">
+                <div class="styleguide__pic"><img src="img/assets/guide01.png" alt="" /></div>
+            </figure>
+            <div class="stg__element">
+                  <div class="stg__full">
+                    <figure class="img-block">
+                      <img src="img/assets/Look.jpg" alt="" />
+                    </figure>
+                    <a href="#" class="stg__prev">Предыдущий образ</a>
+                    <a href="#" class="stg__next">Следующий образ</a>
+                  </div>
+                  <h2 class="stg__title">На модели надето:</h2>
+                  <ul class="stg__parts">
+                    <li class="stg__parts-element">
+                      <div class="stg__parts-element-pic">
+                        <figure class="img-block">
+                          <img src="img/assets/Look_0.jpg" alt="" />
+                        </figure>
+                      </div>
+                      <div class="stg__parts-element-title"> Блузка
+                        <p class="price"> 1995р </p>
+                      </div>
+                    </li>
+                    <li class="stg__parts-element">
+                      <div class="stg__parts-element-pic">
+                        <figure class="img-block">
+                          <img src="img/assets/Look_1.jpg" alt="" />
+                        </figure>
+                      </div>
+                      <div class="stg__parts-element-title"> Брюки
+                        <p class="price">
+                          <strike>1995р</strike>
+                          <span class="sale">9995р -30%</span>
+                        </p>
+                      </div>
+                    </li>
+                    <li class="stg__parts-element">
+                      <div class="stg__parts-element-pic">
+                        <figure class="img-block">
+                          <img src="img/assets/Look_2.jpg" alt="" />
+                        </figure>
+                      </div>
+                      <div class="stg__parts-element-title"> Прямая юбка
+                        <p class="price"> 1995р </p>
+                      </div>
+                    </li>
+                  </ul>
+            </div>
+            <div class="stg__other">
+                {{mixins.styleguideItems(3)}}
+            </div>
+    </main>
 
 {% endblock %}

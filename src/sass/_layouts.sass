@@ -42,6 +42,7 @@
 aside.sidebar
     float: left;
     width: 285px;
+    position: fixed;
     +sm
         display: none;
 
@@ -95,7 +96,7 @@ main
         float: none;
         width: 100%;
         padding: 1em;
-        padding-top: 70px;
+        padding-top: 110px;
         min-height: initial;
 
 footer
@@ -128,11 +129,11 @@ footer
         padding: 0 20px;
         overflow: initial;
         +sm
-            padding: 0 10px;
+            padding: 0 10px 0 0;
     footer &
         padding-top: 0px;
 header, aside
-    z-index: 999;
+    z-index: 500;
 
 header
     position: fixed;
@@ -153,7 +154,13 @@ header
 //         padding-top: 0;
 
 
-.itemPage
+.itemPage,
+.pageBlog,
+.pageStoreMap,
+.pageShopcart
     float: left;
     width: 100%;
+
+
+
 

@@ -1,0 +1,262 @@
+.pageStyleGuide
+    .grid__styleguide
+        position: relative;
+        margin: 0 auto;
+        padding: .5em 0 4em;
+        padding-top: 0;
+        max-width: 1000px;
+        list-style: none;
+        text-align: left;
+
+    .styleguide
+        position: relative
+        //float: left
+
+        margin: 0 0
+        //min-width: 320px
+        //max-width: 480px
+        width: 100%
+        margin-bottom: 100px;
+        cursor: pointer
+        +sm
+            margin-bottom: 70px;
+
+        .styleguide__link
+            position: absolute
+            display: block
+            height: 100%
+            width: 100%
+            text-indent: -1984px;
+            z-index: 100;
+        .styleguide__pic
+            max-height: 324px
+            overflow: hidden
+            margin-bottom: 80px;
+            +sm
+                margin-bottom: 30px;
+            img
+                position: relative
+                display: block
+                min-height: 100%
+                max-width: 100%
+
+        figcaption
+            padding: 30px 48px;
+            color: #fff
+            -webkit-backface-visibility: hidden
+            backface-visibility: hidden
+            &::before, &::after
+              pointer-events: none
+        figcaption
+            position: absolute;
+            //bottom: -15%;
+            //transform: translate(0, -50%);
+            bottom: -50px;
+            min-width: 50%;
+            left: 20px;
+            background: #FFFFFF;
+            color: #333333
+            z-index: 1
+            box-shadow: -15px 15px 25px rgba(0, 0, 0, 0.2)
+            +sm
+                padding: 5px 20px;
+                left: 10px;
+                right: 10px;
+                bottom: -30px;
+            h2
+                font-weight: normal;
+                font-size: 24px;
+                height: 50px;
+                line-height: 50px;
+                text-transform: none;
+                +sm
+                    font-size: 18px;
+    .styleguide
+        &--noCaption
+            margin-bottom: 20px;
+            cursor: auto;
+            +sm
+                margin-bottom: 0px;
+            .styleguide__pic
+                margin-bottom: 20px
+    .styleguide:nth-child(2n) figcaption
+        left: initial;
+        right: 20px;
+
+// Animations
+.pageStyleGuide
+    .grid__styleguide
+        figure.styleguide
+            .styleguide__pic img
+                opacity: .8;
+                transform: scale3d(1.05,1.05,1);
+                transition: opacity 0.35s, transform 0.35s
+            &:hover
+                .styleguide__pic img
+                    opacity: 1;
+                    transform: scale3d(1,1,1);
+        figure .styleguide__pic
+            position: relative;
+            z-index: 0;
+        figure .styleguide__pic
+            &::before, &::after
+                pointer-events: none;
+        figure .styleguide__pic::before
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.5);
+            content: '';
+            z-index: 10;
+            transition: transform 0.6s;
+            transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-130%,0);
+        figure:hover .styleguide__pic::before
+            transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,130%,0);
+
+
+.stg
+    &__element
+        +clr
+        position: relative;
+        //max-height: 400px;
+        width: 100%;
+        margin-left: .5em;
+        //margin-top: 1%;
+        +sm
+            margin: 0
+    &__full
+        float: left;
+        display: block;
+        margin-right: 2em;
+        +md
+            margin-right: 1em;
+        +sm
+            float: none!important;
+            width: 100%;
+            padding-bottom: 3em;
+        .img-block img
+            height: 550px;
+            width: auto;
+            display: block
+            +md
+                height: 200px
+            +sm
+                width: 100%;
+                height: auto;
+    &__prev, &__next
+        display: none
+        font-size: 14px;
+        margin: 15px 0;
+        +sm
+            display: block
+            //position: absolute
+    &__prev
+        float: left;
+    &__next
+        float: right;
+
+
+    &__title
+        font-size: 16px;
+        color: #333333;
+        font-weight: normal
+    &__parts
+        float: left;
+        +sm
+            float: none!important;
+            width: 100%;
+        &-element
+            display: table;
+            margin-bottom: 1em;
+            *
+                display: table-cell
+                vertical-align: middle;
+        &-element-pic
+            padding: 10px;
+            background: #fff;
+            +md
+                padding: 0;
+        &-element-title
+            padding-left: 15px;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #949494;
+            .price
+                color: #949494;
+                font-weight: 500;
+                .sale
+                    color: #F24B4B;
+                    padding-left: 5px;
+.stg__other
+    margin-bottom: 1em;
+    +clr
+    .item
+        +clr
+        float: left;
+        background: transparent;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        padding: 15px;
+        width: 33%;
+        z-index: 1;
+        position: relative;
+        +md
+            width: 48%
+        +sm
+            width: 100%
+    .item-link
+        min-height: 40px;
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        position: relative;
+        .img-block
+            +pseudo
+            //background: white;
+            text-align: center;
+            position: relative;
+            width: 100%;
+            //border: 5px solid #f4f4f4;
+            //height: 300px;
+            display: table;
+            overflow: hidden;
+            img
+                width: 100%;
+                height: auto;
+
+        figure.img-block img
+            opacity: .8;
+            transform: scale3d(1.05,1.05,1);
+            transition: opacity 0.35s, transform 0.35s
+            &:hover
+                .styleguide__pic img
+                    opacity: 1;
+                    transform: scale3d(1,1,1);
+        figure.img-block
+            position: relative;
+            z-index: 0;
+            img
+                opacity: .5
+        figure.img-block
+            &::before, &::after
+                pointer-events: none;
+        figure.img-block::before
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.5);
+            content: '';
+            z-index: 10;
+            transition: transform 0.6s;
+            transform: scale3d(2,1.6,1) rotate3d(0,0,1,45deg) translate3d(0,-90%,0);
+        figure.img-block:hover::before
+            transform: scale3d(2,1.6,1) rotate3d(0,0,1,45deg) translate3d(0, 90%,0);
+        figure.img-block:hover
+            img
+                opacity: 1

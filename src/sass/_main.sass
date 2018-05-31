@@ -4,19 +4,88 @@ main
 .page__hero
     +clr
     margin-bottom: 1em;
+
+
+.page__title
+    +clr
+    margin-bottom: .5em;
+    //margin-left: -13px;
+    h1
+        margin-bottom: 0
+    &-text
+        float: left;
+        line-height: 32px;
+        +md
+            float: left;
+        +sm
+            float: none;
+    &-right
+        float: right;
+        +md
+            float: left;
+            margin-left: 1em;
+        +sm
+            margin-left: 0;
+            float: none;
+
 .page__title
     .title__viewAll
         display: inline-block
         opacity: .5
         font-size: 40%;
-        margin-left: 4%;
+        margin-left: 10px;
         +sm
             display: block;
-            margin: 10px 0;
+            margin: 0;
+    &-right
 
-@import page__catalog
-@import page__look
-@import page__oneitem
+    &-menu
+        float: right;
+        font-size: 16px;
+        margin-top: 1em;
+        margin-bottom: 0;
+        li
+            float: left;
+            margin-right: 1em;
+            margin-bottom: 0;
+            list-style: none;
+            a
+                color: #ABABAB;
+        .active
+            a
+                color: #333333;
+                &:after
+                    border-color: #333333
+
+
+@import pages/page__catalog
+@import pages/page__look
+@import pages/page__oneitem
+
+@import pages/page__actions-news
+@import pages/page__blog
+@import pages/page__styleguide
+@import pages/page__innerpage
+@import pages/page__404-500
+@import pages/page__stores
+@import pages/page__mirmdrt
+@import pages/page__cabinet
+
+
+
+
+.page__fullpage .section
+    background: yellow;
+    &:nth-of-type(even)
+      background: crimson
+
+    &.with-overflow
+        .overflow-content
+            height: 200vh;
+
+
+
+
 
 
 
