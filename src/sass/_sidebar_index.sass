@@ -25,58 +25,119 @@
                 top: initial;
                 width: 0%;
                 transition: width .25s,
-        .subMenu.isOpenMenu > a
-            &:before
-                width: 100%;
 
-        .subMenuBlock
-            z-index: 100;
-            position: absolute;
-            left: -12px;
-            top: -90px;
-            background: red;
-            border-radius: 2px;
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
-            background: rgba(255, 255, 255, 0.95);
-            width: 500px;
-            //padding-top: 30px;
-            padding: 20px;
-            padding-left: 140px;
-            padding-bottom: 0;
+        .menu__item
+            &-subMenu
+                z-index: 106;
+            // &:nth-child(2)
+            //     z-index: 105;
+            // &:nth-child(3)
+            //     z-index: 104;
+            // &:nth-child(4)
+            //     z-index: 103;
+            // &:nth-child(5)
+            //     z-index: 102;
+            // &:nth-child(6)
+            //     z-index: 101;
+            .menu__item-subMenuWrap
+                position: relative;
+                display: block;
+                box-sizing: border-box;
+                .menu__item-subMenuBlock
+                    position: absolute;
+                    top: -90px;
+                    left: -12px;
+                    padding: 20px;
+                    background: #fff;
+                    color: #ed4e6e;
 
-            ul
-                width: 50%;
-                float: left;
-                margin: 0;
-                margin-bottom: 15px;
-                li
-                    display: block;
-                    font-size: 18px;
-                    margin-bottom: 12px;
-                    a
-                        color: #333333;
-        .subMenuBlock
-            //display: none;
-            transition: opacity .35s cubic-bezier(0,0,.58,1), transform .005s;
-            opacity: 0;
-            //transform: scale(.1);
-            transform: translateX(-2000px);
-        .isOpenSubMenu .subMenuBlock
-            //display: block;
-            opacity: 1;
-            transform: scale(1);
+                    opacity: 0;
+                    pointer-events: none;
+                    backface-visibility: hidden;
+                    transition: opacity 0.3s, height 0.3s, box-shadow 0.3s;
+                    box-shadow: 0 0 0 0px #2c3f52;
 
-        .isOpenMenu a
-            z-index: 101;
+                    border-radius: 2px;
+                    padding: 20px;
+                    padding-left: 140px;
+                    padding-bottom: 0;
+                    width: 500px;
+                    ul
+                        width: 50%;
+                        float: left;
+                        margin: 0;
+                        margin-bottom: 15px;
+                        li
+                            display: block;
+                            font-size: 18px;
+                            margin-bottom: 12px;
+                            a
+                                color: #333333;
+            .menu__item-subMenuWrap
+                > .menu__item-link
+                    z-index: 110;
+            .menu__item-subMenuWrap:hover
+                pointer-events: auto;
+                opacity: 1;
+                //box-shadow: 0 0 0 10px #2c3f52;
+                .menu__item-subMenuBlock
+                    pointer-events: auto;
+                    opacity: 1;
+                    height: 270px;
+                    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+                    background: rgba(255, 255, 255, 0.95);
+                    z-index: 109;
+
     .smenu
         li ul
             display: block
             margin-top: 1em;
             margin-left: 1em;
             font-size: 16px;
-        .subMenuBlock
-            top: -70px;
-            ul
-                li
-                    font-size: 16px;
-                    margin-bottom: 12px;
+        .smenu__item-subMenu
+            z-index: 6;
+            .smenu__item-subMenuWrap
+                position: relative;
+                display: block;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                > .smenu__item-link
+                    z-index: 10;
+                .smenu__item-subMenuBlock
+                    position: absolute;
+                    top: -70px;
+                    left: -12px;
+                    padding: 20px;
+                    background: #fff;
+                    color: #ed4e6e;
+
+                    opacity: 0;
+                    pointer-events: none;
+                    backface-visibility: hidden;
+                    transition: opacity 0.3s, height 0.3s, box-shadow 0.3s;
+                    box-shadow: 0 0 0 0px #2c3f52;
+
+                    border-radius: 2px;
+                    padding: 20px;
+                    padding-left: 140px;
+                    padding-bottom: 0;
+                    width: 500px;
+                    ul
+                        width: 50%;
+                        float: left;
+                        margin: 0;
+                        margin-bottom: 15px;
+                        li
+                            display: block;
+                            font-size: 16px;
+                            margin-bottom: 12px;
+                            a
+                                color: #333333;
+            .smenu__item-subMenuWrap:hover
+                .smenu__item-subMenuBlock
+                    pointer-events: auto;
+                    opacity: 1;
+                    height: 170px;;
+                    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+                    background: rgba(255, 255, 255, 0.95);
+                    z-index: 9;

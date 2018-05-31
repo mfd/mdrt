@@ -271,6 +271,96 @@ export default () => {
   selectLocation();
   showLoginform();
 
+
+
+
+  function showMap(coords,name,zz,myMap,myCollection) {
+    var zz = zz || 16;
+    var coords = coords || [55.75, 37.6];
+  }
+
+  function initMaps() {
+    let $elm = $('.pageStoreMap');
+    if ($elm.length > 0) {
+      console.log('initMaps');
+
+      const ps = new PerfectScrollbar('.b-stores');
+
+      $('.store-city__item').on('click', (event) => {
+        event.preventDefault();
+        var coords = $(this).data('latlon');
+        var pm = new ymaps.Placemark(
+          coords,
+          {
+          //hintContent: zhk, balloonContentHeader: zhk
+          },
+          {
+            iconLayout: 'default#image',
+            iconImageHref: 'http://granelle.kashaev.ru/static/imgs/pm_zhk.svg',
+            iconImageSize: [70, 70],
+            iconImageOffset: [-35, -50]
+          },
+          {
+          //overlayFactory: "default#interactiveGraphics"
+          }
+        );
+
+        myMap.panTo(coords).then(function() {
+          myCollection.removeAll();
+          myCollection.add(pm);
+          myMap.geoObjects.add(myCollection);
+          //myMap.balloon.open(coords, zhk, {closeButton: false});
+          myMap.setZoom(zz, {
+            checkZoomRange: false
+          });
+          $('.ya_map_title h4').text(name);
+          desc.wrap("<div class='desc'></div>");
+          console.log(desc);
+        });
+      });
+
+      var myMap, myCollection;
+      var myCollection = new ymaps.GeoObjectCollection();
+      var myMap = new ymaps.Map('map', {
+        center: [54.73, 55.96],
+        zoom: 8,
+        controls: [],
+        behaviors: ['drag', 'dblClickZoom',]
+      });
+      myMap.controls.add('zoomControl', {
+        size: 'small',
+        zoomDuration: 400,
+        position: {
+          left: '10px',
+          top:  '30px'
+        }
+      });
+      var pm = new ymaps.Placemark(
+        [55.75, 37.6],
+        {
+          //hintContent: zhk, balloonContentHeader: zhk
+        },
+        {
+          iconLayout: 'default#image',
+          iconImageHref: 'http://granelle.kashaev.ru/static/imgs/pm_zhk.svg',
+          iconImageSize: [70, 70],
+          iconImageOffset: [-35, -50]
+        },
+        {
+          //overlayFactory: "default#interactiveGraphics"
+        }
+      );
+      myCollection.removeAll();
+      myCollection.add(pm);
+      $('#map').addClass('isLoaded');
+    }
+  }
+  ymaps.ready(function() {
+    initMaps();
+  });
+
+
+
   window.addEventListener('resize', debounce(() => {
     $('.owl-carousel').trigger('destroy.owl.carousel');
     initHomePromo();

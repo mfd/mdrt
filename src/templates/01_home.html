@@ -8,19 +8,36 @@ owlOneSlide: [
 	{ title: "Брючный костюм за 999 р", href: '#', pic: 'img/assets/model01_alpha.png' },
 	{ title: "Платье-футляр за 4999 р", href: '#', pic: 'img/assets/model01_alpha.png' }
 ]
+barbaNameSpace: homepage
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
     {% include "partials/_sidebar.html" %}
-<!-- 	<div class="page__fullpage">
-		<div class="section full">
 
-		</div>
-		<div class="section with-overflow">
+<style type="text/css">
+#content .section {
+  background: yellow;
+}
+#content .section:nth-of-type(even) {
+  background: crimson;
+}
+#content .section.with-overflow .overflow-content {
+  height: 200vh;
+}
 
-		</div>
-	</div> -->
+</style>
+<!-- <div id="content">
+  <div class="section full">1</div>
+  <div class="section with-overflow">
+    <div class="overflow-content">2
+      <div id="pin">Pin me please !</div>
+    </div>
+  </div>
+  <div class="section full">3</div>
+</div> -->
+
+
 	<main class="indexPage">
 		<div class="page__hero">
 			<div class="row">

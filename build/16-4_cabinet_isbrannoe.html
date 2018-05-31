@@ -8,8 +8,17 @@
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
     <meta name="author" content="Kamil Kashaev" />
-    <link rel="stylesheet" media="all" href="css/app.css"> </head>
+    <link rel="stylesheet" media="all" href="css/app.css">
+    <script>
+      document.documentElement.classList.remove('no-js');
+      document.documentElement.classList.add('js');
+
+    </script>
+  </head>
   <body>
+    <div class="loader">
+      <div class="loader__wrap"></div>
+    </div>
     <!-- header -->
     <header class="header js-header">
       <div class="container">
@@ -162,573 +171,579 @@
         </div>
       </div>
     </header>
-    <div class="container">
-      <!-- BEGIN content -->
-      <aside class="sidebar_mobile">
-        <ul class="menu">
-          <li class="menu__item">
-            <a href="02_catalog.html">Главная</a>
-          </li>
-          <li class="menu__item">
-            <a href="#">Каталог </a>
-            <ul class="submenu">
-              <li class="submenu__item">
-                <a href="#">Платья</a>
-              </li>
-              <li class="submenu__item">
-                <a href="#">Жакеты</a>
-              </li>
-              <li class="submenu__item">
-                <a href="#">Юбки</a>
-              </li>
-              <li class="submenu__item">
-                <a href="#">Блузки</a>
-              </li>
-              <li class="submenu__item">
-                <a href="#">Брюки</a>
-              </li>
-              <li class="submenu__item">
-                <a href="#">Джемперы Джемперы </a>
-              </li>
-              <li class="submenu__item">
-                <a href="#">Пальто</a>
-              </li>
-              <li class="submenu__item">
-                <a href="#">Сумки</a>
-              </li>
-              <li class="submenu__item">
-                <a href="#">Аксессуары</a>
-              </li>
-              <li class="submenu__item">
-                <a href="#">Бижутерия</a>
-              </li>
-            </ul>
-          </li>
-          <li class="menu__item">
-            <a href="02_catalog.html">Новинки</a>
-          </li>
-          <li class="menu__item sale">
-            <a href="02_catalog.html">Распродажа</a>
-          </li>
-          <li class="menu__item">
-            <a href="02_catalog.html">Хит продаж</a>
-          </li>
-        </ul>
-        <ul class="location">
-          <li class="menu__item city">
-            <a href="#">Выбор города</a>
-          </li>
-          <!-- <li class="menu__item city"><a href="#">город: Ростов-на-дону</a></li> -->
-        </ul>
-        <ul class="userArea">
-          <li class="menu__item">
-            <a href="#">Вход</a>
-          </li>
-          <li class="menu__item">
-            <a href="#">Регистрация</a>
-          </li>
-          <li class="menu__item">
-            <a href="#">Состояние заказов</a>
-          </li>
-          <li class="menu__item">
-            <a href="#">О нас</a>
-          </li>
-          <li class="menu__item">
-            <a href="#">Возврат</a>
-          </li>
-          <li class="menu__item">
-            <a href="#">Доставка</a>
-          </li>
-          <li class="menu__item">
-            <a href="#">Политика конфиденциальности</a>
-          </li>
-        </ul>
-      </aside>
-      <!-- sidebar -->
-      <aside class="sidebar sidebar--index" data-sticky>
-        <ul class="menu">
-          <li class="menu__item">
-            <a href="06_novelty.html">Новинки</a>
-          </li>
-          <li class="menu__item">
-            <a href="03_item.html">Распродажа</a>
-          </li>
-          <li class="menu__item subMenu">
-            <a href="#">Каталог </a>
-            <div class="subMenuBlock">
+    <div id="barba-wrapper" class="container">
+      <div class="barba-container homeContainer" data-namespace="page" data-title="">
+        <!-- BEGIN content -->
+        <aside class="sidebar_mobile">
+          <ul class="menu">
+            <li class="menu__item">
+              <a href="02_catalog.html">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a href="#">Каталог </a>
               <ul class="submenu">
                 <li class="submenu__item">
-                  <a href="02_catalog.html">Платья</a>
+                  <a href="#">Платья</a>
                 </li>
                 <li class="submenu__item">
-                  <a href="02_catalog.html">Жакеты</a>
+                  <a href="#">Жакеты</a>
                 </li>
                 <li class="submenu__item">
-                  <a href="02_catalog.html">Юбки</a>
+                  <a href="#">Юбки</a>
                 </li>
                 <li class="submenu__item">
-                  <a href="02_catalog.html">Блузки</a>
+                  <a href="#">Блузки</a>
                 </li>
                 <li class="submenu__item">
-                  <a href="02_catalog.html">Брюки</a>
+                  <a href="#">Брюки</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="#">Джемперы Джемперы </a>
+                </li>
+                <li class="submenu__item">
+                  <a href="#">Пальто</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="#">Сумки</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="#">Аксессуары</a>
+                </li>
+                <li class="submenu__item">
+                  <a href="#">Бижутерия</a>
                 </li>
               </ul>
-              <ul class="submenu">
-                <li class="submenu__item">
-                  <a href="02_catalog.html">Джемперы</a>
+            </li>
+            <li class="menu__item">
+              <a href="02_catalog.html">Новинки</a>
+            </li>
+            <li class="menu__item sale">
+              <a href="02_catalog.html">Распродажа</a>
+            </li>
+            <li class="menu__item">
+              <a href="02_catalog.html">Хит продаж</a>
+            </li>
+          </ul>
+          <ul class="location">
+            <li class="menu__item city">
+              <a href="#">Выбор города</a>
+            </li>
+            <!-- <li class="menu__item city"><a href="#">город: Ростов-на-дону</a></li> -->
+          </ul>
+          <ul class="userArea">
+            <li class="menu__item">
+              <a href="#">Вход</a>
+            </li>
+            <li class="menu__item">
+              <a href="#">Регистрация</a>
+            </li>
+            <li class="menu__item">
+              <a href="#">Состояние заказов</a>
+            </li>
+            <li class="menu__item">
+              <a href="#">О нас</a>
+            </li>
+            <li class="menu__item">
+              <a href="#">Возврат</a>
+            </li>
+            <li class="menu__item">
+              <a href="#">Доставка</a>
+            </li>
+            <li class="menu__item">
+              <a href="#">Политика конфиденциальности</a>
+            </li>
+          </ul>
+        </aside>
+        <!-- sidebar -->
+        <aside class="sidebar sidebar--index" data-sticky>
+          <ul class="menu">
+            <li class="menu__item">
+              <a href="06_novelty.html">Новинки</a>
+            </li>
+            <li class="menu__item">
+              <a href="03_item.html">Распродажа</a>
+            </li>
+            <li class="menu__item menu__item-subMenu">
+              <div class="menu__item-subMenuWrap">
+                <a href="#" class="menu__item-link">Каталог </a>
+                <div class="menu__item-subMenuBlock">
+                  <ul class="submenu">
+                    <li class="submenu__item">
+                      <a href="02_catalog.html">Платья</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="02_catalog.html">Жакеты</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="02_catalog.html">Юбки</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="02_catalog.html">Блузки</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="02_catalog.html">Брюки</a>
+                    </li>
+                  </ul>
+                  <ul class="submenu">
+                    <li class="submenu__item">
+                      <a href="02_catalog.html">Джемперы</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="02_catalog.html">Пальто</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="02_catalog.html">Сумки</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="02_catalog.html">Аксессуары</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="02_catalog.html">Бижутерия</a>
+                    </li>
+                  </ul>
+                  <ul class="submenu">
+                    <li class="submenu__item">
+                      <a href="06_novelty.html">Новинки</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="02_catalog.html">Распродажи</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="02_catalog.html">Хиты продаж</a>
+                    </li>
+                  </ul>
+                  <ul class="submenu">
+                    <li class="submenu__item">
+                      <a href="04-2_collection-catalog.html">Новый год 2018</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="04-2_collection-catalog.html">Осень 2017</a>
+                    </li>
+                    <li class="submenu__item">
+                      <a href="04-2_collection-catalog.html">Лето 2017</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul class="smenu">
+            <li class="menu__item smenu__item-subMenu">
+              <div class="smenu__item-subMenuWrap">
+                <a href="15_mir-madyart.html" class="smenu__item-link">Мир Madyart</a>
+                <div class="smenu__item-subMenuBlock">
+                  <ul class="smenu__sub">
+                    <li class="menu__item">
+                      <a href="13-1_blog-list.html">Блог</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#">История MADYART</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#">Дизайн-бюро</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="#">Фабрика</a>
+                    </li>
+                  </ul>
+                  <ul class="submenu">
+                    <li class="menu__item">
+                      <a href="14_discount.html">Дисконтная программа</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="10-1_text_one.html">Подарочный сертификат</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="12-1_news-list.html">Новости</a>
+                    </li>
+                    <li class="menu__item">
+                      <a href="09_stores.html">Салоны</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="menu__item">
+              <a href="04-1_collection.html">Коллекции</a>
+            </li>
+            <li class="menu__item">
+              <a href="05-1_styleguide.html">Гид по стилю</a>
+            </li>
+            <li class="menu__item">
+              <a href="09_stores.html">Салоны</a>
+            </li>
+          </ul>
+          <ul class="smenu">
+            <li class="menu__item">
+              <a href="10-1_text_one.html">Как оформить заказ</a>
+            </li>
+            <li class="menu__item">
+              <a href="10-2_text_two.html">Условия доставки</a>
+            </li>
+            <li class="menu__item">
+              <a href="10-2_text_two.html">Оплата товара</a>
+            </li>
+          </ul>
+          <div class="phone">
+            <a href="tel:8 (800) 700-00-10" class="tel">8 (800) 700-00-10</a>
+            <p class="phone__desc">Звонок по РФ бесплатный
+              <br/> По будням с 8 до 18 (мск)</p>
+          </div>
+        </aside>
+        <!-- //.sidebar -->
+        <main class="innerPage catalogPage">
+          <div class="page__title">
+            <h1 class="page__title-text"> Избранное </h1>
+            <div class="page__title-right">
+              <ul class="catalog__sort">
+                <li>
+                  <a href="#">Все предметы одежды</a>
                 </li>
-                <li class="submenu__item">
-                  <a href="02_catalog.html">Пальто</a>
+                <li class="active">
+                  <a href="#">Размеры</a>
                 </li>
-                <li class="submenu__item">
-                  <a href="02_catalog.html">Сумки</a>
+                <li>
+                  <a href="#">Цена</a>
                 </li>
-                <li class="submenu__item">
-                  <a href="02_catalog.html">Аксессуары</a>
-                </li>
-                <li class="submenu__item">
-                  <a href="02_catalog.html">Бижутерия</a>
+                <li>
+                  <a href="#" class="clear">Сбросить</a>
                 </li>
               </ul>
-              <ul class="submenu">
-                <li class="submenu__item">
-                  <a href="06_novelty.html">Новинки</a>
-                </li>
-                <li class="submenu__item">
-                  <a href="02_catalog.html">Распродажи</a>
-                </li>
-                <li class="submenu__item">
-                  <a href="02_catalog.html">Хиты продаж</a>
-                </li>
-              </ul>
-              <ul class="submenu">
-                <li class="submenu__item">
-                  <a href="04-2_collection-catalog.html">Новый год 2018</a>
-                </li>
-                <li class="submenu__item">
-                  <a href="04-2_collection-catalog.html">Осень 2017</a>
-                </li>
-                <li class="submenu__item">
-                  <a href="04-2_collection-catalog.html">Лето 2017</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-        <ul class="smenu">
-          <li class="menu__item subMenu">
-            <a href="15_mir-madyart.html">Мир Madyart</a>
-            <div class="subMenuBlock">
-              <ul class="smenu__sub">
-                <li class="menu__item">
-                  <a href="13-1_blog-list.html">Блог</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#">История MADYART</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#">Дизайн-бюро</a>
-                </li>
-                <li class="menu__item">
-                  <a href="#">Фабрика</a>
-                </li>
-              </ul>
-              <ul class="submenu">
-                <li class="menu__item">
-                  <a href="14_discount.html">Дисконтная программа</a>
-                </li>
-                <li class="menu__item">
-                  <a href="10-1_text_one.html">Подарочный сертификат</a>
-                </li>
-                <li class="menu__item">
-                  <a href="12-1_news-list.html">Новости</a>
-                </li>
-                <li class="menu__item">
-                  <a href="09_stores.html">Салоны</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="menu__item">
-            <a href="04-1_collection.html">Коллекции</a>
-          </li>
-          <li class="menu__item">
-            <a href="05-1_styleguide.html">Гид по стилю</a>
-          </li>
-          <li class="menu__item">
-            <a href="09_stores.html">Салоны</a>
-          </li>
-        </ul>
-        <ul class="smenu">
-          <li class="menu__item">
-            <a href="10-1_text_one.html">Как оформить заказ</a>
-          </li>
-          <li class="menu__item">
-            <a href="10-2_text_two.html">Условия доставки</a>
-          </li>
-          <li class="menu__item">
-            <a href="10-2_text_two.html">Оплата товара</a>
-          </li>
-        </ul>
-        <div class="phone">
-          <a href="tel:8 (800) 700-00-10" class="tel">8 (800) 700-00-10</a>
-          <p class="phone__desc">Звонок по РФ бесплатный
-            <br/> По будням с 8 до 18 (мск)</p>
-        </div>
-      </aside>
-      <!-- //.sidebar -->
-      <main class="innerPage catalogPage">
-        <div class="page__title">
-          <h1 class="page__title-text"> Избранное </h1>
-          <div class="page__title-right">
-            <ul class="catalog__sort">
-              <li>
-                <a href="#">Все предметы одежды</a>
-              </li>
-              <li class="active">
-                <a href="#">Размеры</a>
-              </li>
-              <li>
-                <a href="#">Цена</a>
-              </li>
-              <li>
-                <a href="#" class="clear">Сбросить</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- //.page__title -->
-        <div class="row grid__catalog grid__catalog--col3">
-          <!-- BEGIN item-->
-          <div class="item">
-            <div class="item__row">
-              <figure class="img-block">
-                <img src="img/assets/item05.jpg" alt="" />
-              </figure>
-              <!-- <figure class="img-block"><img src="img/assets/item01.jpg" alt="" /></figure> -->
-              <div class="item__type new">Распродажа</div>
-              <a href="#" class="item__like">Добавить в избранное</a>
-            </div>
-            <div class="item__row">
-              <h3 class="item__title">
-                <a href="#">Пальто утепленное</a>
-              </h3>
-              <p class="item__price"> 1995р </p>
-            </div>
-            <div class="item__actions">
-              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-              <a href="03_item.html" class="btn btn-info">В корзину</a>
             </div>
           </div>
-          <!-- END item-->
-          <!-- BEGIN item-->
-          <div class="item">
-            <div class="item__row">
-              <figure class="img-block">
-                <img src="img/assets/item02.jpg" alt="" />
-              </figure>
-              <!-- <figure class="img-block"><img src="img/assets/item01.jpg" alt="" /></figure> -->
-              <div class="item__type new">Распродажа</div>
-              <a href="#" class="item__like">Добавить в избранное</a>
+          <!-- //.page__title -->
+          <div class="row grid__catalog grid__catalog--col3">
+            <!-- BEGIN item-->
+            <div class="item">
+              <div class="item__row">
+                <figure class="img-block">
+                  <img src="img/assets/item04.jpg" alt="" />
+                </figure>
+                <!-- <figure class="img-block"><img src="img/assets/item01.jpg" alt="" /></figure> -->
+                <a href="#" class="item__like">Добавить в избранное</a>
+              </div>
+              <div class="item__row">
+                <h3 class="item__title">
+                  <a href="#">Юбка с высокой талией</a>
+                </h3>
+                <p class="item__price"> 6995р </p>
+              </div>
+              <div class="item__actions">
+                <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                <a href="03_item.html" class="btn btn-info">В корзину</a>
+              </div>
             </div>
-            <div class="item__row">
-              <h3 class="item__title">
-                <a href="#">Пальто утепленное</a>
-              </h3>
-              <p class="item__price">
-                <s>1995р</s>
-                <span class="item__price--sale">9995р -30%</span>
-              </p>
+            <!-- END item-->
+            <!-- BEGIN item-->
+            <div class="item">
+              <div class="item__row">
+                <figure class="img-block">
+                  <img src="img/assets/item01.jpg" alt="" />
+                </figure>
+                <!-- <figure class="img-block"><img src="img/assets/item05.jpg" alt="" /></figure> -->
+                <a href="#" class="item__like">Добавить в избранное</a>
+              </div>
+              <div class="item__row">
+                <h3 class="item__title">
+                  <a href="#">Юбка с высокой талией</a>
+                </h3>
+                <p class="item__price"> 6995р </p>
+              </div>
+              <div class="item__actions">
+                <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                <a href="03_item.html" class="btn btn-info">В корзину</a>
+              </div>
             </div>
-            <div class="item__actions">
-              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-              <a href="03_item.html" class="btn btn-info">В корзину</a>
+            <!-- END item-->
+            <!-- BEGIN item-->
+            <div class="item">
+              <div class="item__row">
+                <figure class="img-block">
+                  <img src="img/assets/item05.jpg" alt="" />
+                </figure>
+                <!-- <figure class="img-block"><img src="img/assets/item03.jpg" alt="" /></figure> -->
+                <div class="item__type new">Распродажа</div>
+                <a href="#" class="item__like">Добавить в избранное</a>
+              </div>
+              <div class="item__row">
+                <h3 class="item__title">
+                  <a href="#">Пальто утепленное</a>
+                </h3>
+                <p class="item__price"> 1995р </p>
+              </div>
+              <div class="item__actions">
+                <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                <a href="03_item.html" class="btn btn-info">В корзину</a>
+              </div>
             </div>
+            <!-- END item-->
+            <!-- BEGIN item-->
+            <div class="item">
+              <div class="item__row">
+                <figure class="img-block">
+                  <img src="img/assets/item06.jpg" alt="" />
+                </figure>
+                <!-- <figure class="img-block"><img src="img/assets/item02.jpg" alt="" /></figure> -->
+                <div class="item__type hit">Хит!</div>
+                <a href="#" class="item__like">Добавить в избранное</a>
+              </div>
+              <div class="item__row">
+                <h3 class="item__title">
+                  <a href="#">Яркое платье</a>
+                </h3>
+                <p class="item__price"> 995р </p>
+              </div>
+              <div class="item__actions">
+                <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                <a href="03_item.html" class="btn btn-info">В корзину</a>
+              </div>
+            </div>
+            <!-- END item-->
+            <!-- BEGIN item-->
+            <div class="item">
+              <div class="item__row">
+                <figure class="img-block">
+                  <img src="img/assets/item02.jpg" alt="" />
+                </figure>
+                <!-- <figure class="img-block"><img src="img/assets/item04.jpg" alt="" /></figure> -->
+                <div class="item__type new">Распродажа</div>
+                <a href="#" class="item__like">Добавить в избранное</a>
+              </div>
+              <div class="item__row">
+                <h3 class="item__title">
+                  <a href="#">Пальто утепленное</a>
+                </h3>
+                <p class="item__price">
+                  <s>1995р</s>
+                  <span class="item__price--sale">9995р -30%</span>
+                </p>
+              </div>
+              <div class="item__actions">
+                <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                <a href="03_item.html" class="btn btn-info">В корзину</a>
+              </div>
+            </div>
+            <!-- END item-->
+            <!-- BEGIN item-->
+            <div class="item">
+              <div class="item__row">
+                <figure class="img-block">
+                  <img src="img/assets/item03.jpg" alt="" />
+                </figure>
+                <!-- <figure class="img-block"><img src="img/assets/item05.jpg" alt="" /></figure> -->
+                <div class="item__type hit">Хит!</div>
+                <a href="#" class="item__like">Добавить в избранное</a>
+              </div>
+              <div class="item__row">
+                <h3 class="item__title">
+                  <a href="#">Яркое платье</a>
+                </h3>
+                <p class="item__price">
+                  <s>995р</s>
+                  <span class="item__price--sale">195р -90%</span>
+                </p>
+              </div>
+              <div class="item__actions">
+                <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                <a href="03_item.html" class="btn btn-info">В корзину</a>
+              </div>
+            </div>
+            <!-- END item-->
+            <!-- BEGIN item-->
+            <div class="item">
+              <div class="item__row">
+                <figure class="img-block">
+                  <img src="img/assets/item05.jpg" alt="" />
+                </figure>
+                <!-- <figure class="img-block"><img src="img/assets/item02.jpg" alt="" /></figure> -->
+                <div class="item__type new">Распродажа</div>
+                <a href="#" class="item__like">Добавить в избранное</a>
+              </div>
+              <div class="item__row">
+                <h3 class="item__title">
+                  <a href="#">Пальто утепленное</a>
+                </h3>
+                <p class="item__price"> 1995р </p>
+              </div>
+              <div class="item__actions">
+                <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                <a href="03_item.html" class="btn btn-info">В корзину</a>
+              </div>
+            </div>
+            <!-- END item-->
+            <!-- BEGIN item-->
+            <div class="item">
+              <div class="item__row">
+                <figure class="img-block">
+                  <img src="img/assets/item01.jpg" alt="" />
+                </figure>
+                <!-- <figure class="img-block"><img src="img/assets/item01.jpg" alt="" /></figure> -->
+                <a href="#" class="item__like">Добавить в избранное</a>
+              </div>
+              <div class="item__row">
+                <h3 class="item__title">
+                  <a href="#">Юбка с высокой талией</a>
+                </h3>
+                <p class="item__price"> 6995р </p>
+              </div>
+              <div class="item__actions">
+                <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                <a href="03_item.html" class="btn btn-info">В корзину</a>
+              </div>
+            </div>
+            <!-- END item-->
+            <!-- BEGIN item-->
+            <div class="item">
+              <div class="item__row">
+                <figure class="img-block">
+                  <img src="img/assets/item02.jpg" alt="" />
+                </figure>
+                <!-- <figure class="img-block"><img src="img/assets/item04.jpg" alt="" /></figure> -->
+                <div class="item__type new">Распродажа</div>
+                <a href="#" class="item__like">Добавить в избранное</a>
+              </div>
+              <div class="item__row">
+                <h3 class="item__title">
+                  <a href="#">Пальто утепленное</a>
+                </h3>
+                <p class="item__price">
+                  <s>1995р</s>
+                  <span class="item__price--sale">9995р -30%</span>
+                </p>
+              </div>
+              <div class="item__actions">
+                <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                <a href="03_item.html" class="btn btn-info">В корзину</a>
+              </div>
+            </div>
+            <!-- END item-->
+            <!-- BEGIN item-->
+            <div class="item">
+              <div class="item__row">
+                <figure class="img-block">
+                  <img src="img/assets/item06.jpg" alt="" />
+                </figure>
+                <!-- <figure class="img-block"><img src="img/assets/item04.jpg" alt="" /></figure> -->
+                <div class="item__type hit">Хит!</div>
+                <a href="#" class="item__like">Добавить в избранное</a>
+              </div>
+              <div class="item__row">
+                <h3 class="item__title">
+                  <a href="#">Яркое платье</a>
+                </h3>
+                <p class="item__price"> 995р </p>
+              </div>
+              <div class="item__actions">
+                <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                <a href="03_item.html" class="btn btn-info">В корзину</a>
+              </div>
+            </div>
+            <!-- END item-->
+            <!-- BEGIN item-->
+            <div class="item">
+              <div class="item__row">
+                <figure class="img-block">
+                  <img src="img/assets/item04.jpg" alt="" />
+                </figure>
+                <!-- <figure class="img-block"><img src="img/assets/item02.jpg" alt="" /></figure> -->
+                <a href="#" class="item__like">Добавить в избранное</a>
+              </div>
+              <div class="item__row">
+                <h3 class="item__title">
+                  <a href="#">Юбка с высокой талией</a>
+                </h3>
+                <p class="item__price"> 6995р </p>
+              </div>
+              <div class="item__actions">
+                <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                <a href="03_item.html" class="btn btn-info">В корзину</a>
+              </div>
+            </div>
+            <!-- END item-->
+            <!-- BEGIN item-->
+            <div class="item">
+              <div class="item__row">
+                <figure class="img-block">
+                  <img src="img/assets/item03.jpg" alt="" />
+                </figure>
+                <!-- <figure class="img-block"><img src="img/assets/item01.jpg" alt="" /></figure> -->
+                <div class="item__type hit">Хит!</div>
+                <a href="#" class="item__like">Добавить в избранное</a>
+              </div>
+              <div class="item__row">
+                <h3 class="item__title">
+                  <a href="#">Яркое платье</a>
+                </h3>
+                <p class="item__price">
+                  <s>995р</s>
+                  <span class="item__price--sale">195р -90%</span>
+                </p>
+              </div>
+              <div class="item__actions">
+                <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                <a href="03_item.html" class="btn btn-info">В корзину</a>
+              </div>
+            </div>
+            <!-- END item-->
           </div>
-          <!-- END item-->
-          <!-- BEGIN item-->
-          <div class="item">
-            <div class="item__row">
-              <figure class="img-block">
-                <img src="img/assets/item01.jpg" alt="" />
-              </figure>
-              <!-- <figure class="img-block"><img src="img/assets/item04.jpg" alt="" /></figure> -->
-              <a href="#" class="item__like">Добавить в избранное</a>
-            </div>
-            <div class="item__row">
-              <h3 class="item__title">
-                <a href="#">Юбка с высокой талией</a>
-              </h3>
-              <p class="item__price"> 6995р </p>
-            </div>
-            <div class="item__actions">
-              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-              <a href="03_item.html" class="btn btn-info">В корзину</a>
-            </div>
-          </div>
-          <!-- END item-->
-          <!-- BEGIN item-->
-          <div class="item">
-            <div class="item__row">
-              <figure class="img-block">
-                <img src="img/assets/item03.jpg" alt="" />
-              </figure>
-              <!-- <figure class="img-block"><img src="img/assets/item03.jpg" alt="" /></figure> -->
-              <div class="item__type hit">Хит!</div>
-              <a href="#" class="item__like">Добавить в избранное</a>
-            </div>
-            <div class="item__row">
-              <h3 class="item__title">
-                <a href="#">Яркое платье</a>
-              </h3>
-              <p class="item__price">
-                <s>995р</s>
-                <span class="item__price--sale">195р -90%</span>
-              </p>
-            </div>
-            <div class="item__actions">
-              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-              <a href="03_item.html" class="btn btn-info">В корзину</a>
-            </div>
-          </div>
-          <!-- END item-->
-          <!-- BEGIN item-->
-          <div class="item">
-            <div class="item__row">
-              <figure class="img-block">
-                <img src="img/assets/item06.jpg" alt="" />
-              </figure>
-              <!-- <figure class="img-block"><img src="img/assets/item04.jpg" alt="" /></figure> -->
-              <div class="item__type hit">Хит!</div>
-              <a href="#" class="item__like">Добавить в избранное</a>
-            </div>
-            <div class="item__row">
-              <h3 class="item__title">
-                <a href="#">Яркое платье</a>
-              </h3>
-              <p class="item__price"> 995р </p>
-            </div>
-            <div class="item__actions">
-              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-              <a href="03_item.html" class="btn btn-info">В корзину</a>
-            </div>
-          </div>
-          <!-- END item-->
-          <!-- BEGIN item-->
-          <div class="item">
-            <div class="item__row">
-              <figure class="img-block">
-                <img src="img/assets/item04.jpg" alt="" />
-              </figure>
-              <!-- <figure class="img-block"><img src="img/assets/item01.jpg" alt="" /></figure> -->
-              <a href="#" class="item__like">Добавить в избранное</a>
-            </div>
-            <div class="item__row">
-              <h3 class="item__title">
-                <a href="#">Юбка с высокой талией</a>
-              </h3>
-              <p class="item__price"> 6995р </p>
-            </div>
-            <div class="item__actions">
-              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-              <a href="03_item.html" class="btn btn-info">В корзину</a>
-            </div>
-          </div>
-          <!-- END item-->
-          <!-- BEGIN item-->
-          <div class="item">
-            <div class="item__row">
-              <figure class="img-block">
-                <img src="img/assets/item03.jpg" alt="" />
-              </figure>
-              <!-- <figure class="img-block"><img src="img/assets/item01.jpg" alt="" /></figure> -->
-              <div class="item__type hit">Хит!</div>
-              <a href="#" class="item__like">Добавить в избранное</a>
-            </div>
-            <div class="item__row">
-              <h3 class="item__title">
-                <a href="#">Яркое платье</a>
-              </h3>
-              <p class="item__price">
-                <s>995р</s>
-                <span class="item__price--sale">195р -90%</span>
-              </p>
-            </div>
-            <div class="item__actions">
-              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-              <a href="03_item.html" class="btn btn-info">В корзину</a>
-            </div>
-          </div>
-          <!-- END item-->
-          <!-- BEGIN item-->
-          <div class="item">
-            <div class="item__row">
-              <figure class="img-block">
-                <img src="img/assets/item01.jpg" alt="" />
-              </figure>
-              <!-- <figure class="img-block"><img src="img/assets/item05.jpg" alt="" /></figure> -->
-              <a href="#" class="item__like">Добавить в избранное</a>
-            </div>
-            <div class="item__row">
-              <h3 class="item__title">
-                <a href="#">Юбка с высокой талией</a>
-              </h3>
-              <p class="item__price"> 6995р </p>
-            </div>
-            <div class="item__actions">
-              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-              <a href="03_item.html" class="btn btn-info">В корзину</a>
-            </div>
-          </div>
-          <!-- END item-->
-          <!-- BEGIN item-->
-          <div class="item">
-            <div class="item__row">
-              <figure class="img-block">
-                <img src="img/assets/item06.jpg" alt="" />
-              </figure>
-              <!-- <figure class="img-block"><img src="img/assets/item01.jpg" alt="" /></figure> -->
-              <div class="item__type hit">Хит!</div>
-              <a href="#" class="item__like">Добавить в избранное</a>
-            </div>
-            <div class="item__row">
-              <h3 class="item__title">
-                <a href="#">Яркое платье</a>
-              </h3>
-              <p class="item__price"> 995р </p>
-            </div>
-            <div class="item__actions">
-              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-              <a href="03_item.html" class="btn btn-info">В корзину</a>
-            </div>
-          </div>
-          <!-- END item-->
-          <!-- BEGIN item-->
-          <div class="item">
-            <div class="item__row">
-              <figure class="img-block">
-                <img src="img/assets/item02.jpg" alt="" />
-              </figure>
-              <!-- <figure class="img-block"><img src="img/assets/item01.jpg" alt="" /></figure> -->
-              <div class="item__type new">Распродажа</div>
-              <a href="#" class="item__like">Добавить в избранное</a>
-            </div>
-            <div class="item__row">
-              <h3 class="item__title">
-                <a href="#">Пальто утепленное</a>
-              </h3>
-              <p class="item__price">
-                <s>1995р</s>
-                <span class="item__price--sale">9995р -30%</span>
-              </p>
-            </div>
-            <div class="item__actions">
-              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-              <a href="03_item.html" class="btn btn-info">В корзину</a>
-            </div>
-          </div>
-          <!-- END item-->
-          <!-- BEGIN item-->
-          <div class="item">
-            <div class="item__row">
-              <figure class="img-block">
-                <img src="img/assets/item05.jpg" alt="" />
-              </figure>
-              <!-- <figure class="img-block"><img src="img/assets/item03.jpg" alt="" /></figure> -->
-              <div class="item__type new">Распродажа</div>
-              <a href="#" class="item__like">Добавить в избранное</a>
-            </div>
-            <div class="item__row">
-              <h3 class="item__title">
-                <a href="#">Пальто утепленное</a>
-              </h3>
-              <p class="item__price"> 1995р </p>
-            </div>
-            <div class="item__actions">
-              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-              <a href="03_item.html" class="btn btn-info">В корзину</a>
-            </div>
-          </div>
-          <!-- END item-->
-          <!-- BEGIN item-->
-          <div class="item">
-            <div class="item__row">
-              <figure class="img-block">
-                <img src="img/assets/item04.jpg" alt="" />
-              </figure>
-              <!-- <figure class="img-block"><img src="img/assets/item03.jpg" alt="" /></figure> -->
-              <a href="#" class="item__like">Добавить в избранное</a>
-            </div>
-            <div class="item__row">
-              <h3 class="item__title">
-                <a href="#">Юбка с высокой талией</a>
-              </h3>
-              <p class="item__price"> 6995р </p>
-            </div>
-            <div class="item__actions">
-              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-              <a href="03_item.html" class="btn btn-info">В корзину</a>
-            </div>
-          </div>
-          <!-- END item-->
-        </div>
-        <ul class="pagination inline">
-          <li>
-            <a href="#">
-              <span>В начало</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>1</span>
-            </a>
-          </li>
-          <li class="active">
-            <a href="#">
-              <span>2</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>3</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>4</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>5</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>...</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>101</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>102</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span>В конец</span>
-            </a>
-          </li>
-        </ul>
-        <p> Выглядеть стильно и привлекательно - просто! Достаточно правильно подобрать одежду, ориентируясь на особенности своей фигуры. </p>
-        <p> Мы расскажем, какими приемами пользуются профессиональные стилисты. </p>
-        <p> Узкие плечи можно корректировать с помощью свитеров и блуз с продольным вырезом и рукавами-буф, </p>
-      </main>
-      <!-- END content -->
+          <ul class="pagination inline">
+            <li>
+              <a href="#">
+                <span>В начало</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>1</span>
+              </a>
+            </li>
+            <li class="active">
+              <a href="#">
+                <span>2</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>3</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>4</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>5</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>...</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>101</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>102</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>В конец</span>
+              </a>
+            </li>
+          </ul>
+          <p> Выглядеть стильно и привлекательно - просто! Достаточно правильно подобрать одежду, ориентируясь на особенности своей фигуры. </p>
+          <p> Мы расскажем, какими приемами пользуются профессиональные стилисты. </p>
+          <p> Узкие плечи можно корректировать с помощью свитеров и блуз с продольным вырезом и рукавами-буф, </p>
+        </main>
+        <!-- END content -->
+      </div>
     </div>
     <!-- footer  -->
     <footer class="footer ">
@@ -827,6 +842,8 @@
       </div>
     </footer>
     <!-- //.footer -->
+    <div class="shapeTransit1"></div>
+    <div class="shapeTransit2"></div>
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->
