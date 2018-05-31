@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html lang="ru">
 <html>
   <head>
     <meta charset="utf-8">
@@ -135,18 +135,32 @@
         </ul>
         <div class="header__right">
           <div class="userArea">
-            <a href="#" class="userArea__sign">
+            <a href="#" class="userArea__sign  js-sign">
               <svg class="icon icon-sign">
                 <use xlink:href="img/sprite.svg#icon-sign"></use>
               </svg>
               <span class="userArea__sign-title">Вход / Регистрация</span>
             </a>
-            <!--
-                <div class="userArea__cabinet">
-                    <a href="#">Избранное</a>
-                    <a href="#">Личный кабинет</a>
-                </div>
-                --></div>
+            <div class="b-login-form">
+              <div class="b-login-form-wrap">
+                <h3 class="b-login-form__title">Вход</h3>
+                <a href="16-1_cabinet_myprofile.html" class="b-login-form--register">У меня нет учетной записи</a>
+                <form action="16-1_cabinet_myprofile.html">
+                  <div class="input">
+                    <label>Email:</label>
+                    <input type="text" placeholder="Введите email" /> </div>
+                  <div class="input">
+                    <label>Пароль:</label>
+                    <input type="text" placeholder="Введите пароль" /> </div>
+                  <div class="row b-login-form-btn">
+                    <a href="16-1_cabinet_myprofile.html" class="lostpass">Забыли пароль?</a>
+                    <button class="btn">Вход</button>
+                  </div>
+                </form>
+                <div class="location__choose-close btn-close">Закрыть</div>
+              </div>
+            </div>
+          </div>
           <div class="basket">
             <a href="#" class="basket--order">
               <span class="basket-title">Оформить заказ</span>
@@ -312,11 +326,11 @@
         </ul>
         <ul class="smenu">
           <li class="menu__item subMenu">
-            <a href="02_catalog.html">Мир Madyart</a>
+            <a href="15_mir-madyart.html">Мир Madyart</a>
             <div class="subMenuBlock">
               <ul class="smenu__sub">
                 <li class="menu__item">
-                  <a href="12-1_news-list.html">Новости</a>
+                  <a href="13-1_blog-list.html">Блог</a>
                 </li>
                 <li class="menu__item">
                   <a href="#">История MADYART</a>
@@ -330,16 +344,16 @@
               </ul>
               <ul class="submenu">
                 <li class="menu__item">
-                  <a href="09_stores.html">Салоны</a>
-                </li>
-                <li class="menu__item">
                   <a href="14_discount.html">Дисконтная программа</a>
                 </li>
                 <li class="menu__item">
                   <a href="10-1_text_one.html">Подарочный сертификат</a>
                 </li>
                 <li class="menu__item">
-                  <a href="13-1_blog-list.html">Блог</a>
+                  <a href="12-1_news-list.html">Новости</a>
+                </li>
+                <li class="menu__item">
+                  <a href="09_stores.html">Салоны</a>
                 </li>
               </ul>
             </div>
@@ -359,7 +373,7 @@
             <a href="10-1_text_one.html">Как оформить заказ</a>
           </li>
           <li class="menu__item">
-            <a href="03_item.html">Условия доставки</a>
+            <a href="10-2_text_two.html">Условия доставки</a>
           </li>
           <li class="menu__item">
             <a href="10-2_text_two.html">Оплата товара</a>
@@ -373,14 +387,30 @@
       </aside>
       <!-- //.sidebar -->
       <main class="innerPage">
-        <h1 class="page__title">Подарочный сертификат</h1>
-        <p> Выглядеть стильно и привлекательно - просто! Достаточно правильно подобрать одежду, ориентируясь на особенности своей фигуры. </p>
-        <p> Мы расскажем, какими приемами пользуются профессиональные стилисты. </p>
-        <p> Узкие плечи можно корректировать с помощью свитеров и блуз с продольным вырезом и рукавами-буф, </p>
+        <div class="page__title">
+          <h1 class="page__title-text"> Подарочный сертификат </h1>
+          <div class="page__title-right">
+            <ul class="page__title-menu">
+              <li class="active">
+                <a href="javascript:history.back()">Вернуться к покупкам</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- //.page__title -->
+        <div class="page__row">
+          <div class="col col-content">
+            <figure class="img-full">
+              <img src="img/assets/giftcard.jpg" alt="" /> </figure>
+            <h2>Сертификат – идея отличного подарка!</h2>
+            <p>Номинал подарочного сертификата: 1 тысяча рублей, 5 тысяч рублей.</p>
+            <p>При совершении покупки от 25 тысяч рублей Вы получаете в подарок VIP-карту, дающую право на 15% скидку на всю продукцию, представленную в салонах торговой сети MADYART.</p>
+          </div>
+        </div>
       </main>
       <!-- END content -->
     </div>
-    <!-- footer -->
+    <!-- footer  -->
     <footer class="footer ">
       <div class="container">
         <div class="footer__in">
