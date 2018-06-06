@@ -1,11 +1,13 @@
 //import ResizeManager from '../managers/ResizeManager';
 //import 'owlCarousel';
+import DeviceInfo from '../tools/DeviceInfo';
 import PerfectScrollbar from 'perfect-scrollbar';
 class Carousel {
 
   constructor() {
     console.log('owlCar', $('.owl-gallery').length);
     this.el = $('.owl-gallery');
+    this.win = $(window).width();
     this.init();
   }
   /**
@@ -40,7 +42,7 @@ class Carousel {
         },
         600:{
           items:count[1],
-          nav:false
+          nav:true
         },
         1000:{
           items:count[2],
@@ -72,39 +74,42 @@ class Carousel {
       autoplay:false
     });
 
-    var dotcount = 1;
+    if (this.win > 768) {
+      var dotcount = 1;
 
-    $('.oneitem__gallery-carousel .owl-dot').each(function() {
-      $( this ).addClass( 'dotnumber' + dotcount);
-      $( this ).attr('data-info', dotcount);
-      dotcount=dotcount+1;
-    });
-    var slidecount = 1;
+      $('.oneitem__gallery-carousel .owl-dot').each(function() {
+        $( this ).addClass( 'dotnumber' + dotcount);
+        $( this ).attr('data-info', dotcount);
+        dotcount=dotcount+1;
+      });
+      var slidecount = 1;
 
-    $('.owl-item').not('.cloned').each(function() {
-      $(this).addClass( 'slidenumber' + slidecount);
-      slidecount=slidecount+1;
-    });
+      $('.owl-item').not('.cloned').each(function() {
+        $(this).addClass( 'slidenumber' + slidecount);
+        slidecount=slidecount+1;
+      });
 
-    $('.owl-dot').each(function() {
-      var grab = $(this).data('info');
-      var slidegrab = $('.slidenumber'+ grab +' img').attr('src');
-      $(this).css('background-image', 'url('+slidegrab+')');
-    });
+      $('.owl-dot').each(function() {
+        var grab = $(this).data('info');
+        var slidegrab = $('.slidenumber'+ grab +' img').attr('src');
+        $(this).css('background-image', 'url('+slidegrab+')');
+      });
 
-    var amount = $('.owl-dot').length;
-    var gotowidth = 100/amount;
-    $('.owl-dot').css('height', gotowidth+'%');
+      var amount = $('.owl-dot').length;
+      var gotowidth = 100/amount;
+      $('.owl-dot').css('height', gotowidth+'%');
 
-    //$('.owl-dots').wrapInner( "<div class='scroll-wrap'></div>");
-    //$('.owl-dots').find('.scroll-wrap').css({ height: $('.oneitem__gallery-carousel').height()});
-    const owlDotScroll = new PerfectScrollbar('.oneitem__gallery-carousel .owl-dots',{
-      wheelSpeed: 2,
-      wheelPropagation: true,
-      minScrollbarLength: 10,
-      suppressScrollX: true,
-      useBothWheelAxes: true
-    });
+      //$('.owl-dots').wrapInner( "<div class='scroll-wrap'></div>");
+      //$('.owl-dots').find('.scroll-wrap').css({ height: $('.oneitem__gallery-carousel').height()});
+      const owlDotScroll = new PerfectScrollbar('.oneitem__gallery-carousel .owl-dots',{
+        wheelSpeed: 2,
+        wheelPropagation: true,
+        minScrollbarLength: 10,
+        suppressScrollX: true,
+        useBothWheelAxes: true
+      });
+    }
+
 
   }
   cleanup() {
@@ -117,7 +122,7 @@ class Carousel {
   }
 
   resize() {
-
+    console.log('resize');
   }
 
 }

@@ -1,6 +1,7 @@
 import ResizeManager from '../managers/ResizeManager';
 import Tools from '../tools/Tools';
 import Banner from '../partial/Banner';
+import Tabs from '../partial/Tabs';
 import Share from '../partial/Share';
 import VideoApi from '../partial/VideoApi';
 import Popup from '../partial/Popup';
@@ -75,6 +76,7 @@ class BarbaPageBase {
     //Init Partial Modules
     //if($('.bannerHead').length) this.banner = new Banner();
     if($('.shareFacebook').length) this.share = new Share();
+    if($('.tabs').length) this.tabs = new Tabs(this.view);
     //if($('.partner').length) this.carousel = new Carousel();
     //if($('.startPlayer').length) this.videoApi = new VideoApi();
     //if($('.playerPopup').length) this.popup = new Popup(this.view);
@@ -100,6 +102,7 @@ class BarbaPageBase {
     //Destroy Partial Modules
     // if(this.banner) this.banner.destroy();
     if(this.carousel) this.carousel.destroy();
+    if(this.tabs) this.tabs.destroy();
     // if(this.videoApi) this.videoApi.destroy();
     // if(this.popup) this.popup.destroy();
     //if(this.header) this.header.destroy();

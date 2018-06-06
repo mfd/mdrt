@@ -82,6 +82,7 @@
 .owl-carousel.owl-gallery .owl-nav
     position: absolute;
     top: -40px;
+    top: -60px;
     //right: 5%;
     right: 30px;
     button
@@ -94,6 +95,31 @@
         border: 1px solid #ccc;
         padding: 5px 20px;
         color: #000;
++sm
+    .owl-stage-outer
+        margin: 0 2em
+        .item
+            margin: 0
+            padding-left: 0
+    .owl-carousel.owl-gallery .owl-nav
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        .owl-prev, .owl-next
+            top: 30%
+        .owl-prev
+            position: absolute;
+            left: 0;
+        .owl-next
+            position: absolute;
+            right: 0;
+        button span
+            border: 0
+            font-size: 72px
+            padding: 0
+            color: #949494
 
 .owl-carousel.owl-gallery.owl-theme .owl-nav [class*=owl-]:hover
     background: none;

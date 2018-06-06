@@ -77,12 +77,36 @@ header
         &--change
             border-bottom: 1px dashed #bbb
             position: relative;
-            margin-left: 15px;
+            margin-left: 20px;
+            display: block;
+            float: right;
             .fa
                 position: absolute;
                 left: -13px;
+                top: 2px;
         +md
             display: none;
+        &__name
+            width: 150px
+            height: 20px
+            overflow: hidden
+            display: block
+            white-space: nowrap;
+            @media only screen and (min-width: 1025px)
+                width: initial;
+            +md
+                //width: 140px;
+            +pseudo
+            &::before
+                top: 0
+                background: #fff
+                width: 1px
+                height: 100%
+                left: initial
+                right: 0
+                box-shadow: 4px 0 15px 15px #ffffff
+                @media only screen and (min-width: 1025px)
+                    display: none
 
         .location__choose
             background: rgba(51, 51, 51, 0.8);
@@ -164,16 +188,17 @@ header
                 transform: none
     .header__right
         float: right;
+    .userArea, .basket
+        margin-top: 1.15em;
     .userArea
         float: left;
         //margin-right: 1em;
-        margin-top: 1.25em;
         position: relative;
         +sm
             margin-top: 1.1em;
         > a
             float: left;
-            margin-right: 35px;
+            margin-right: 25px;
         &__like
             position: relative;
             .icon-like
@@ -210,7 +235,6 @@ header
     .basket
         float: left;
         margin-right: 2em;
-        margin-top: 1.25em;
         +sm
             margin-top: 1em;
         &--order

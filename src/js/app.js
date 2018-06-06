@@ -1,19 +1,21 @@
 import 'babel-polyfill';
 
-import $ from 'jquery';
-import jQuery from 'jquery';
+//import $ from 'jquery';
+//import jQuery from 'jquery';
 window.$ = $;
 window.jQuery = jQuery;
 
-import 'TweenMax';
-import ScrollMagic from 'scrollmagic/scrollmagic/uncompressed/ScrollMagic';
-import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
-import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
+// import 'TweenMax';
+// import ScrollMagic from 'scrollmagic/scrollmagic/uncompressed/ScrollMagic';
+// import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
+// import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
+
+//import 'TimelineLite';
 import 'owl.carousel';
 
-import 'fullpage.js/dist/jquery.fullpage.extensions.min';
-import 'fullpage.js/dist/jquery.fullPage';
-import PerfectScrollbar from 'perfect-scrollbar';
+///import 'fullpage.js/dist/jquery.fullpage.extensions.min';
+//import 'fullpage.js/dist/jquery.fullPage';
+//import PerfectScrollbar from 'perfect-scrollbar';
 import FixBody from 'js-util/FixBody';
 
 import DeviceInfo from './tools/DeviceInfo';
@@ -41,7 +43,7 @@ class Main {
 
   ready() {
     window.container = document.getElementById('barba-wrapper');
-    DeviceInfo.check();
+    //DeviceInfo.check();
     ResizeManager.start();
     BarbaController.start(true);
 

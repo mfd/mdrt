@@ -1,6 +1,10 @@
 @import page__oneitem-rating
 .itemPage
     font-size: 16px;
+    .page__title
+        display: none
+        +sm
+           display: block
     .oneitem__body
         //background: green;
         width: 100%;
@@ -9,10 +13,13 @@
             text-transform: uppercase;
             font-size: 24px;
             margin-bottom: .5em;
+            +sm
+                display: none
         &__back2list
             color: #ABABAB;
             float: right;
-
+            +sm
+                display: none
         &__gallery
             float: left;
             width: 50%;
@@ -29,36 +36,59 @@
                 width: calc(100% - 140px);
                 margin-left: 120px;
 
-            .owl-carousel .oneitem__itemPic
-                width: 100%;
+                .oneitem__itemPic
+                    width: 100%;
 
-            .owl-carousel .owl-controls .owl-dot
-                background-size: cover;
-                margin-top: 10px;
+                .owl-controls .owl-dot
+                    background-size: cover;
+                    margin-top: 10px;
 
-            .owl-carousel .owl-dots
-                position: absolute;
-                top: 0;
-                left: -100px;
-                width: 95px;
-                //height: 100%;
-                height: 550px;
-                overflow: hidden;
+                .owl-dots
+                    position: absolute;
+                    top: 0;
+                    left: -100px;
+                    width: 95px;
+                    //height: 100%;
+                    height: 550px;
+                    overflow: hidden;
 
-            .owl-carousel .owl-dot
-              width: 80px;
-              height: 80px!important;
-              display: block;
-              margin-bottom: 5px;
+                .owl-dot
+                  width: 80px;
+                  height: 80px!important;
+                  display: block;
+                  margin-bottom: 5px;
 
-            .owl-carousel .owl-dot
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-            .owl-carousel .owl-dot.active
-                border: 2px solid #9e9e9e;
+                .owl-dot
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    &.active
+                        border: 2px solid #9e9e9e;
 
+                //MOBILE
+                +sm
+                    width: 100%;
+                    margin: 0 0 1em 0;
+                    .owl-dots
+                        left: 0
+                        top: initial;
+                        width: 100%
+                        height: 40px
+                        bottom: 0
+                        //transform: translate(-50%, 0);
+                        display: flex;
+                        justify-content: center;
 
+                    .owl-dot
+                        width: 10px
+                        height: 10px!important
+                        //float: left
+                        background: rgba(51, 51, 51, 0.4)
+                        margin-right: 10px
+                        border-radius: 50%
+                        &.active
+                            border-color: #333
+                            background: #333
 
         &__desc
             float: right;
@@ -153,7 +183,7 @@
         .opinion
             border: 1px solid #ccc;
             margin: 1em 0;
-            padding: 1em;
+            padding: 0;
             td
                 border: 1px solid #ccc;
                 padding: 1em;
@@ -166,17 +196,35 @@
             &__text
             .authName
 
+        dl.opinion
+            display: flex;
+            +sm
+                flex-direction: column;
 
-            dt
-                float: left;
+            dt.opinion__author
+                //float: left;
                 width: 200px;
                 border-right: 1px solid #ccc;
                 color: #333333;
+                padding: 1em 1em 1em 1em
+                +sm
+                    width: 100%
+                    float: none
+                    border: 0
+                    border-bottom: 1px solid #ccc;
                 time
                     color: #ABABAB;
 
-            dd
+            dd.opinion__text
                 //float: left;
-                margin-left: 220px;
+                //margin-left: 220px;
+                padding: 1em 1em 1em 1em
+                +sm
+                    width: 100%
+                    margin-left: 0;
+
         .btn
             float: right;
+            +sm
+                float: none;
+                margin: 0 auto;

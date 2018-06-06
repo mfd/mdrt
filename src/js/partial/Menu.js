@@ -1,5 +1,5 @@
 import BarbaController from '../barba/BarbaController';
-import PerfectScrollbar from 'perfect-scrollbar';
+//import PerfectScrollbar from 'perfect-scrollbar';
 import FixBody from 'js-util/FixBody';
 
 

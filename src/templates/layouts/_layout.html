@@ -20,7 +20,7 @@
       <div class="loader"><div class="loader__wrap"></div></div>
       {% include "partials/_header.html" %}
       <div id="barba-wrapper" class="container">
-        <div class="barba-container homeContainer" data-namespace="{% if barbaNameSpace %}{{ barbaNameSpace }}{% else %}page{% endif %}" data-title="">
+        <div class="barba-container homeContainer" data-namespace="{% if barbaNameSpace %}{{ barbaNameSpace }}{% else %}page{% endif %}" data-title="{{ title }}">
         <!-- BEGIN content -->
         {% include "partials/_sidebar_mobile.html" %}
         {% block content %}{% endblock %}
@@ -35,10 +35,8 @@
     <div class="shapeTransit2"></div>
 
     <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/vendors.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
-
-
-
     <!-- END scripts -->
 
   </body>

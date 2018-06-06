@@ -13,12 +13,12 @@ footerWide: true
       <div class="pageBlog__col pageBlog__col-content">
         <div class="tabs">
           <ul class="tabs__caption">
-            <li class="active">Тренды</li>
-            <li>Коллекции</li>
-            <li>Новости</li>
+            <li class="active"><a href="#tab-1">Тренды</a></li>
+            <li><a href="#tab-2">Новости</a></li>
+            <li><a href="#tab-3">Коллекции</a></li>
           </ul>
 
-          <div class="tabs__content active">
+          <div class="tabs__content active" id="tab-1">
 
             <div class="grid__blogitem">
                 <figure class="blogitem">
@@ -58,21 +58,15 @@ footerWide: true
             {{mixins.pagination()}}
 
           </div>
-          <div class="tabs__content">
+          <div class="tabs__content" id="tab-2">
             <div class="grid__news">
               {{mixins.newsItems(2, '12-2_news-item.html')}}
               {{mixins.pagination()}}
             </div>
           </div>
-          <div class="tabs__content">
+          <div class="tabs__content" id="tab-3">
             <div class="grid__catalog grid__catalog--col3">
               {{mixins.catalogItems(2)}}
-            </div>
-          </div>
-          <div class="tabs__content">
-            <div class="grid__news">
-                {{mixins.newsItems(2, '12-2_news-item.html')}}
-                {{mixins.pagination()}}
             </div>
           </div>
         </div>
