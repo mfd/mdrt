@@ -43,7 +43,7 @@ class Main {
 
   ready() {
     window.container = document.getElementById('barba-wrapper');
-    //DeviceInfo.check();
+    DeviceInfo.check();
     ResizeManager.start();
     BarbaController.start(true);
 

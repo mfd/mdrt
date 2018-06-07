@@ -1,13 +1,5 @@
 <!-- begin breadcrumbs  -->
-<ul class="breadcrumbs {{breadcrumbsClass}}">
-    {% for item in breadcrumbs %}
-        <li>
-            {% if loop.last %}
-                <a href="#" class="is-active">{{item}}</a>
-            {% else %}
-                <a href="#">{{item}}</a>
-            {% endif %}
-        </li>
-    {% endfor %}
-</ul>
+<div class="breadcrumbs__mobile">
+{% if breadCrumbsItems %}{{mixins.breadcrumbs(breadCrumbsItems)}}{% endif %}
+</div>
 <!-- end breadcrumbs -->

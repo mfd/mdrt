@@ -6,6 +6,7 @@ header
         display: block;
         width: 225px;
         height: 60px;
+        margin-top: 10px;
         //margin: 2em 0;
 
         margin-right: 3em;
@@ -57,7 +58,8 @@ header
             left: initial;
             right: 5%;
         +sm
-            display: block;
+            display: none;
+            //display: block;
             left: 0;
             right: 0;
             top: 50px;
@@ -199,6 +201,8 @@ header
         > a
             float: left;
             margin-right: 25px;
+            +sm
+                margin-right: 45px;
         &__like
             position: relative;
             .icon-like

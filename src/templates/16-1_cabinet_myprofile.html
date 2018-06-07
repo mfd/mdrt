@@ -8,7 +8,7 @@ isLogged: true
 
 {% block content %}
     {% include "partials/_sidebar.html" %}
-	<main class="innerPage pageCabinet">
+  <main class="innerPage pageCabinet">
         {{mixins.pageTitle(title)}}
         <div class="tabs tabs-cabinet">
           <ul class="tabs__caption">
@@ -19,21 +19,21 @@ isLogged: true
             <li><a href="#tab-5">Система лояльности</a></li>
           </ul>
           <div class="tabs__content active" id="tab-1">
-            {% include "partials/cabinet/01-profile.html" %}
+            {% include "partials/_cabinet_01-profile.html" %}
           </div>
           <div class="tabs__content" id="tab-2">
-            {% include "partials/cabinet/02-orders.html" %}
+            {% include "partials/_cabinet_02-orders.html" %}
           </div>
           <div class="tabs__content" id="tab-3">
-            {% include "partials/cabinet/03-history.html" %}
+            {% include "partials/_cabinet_03-history.html" %}
           </div>
           <div class="tabs__content" id="tab-4">
-            {% include "partials/cabinet/04-ship.html" %}
+            {% include "partials/_cabinet_04-ship.html" %}
           </div>
           <div class="tabs__content" id="tab-5">
-            {% include "partials/cabinet/05-loalty.html" %}
+            {% include "partials/_cabinet_05-loalty.html" %}
           </div>
         </div> <!-- /.tabs -->
-	</main>
+  </main>
 
 {% endblock %}

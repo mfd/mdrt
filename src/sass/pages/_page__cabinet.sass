@@ -1,13 +1,79 @@
 .pageCabinet .tabs-cabinet
+    .tabs__caption li
+        +sm
+            margin-right: -5px;
     .tabs__content
-        padding: 1em 1em;
+        padding: .5em 0;
         .page__row
             .col-left
                 width: 40%
             .col-right
                 width: 40%
-
         h5
             font-size: 18px;
             color: #333333;
             font-weight: normal
+    .page__row
+        justify-content: left;
+        > .btn
+            margin-right: 15px;
+    .btn
+        @extend .btn_sm, .btn_default
+        &.is-active
+            color: #fff
+            background: #B09C6D
+            border-color: #B09C6D
+    .grid__orders
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        .b-order-card
+            flex: 1 48%;
+            min-width: 0;
+            margin: 2%;
+            margin-top: 0;
+            margin-left: 0
+            border: 1px solid #BDBDBD
+            border-radius: 3px;
+
+            font-size: 14px
+            color: #333;
+
+            +md
+                flex: 1 100%
+                margin-bottom: 20px
+
+            &__header,
+            &__footer,
+            &__desc
+                padding: 15px;
+            &__desc
+                //padding: 0 15px
+            &__header
+                font-size: 16px;
+                font-weight: bold
+                border-bottom: 1px solid #BDBDBD
+                span
+                    font-size: 14px
+                    font-weight: normal
+                    padding: 0 5px
+            &__desc
+                dt, dd
+                    margin-bottom: 5px
+                dt
+                    float: left
+                    margin-right: 10px
+                dd
+                    color: #949494
+                    padding-left: 150px
+            &__footer
+                +clr
+                border-top: 1px solid #BDBDBD
+                .orderStatus
+                    float: left
+                    color: #949494;
+                .btn
+                    float: right
+                    color: #fff
+                    background: #B09C6D
+                    border-color: #B09C6D

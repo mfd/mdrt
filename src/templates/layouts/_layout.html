@@ -22,9 +22,11 @@
         <div class="barba-container homeContainer" data-namespace="{% if barbaNameSpace %}{{ barbaNameSpace }}{% else %}page{% endif %}" data-title="{{ title }}">
           <div class="{% if barbaNameSpace==='homepage'%}{% else %}container{% endif %}">
             {% include "partials/_header.html" %}
+            {% include "partials/_breadcrumbs.html" %}
             <!-- BEGIN content -->
             {% include "partials/_sidebar_mobile.html" %}
-            {% block content %}{% endblock %}
+            {% block content %}
+            {% endblock %}
             <!-- END content -->
           </div>
         </div>

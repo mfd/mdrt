@@ -176,6 +176,18 @@
               </div>
             </div>
           </header>
+          <!-- begin breadcrumbs  -->
+          <div class="breadcrumbs__mobile">
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs-item">
+                <a href="#" class="breadcrumbs-link">Главная</a>
+              </li>
+              <li class="breadcrumbs-item is-active">
+                <a href="#" class="breadcrumbs-link">Личный кабинет</a>
+              </li>
+            </ul>
+          </div>
+          <!-- end breadcrumbs -->
           <!-- BEGIN content -->
           <aside class="sidebar_mobile">
             <ul class="menu">
@@ -429,74 +441,1269 @@
                 </div>
               </div>
               <div class="tabs__content" id="tab-2">
-                <div class="b-order">
-                  <div class="row"> Заказ #12 20.15.2016 Обработка заказа
-                    <a href="#" class="btn">Обратно к заказам</a>
-                  </div>
-                  <ul>
-                    <li>
-                      <h5>О покупателе:</h5>
-                      <dl>
-                        <dt>Имя:</dt>
-                        <dd>Алевтина</dd>
-                        <dt>Фамилия:</dt>
-                        <dd>Никифорова</dd>
-                        <dt>Отчество:</dt>
-                        <dd>Иннокентиевна</dd>
-                        <dt>e-mail:</dt>
-                        <dd>alevtina_nikiforova@mail.ru</dd>
-                        <dt>Телефон::</dt>
-                        <dd>+7 985 789 45 23</dd>
-                      </dl>
-                    </li>
-                    <li>
-                      <h5>Доставка:</h5>
-                      <dl>
-                        <dt>Имя:</dt>
-                        <dd>Алевтина</dd>
-                        <dt>Фамилия:</dt>
-                        <dd>Никифорова</dd>
-                        <dt>Отчество:</dt>
-                        <dd>Иннокентиевна</dd>
-                        <dt>e-mail:</dt>
-                        <dd>alevtina_nikiforova@mail.ru</dd>
-                        <dt>Телефон::</dt>
-                        <dd>+7 985 789 45 23</dd>
-                      </dl>
-                    </li>
-                    <li>
-                      <h5>Содержание заказа</h5>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="tabs__content" id="tab-3">
                 <div class="page__row">
                   <a href="#" class="btn">Активные</a>
                   <a href="#" class="btn">Выполненные</a>
                   <a href="#" class="btn">Отмененные</a>
-                  <a href="#" class="btn">Все заказы</a>
+                  <a href="#" class="btn is-active">Все заказы</a>
                 </div>
                 <div class="page__row">
                   <div class="grid__orders">
-                    <div class="card">
-                      <h6> Заказ #12
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #1
                         <span>20.15.2016</span>
-                      </h6>
-                      <dl>
-                        <dt>Сумма к оплате:</dt>
-                        <dd>14 999 р</dd>
-                        <dt>Оплачен:</dt>
-                        <dd>нет</dd>
-                        <dt>Способ оплаты:</dt>
-                        <dd>наличными курьеру</dd>
-                        <dt>Способ доставки:</dt>
-                        <dd>300 р</dd>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
                       </dl>
-                      <div class="footer">
-                        <button class="btn">Подробнее о заказе</button>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
                       </div>
                     </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #2
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #3
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #4
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #5
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #6
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #7
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #8
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #9
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #10
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #11
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #12
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #13
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #14
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #15
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #16
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #17
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #18
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #19
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #20
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #21
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #22
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #23
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #24
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #25
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #26
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #27
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #28
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #29
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #30
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <ul class="pagination inline">
+                      <li>
+                        <a href="#">
+                          <span>В начало</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span>1</span>
+                        </a>
+                      </li>
+                      <li class="active">
+                        <a href="#">
+                          <span>2</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span>3</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span>4</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span>5</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span>...</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span>101</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span>102</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span>В конец</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs__content" id="tab-3">
+                <div class="page__row">
+                  <a href="#" class="btn">Выполненные</a>
+                  <a href="#" class="btn">Отмененные</a>
+                  <a href="#" class="btn is-active">Все заказы</a>
+                </div>
+                <div class="page__row">
+                  <div class="grid__orders">
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #1
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #2
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #3
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #4
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #5
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #6
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #7
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #8
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #9
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #10
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #11
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #12
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #13
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #14
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #15
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #16
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #17
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #18
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #19
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #20
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #21
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #22
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #23
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #24
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #25
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #26
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #27
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #28
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #29
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <div class="b-order-card">
+                      <div class="b-order-card__header">Заказ #30
+                        <span>20.15.2016</span>
+                      </div>
+                      <dl class="b-order-card__desc">
+                        <dt class="orderDesc__label">Сумма к оплате:</dt>
+                        <dd class="orderDesc__value">14 999 р</dd>
+                        <dt class="orderDesc__label">Оплачен:</dt>
+                        <dd class="orderDesc__value">нет</dd>
+                        <dt class="orderDesc__label">Способ оплаты:</dt>
+                        <dd class="orderDesc__value">наличными курьеру</dd>
+                        <dt class="orderDesc__label">Способ доставки:</dt>
+                        <dd class="orderDesc__value">300 р</dd>
+                      </dl>
+                      <div class="b-order-card__footer">
+                        <div class="orderStatus">Обработка заказа</div>
+                        <a href="#" class="btn">Подробнее о заказе</a>
+                      </div>
+                    </div>
+                    <ul class="pagination inline">
+                      <li>
+                        <a href="#">
+                          <span>В начало</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span>1</span>
+                        </a>
+                      </li>
+                      <li class="active">
+                        <a href="#">
+                          <span>2</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span>3</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span>4</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span>5</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span>...</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span>101</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span>102</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <span>В конец</span>
+                        </a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
