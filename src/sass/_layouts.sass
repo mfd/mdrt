@@ -63,6 +63,27 @@ aside.sidebar_mobile
             left: 0;
             bottom: 0;
 
+aside.sidebar.sidebar--index
+    top: 100px;
+    left: 2%;
+
+    @media (min-width: 1601px) and (max-width: 2200px)
+       left: 15%
+    @media (min-width: 1501px) and (max-width: 1600px)
+       left: 13%
+    @media (min-width: 1421px) and (max-width: 1500px)
+       left: 10%
+
+    @media (min-width: 1300px) and (max-width: 1420px)
+       left: 8%
+
+    @media (min-width: 1200px) and (max-width: 1300px)
+       left: 5%
+    +md
+       left: 2%
+
+
+
 
 header
     position: relative;
@@ -124,7 +145,7 @@ footer
         width: 100%;
 
 .container
-    padding-top: 90px;
+    padding-top: 100px;
     header &
         padding: 0 20px;
         overflow: initial;

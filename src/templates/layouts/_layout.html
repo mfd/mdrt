@@ -18,13 +18,15 @@
   </head>
   <body>
       <div class="loader"><div class="loader__wrap"></div></div>
-      {% include "partials/_header.html" %}
-      <div id="barba-wrapper" class="container">
+      <div id="barba-wrapper">
         <div class="barba-container homeContainer" data-namespace="{% if barbaNameSpace %}{{ barbaNameSpace }}{% else %}page{% endif %}" data-title="{{ title }}">
-        <!-- BEGIN content -->
-        {% include "partials/_sidebar_mobile.html" %}
-        {% block content %}{% endblock %}
-        <!-- END content -->
+          <div class="{% if barbaNameSpace==='homepage'%}{% else %}container{% endif %}">
+            {% include "partials/_header.html" %}
+            <!-- BEGIN content -->
+            {% include "partials/_sidebar_mobile.html" %}
+            {% block content %}{% endblock %}
+            <!-- END content -->
+          </div>
         </div>
       </div>
       {% block footer %}
@@ -38,6 +40,19 @@
     <script type="text/javascript" src="js/vendors.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->
-
+    {% if barbaNameSpace==='homepage'%}
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#fullpage').fullpage({
+          //anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
+          //sectionsColor: ['#eee', '#939FAA', '#ffffff'],
+          scrollOverflow: true,
+          navigation: true
+          //navigationTooltips: ['home', 'second']
+        });
+      });
+    </script>
+    {% else %}
+    {% endif %}
   </body>
 </html>

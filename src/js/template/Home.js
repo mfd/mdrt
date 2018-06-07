@@ -31,50 +31,48 @@ class Home extends BarbaPageBase {
 
     headernav.totalDuration(2).restart();
 
+
+
   }
-  sliderGallery() {
-    let $this = $('.owl-gallery');
+  initFullPage() {
+    $('#fullpage').fullpage({
+      //anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
+      //sectionsColor: ['#eee', '#939FAA', '#ffffff'],
+      scrollOverflow: true,
+      navigation: true,
+      //navigationTooltips: ['home', 'second']
+    });
+  }
+  initHomePromo() {
+    let $owl = $('.owl-oneslide');
 
-    let isData = $('.owl-gallery[data-count]').length;
-    let count  = isData ? $this.attr('data-count').split('|') : ['1', '3', '3'];
+    $owl.on('initialized.owl.carousel',function() {
+      $('.owl-item.active').find('.slider__title')
+        .addClass('animated flipInX');
 
-    var isGalleryLook = $this.hasClass('owl-gallery-look');
-
-    $this.owlCarousel({
-      loop: true,
-      //margin: 10,
-      stagePadding: 10,
-      dots: false,
-      responsiveClass:true,
-      responsive:{
-        0:{
-          items:count[0],
-          nav:true,
-          //dots: true,
-        },
-        600:{
-          items:count[1],
-          nav:false
-        },
-        1000:{
-          items:count[2],
-          nav:true,
-          loop:false
-        }
-      }
+      // let owlItemW = Math.round($('.page__hero').width());
+      // let owlItemH = ($(window).width() < 768 ) ? 200 : Math.round($(window).height()/1.5);
+      // console.log(owlItemW, owlItemH);
+      // $owl.find('.hero__item').css('width',owlItemW);
+      // $owl.find('.hero__item').css('height',owlItemH);
     });
 
-    if (isGalleryLook) {
-      $this.find('.owl-stage >:first-child').addClass('activeLook');
-      $this.find('.owl-stage .owl-item').on('click', function() {
-        $(this).siblings().removeClass('activeLook');
-        $(this).addClass('activeLook');
-        var n = $(this).index();
-        console.log(n);
-        $this.trigger('to.owl.carousel', [n, 500, true]);// 500 is the speed of the transition in ms
-        return false;
-      });
-    }
+    //$("body").find('.sidebar--index').css('left', '20%');
+
+    $owl.owlCarousel({
+      loop: false,
+      responsiveClass:true,
+      nav: false,
+      navigation: false,
+      dots: true,
+      autoplay:true,
+      items: 1,
+      autoplayTimeout: 6000, //6s
+    });
+
+    // $('.custom-slick-next').click(function() {
+    //   $owl.trigger('next.owl.carousel');
+    // });
   }
   onEnterCompleted() {
     super.onEnterCompleted();
@@ -82,6 +80,10 @@ class Home extends BarbaPageBase {
     //TweenMax.set($('aside.sidebar'), {css:{top:-100}});
     //if($('.partner').length) this.carousel = new Carousel();
     //if($('.owl-gallery').length) this.sliderGallery();
+
+
+    //this.initFullPage();
+    this.initHomePromo();
   }
 
   hide(container, promise) {

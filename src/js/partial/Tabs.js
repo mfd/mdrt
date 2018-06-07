@@ -18,6 +18,7 @@ class Tabs {
     }
   }
   destroy() {
+    console.log('destroy tabs');
     var elements = this.elements;
     for(let i = 0; i < elements.length; i++) {
       this.Tab[i] = null;

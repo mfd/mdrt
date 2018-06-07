@@ -12,25 +12,25 @@ isLogged: true
         {{mixins.pageTitle(title)}}
         <div class="tabs tabs-cabinet">
           <ul class="tabs__caption">
-            <li class="active">Мой профиль</li>
-            <li>Состояние заказов</li>
-            <li>История заказов</li>
-            <li>Адреса доставки</li>
-            <li>Система лояльности</li>
+            <li class="active"><a href="#tab-1" class="active">Мой профиль</a></li>
+            <li><a href="#tab-2">Состояние заказов</a></li>
+            <li><a href="#tab-3">История заказов</a></li>
+            <li><a href="#tab-4">Адреса доставки</a></li>
+            <li><a href="#tab-5">Система лояльности</a></li>
           </ul>
-          <div class="tabs__content active">
+          <div class="tabs__content active" id="tab-1">
             {% include "partials/cabinet/01-profile.html" %}
           </div>
-          <div class="tabs__content">
+          <div class="tabs__content" id="tab-2">
             {% include "partials/cabinet/02-orders.html" %}
           </div>
-          <div class="tabs__content">
+          <div class="tabs__content" id="tab-3">
             {% include "partials/cabinet/03-history.html" %}
           </div>
-          <div class="tabs__content">
+          <div class="tabs__content" id="tab-4">
             {% include "partials/cabinet/04-ship.html" %}
           </div>
-          <div class="tabs__content">
+          <div class="tabs__content" id="tab-5">
             {% include "partials/cabinet/05-loalty.html" %}
           </div>
         </div> <!-- /.tabs -->
