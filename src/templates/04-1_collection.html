@@ -57,28 +57,32 @@ breadCrumbsItems: ['Главная','Коллекции']
 		<div class="page__content">
 			<div class="row">
 				<div class="tabs">
-
-				  <ul class="tabs__caption">
-				    <li class="active">Новый год 2018</li>
-				    <li>Осень 2017</li>
-				   	<li>Осень 2017</li>
-				  </ul>
-
-				  <div class="tabs__content active">
-					<div class="owl-carousel owl-theme owl-gallery owl-gallery-look" data-count="1|2|4">
-						{% include "partials/_item-look.html" %}
-						{% include "partials/_item-look.html" %}
-					</div>
-					{{look()}}
-				  </div>
-
-				  <div class="tabs__content">
-					<div class="owl-carousel owl-theme owl-gallery owl-gallery-look" data-count="1|2|4">
-						{% include "partials/_item-look.html" %}
-					</div>
-					{{look()}}
-				  </div>
-
+		          <ul class="tabs__caption">
+		            <li class="active"><a href="#tab-1">Новый год 2018</a></li>
+		            <li><a href="#tab-2">Осень 2017</a></li>
+		            <li><a href="#tab-3">Осень 2017</a></li>
+		          </ul>
+		          <div class="tabs__container">
+					  <div class="tabs__content active" id="tab-1">
+						<div class="owl-carousel owl-theme owl-gallery owl-gallery-look" data-count="1|2|4">
+							{% include "partials/_item-look.html" %}
+							{% include "partials/_item-look.html" %}
+						</div>
+						{{look()}}
+					  </div>
+					  <div class="tabs__content" id="tab-2">
+						<div class="owl-carousel owl-theme owl-gallery owl-gallery-look" data-count="1|2|4">
+							{% include "partials/_item-look.html" %}
+						</div>
+						{{look()}}
+					  </div>
+					  <div class="tabs__content" id="tab-3">
+						<div class="owl-carousel owl-theme owl-gallery owl-gallery-look" data-count="1|2|4">
+							{% include "partials/_item-look.html" %}
+						</div>
+						{{look()}}
+					  </div>
+					</div><!-- .tabs__container-->
 				</div><!-- .tabs-->
 			</div>
 		</div>

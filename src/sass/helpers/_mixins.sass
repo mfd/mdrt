@@ -312,3 +312,23 @@
     border: solid black;
     transform: rotate(-45deg) scale(.6);
     border-width: 0 2px 2px 0;
+
+
+=link-border($class:'.news-item__title')
+    #{$class}
+      position: relative
+      display: inline;
+      &::after
+          content: "";
+          position: absolute;
+          bottom: -2px;
+          right: 0;
+          left: 0;
+          height: 2px;
+          background-color: #aaa;
+          transform: scaleX(0);
+          transform-origin: center right;
+          transition: transform .4s cubic-bezier(.645,.045,.355,1);
+    &:hover #{$class}::after
+        transform: scaleX(1);
+        transform-origin: center left;

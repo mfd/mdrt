@@ -8,7 +8,7 @@ class Popup {
     this.heightPopup = null;
     this.windowResize = this.windowResize.bind(this);
 
-    $(window).on('resize',this.windowResize);
+    $(window).on('resize', this.windowResize);
     $('body').on('click', '.playerPopup', this.openPopup.bind(this));
     $('body').on('click', '.popUp .bg', this.closePopup.bind(this));
     $('body').on('click', '.btnClose', this.closePopup.bind(this));
@@ -46,7 +46,7 @@ class Popup {
     $('body').off('click', '.btnClose', this.closePopup.bind(this));
     this.windowResize = null;
   }
-    
+
 }
 
 export default Popup;

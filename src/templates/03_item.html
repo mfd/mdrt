@@ -123,22 +123,23 @@ isLogged: true
 						    <li><a href="#tab-3">Уход</a></li>
 						    <li><a href="#tab-4">Доставка и оплата</a></li>
 						  </ul>
+			          		<div class="tabs__container">
+							  <div class="tabs__content active" id="tab-1">
+								<p>Абстрактный принт по популярности может посоперничать с цветами и геометрией: этим летом он повсюду. Особенно хорошо такие рисунки смотрятся на деловой одежде: например, на платье фасона "футляр". Ткань - испанский набивной бифлекс.</p>
+							  </div>
 
-						  <div class="tabs__content active" id="tab-1">
-							<p>Абстрактный принт по популярности может посоперничать с цветами и геометрией: этим летом он повсюду. Особенно хорошо такие рисунки смотрятся на деловой одежде: например, на платье фасона "футляр". Ткань - испанский набивной бифлекс.</p>
-						  </div>
-
-						  <div class="tabs__content" id="tab-2">
-						    Содержимое блока Состав
-						  </div>
-						  <div class="tabs__content" id="tab-3">
-						    <svg class="icon icon-uhod-01"><use xlink:href="img/sprite.svg#icon-uhod-01"></use></svg>
-							<svg class="icon icon-uhod-02"><use xlink:href="img/sprite.svg#icon-uhod-02"></use></svg>
-							<svg class="icon icon-uhod-03"><use xlink:href="img/sprite.svg#icon-uhod-03"></use></svg>
-						  </div>
-						  <div class="tabs__content" id="tab-4">
-						    Содержимое блока Доставка и оплата
-						  </div>
+							  <div class="tabs__content" id="tab-2">
+							    Содержимое блока Состав
+							  </div>
+							  <div class="tabs__content" id="tab-3">
+							    <svg class="icon icon-uhod-01"><use xlink:href="img/sprite.svg#icon-uhod-01"></use></svg>
+								<svg class="icon icon-uhod-02"><use xlink:href="img/sprite.svg#icon-uhod-02"></use></svg>
+								<svg class="icon icon-uhod-03"><use xlink:href="img/sprite.svg#icon-uhod-03"></use></svg>
+							  </div>
+							  <div class="tabs__content" id="tab-4">
+							    Содержимое блока Доставка и оплата
+							  </div>
+							</div><!-- .tabs__container-->
 						</div><!-- .tabs-->
 					</div>
 				</div>
@@ -221,64 +222,54 @@ isLogged: true
 				    <li class="active"><a href="#tab-1" class="active">Отзывы</a></li>
 				    <li><a href="#tab-2">Вопросы</a></li>
 				  </ul>
+		          <div class="tabs__container">
+					  <div class="tabs__content active" id="tab-1">
+						<div class="b-opinions">
+							{{opinion()}}
+							<button class="btn">Добавить отзыв</button>
+						</div>
+					  </div>
 
-				  <div class="tabs__content active" id="tab-1">
-					<div class="b-opinions">
-						{{opinion()}}
-						<button class="btn">Добавить отзыв</button>
-					</div>
-				  </div>
+					  <div class="tabs__content" id="tab-2">
+						<div class="b-opinions">
+							{{opinion()}}
+						</div>
+					  </div>
 
-				  <div class="tabs__content" id="tab-2">
-					<div class="b-opinions">
-						{{opinion()}}
-					</div>
-				  </div>
-
+					</div><!-- .tabs__container-->
 				</div><!-- .tabs-->
 
 			</div>
 			<div class="row">
-				<div class="tabs">
-
+				<div class="tabs tabs-gallery">
 				  <ul class="tabs__caption">
 				    <li class="active"><a href="#tab-1">Рекомендации</a></li>
 				    <li><a href="#tab-2">Похожие товары</a></li>
 				    <li><a href="#tab-3">Вы недавно просматривали</a></li>
 				  </ul>
-
-				  <div class="tabs__content active" id="tab-1">
-					<div class="row grid__catalog">
-						<div class="owl-carousel owl-theme owl-gallery" data-count="1|3|4">
-      						{{mixins.catalogItems(2)}}
-						</div>
-					</div>
-				  </div>
-
-				  <div class="tabs__content" id="tab-2">
-					<div class="row grid__catalog">
-						<div class="owl-carousel owl-theme owl-gallery" data-count="1|3|4">
-      						{{mixins.catalogItems(2)}}
-						</div>
-					</div>
-				  </div>
-				  <div class="tabs__content">
-					<div class="row grid__catalog">
-						<div class="owl-carousel owl-theme owl-gallery" data-count="1|4|4">
+		          <div class="tabs__container">
+					  <div class="tabs__content active" id="tab-1">
+						<div class="row grid__catalog">
+							<div class="owl-carousel owl-theme owl-gallery" data-count="1|3|4">
 	      						{{mixins.catalogItems(2)}}
+							</div>
 						</div>
-					</div>
-				  </div>
-
-
-				  <div class="tabs__content">
-					<div class="row grid__catalog">
-						<div class="owl-carousel owl-theme owl-gallery" data-count="1|4|4">
-      						{{mixins.catalogItems(2)}}
+					  </div>
+					  <div class="tabs__content" id="tab-2">
+						<div class="row grid__catalog">
+							<div class="owl-carousel owl-theme owl-gallery" data-count="1|3|4">
+	      						{{mixins.catalogItems(2)}}
+							</div>
 						</div>
-					</div>
-				  </div>
-
+					  </div>
+					  <div class="tabs__content" id="tab-3">
+						<div class="row grid__catalog">
+							<div class="owl-carousel owl-theme owl-gallery" data-count="1|4|4">
+		      					{{mixins.catalogItems(2)}}
+							</div>
+						</div>
+					  </div>
+					</div><!-- .tabs__container-->
 				</div><!-- .tabs-->
 			</div>
 		</div>

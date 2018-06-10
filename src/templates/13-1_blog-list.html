@@ -17,56 +17,55 @@ footerWide: true
             <li><a href="#tab-2">Новости</a></li>
             <li><a href="#tab-3">Коллекции</a></li>
           </ul>
-
-          <div class="tabs__content active" id="tab-1">
-
-            <div class="grid__blogitem">
-                <figure class="blogitem">
-                    <a href="13-2_blog-item.html" class="blogitem__link">Силуэт в стиле Dior</a>
-                    <div class="blogitem__pic"><img src="img/assets/blog__item01.jpg" alt="" /></div>
-                    <figcaption class="blogitem__title">
-                        <div class="blogitem__title-wrap">
-                            <h2 class="blogitem__title-text">Платья в стиле 30-х</h2>
-                            <p class="blogitem__title-content">
-                              Довоенная эпоха была периодом стремительного развития моды. Именно в 30-х годах появилось множество фасонов одежды.
-                            </p>
-                        </div>
-                    </figcaption>
-                </figure>
-                <figure class="blogitem">
-                    <a href="13-2_blog-item.html" class="blogitem__link">Цветочные принты</a>
-                    <div class="blogitem__pic"><img src="img/assets/blog__item02.jpg" alt="" /></div>
-                    <figcaption class="blogitem__title">
-                        <div class="blogitem__title-wrap">
-                            <h2 class="blogitem__title-text">Женские пиджаки</h2>
-                            <p class="blogitem__title-content">
-                              Довоенная эпоха была периодом стремительного развития моды. Именно в 30-х годах появилось множество фасонов одежды.
-                            </p>
-                        </div>
-                    </figcaption>
-                </figure>
-                <figure class="blogitem">
-                    <a href="13-2_blog-item.html" class="blogitem__link">Силуэт в стиле Dior</a>
-                    <div class="blogitem__pic"><img src="img/assets/blog__item01.jpg" alt="" /></div>
-                    <figcaption class="blogitem__title">
-                        <div class="blogitem__title-wrap">
-                            <h2 class="blogitem__title-text">Силуэт в стиле Dior</h2>
-                        </div>
-                    </figcaption>
-                </figure>
-            </div> <!-- //.grid__blogitem -->
-            {{mixins.pagination()}}
-
-          </div>
-          <div class="tabs__content" id="tab-2">
-            <div class="grid__news">
-              {{mixins.newsItems(2, '12-2_news-item.html')}}
+          <div class="tabs__container">
+            <div class="tabs__content active" id="tab-1">
+              <div class="grid__blogitem">
+                  <figure class="blogitem">
+                      <a href="13-2_blog-item.html" class="blogitem__link">Силуэт в стиле Dior</a>
+                      <div class="blogitem__pic"><img src="img/assets/blog__item01.jpg" alt="" /></div>
+                      <figcaption class="blogitem__title">
+                          <div class="blogitem__title-wrap">
+                              <h2 class="blogitem__title-text">Платья в стиле 30-х</h2>
+                              <p class="blogitem__title-content">
+                                Довоенная эпоха была периодом стремительного развития моды. Именно в 30-х годах появилось множество фасонов одежды.
+                              </p>
+                          </div>
+                      </figcaption>
+                  </figure>
+                  <figure class="blogitem">
+                      <a href="13-2_blog-item.html" class="blogitem__link">Цветочные принты</a>
+                      <div class="blogitem__pic"><img src="img/assets/blog__item02.jpg" alt="" /></div>
+                      <figcaption class="blogitem__title">
+                          <div class="blogitem__title-wrap">
+                              <h2 class="blogitem__title-text">Женские пиджаки</h2>
+                              <p class="blogitem__title-content">
+                                Довоенная эпоха была периодом стремительного развития моды. Именно в 30-х годах появилось множество фасонов одежды.
+                              </p>
+                          </div>
+                      </figcaption>
+                  </figure>
+                  <figure class="blogitem">
+                      <a href="13-2_blog-item.html" class="blogitem__link">Силуэт в стиле Dior</a>
+                      <div class="blogitem__pic"><img src="img/assets/blog__item01.jpg" alt="" /></div>
+                      <figcaption class="blogitem__title">
+                          <div class="blogitem__title-wrap">
+                              <h2 class="blogitem__title-text">Силуэт в стиле Dior</h2>
+                          </div>
+                      </figcaption>
+                  </figure>
+              </div> <!-- //.grid__blogitem -->
               {{mixins.pagination()}}
             </div>
-          </div>
-          <div class="tabs__content" id="tab-3">
-            <div class="grid__catalog grid__catalog--col3">
-              {{mixins.catalogItems(2)}}
+            <div class="tabs__content" id="tab-2">
+              <div class="grid__news">
+                {{mixins.newsItems(2, '12-2_news-item.html')}}
+                {{mixins.pagination()}}
+              </div>
+            </div>
+            <div class="tabs__content" id="tab-3">
+              <div class="grid__catalog grid__catalog--col3">
+                {{mixins.catalogItems(2)}}
+              </div>
             </div>
           </div>
         </div>

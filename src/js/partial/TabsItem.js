@@ -22,7 +22,7 @@ export default class TabsItem {
     $(this.el).on('click', "li:not('.active') a", this.clickTab.bind(this));
     $(this.el).on('click', 'li.active a', this.toggleMobileMenu.bind(this));
 
-    //this.scrollBlock();
+    this.scrollBlock();
     console.log(this.opt.hash);
     if (this.opt.hash) {
       console.log('start',this.opt.hash);

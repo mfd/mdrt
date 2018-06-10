@@ -35,7 +35,8 @@ class BarbaController {
 		    		shapeLeave.fromTo($('.shapeTransit2'), 0.7, {css:{bottom:'0'}}, {css:{bottom:'-100%'}, ease:'Power1.easeInOut'},0);
 		    		shapeLeave.fromTo($('.shapeTransit1'), 0.7, {css:{bottom:'0%'}}, {css:{bottom:'-100%'}, ease:'Power1.easeInOut'},0.3);
 		    		shapeLeave.restart();
-        $('body').addClass('is-loaded');
+        //$('.barba-container');
+        $(this.newContainer).addClass('is-animate');
 
       },
 
@@ -66,13 +67,13 @@ class BarbaController {
       },
 
       animOut: function() {
+        $('.barba-container').removeClass('is-animate');
         let deferred = Barba.Utils.deferred();
 
 		    	const shapeEnter = new TimelineLite({paused : true, onComplete:() => {deferred.resolve();}});
 		    		shapeEnter.fromTo($('.shapeTransit1'), 0.7, {css:{bottom:'-100%'}}, {css:{bottom:'0%'}, ease:'Power1.easeInOut'},0);
 		    		shapeEnter.fromTo($('.shapeTransit2'), 0.7, {css:{bottom:'-100%'}}, {css:{bottom:'0%'}, ease:'Power1.easeInOut'},0.3);
 		    		shapeEnter.restart();
-
 		    	return deferred.promise;
 
       },

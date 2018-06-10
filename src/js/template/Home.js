@@ -1,47 +1,34 @@
 import BarbaPageBase from '../barba/BarbaPageBase';
+import owlCarousel from '../partial/owlCarousel';
+import HomeBG from '../partial/homebg';
 
+
+//import changeBg from
 class Home extends BarbaPageBase {
 
   constructor() {
     super('homepage');
 
-    //Forgive me for this shitty hack
-    $(window).scroll(() => {
-      if($(window).scrollTop()>$('body').height()/2 && $('body').hasClass('mobile')) $('.bannerHead').css('visibility','hidden');
-      else $('.bannerHead').css('visibility','visible');
-      //console.log('scroll');
-    });
+
+    //$(window).scroll(() => { this.changeBg(); });
   }
 
   display(container) {
-
-    //document.getElementById('playerHome').play();
-
-    	//---Scroll Anim --///
-    //this.controller = new ScrollMagic.Controller();
-    this.headernav = new TimelineLite();
-
-    const headernav = new TimelineLite({paused : true});
-
-    headernav.fromTo($('header'), 0.1, {css:{top:-100}}, {css:{top:0}, ease:'Power1.easeOut'},1);
-    //headernav.fromTo($('aside.sidebar'),0.4, {css:{autoAlpha:0}}, {css:{autoAlpha:1}, ease:'Power1.easeOut'},1);
-    //bannerHome.restart();
-    headernav.staggerFrom($('.menu__item'), 0.6, {x:-40, opacity:0, ease:Power3.easeOut}, 0.15, 0.2);
-    headernav.fromTo($('main'),2, {css:{autoAlpha:0}}, {css:{autoAlpha:1}, ease:'Power1.easeOut'},2);
-
-    headernav.totalDuration(2).restart();
-
-
-
+    console.log('Start Home');
+    //this.changeBg();
   }
-  initFullPage() {
-    $('#fullpage').fullpage({
-      //anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
-      //sectionsColor: ['#eee', '#939FAA', '#ffffff'],
-      scrollOverflow: true,
-      navigation: true,
-      //navigationTooltips: ['home', 'second']
-    });
+  onEnterCompleted() {
+    //super.onEnterCompleted();
+
+    //TweenMax.set($('aside.sidebar'), {css:{top:-100}});
+    //if($('.partner').length) this.carousel = new Carousel();
+    //if($('.owl-gallery').length) this.sliderGallery();
+    if($('.owl-gallery')) this.carousel = new owlCarousel(this.view);
+
+    //this.initFullPage();
+    this.initHomePromo();
+    this.scrollBG = new HomeBG();
+
   }
   initHomePromo() {
     let $owl = $('.owl-oneslide');
@@ -74,23 +61,15 @@ class Home extends BarbaPageBase {
     //   $owl.trigger('next.owl.carousel');
     // });
   }
-  onEnterCompleted() {
-    super.onEnterCompleted();
-    TweenMax.set($('header'), {css:{top:-100}});
-    //TweenMax.set($('aside.sidebar'), {css:{top:-100}});
-    //if($('.partner').length) this.carousel = new Carousel();
-    //if($('.owl-gallery').length) this.sliderGallery();
-
-
-    //this.initFullPage();
-    this.initHomePromo();
-  }
-
   hide(container, promise) {
     super.hide(container,promise);
 
+    if(this.carousel) this.carousel.destroy();
 
-    //     this.controller.destroy();
+    this.scrollBG.destroy();
+
+    //$(window).off('scroll', this.changeBg);
+    //this.controller.destroy();
     //     this.bannerHome.kill();
     //     this.quoteHome.kill();
     //     this.mainEpisode.kill();
@@ -98,7 +77,7 @@ class Home extends BarbaPageBase {
     //     this.moreArticle.kill();
     //     this.partner.kill();
     //
-    //     this.controller = null;
+    //this.controller = null;
     //     this.bannerHome = null;
     //     this.quoteHome = null;
     //     this.mainEpisode = null;
@@ -106,6 +85,8 @@ class Home extends BarbaPageBase {
     //     this.moreArticle = null;
     //     this.partner = null;
   }
+
+
 
 }
 

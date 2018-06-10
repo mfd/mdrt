@@ -6,7 +6,6 @@ import Share from '../partial/Share';
 import VideoApi from '../partial/VideoApi';
 import Popup from '../partial/Popup';
 import Header from '../partial/Header';
-
 import owlCarousel from '../partial/owlCarousel';
 
 /**
@@ -77,13 +76,16 @@ class BarbaPageBase {
     //if($('.bannerHead').length) this.banner = new Banner();
     if($('.shareFacebook').length) this.share = new Share();
     if($('.tabs').length) this.tabs = new Tabs(this.view);
+
     //if($('.partner').length) this.carousel = new Carousel();
     //if($('.startPlayer').length) this.videoApi = new VideoApi();
     //if($('.playerPopup').length) this.popup = new Popup(this.view);
 
     //if($('header').length) this.header = new Header();
-
     if($('.owl-gallery')) this.carousel = new owlCarousel();
+
+
+
 
     this.resize();
 
@@ -100,7 +102,7 @@ class BarbaPageBase {
     ResizeManager.unbind( this.id );
 
     //Destroy Partial Modules
-    // if(this.banner) this.banner.destroy();
+    //if(this.header) this.header.destroy();
     if(this.carousel) this.carousel.destroy();
     if(this.tabs) this.tabs.destroy();
     // if(this.videoApi) this.videoApi.destroy();

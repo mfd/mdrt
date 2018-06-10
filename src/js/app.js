@@ -33,7 +33,7 @@ import owlCarousel from './partial/owlCarousel';
 
 import Home from './template/Home';
 import Page from './template/Page';
-
+import Stores from './template/Stores';
 
 class Main {
 
@@ -56,6 +56,7 @@ class Main {
     // INIT VIEWS
     this.home = new Home();
     this.page = new Page();
+    this.stores = new Stores();
 
 
     this.header = new Header();
@@ -63,6 +64,7 @@ class Main {
 
     BarbaController.register(this.home);
     BarbaController.register(this.page);
+    BarbaController.register(this.stores);
 
 
 
