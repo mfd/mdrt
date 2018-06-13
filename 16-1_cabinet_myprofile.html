@@ -8,6 +8,7 @@
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
     <meta name="author" content="Kamil Kashaev" />
+    <link rel="stylesheet" media="all" href="js/vendors.min.css">
     <link rel="stylesheet" media="all" href="css/app.css">
     <script>
       document.documentElement.classList.remove('no-js');
@@ -431,15 +432,83 @@
               </ul>
               <div class="tabs__container">
                 <div class="tabs__content active" id="tab-1">
-                  <div class="page__row">
-                    <div class="col col-left">
-                      <h5>Личные данные</h5>
+                  <form class="form__profileEdit">
+                    <div class="page__row">
+                      <div class="col col-left">
+                        <h5>Личные данные</h5>
+                        <div class="form-group">
+                          <input class="form-control" type="text" name="name" placeholder="Введите имя" />
+                          <label for="name" class="control-label">Имя</label>
+                        </div>
+                        <div class="form-group">
+                          <input class="form-control" type="text" name="faname" placeholder="Введите фамилию" />
+                          <label for="faname" class="control-label">Фамилия</label>
+                        </div>
+                        <div class="form-group">
+                          <input class="form-control" type="text" name="surname" placeholder="Введите отчество" />
+                          <label for="surname" class="control-label">Отчество</label>
+                        </div>
+                        <div class="form-group">
+                          <select class="form-control">
+                            <option>Уфа</option>
+                            <option>Москва</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <input class="form-control" type="text" name="email" placeholder="k@k.ru" disabled />
+                          <label for="email" class="control-label"></label>
+                        </div>
+                        <div class="form-group">
+                          <input class="form-control" type="text" name="tel" placeholder="+7 ___-___-__-__" />
+                          <label for="tel" class="control-label">Телефон:</label>
+                        </div>
+                      </div>
+                      <div class="col col-right">
+                        <h5>Изменение пароля</h5>
+                        <div class="form-group">
+                          <input class="form-control" type="password" name="password" placeholder="Новый пароль" />
+                          <label for="password" class="control-label">Новый пароль</label>
+                        </div>
+                        <div class="form-group">
+                          <input class="form-control" type="password" name="repassword" placeholder="Повторите пароль" />
+                          <label for="repassword" class="control-label">Повторите пароль</label>
+                        </div>
+                        <h5>Дата рождения</h5>
+                        <div class="form-group">
+                          <select class="form-control">
+                            <option>1</option>
+                            <option>31</option>
+                          </select>
+                          <select class="form-control">
+                            <option>Январь</option>
+                            <option>Декабрь</option>
+                          </select>
+                          <select class="form-control">
+                            <option>1970</option>
+                            <option>2010</option>
+                          </select>
+                        </div>
+                        <p>Будьте внимательны!
+                          <br/>Поменять дату рождения можно только один раз!</p>
+                        <div class="input-group">
+                          <label class="checkbox checkbox-lg">
+                            <input type="checkbox" checked="" />
+                            <span>Я хочу получать SMS-рассылку</span>
+                          </label>
+                        </div>
+                        <div class="input-group">
+                          <label class="checkbox">
+                            <input type="checkbox" />
+                            <span>Я хочу получать email-рассылку</span>
+                          </label>
+                        </div>
+                      </div>
                     </div>
-                    <div class="col col-right">
-                      <h5>Изменение пароля</h5>
-                      <h5>Дата рождения</h5>
+                    <div class="btn__row">
+                      <button class="btn btn_sm">Отмена</button>
+                      <button class="btn btn-ok btn_sm">Сохранить</button>
                     </div>
-                  </div>
+                  </form>
                 </div>
                 <div class="tabs__content" id="tab-2">
                   <div class="page__row">
@@ -1709,24 +1778,52 @@
                   </div>
                 </div>
                 <div class="tabs__content" id="tab-4">
-                  <ul class="shipment">
-                    <li class="shipment-item">
-                      <div class="input-group">
-                        <label class="radio">
-                          <input type="radio" checked="" name="selectLocation1" />
-                          <span>г. Уфа, Гагарина, 6 кв. 2, 450092</span>
-                        </label>
-                      </div>
-                    </li>
-                    <li class="shipment-item">
-                      <div class="input-group">
-                        <label class="radio">
-                          <input type="radio" name="selectLocation2" />
-                          <span>г. Уфа, бульвар Ибрагимова, 186/23 кв. 2, 450092</span>
-                        </label>
-                      </div>
-                    </li>
-                  </ul>
+                  <form class="form__shipment">
+                    <ul class="shipment-list">
+                      <li class="shipment-item">
+                        <div class="input-group">
+                          <label class="radio">
+                            <input type="radio" checked="" name="shiploc" value="2" />
+                            <span>г. Уфа, Гагарина, 6 кв. 2, 450092</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="shipment-item">
+                        <div class="input-group">
+                          <label class="radio">
+                            <input type="radio" name="shiploc" value="2" />
+                            <span>г. Уфа, бульвар Ибрагимова, 186/23 кв. 2, 450092</span>
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </form>
+                  <form class="form__shipmentAdd">
+                    <h5>Добавить новый адрес</h5>
+                    <div class="form-group form-wide">
+                      <input class="form-control" type="city" name="text" placeholder="Город" />
+                      <label for="city" class="control-label">Город</label>
+                    </div>
+                    <div class="form-group form-wide">
+                      <input class="form-control" type="street" name="text" placeholder="Улица" />
+                      <label for="street" class="control-label">Улица</label>
+                    </div>
+                    <div class="form-group form-inline">
+                      <input class="form-control" type="build" name="text" placeholder="Дом" />
+                      <label for="build" class="control-label">Дом</label>
+                    </div>
+                    <div class="form-group form-inline">
+                      <input class="form-control" type="korp" name="text" placeholder="Корпус/Строение" />
+                      <label for="korp" class="control-label">Корпус/Строение</label>
+                    </div>
+                    <div class="form-group form-inline">
+                      <input class="form-control" type="office" name="text" placeholder="Квартира/Офис" />
+                      <label for="office" class="control-label">Квартира/Офис</label>
+                    </div>
+                    <div class="btn__row">
+                      <button class="btn btn-ok">Добавить адрес</button>
+                    </div>
+                  </form>
                 </div>
                 <div class="tabs__content" id="tab-5">
                   <div class="input">
@@ -1844,8 +1941,9 @@
     <div class="shapeTransit2"></div>
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/vendors.min.js"></script>
-    <script type="text/javascript" src="https://rawgit.com/hpneo/gmaps/master/gmaps.min.js"></script>
-    <script type="text/javascript" src="https://rawgit.com/googlemaps/v3-utility-library/master/markerclustererplus/src/markerclusterer_packed.js"></script>
+    <script type="text/javascript" src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+    <!--     <script type="text/javascript" src="https://rawgit.com/alvarotrigo/fullPage.js/master/vendors/scrolloverflow.min.js"></script>
+ -->
     <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->
   </body>
