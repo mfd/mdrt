@@ -15,15 +15,59 @@
             font-weight: normal
     .page__row
         justify-content: left;
+
         > .btn
             margin-right: 15px;
             margin-bottom: 10px;
     .btn
-        @extend .btn_sm, .btn_default
-        &.is-active
+        @extend .btn_default
+        margin-right: 10px;
+        margin-bottom: 10px;
+        &.is-active,
+        &.btn-ok
             color: #fff
             background: #B09C6D
             border-color: #B09C6D
+
+    .form__profileEdit
+        .page__row
+            .col-left,
+            .col-right
+                width: 30%
+                +md
+                    width: 50%
+
+        .checkbox
+            font-size: 16px;
+        .btn__row
+            +clr
+            margin-left: 35%
+            +md
+                margin: 0;
+
+    .shipment-item
+        list-style: none;
+    .form__shipmentAdd
+        border: 1px solid #BDBDBD;
+        border-radius: 5px;
+        padding: 1em;
+        width: 430px;
+        .form-wide
+            .form-control
+                width: 100%;
+        .form-inline
+            display: inline-block;
+            width: 28%;
+            margin-right: 10px;
+            .form-control
+                width: 100%;
+        .btn__row
+            margin: .5em 0;
+            .btn
+                //@extend .btn_sm
+                transform: scale(.8)
+                transform-origin: 0 50%;
+
     .grid__orders
         display: flex;
         flex-wrap: wrap;

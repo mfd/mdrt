@@ -9,6 +9,7 @@
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
     <meta name="author" content="Kamil Kashaev" />
+    <link rel="stylesheet" media="all" href="js/vendors.min.css">
     <link rel="stylesheet" media="all" href="css/app.css">
     {# {% include "../partials/_media-tags.html" %} #}
     <script>
@@ -40,36 +41,12 @@
 
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/vendors.min.js"></script>
-    <script type="text/javascript" src="https://rawgit.com/hpneo/gmaps/master/gmaps.min.js"></script>
-    <script type="text/javascript" src="https://rawgit.com/googlemaps/v3-utility-library/master/markerclustererplus/src/markerclusterer_packed.js"></script>
-
-
+    <script type="text/javascript" src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+<!--     <script type="text/javascript" src="https://rawgit.com/alvarotrigo/fullPage.js/master/vendors/scrolloverflow.min.js"></script>
+ -->
     <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->
     {% if barbaNameSpace==='homepage'%}
-    <script type="text/javascript">
-//       $(document).ready(function() {
-//         $('#fullpage').fullpage({
-//           //sectionsColor: ['#eee', '#939FAA', '#ffffff'],
-//           scrollOverflow: true,
-//           navigation: true,
-//           //navigationTooltips: ['home', 'second']
-//           onSlideLeave: function( anchorLink, index, slideIndex, direction, nextSlideIndex){
-//             var leavingSlide = $(this);
-//
-//             //leaving the first slide of the 2nd Section to the right
-//             if(index == 2 && slideIndex == 0 && direction == 'right'){
-//               alert("Leaving the fist slide!!");
-//             }
-//
-//             //leaving the 3rd slide of the 2nd Section to the left
-//             if(index == 2 && slideIndex == 2 && direction == 'left'){
-//               alert("Going to slide 2! ");
-//             }
-//           }
-//         });
-//       });
-    </script>
     {% else %}
     {% endif %}
   </body>

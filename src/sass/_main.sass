@@ -64,38 +64,6 @@ main
                     border-color: #333333
 
 
-@import pages/page__catalog
-@import pages/page__look
-@import pages/page__oneitem
-
-@import pages/page__actions-news
-@import pages/page__blog
-@import pages/page__styleguide
-@import pages/page__innerpage
-@import pages/page__404-500
-@import pages/page__stores
-@import pages/page__mirmdrt
-@import pages/page__cabinet
-
-
-
-
-.page__fullpage .section
-    background: yellow;
-    &:nth-of-type(even)
-      background: crimson
-
-    &.with-overflow
-        .overflow-content
-            height: 200vh;
-
-
-
-
-
-
-
-
 
 .page__news
     +clr
@@ -132,7 +100,12 @@ main
         width: 270px;
         +md
             width: 400px;
+        +sm
+            display: none
     &__col2
         width: 850px;
         +md
             width: 450px;
+        +sm
+            width: 100%
+            padding: 0 1em

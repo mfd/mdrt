@@ -157,6 +157,7 @@
             {% set idx = outer_loop.index+loop.index-1 %}
             <!-- BEGIN item-->
             <div class="item">
+                <a href="03_item.html" class="item__link">{{ item.title | safe }}</a>
                 <div class="item__row">
                     <figure class="img-block"><img src="img/assets/{{ item.path }}" alt="" /></figure>
                     <!-- <figure class="img-block"><img src="img/assets/item0{{ range(1, 6) | random }}.jpg" alt="" /></figure> -->
@@ -174,7 +175,6 @@
                         {% else %}
                             {{ item.price }}
                         {% endif %}
-
                     </p>
                 </div>
 

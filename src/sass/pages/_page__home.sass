@@ -1,0 +1,23 @@
+#fullpage
+    .section
+        padding-top: 100px
+        +sm
+            padding-top: 25px
+        &.one
+            background: #F2F2F2
+        &.two
+            background: #D9DBDF
+    .container
+        margin-top: 0
+        padding-top: 0
+
+
+
+.page__fullpage .section
+    background: yellow;
+    &:nth-of-type(even)
+      background: crimson
+
+    &.with-overflow
+        .overflow-content
+            height: 200vh;

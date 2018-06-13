@@ -1,18 +1,47 @@
-            <ul class="shipment">
-              <li class="shipment-item">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" checked="" name="selectLocation1" />
-                    <span>г. Уфа, Гагарина, 6 кв. 2, 450092</span>
-                  </label>
-                </div>
-              </li>
-              <li class="shipment-item">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation2" />
-                    <span>г. Уфа, бульвар Ибрагимова, 186/23 кв. 2, 450092</span>
-                  </label>
-                </div>
-              </li>
-            </ul>
+<form class="form__shipment">
+  <ul class="shipment-list">
+    <li class="shipment-item">
+      <div class="input-group">
+        <label class="radio">
+          <input type="radio" checked="" name="shiploc" value="2" />
+          <span>г. Уфа, Гагарина, 6 кв. 2, 450092</span>
+        </label>
+      </div>
+    </li>
+    <li class="shipment-item">
+      <div class="input-group">
+        <label class="radio">
+          <input type="radio" name="shiploc" value="2" />
+          <span>г. Уфа, бульвар Ибрагимова, 186/23 кв. 2, 450092</span>
+        </label>
+      </div>
+    </li>
+  </ul>
+</form>
+
+<form class="form__shipmentAdd">
+  <h5>Добавить новый адрес</h5>
+  <div class="form-group form-wide">
+    <input class="form-control" type="city" name="text" placeholder="Город" />
+    <label for="city" class="control-label">Город</label>
+  </div>
+  <div class="form-group form-wide">
+    <input class="form-control" type="street" name="text" placeholder="Улица" />
+    <label for="street" class="control-label">Улица</label>
+  </div>
+    <div class="form-group form-inline">
+      <input class="form-control" type="build" name="text" placeholder="Дом" />
+      <label for="build" class="control-label">Дом</label>
+    </div>
+    <div class="form-group form-inline">
+      <input class="form-control" type="korp" name="text" placeholder="Корпус/Строение" />
+      <label for="korp" class="control-label">Корпус/Строение</label>
+    </div>
+    <div class="form-group form-inline">
+      <input class="form-control" type="office" name="text" placeholder="Квартира/Офис" />
+      <label for="office" class="control-label">Квартира/Офис</label>
+    </div>
+    <div class="btn__row">
+        <button class="btn btn-ok">Добавить адрес</button>
+    </div>
+</form>

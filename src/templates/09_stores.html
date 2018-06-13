@@ -112,7 +112,7 @@ barbaNameSpace: stores
                         <article class="ac-text">
                           <div class="ac-sub store-city">
                           {% for store in item.stores %}
-                                <a href="#" class="store-city__item" data-latlng="{{store.latlng}}" data-fulladdress="{{city}}, {{store.addr}}">
+                                <a href="#" class="store-city__item" data-latlng="{{store.latlng}}" data-addr="{{city}}, {{store.addr}} {{store.tel}}">
                                   <div class="store-city__name">{{store.title}}</div>
                                   <div class="store-city__addr">{{store.addr}}<br/> т.{{store.tel}}</div>
                                 </a>

@@ -8,6 +8,7 @@ function build(cb) {
         'sprite:svg',
         'sass',
         'nunjucks',
+        'vendors',
         'webpack',
         'copy',
         'list-pages',

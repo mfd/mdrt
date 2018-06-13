@@ -1,4 +1,4 @@
-import 'babel-polyfill';
+//import 'babel-polyfill';
 
 //import $ from 'jquery';
 //import jQuery from 'jquery';
@@ -16,6 +16,7 @@ import 'owl.carousel';
 ///import 'fullpage.js/dist/jquery.fullpage.extensions.min';
 //import 'fullpage.js/dist/jquery.fullPage';
 //import PerfectScrollbar from 'perfect-scrollbar';
+
 import FixBody from 'js-util/FixBody';
 
 import DeviceInfo from './tools/DeviceInfo';
