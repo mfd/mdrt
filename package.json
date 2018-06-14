@@ -77,6 +77,7 @@
     "fastclick": "^1.0.6",
     "fullpage.js": "^2.9.7",
     "gsap": "^2.0.1",
+    "gulp-size": "^3.0.0",
     "jquery": "^3.1.1",
     "js-util": "git://github.com/ykob/js-util.git",
     "object-fit-images": "^3.2.3",
@@ -86,6 +87,7 @@
     "sticky-js": "^1.2.0",
     "stickybits": "^3.3.0",
     "swiper": "^4.2.2",
+    "tippy.js": "^2.5.2",
     "webfontloader": "^1.6.28"
   }
 }

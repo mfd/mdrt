@@ -231,6 +231,20 @@
                 </ul>
               </li>
               <li class="menu__item">
+                <a href="04-1_collection.html">Коллекции</a>
+                <ul class="submenu">
+                  <li class="submenu__item">
+                    <a href="04-2_collection-catalog.html">Новый год 2018</a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="04-2_collection-catalog.html">Осень 2017</a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="04-2_collection-catalog.html">Лето 2017</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu__item">
                 <a href="06_novelty.html">Новинки</a>
               </li>
               <li class="menu__item sale">
@@ -410,6 +424,13 @@
           <main class="innerPage pageCabinet">
             <div class="page__title">
               <h1 class="page__title-text"> Личный кабинет </h1>
+              <div class="page__title-right">
+                <ul class="page__title-menu">
+                  <li class="active">
+                    <a href="javascript:history.back()">Вернуться к покупкам</a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <!-- //.page__title -->
             <div class="tabs tabs-cabinet">
@@ -474,7 +495,7 @@
                           <label for="repassword" class="control-label">Повторите пароль</label>
                         </div>
                         <h5>Дата рождения</h5>
-                        <div class="form-group">
+                        <div class="form-group date">
                           <select class="form-control">
                             <option>1</option>
                             <option>31</option>
@@ -502,11 +523,11 @@
                             <span>Я хочу получать email-рассылку</span>
                           </label>
                         </div>
+                        <div class="btn__row">
+                          <button class="btn btn_sm">Отмена</button>
+                          <button class="btn btn-ok btn_sm">Сохранить</button>
+                        </div>
                       </div>
-                    </div>
-                    <div class="btn__row">
-                      <button class="btn btn_sm">Отмена</button>
-                      <button class="btn btn-ok btn_sm">Сохранить</button>
                     </div>
                   </form>
                 </div>
@@ -1783,16 +1804,24 @@
                       <li class="shipment-item">
                         <div class="input-group">
                           <label class="radio">
-                            <input type="radio" checked="" name="shiploc" value="2" />
+                            <input type="radio" name="shiploc" value="1" />
                             <span>г. Уфа, Гагарина, 6 кв. 2, 450092</span>
+                            <span class="shipment-item__action">
+                              <a href="#">Редактировать</a>
+                              <a href="#">Удалить</a>
+                            </span>
                           </label>
                         </div>
                       </li>
                       <li class="shipment-item">
                         <div class="input-group">
                           <label class="radio">
-                            <input type="radio" name="shiploc" value="2" />
+                            <input type="radio" name="shiploc" value="1" />
                             <span>г. Уфа, бульвар Ибрагимова, 186/23 кв. 2, 450092</span>
+                            <span class="shipment-item__action">
+                              <a href="#">Редактировать</a>
+                              <a href="#">Удалить</a>
+                            </span>
                           </label>
                         </div>
                       </li>

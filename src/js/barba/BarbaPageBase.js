@@ -84,9 +84,6 @@ class BarbaPageBase {
     //if($('header').length) this.header = new Header();
     if($('.owl-gallery')) this.carousel = new owlCarousel();
 
-
-
-
     this.resize();
 
     //$('html title').html($('.barba-container').attr('data-title')+'Pastel Fluo');

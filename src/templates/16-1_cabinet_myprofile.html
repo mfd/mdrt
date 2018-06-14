@@ -9,7 +9,7 @@ isLogged: true
 {% block content %}
     {% include "partials/_sidebar.html" %}
   <main class="innerPage pageCabinet">
-        {{mixins.pageTitle(title)}}
+        {{mixins.pageTitle(title, 'back')}}
         <div class="tabs tabs-cabinet">
           <ul class="tabs__caption">
             <li class="active"><a href="#tab-1" class="active">Мой профиль</a></li>

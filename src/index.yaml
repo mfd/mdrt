@@ -47,9 +47,7 @@ PageList:
   ready: 10
 - file: 16-2_cabinet_order-full.html
   ready: 10
-- file: 16-3_cabinet_ship--add.html
+- file: 16-3_cabinet_isbrannoe.html
   ready: 10
-- file: 16-4_cabinet_isbrannoe.html
-  ready: 10
-- file: 16-5_cabinet_korzina.html
+- file: 16-4_cabinet_korzina.html
   ready: 100

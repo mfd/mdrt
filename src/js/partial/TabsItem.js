@@ -37,11 +37,12 @@ export default class TabsItem {
   hide() {
     console.log('tabs hide');
   }
-  clickTab(event) {
-    console.log(event, hash);
-    let hash = $(event.currentTarget).attr('href');
+  clickTab(e) {
+    //console.log(event, hash);
+    console.info(e, e.target, e.currentTarget);
+    let hash = $(e.currentTarget).attr('href');
     this.changeTab(hash);
-    event.preventDefault();
+    e.preventDefault();
   }
   changeTab(hash) {
     console.log('cng',hash);

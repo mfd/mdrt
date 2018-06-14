@@ -80,11 +80,13 @@
         width: 100%;
         margin-left: .5em;
         //margin-top: 1%;
+        +md
+            margin: 0;
     &__full
         float: left;
         display: block;
         margin-right: 2em;
-        +sm
+        +md
             float: none!important;
             width: 100%;
         .img-block img
@@ -92,19 +94,39 @@
             width: auto;
             display: block
             +md
-                height: 350px
+                height: auto;
             +sm
-                height: 250px
+                //height: 250px
+                width: 100%;
+    &__prev, &__next
+        display: none
+        font-size: 14px;
+        margin: 15px 0;
+        +md
+            display: block
+            //position: absolute
+    &__prev
+        float: left;
+    &__next
+        float: right;
+
+
     &__title
         font-size: 24px;
         text-transform: uppercase;
         color: #333333;
         font-weight: normal
+        +md
+            text-align: center;
+            margin: 1em 0 .25em 0;
     &__parts
-        float: left;
+        float: none;
+        +md
+            float: left;
+            width: 100%;
         +sm
             float: none!important;
-            width: 100%;
+
         &-element
             display: table;
             margin-bottom: 1em;
@@ -125,10 +147,11 @@
 
 .owl-carousel.owl-gallery.owl-gallery-look
     margin: 2em 0;
+    +md
+        display: none;
     .owl-nav
         top: -50px;
         .owl-prev
-
-
-
-
+    .owl-stage-outer
+        //width: 90%
+        margin-right: 6px

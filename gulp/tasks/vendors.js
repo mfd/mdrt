@@ -4,13 +4,17 @@ var concat       = require('gulp-concat');
 var uglify       = require('gulp-uglify');
 var debug        = require('gulp-debug');
 var insert       = require('gulp-insert');
+var size         = require('gulp-size');
 var config       = require('../config');
 
 gulp.task('vendors', () => {
   //return gulp.src(`${ASSETS}/vendors/*.js`)
   gulp.src(config.src.root + '/vendors/*.js')
     .pipe(sort())
-    .pipe(debug())
+    //.pipe(debug())
+    .pipe(size({
+        showFiles: true
+    }))
     .pipe(insert.transform(function(contents, file) {
         return '/* => ' + file.path.split('/').reverse()[0] + ' */\n' + contents + '\n\n';
     }))
@@ -24,7 +28,10 @@ gulp.task('vendors', () => {
 
   gulp.src(config.src.root + '/vendors/*.css')
     .pipe(sort())
-    .pipe(debug())
+    //.pipe(debug())
+    .pipe(size({
+        showFiles: true
+    }))
     .pipe(insert.transform(function(contents, file) {
         return '/* => ' + file.path.split('/').reverse()[0] + ' */\n' + contents + '\n\n';
     }))

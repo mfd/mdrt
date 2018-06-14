@@ -66,8 +66,16 @@
     {% if(titleMenu==='catalog') %}
         <div class="page__title-right">
           <ul class="catalog__sort">
-            <li><a href="#">Все предметы одежды</a></li>
-            <li class="active"><a href="#">Размеры</a></li>
+            <li>
+              <a href="#" id="catalog-sort">Все предметы одежды</a>
+              <div id="catalog-sort__dropdown" class="tippy-dropdown">
+                <ul>
+                  <li><a href="#">По новизне</a></li>
+                  <li class="is-active"><a href="#">По популярности</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="active"><a href="#" data-tippy title="test">Размеры</a></li>
             <li><a href="#">Цена</a></li>
             <li><a href="#" class="clear">Сбросить</a></li>
           </ul>
