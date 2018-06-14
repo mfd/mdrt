@@ -33,6 +33,44 @@ h1, .h1
         line-height: 36px
         margin-bottom: 0
         margin-bottom: 10px;
+
+.table
+    width: 100%;
+    max-width: 100%
+    caption
+        padding-top: 8px;
+        padding-bottom: 8px;
+        color: #777;
+        text-align: left;
+
+.table
+    width: 100%
+    max-width: 100%
+    margin-bottom: 20px
+    >
+        thead > tr > th,
+        tbody > tr > th,
+        tfoot > tr > th,
+        thead > tr > td,
+        tbody > tr > td,
+        tfoot > tr > td
+            padding: 8px
+            line-height: 1.42857143
+            vertical-align: top
+            border-top: 1px solid #ddd
+        thead > tr > th
+            vertical-align: bottom
+            border-bottom: 2px solid #ddd
+            font-size: 14px;
+            color: #ABABAB;
+        caption + thead > tr:first-child > th, colgroup + thead > tr:first-child > th, thead:first-child > tr:first-child > th, caption + thead > tr:first-child > td, colgroup + thead > tr:first-child > td, thead:first-child > tr:first-child > td
+            border-top: 0
+        tbody + tbody
+            border-top: 2px solid #ddd
+        th
+            text-align: left;
+
+
 main
     h2
         font-size: 24px;

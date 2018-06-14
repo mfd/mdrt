@@ -83,18 +83,18 @@
         transform: translateX(150px);
         opacity: 0;
         visibility: hidden;
-        transition: transform 800ms $ease, opacity 400ms $ease 0ms, visibility 800ms $ease;
+        transition: transform .8s $ease, opacity .4s $ease 0s, visibility .8s $ease;
         &.active
             position: relative;
             transform: translateX(0%);
             opacity: 1;
             visibility: visible;
-            transition: transform 800ms $ease, opacity 400ms $ease 200ms, visibility 800ms $ease;
+            transition: transform .8s $ease, opacity .4s $ease .2s, visibility .8s $ease;
             &~.tabs__content
                 transform: translateX(-150px);
                 opacity: 0;
                 visibility: hidden;
-                transition: transform 800ms $ease, opacity 400ms $ease 0ms, visibility 800ms $ease;
+                transition: transform .8s $ease, opacity .4s $ease 0, visibility .8s $ease;
 
 // -----
 // MOBILE

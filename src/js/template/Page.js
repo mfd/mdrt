@@ -23,15 +23,32 @@ class Page extends BarbaPageBase {
   onEnter() {
     super.onEnter();
 
-    this.tips = tippy(document.querySelectorAll('[data-tippy]'));
-    this.tipCatalogSort = tippy('#catalog-sort', {
-      html: document.querySelector('#catalog-sort__dropdown'),
-      theme: 'mdrt',
-      placement: 'bottom',
-      arrow: true,
-      trigger: 'click',
-      interactive: true
+    this.tips = [];
+
+    document.querySelectorAll('[data-tippy]').forEach(el => {
+      this.tips.push(
+        tippy(el)
+      );
+      this.tips.push(
+        tippy('#catalog-sort', {
+          html: document.querySelector('#catalog-sort__dropdown'),
+          theme: 'mdrt',
+          placement: 'bottom',
+          arrow: true,
+          trigger: 'click',
+          interactive: true
+        })
+      );
     });
+    // this.tips = tippy(document.querySelectorAll('[data-tippy]'));
+    // this.tipCatalogSort = tippy('#catalog-sort', {
+    //   html: document.querySelector('#catalog-sort__dropdown'),
+    //   theme: 'mdrt',
+    //   placement: 'bottom',
+    //   arrow: true,
+    //   trigger: 'click',
+    //   interactive: true
+    // });
   }
 
   onEnterCompleted() {
@@ -42,8 +59,10 @@ class Page extends BarbaPageBase {
   hide(container, promise) {
     super.hide(container,promise);
     debugger;
+    this.tips = null;
+    // const first = this.tips[0];
+    // first.destroy(first.store[0].popper);
 
-    this.tipCatalogSort.destroyAll();
     // this.listEpisode.kill();
     // this.listEpisode = null;
 

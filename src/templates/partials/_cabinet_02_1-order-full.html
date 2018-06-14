@@ -1,37 +1,137 @@
-<div class="page__row">
-    <h5>Заказ #5</h5>
-
-</div>
-<div class="page__row">
-    <ul class="order-full__desc">
-        <li class="order-full__name">
-            <h5>О покупателе:</h5>
-            <dl class="order-full__list">
-                <dt class="order-full__label">Имя:</dt>
-                    <dd class="order-full__value">Никифорова</dd>
-                <dt class="order-full__label">Фамилия:</dt>
-                    <dd class="order-full__value">Алевтина</dd>
-                <dt class="order-full__label">Отчество:</dt>
-                    <dd class="order-full__value">Иннокентиевна</dd>
-                <dt class="order-full__label">e-mail:</dt>
-                    <dd class="order-full__value">alevtina_nikiforova@mail.ru</dd>
-                <dt class="order-full__label">Телефон:</dt>
-                    <dd class="order-full__value">+7 985 789 45 23</dd>
-            </dl>
-        </li>
-        <li class="order-full__shipment">
-            <h5>Доставка:</h5>
-            <dl class="b-order-card__desc">
-                <dt class="orderDesc__label">Сумма к оплате:</dt>
-                    <dd class="orderDesc__value">14 999 р</dd>
-                <dt class="orderDesc__label">Оплачен:</dt>
-                    <dd class="orderDesc__value">нет</dd>
-                <dt class="orderDesc__label">Способ оплаты:</dt>
-                    <dd class="orderDesc__value">наличными курьеру</dd>
-                <dt class="orderDesc__label">Способ доставки:</dt>
-                    <dd class="orderDesc__value">300 р</dd>
-            </dl>
-        </li>
-    </ul>
-
+<div class="order-full">
+    <div class="page__row order-full__title">
+        <h5>Заказ #5</h5>
+        <time>20.15.2016</time>
+        <span class="order-full__status">Обработка заказа</span>
+        <a href="#" class="btn btn-ok btn-back">Обратно к заказам</a>
+    </div>
+    <div class="page__row">
+        <ul class="order-full__desc">
+            <li class="order-full__name">
+                <h5>О покупателе:</h5>
+                <dl class="order-full__list">
+                    <dt class="order-full__label">Имя:</dt>
+                        <dd class="order-full__value">Никифорова</dd>
+                    <dt class="order-full__label">Фамилия:</dt>
+                        <dd class="order-full__value">Алевтина</dd>
+                    <dt class="order-full__label">Отчество:</dt>
+                        <dd class="order-full__value">Иннокентиевна</dd>
+                    <dt class="order-full__label">e-mail:</dt>
+                        <dd class="order-full__value">alevtina_nikiforova@mail.ru</dd>
+                    <dt class="order-full__label">Телефон:</dt>
+                        <dd class="order-full__value">+7 985 789 45 23</dd>
+                </dl>
+            </li>
+            <li class="order-full__shipment">
+                <h5>Доставка:</h5>
+                <dl class="order-full__list">
+                    <dt class="order-full__label">Имя:</dt>
+                        <dd class="order-full__value">Никифорова</dd>
+                    <dt class="order-full__label">Фамилия:</dt>
+                        <dd class="order-full__value">Алевтина</dd>
+                    <dt class="order-full__label">Отчество:</dt>
+                        <dd class="order-full__value">Иннокентиевна</dd>
+                    <dt class="order-full__label">e-mail:</dt>
+                        <dd class="order-full__value">alevtina_nikiforova@mail.ru</dd>
+                    <dt class="order-full__label">Телефон:</dt>
+                        <dd class="order-full__value">+7 985 789 45 23</dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+    <div class="page__row">
+        <div class="order-full__items">
+            <h5>Содержание заказа</h5>
+            <ul class="order-full__desc">
+                {% for i in range(0, 20) -%}
+                <li class="order-full__item">
+                    <div class="order-full__item-tovar">
+                        <figure class="img-block">
+                          <img src="img/assets/Look_0.jpg" alt="" />
+                        </figure>
+                        <h6 class="order-full__item-title">Пиджак</h6>
+                        <dl class="item__list desc">
+                            <dt class="item__title">Артикул:</dt>
+                            <dd class="item__value">03-900-0387*1</dd>
+                        </dl>
+                        <dl class="item__list desc">
+                            <dt class="item__title">Цвет:</dt>
+                            <dd class="item__value">Желтый</dd>
+                        </dl>
+                        <dl class="item__list desc">
+                            <dt class="item__title">Размер:</dt>
+                            <dd class="item__value">40</dd>
+                        </dl>
+                        <dl class="item__list desc">
+                            <dt class="item__title">Кол-во:</dt>
+                            <dd class="item__value">1</dd>
+                        </dl>
+                    </div>
+                    <div class="order-full__item-tovarprice">
+                        <div class="order-full__item-col">
+                            <dl class="item__list price">
+                                <dt class="item__title">Цена</dt>
+                                <dd class="item__value">19 995 р.</dd>
+                            </dl>
+                        </div>
+                        <div class="order-full__item-col dsc">
+                            <dl class="item__list price">
+                                <dt class="item__title">Цена</dt>
+                                <dd class="item__value">19 995 р.</dd>
+                            </dl>
+                            <dl class="item__list discount">
+                                <dt class="item__title">Скидка по промокоду</dt>
+                                <dd class="item__value">10%</dd>
+                            </dl>
+                            <dl class="item__list discount">
+                                <dt class="item__title">Скидка по VIP-карте</dt>
+                                <dd class="item__value">10%</dd>
+                            </dl>
+                        </div>
+                        <div class="order-full__item-col">
+                            <dl class="item__list price final">
+                                <dt class="item__title">Итоговая цена со скидкой</dt>
+                                <dd class="item__value">19 995 р.</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </li>
+                {% endfor -%}
+            </ul>
+        </div>
+    </div>
+    <div class="page__row">
+        <div class="itemtotal__col col2">
+          <dl class="itemtotal__list">
+            <dt class="itemtotal__title">Общая стоимость товаров без скидки:</dt>
+            <dd class="itemtotal__value">25 995 р.</dd>
+          </dl>
+          <dl class="itemtotal__list">
+            <dt class="itemtotal__title">Сумма скидок:</dt>
+            <dd class="itemtotal__value">1 102 р.</dd>
+          </dl>
+          <dl class="itemtotal__list">
+            <dt class="itemtotal__title">Оплата бонусами:</dt>
+            <dd class="itemtotal__value">24 995 р.</dd>
+          </dl>
+          <dl class="itemtotal__list">
+            <dt class="itemtotal__title">Итого:</dt>
+            <dd class="itemtotal__value">24 995 р.</dd>
+          </dl>
+        </div>
+        <div class="itemtotal__col col1">
+          <dl class="itemtotal__list">
+            <dt class="itemtotal__title">Оплачен:</dt>
+            <dd class="itemtotal__value">нет</dd>
+          </dl>
+          <dl class="itemtotal__list">
+            <dt class="itemtotal__title">Способ оплаты:</dt>
+            <dd class="itemtotal__value">При получении</dd>
+          </dl>
+          <dl class="itemtotal__list">
+            <dt class="itemtotal__title">&nbsp;</dt>
+            <dd class="itemtotal__value"><a href="#" class="btn btn-ok btn_sm">Оплатить сейчас</a></dd>
+          </dl>
+        </div>
+    </div>
 </div>

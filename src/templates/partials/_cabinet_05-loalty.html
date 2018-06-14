@@ -1,4 +1,30 @@
-<div class="input">
-  <input type="text" class="input__short" placeholder="Номер дисконтной карты" />
-  <button class="btn">Привязать карту</button>
+<div class="loyalty">
+    <div class="form-group check_card">
+      <input class="form-control" type="text" name="discount-number" placeholder="Номер дисконтной карты" />
+      <button class="btn btn-ok btn_sm">Привязать карту</button>
+    </div>
+    <div class="page__row">
+        <table class="table">
+            <caption> <span class="bonus-count">Бонусов на счету: <strong>2000</strong></span> Бонусные транзакции</caption>
+            <thead>
+                <tr>
+                  <th>Дата</th>
+                  <th>Операция</th>
+                  <th>Бонусы</th>
+                  <th>Описание</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in range(0, 50) -%}
+                <tr>
+                  <td>12.09.2018</td>
+                  <td>Начисление</td>
+                  <td>500</td>
+                  <td>Начисление бонусов за заказ #333</td>
+                </tr>
+                {% endfor -%}
+            </tbody>
+        </table>
+    </div>
+    {{mixins.pagination()}}
 </div>

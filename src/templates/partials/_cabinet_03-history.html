@@ -1,11 +1,13 @@
-<div class="page__row">
-    <a href="#" class="btn">Выполненные</a>
-    <a href="#" class="btn">Отмененные</a>
-    <a href="#" class="btn is-active">Все заказы</a>
-</div>
-<div class="page__row">
-    <div class="grid__orders">
-        {{mixins.orders()}}
-        {{mixins.pagination()}}
+<div class="orders">
+    <div class="page__row">
+        <a href="#" class="btn">Выполненные</a>
+        <a href="#" class="btn">Отмененные</a>
+        <a href="#" class="btn is-active">Все заказы</a>
+    </div>
+    <div class="page__row">
+        <div class="orders__grid">
+            {{mixins.orders()}}
+            {{mixins.pagination()}}
+        </div>
     </div>
 </div>
