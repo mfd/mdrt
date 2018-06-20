@@ -426,7 +426,7 @@
               <h1 class="page__title-text"> Подробнее о заказе </h1>
               <div class="page__title-right">
                 <ul class="page__title-menu">
-                  <li class="active">
+                  <li>
                     <a href="javascript:history.back()">Вернуться к покупкам</a>
                   </li>
                 </ul>
@@ -1600,23 +1600,25 @@
                         </ul>
                       </div>
                     </div>
-                    <div class="page__row">
+                    <div class="page__row total">
                       <div class="itemtotal__col col2">
                         <dl class="itemtotal__list">
-                          <dt class="itemtotal__title">Общая стоимость товаров без скидки:</dt>
+                          <dt class="itemtotal__title black">Общая стоимость товаров без скидки:</dt>
                           <dd class="itemtotal__value">25 995 р.</dd>
                         </dl>
                         <dl class="itemtotal__list">
-                          <dt class="itemtotal__title">Сумма скидок:</dt>
-                          <dd class="itemtotal__value">1 102 р.</dd>
+                          <dt class="itemtotal__title">
+                            <a href="#" class="dotted">Сумма скидок:</a>
+                          </dt>
+                          <dd class="itemtotal__value gray">1 102 р.</dd>
                         </dl>
                         <dl class="itemtotal__list">
-                          <dt class="itemtotal__title">Оплата бонусами:</dt>
+                          <dt class="itemtotal__title black">Оплата бонусами:</dt>
                           <dd class="itemtotal__value">24 995 р.</dd>
                         </dl>
                         <dl class="itemtotal__list">
-                          <dt class="itemtotal__title">Итого:</dt>
-                          <dd class="itemtotal__value">24 995 р.</dd>
+                          <dt class="itemtotal__title black">Итого:</dt>
+                          <dd class="itemtotal__value bold">24 995 р.</dd>
                         </dl>
                       </div>
                       <div class="itemtotal__col col1">
@@ -2332,7 +2334,7 @@
                 <div class="tabs__content" id="tab-5">
                   <div class="loyalty">
                     <div class="form-group check_card">
-                      <input class="form-control" type="text" name="discount-number" placeholder="Номер дисконтной карты" />
+                      <input class="form-control" type="text" name="discount-number" placeholder="Номер карты" />
                       <button class="btn btn-ok btn_sm">Привязать карту</button>
                     </div>
                     <div class="page__row">
