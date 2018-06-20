@@ -5,13 +5,16 @@ breadCrumbsItems: ['Главная']
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-    {% include "partials/_sidebar_catalog.html" %}
-	<main class="innerPage pageActions">
-        {{mixins.pageTitle(title,'novelty')}}
-        <div class="grid__news">
-            {{mixins.newsItems()}}
-            {{mixins.pagination()}}
+    {% include "partials/_sidebar.html" %}
+    <main class="innerPage">
+        {{mixins.pageTitle(title, 'back')}}
+        <div class="page__row">
+          <div class="col col-content">
+            <p>Тестовая страница</p>
+
+
+          </div>
         </div>
-	</main>
+    </main>
 
 {% endblock %}

@@ -1,9 +1,9 @@
 //import 'babel-polyfill';
 
-//import $ from 'jquery';
-//import jQuery from 'jquery';
-//window.$ = $;
-//window.jQuery = jQuery;
+import $ from 'jquery';
+import jQuery from 'jquery';
+window.$ = $;
+window.jQuery = jQuery;
 
 // import 'TweenMax';
 // import ScrollMagic from 'scrollmagic/scrollmagic/uncompressed/ScrollMagic';

@@ -203,6 +203,14 @@ header
             margin-right: 25px;
             +sm
                 margin-right: 45px;
+                +pseudo
+                &::after
+                    background: #EDEDED
+                    width: 1;
+                    height: 200px;
+                    top: -100px;
+                    right: -30px;
+                    left: initial;
         &__like
             position: relative;
             .icon-like
