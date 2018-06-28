@@ -1,0 +1,15 @@
+    ---
+title: Корзина
+breadCrumbsItems: ['Главная','Корзина']
+footerWide: true
+isLogged: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+    <main class="innerPage pageShopcart">
+        {{mixins.pageTitle(title, 'back')}}
+
+    </main>
+
+{% endblock %}

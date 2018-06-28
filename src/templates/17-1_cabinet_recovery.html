@@ -1,0 +1,108 @@
+---
+title: Восстановление пароля
+breadCrumbsItems: ['Главная','Восстановление пароля']
+footerWide: true
+#isLogged: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+    <main class="innerPage pageRegLogRec">
+        {{mixins.pageTitle(title)}}
+        <form class="form recovery" action="">
+            <div class="input-inline">
+              <div class="input-group">
+                <label class="radio">
+                  <input type="radio" name="recoveryType" checked />
+                  <span>Email</span>
+                </label>
+              </div>
+              <div class="input-group">
+                <label class="radio">
+                  <input type="radio" name="recoveryType" />
+                  <span>Телефон</span>
+                </label>
+              </div>
+            </div>
+            <div class="input-inline">
+              <div class="form-group">
+                <input class="form-control" type="text" name="name" placeholder="Введите email" />
+                <label for="name" class="control-label">Введите email</label>
+              </div>
+              <button class="btn">Продолжить</button>
+            </div>
+            <p class="noti">В случае утери пароля вы можете позвонить менеджеру +7 800 896 54 21</p>
+        </form>
+
+        <hr />
+        <form class="form recovery" action="">
+            <div class="input-inline">
+              <div class="input-group">
+                <label class="radio">
+                  <input type="radio" name="recoveryType" checked />
+                  <span>Email</span>
+                </label>
+              </div>
+              <div class="input-group">
+                <label class="radio">
+                  <input type="radio" name="recoveryType" />
+                  <span>Телефон</span>
+                </label>
+              </div>
+            </div>
+            <div class="input-inline">
+              <div class="form-group">
+                <input class="form-control" type="text" name="name" placeholder="Введите email" />
+                <label for="name" class="control-label">Введите email</label>
+              </div>
+              <button class="btn">Продолжить</button>
+            </div>
+            <p class="noti">Ссылка на восстановления пароля выслана на ваш email</p>
+            <p class="noti">Вы сможете повторно запросить восстановление пароля через <strong>10 секунд</strong></p>
+            <br/>
+            <p class="noti">В случае утери пароля вы можете позвонить менеджеру +7 800 896 54 21</p>
+        </form>
+        <hr />
+        <form class="form recovery" action="">
+            <div class="input-inline">
+              <div class="input-group">
+                <label class="radio">
+                  <input type="radio" name="recoveryType" checked />
+                  <span>Email</span>
+                </label>
+              </div>
+              <div class="input-group">
+                <label class="radio">
+                  <input type="radio" name="recoveryType" />
+                  <span>Телефон</span>
+                </label>
+              </div>
+            </div>
+            <div class="input-inline">
+              <div class="form-group">
+                <input class="form-control" type="text" name="name" placeholder="Введите email" />
+                <label for="name" class="control-label">Введите email</label>
+              </div>
+              <button class="btn">Выслать повторно</button>
+            </div>
+            <p class="noti">В случае утери пароля вы можете позвонить менеджеру +7 800 896 54 21</p>
+        </form>
+
+        <hr />
+        <form class="form recovery" action="">
+            <div class="input-group"><div class="input-inline">
+              <div class="radio"><span>Введите код подтверждения</span></div>
+            </div>
+            </div>
+            <div class="input-inline">
+              <div class="form-group">
+                <input class="form-control" type="text" name="name" placeholder="Введите email" />
+                <label for="name" class="control-label">Введите email</label>
+              </div>
+              <button class="btn">Продолжить</button>
+            </div>
+            <p class="noti">В случае утери пароля вы можете позвонить менеджеру +7 800 896 54 21</p>
+        </form>
+    </main>
+
+{% endblock %}

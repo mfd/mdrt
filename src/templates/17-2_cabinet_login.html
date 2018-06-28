@@ -1,0 +1,33 @@
+---
+title: Вход
+breadCrumbsItems: ['Главная','Вход']
+footerWide: true
+#isLogged: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+    <main class="innerPage pageRegLogRec">
+        {{mixins.pageTitle(title)}}
+        <form class="form login" action="16-1_cabinet_myprofile.html">
+          <div class="input">
+            <label>Email:</label>
+            <input type="text" placeholder="Введите email" />
+          </div>
+          <div class="input">
+            <label>Пароль:</label>
+            <input type="password" placeholder="Введите пароль" />
+          </div>
+          <div class="row form__footer">
+            <div class="col">
+                <a href="16-1_cabinet_myprofile.html" class="lostpass">Забыли пароль?</a>
+                <a href="16-1_cabinet_myprofile.html" class="lostpass">У меня нет учетной записи</a>
+            </div>
+            <div class="col">
+                <button class="btn">Вход</button>
+            </div>
+          </div>
+        </form>
+    </main>
+
+{% endblock %}

@@ -1,0 +1,76 @@
+---
+title: Регистрация
+breadCrumbsItems: ['Главная','Регистрация']
+footerWide: true
+#isLogged: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+    <main class="innerPage pageRegLogRec">
+        {{mixins.pageTitle(title)}}
+        <form class="form reg" action="">
+            <div class="input">
+                <label>Email:</label>
+                <input type="text" placeholder="Введите email" />
+            </div>
+            <div class="input">
+                <label>Придумайте пароль:</label>
+                <input type="password" placeholder="Новый пароль" />
+            </div>
+            <div class="input">
+                <label>Повторите пароль:</label>
+                <input type="password" placeholder="Повторите пароль" />
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox" />
+                    <span>Я хочу получать SMS-рассылку</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox" checked="" />
+                    <span>Я хочу получать email-рассылку</span>
+                </label>
+            </div>
+            <div class="input-group">
+                <label class="checkbox">
+                    <input type="checkbox" checked="" />
+                    <span>Я согласен с <a href="#">политикой конфиденциальности</a></span>
+                </label>
+            </div>
+          <div class="row form__footer">
+            <div class="col">
+                <button class="btn">Зарегистрироваться</button>
+            </div>
+          </div>
+        </form>
+        <h2>2 шаг</h2>
+        <form class="form reg" action="">
+            <p class="noti">Ваша учетная запись успешно создана! Чтобы завершить регистрацию заполните личные данные.</p>
+            <div class="input">
+                <label>Имя<sup>*</sup></label>
+                <input type="text" placeholder="Введите имя" />
+            </div>
+            <div class="input">
+                <label>Фамилия<sup>*</sup></label>
+                <input type="text" placeholder="Введите фамилию" />
+            </div>
+            <div class="input">
+                <label>Отчество</label>
+                <input type="text" placeholder="Введите отчество" />
+            </div>
+            <div class="input">
+                <label>Номер телефона<sup>*</sup></label>
+                <input class="form-control" type="text" name="tel" placeholder="+7 ___-___-__-__" />
+            </div>
+              <div class="row form__footer">
+                <div class="col">
+                    <button class="btn">Завершить</button>
+                </div>
+              </div>
+        </form>
+    </main>
+
+{% endblock %}

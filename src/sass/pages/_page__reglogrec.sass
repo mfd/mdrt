@@ -1,0 +1,82 @@
+.pageRegLogRec
+    .form
+        .input
+            margin-bottom: .5em;
+            label, input
+                font-size: 14px;
+                margin-bottom: .5em;
+            input
+                padding: 0 10px;
+                margin-top: .5em;
+                height: 35px;
+                &::placeholder
+                    color: #BDBDBD;
+                    transition: color .5s $ease;
+
+        .checkbox, .radio
+            color: #949494;
+            font-size: 14px;
+            margin-top: 0px;
+            a
+                color: #949494;
+                text-decoration: underline;
+            input+span, input+span
+                position: relative;
+                padding-left: 25px;
+        &__footer
+            a
+                color: #949494;
+                font-size: 14px;
+                line-height: 25px;
+                text-decoration: underline;
+        .noti
+            color: #333333;
+        .input-inline
+            display: flex;
+            align-items: center;
+            .input-group
+                margin-right: 20px
+    .row
+        display: flex;
+        margin: 0;
+        .col
+            width: 50%;
+            padding: 0;
+            margin-bottom: 0;
+            float: none;
+            &:last-child
+                text-align: right;
+            > a
+                display: block;
+    .form
+        &.login
+            max-width: 360px;
+        &.reg
+            max-width: 360px;
+            border: 1px solid #BDBDBD;
+            border-radius: 5px;
+            padding: 20px;
+            padding-bottom: 0;
+            .row .col
+                width: 100%;
+            .form__footer
+                padding: 20px 0;
+        &.recovery
+            .noti
+                font-size: 14px;
+                margin-bottom: 10px;
+            .radio
+                color: #333333;
+            .form-control
+                margin-top: 0;
+                width: 250px;
+            .control-label
+                display: none;
+            .btn
+                position: relative;
+                font-size: 13px;
+                height: 35px;
+                line-height: 35px;
+                padding: 0 20px;
+                margin: 0 10px;
+                margin-bottom: 10px;
