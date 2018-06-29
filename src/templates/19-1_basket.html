@@ -1,4 +1,4 @@
-    ---
+---
 title: Корзина
 breadCrumbsItems: ['Главная','Корзина']
 footerWide: true
@@ -9,7 +9,170 @@ isLogged: true
 {% block content %}
     <main class="innerPage pageShopcart">
         {{mixins.pageTitle(title, 'back')}}
+        <form class="order">
+            <div class="order-full">
+                <div class="page__row">
+                    <div class="order-full__items">
+                        <ul class="order-full__desc">
+                            <li class="order-full__item head">
+                                <div class="order-full__item-tovar">
+                                    Товары
+                                </div>
+                                <div class="order-full__item-tovarprice">
+                                    <div class="order-full__item-col">
+                                        Цена
+                                    </div>
+                                    <div class="order-full__item-col">
+                                        Цена с учетом скидки
+                                    </div>
+                                    <div class="order-full__item-col">
+                                        Сумма
+                                    </div>
+                                </div>
+                            </li>
+                            {% for i in range(0, 4) -%}
+                            <li class="order-full__item">
+                                <div class="order-full__item-tovar">
+                                    <figure class="img-block">
+                                      <img src="img/assets/Look_0.jpg" alt="" />
+                                    </figure>
+                                    <h6 class="order-full__item-title">Пиджак</h6>
+                                    <dl class="item__list desc">
+                                        <dt class="item__title">Артикул:</dt>
+                                        <dd class="item__value">03-900-0387*1</dd>
+                                    </dl>
+                                    <dl class="item__list desc">
+                                        <dt class="item__title">Цвет:</dt>
+                                        <dd class="item__value">Желтый</dd>
+                                    </dl>
+                                    <dl class="item__list desc">
+                                        <dt class="item__title">Размер:</dt>
+                                        <dd class="item__value">40</dd>
+                                    </dl>
+                                    <dl class="item__list desc">
+                                        <dt class="item__title">Кол-во:</dt>
+                                        <dd class="item__value">1</dd>
+                                    </dl>
+                                </div>
+                                <div class="order-full__item-tovarprice">
+                                    <div class="order-full__item-col">
+                                        <dl class="item__list price">
+                                            <dt class="item__title">Цена</dt>
+                                            <dd class="item__value">19 995 р.</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="order-full__item-col dsc">
+                                        <dl class="item__list price">
+                                            <dt class="item__title">Цена</dt>
+                                            <dd class="item__value">19 995 р.</dd>
+                                        </dl>
+                                        <dl class="item__list discount">
+                                            <dt class="item__title">Скидка по промокоду</dt>
+                                            <dd class="item__value">10%</dd>
+                                        </dl>
+                                        <dl class="item__list discount">
+                                            <dt class="item__title">Скидка по VIP-карте</dt>
+                                            <dd class="item__value">10%</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="order-full__item-col">
+                                        <dl class="item__list price final">
+                                            <dt class="item__title">Итоговая цена со скидкой</dt>
+                                            <dd class="item__value">19 995 р.</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            {% endfor -%}
+                        </ul>
+                    </div>
+                </div>
+                <div class="page__row total">
+                    <div class="itemtotal__col col1">
+                      <dl class="itemtotal__list">
+                        <dt class="itemtotal__title black">Общая стоимость товаров без скидки:</dt>
+                        <dd class="itemtotal__value">25 995 р.</dd>
+                      </dl>
+                      <dl class="itemtotal__list">
+                        <dt class="itemtotal__title"><a href="#" class="dotted">Сумма скидок:</a></dt>
+                        <dd class="itemtotal__value gray">1 102 р.</dd>
+                      </dl>
+                      <dl class="itemtotal__list">
+                        <dt class="itemtotal__title black">Оплата бонусами:</dt>
+                        <dd class="itemtotal__value">24 995 р.</dd>
+                      </dl>
+                      <dl class="itemtotal__list">
+                        <dt class="itemtotal__title black">Итого:</dt>
+                        <dd class="itemtotal__value bold">24 995 р.</dd>
+                      </dl>
+                      <dl class="itemtotal__list">
+                          <dt class="itemtotal__title">
+                            <a href="#" class="btn btn_default">Быстрая покупка</a>
+                          </dt>
+                          <dd class="itemtotal__value">
+                            <a href="#" class="btn btn-ok">Оформить заказ</a>
+                          </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="order-submenu">
+                <h5 class="order__title">Бонусы и скидки</h5>
+                <div class="b-promocode">
+                    <h6>Промокод</h6>
+                    <div class="form-group check_card">
+                      <input class="form-control" type="text" name="discount-number" placeholder="Введите промокод">
+                      <button class="btn btn-ok btn_sm"><i class="fa fa-check"></i></button>
+                    </div>
+                </div>
+                <div class="b-promocode isDisabled">
+                    <h6>Промокод</h6>
+                    <div class="form-group check_card">
+                      <input class="form-control" type="text" name="discount-number" placeholder="Введите промокод">
+                      <button class="btn btn-ok btn_sm"><i class="fa fa-check"></i></button>
+                    </div>
+                </div>
+                <div class="b-vipcard">
+                    <ul class="vipcard-list">
+                      <li class="vipcard-item">
+                        <div class="input-group">
+                          <label class="radio">
+                            <input type="radio" name="card" value="1" checked />
+                            <span>
+                                <span class="vipcart-item__title">Использовать скидку по VIP-карте</span>
+                                <span class="vipcard__bonuses">
+                                    15% от суммы заказа кроме товаров со скидкой
+                                    <a href="#" class="btn btn-ok">Использовать</a>
+                                </span>
 
+                            </span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="vipcard-item">
+                        <div class="input-group">
+                          <label class="radio">
+                            <input type="radio" name="card" value="2" />
+                            <span>
+                                <span class="vipcart-item__title">Использовать бонусы</span>
+                                <span class="vipcard__bonuses">
+                                    У вас есть: 1200 бонусов
+                                    <a href="#" class="btn btn-ok">Использовать</a>
+                                </span>
+                            </span>
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                </div>
+                <div class="b-growl">
+                    <h6>Внимание!</h6>
+                    <p>Вы применили промокод “Скидка на платья 10%”. </p>
+                    <p>На платья в вашей корзине не будут действовать другие виды скидок. </p>
+                    <a href="#" class="btn btn-ok">Понятно</a>
+                </div>
+            </div>
+        </form>
     </main>
 
 {% endblock %}

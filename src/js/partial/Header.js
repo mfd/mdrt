@@ -31,7 +31,7 @@ class Header {
   showLogin(event) {
     let $body = this.$body;
     event.preventDefault();
-    $body.removeClass('isLocationSwitch');
+    $body.removeClass('isLoginform');
     if ($body.hasClass('isLoginform')) {
       $body.removeClass('isLoginform');
     } else {
@@ -64,7 +64,9 @@ class Header {
   destroy() {
     let $body = this.body;
     console.log('destroy header events');
+    $('body').removeClass('isLoginform');
     $('body').off('click', '.js-sign, .b-login-form--close', this.showLogin.bind(this));
+    $('body').removeClass('isLoginform');
     $('body').off('click', '.location--change', this.showLocation.bind(this));
     //$body.off('click', this.hidePanels.bind(this));
   }

@@ -163,7 +163,7 @@
         ] %}
         {% for item in items | shuffle %}
             {% set idx = outer_loop.index+loop.index-1 %}
-            <!-- BEGIN item-->
+
             <div class="item">
                 <a href="03_item.html" class="item__link">{{ item.title | safe }}</a>
                 <div class="item__row">
@@ -191,7 +191,7 @@
                     <a href="03_item.html" class="btn btn-info">В корзину</a>
                 </div>
             </div>
-            <!-- END item-->
+
         {% endfor %}
     {%- endfor %}
 {% endmacro %}

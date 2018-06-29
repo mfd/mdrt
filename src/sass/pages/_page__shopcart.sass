@@ -1,0 +1,153 @@
+.pageShopcart
+    .order
+        display: flex
+        +md
+            flex-wrap: wrap
+            flex-direction: column;
+        .order-full
+            flex-grow: 1;
+            margin-right: 20px;
+        .order-submenu
+            width: 300px;
+        &__title
+            font-size: 24px;
+            color: #333333;
+            font-weight: 500;
+            margin-bottom: 9px;
+        .order-full__item
+            &.head
+                padding-left: 10px;
+                border: 0;
+                padding: 0;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                color: #949494;
+                +md
+                    display: none;
+                .order-full__item-tovar
+                    width: 180px;
+                .order-full__item-tovar
+                    width: 180px;
+                &:hover::after
+                    display: none;
+        .total
+            justify-content: flex-end;
+            .itemtotal__col
+                width: 60%
+            .itemtotal__list
+                margin-bottom: 1.5em;
+            .btn
+                font-size: 16px;
+
+        .b-promocode,
+        .b-vipcard,
+        .b-growl
+            +clr
+            border: 1px solid #BDBDBD;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px 0;
+            font-size: 16px;
+            .btn
+                margin: 10px 0;
+                margin-bottom: 0;
+                padding: 10px 15px;
+                font-size: 16px;
+                line-height: initial;
+                height: initial;
+                float: right;
+            &.isDisabled
+                +nosel
+                +pseudo
+                &:before
+                    background: rgba(255, 255, 255, 0.7);
+                    top: -1;
+                    left: -1;
+                    right: -1;
+                    bottom: -1;
+                    z-index: 10;
+        .b-promocode
+            h6
+                font-size: 16px;
+                margin-bottom: .5em
+            .form-control, .btn
+                margin: 0;
+            .check_card
+                display: flex;
+                .form-control
+                    border-bottom-right-radius: 0;
+                    border-top-right-radius: 0;
+                .btn
+                    border-bottom-left-radius: 0;
+                    border-top-left-radius: 0;
+                    padding: 0 15px;
+
+        .b-vipcard
+            .vipcard
+                &-item
+                    list-style: none;
+                    margin-left: 0;
+                    margin-bottom: 40px;
+                    border-bottom: 1px solid #F2F2F2;
+                    color: #333333;
+                    font-size: 16px;
+                    &:last-child
+                        margin: 0;
+                &-item
+                    border: 0
+                    +pseudo
+                    &:after
+                        height: 1px;
+                        background: #bdbdbd;
+                        top: initial;
+                        bottom: -20px;
+                        right: -20px;
+                        left: -20px;
+                    &:last-child:after
+                        display: none
+
+                    .radio
+                        input
+                            + span
+                                &:before, &:after
+                                    top: 10px
+                                    display: block !important;
+                                .vipcart-item__title
+                                    font-weight: normal
+                                .vipcard__bonuses
+                                    font-size: 16px;
+                                    color: #949494;
+                                    //margin-left: 25px;
+                                    margin-top: 10px;
+                                    font-weight: normal;
+                                    display: none
+
+
+                            &:checked
+                                + span
+                                    .vipcart-item__title
+                                        font-weight: bold
+                                    .vipcard__bonuses
+                                        display: block
+                                        font-weight: normal;
+
+        .b-growl
+            color: #fff;
+            background: #333333;
+            box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.5);
+            margin: 100px 0;
+            h6, p
+                color: #fff;
+                font-weight: 300
+            h6
+                font-weight: 700
+                font-size: 18px;
+                text-transform: uppercase;
+                margin-bottom: .5em
+            p
+                opacity: .9
+                margin-bottom: .25em
+                font-size: 16px;
+
+            .btn
+

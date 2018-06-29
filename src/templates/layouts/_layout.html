@@ -30,12 +30,13 @@
             {% endblock %}
             <!-- END content -->
           </div>
+          <!-- BEGIN footer -->
+          {% block footer %}
+          {% include "partials/_footer.html" %}
+          {% endblock %}
+          <!-- END footer -->
         </div>
-      </div>
-      {% block footer %}
-      {% include "partials/_footer.html" %}
-      {% endblock %}
-
+      </div><!-- //#barba-wrapper -->
     <div class="shapeTransit1"></div>
     <div class="shapeTransit2"></div>
 

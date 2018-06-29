@@ -65,3 +65,7 @@ PageList:
   ready: 10
 - file: 18-4_order.html
   ready: 10
+- file: 19-0_basket-null.html
+  ready: 10
+- file: 19-1_basket.html
+  ready: 10
