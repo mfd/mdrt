@@ -1,0 +1,69 @@
+---
+title: Оформление заказа
+breadCrumbsItems: ['Главная','Оформление заказа']
+footerWide: true
+isLogged: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+    <main class="innerPage pageOrdernow">
+        {{mixins.pageTitle(title)}}
+      <div class="ordernow">
+        <div class="ordernow-steps">
+           <div class="ordernow-steps__step"><a href="18-1_ordernow.html" class="title">Информация о покупателе</a></div>
+           <div class="ordernow-steps__step isActive"><a href="18-2_ordernow.html" class="title">Доставка</a></div>
+           <div class="ordernow-steps__step"><a href="18-3_ordernow.html" class="title">Оплата</a></div>
+           <div class="ordernow-steps__step"><a href="18-4_ordernow.html" class="title">Завершение</a></div>
+        </div>
+        <div class="ordernow-steps__content ordernow-step2">
+          <div class="col1">
+            <div class="b-ordernow">
+              <h6>Способ доставки</h6>
+              <select class="form-control">
+                <option>СДЭК</option>
+                <option>ПЭК</option>
+                <option>МЭК</option>
+              </select>
+            </div>
+
+          </div>
+          <div class="col2">
+            <div class="b-ordernow">
+              <h6>Адрес доставки</h6>
+              <ul class="shipment-list">
+                <li class="shipment-item">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="shiploc" value="1" />
+                      <span>г. Уфа, Гагарина, 6 кв. 2, 450092</span>
+                      <span class="shipment-item__action">
+                        <a href="#">Редактировать</a>
+                        <a href="#">Удалить</a>
+                      </span>
+                    </label>
+                  </div>
+                </li>
+                <li class="shipment-item">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="shiploc" value="2" />
+                      <span>г. Уфа, бульвар Ибрагимова, 186/23 кв. 2, 450092</span>
+                      <span class="shipment-item__action">
+                        <a href="#">Редактировать</a>
+                        <a href="#">Удалить</a>
+                      </span>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+              <p class="summary">Стоимость доставки: 500р.
+                <small>Доставка оплачивается отдельно курьеру</small></p>
+              <button class="btn next-step">Перейти к оплате</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+{% endblock %}

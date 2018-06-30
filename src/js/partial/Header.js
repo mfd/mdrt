@@ -42,7 +42,7 @@ class Header {
   showLocation(event) {
     let $body = $('body');
     event.preventDefault();
-    $body.removeClass('isLoginform');
+    $body.removeClass('isLocationSwitch');
     if ($body.hasClass('isLocationSwitch')) {
       $body.removeClass('isLocationSwitch');
     } else {

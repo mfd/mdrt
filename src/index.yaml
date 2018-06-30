@@ -57,13 +57,15 @@ PageList:
   ready: 10
 - file: 17-3_cabinet_reg.html
   ready: 10
-- file: 18-1_order.html
+- file: 18-0_ordernow.html
   ready: 10
-- file: 18-2_order.html
+- file: 18-1_ordernow.html
   ready: 10
-- file: 18-3_order.html
+- file: 18-2_ordernow.html
   ready: 10
-- file: 18-4_order.html
+- file: 18-3_ordernow.html
+  ready: 10
+- file: 18-4_ordernow.html
   ready: 10
 - file: 19-0_basket-null.html
   ready: 10

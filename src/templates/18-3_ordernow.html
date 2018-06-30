@@ -1,0 +1,88 @@
+---
+title: Оформление заказа
+breadCrumbsItems: ['Главная','Оформление заказа']
+footerWide: true
+isLogged: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+    <main class="innerPage pageOrdernow">
+        {{mixins.pageTitle(title)}}
+      <div class="ordernow">
+        <div class="ordernow-steps">
+           <div class="ordernow-steps__step"><a href="18-1_ordernow.html" class="title">Информация о покупателе</a></div>
+           <div class="ordernow-steps__step"><a href="18-2_ordernow.html" class="title">Доставка</a></div>
+           <div class="ordernow-steps__step isActive"><a href="18-3_ordernow.html" class="title">Оплата</a></div>
+           <div class="ordernow-steps__step"><a href="18-4_ordernow.html" class="title">Завершение</a></div>
+        </div>
+        <div class="ordernow-steps__content ordernow-step3">
+          <div class="col1">
+            <div class="b-ordernow">
+              <h6>Способ оплаты</h6>
+                <div class="input-inline">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="recoveryType" checked="" />
+                      <span>Наличными при получении товара</span>
+                    </label>
+                  </div>
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="recoveryType" />
+                      <span>Оплата картой онлайн</span>
+                    </label>
+                  </div>
+                </div>
+            </div>
+            <div class="b-ordernow">
+              <h6>Бонусы и скидки</h6>
+                <div class="form-group promocode">
+                    <input class="form-control" type="text" name="discount-number" placeholder="Введите промокод" />
+                    <button class="btn btn-ok btn_sm">
+                      <i class="fa fa-check"></i>
+                    </button>
+                  </div>
+                  <div class="input-group usebonus">
+                    <label class="radio">
+                      <input type="radio" name="bonuscard" checked="" />
+                      <span>Использовать скидку по VIP-карте</span>
+                    </label>
+                  </div>
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="bonuscard" />
+                      <span>Использовать бонусы</span>
+                    </label>
+                  </div>
+            </div>
+          </div>
+          <div class="col2">
+            <dl class="ordernow-step3__itogoPrice">
+              <dt><span>Общая стоимость товаров без скидки:</span></dt>
+              <dd>25 995 р.</dd>
+              <dt><span>Скидка по дисконтной карте:</span></dt>
+              <dd>25 995 р.</dd>
+              <dt><span>Сумма скидок:</span></dt>
+              <dd>1000 р.</dd>
+              <dt><span>Стоимость корзины с учетом скидок и наценок:</span></dt>
+              <dd>24 995 р.</dd>
+              <dt><span>Итого:</span></dt>
+              <dd><strong>24 995 р.</strong></dd>
+            </dl>
+            <dl class="ordernow-step3__itogoShip">
+              <dt>Доставка:</dt>
+              <dd>СДЭК</dd>
+              <dt>Стоимость доставки:</dt>
+              <dd>400 р.</dd>
+              <dt><small>Оплата за доставку отдельно курьеру</small></dt>
+              <dd></dd>
+            </dl>
+            <p class="ordernow-step3__itogoBonus">Вам будет начислено 256 бонусов за эту покупку</p>
+            <button class="btn next-step">Перейти к оплате</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+{% endblock %}

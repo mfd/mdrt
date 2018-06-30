@@ -1,0 +1,238 @@
+.pageOrdernow
+    .ordernow
+        .btn
+            font-size: 16px;
+        a.underline
+            text-decoration: underline;
+    .ordernow
+        &-steps
+            display: flex;
+            height: 80px;
+            align-items: center;
+            align-content: center;
+            margin-top: -10px;
+            border-bottom: 1px solid #E0E0E0;
+            margin-bottom: 20px;
+        &-steps
+            &__step
+                +pseudo
+                &:before
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid #949494;
+                    border-radius: 50%;
+                    text-align: center;
+
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%)
+                &:nth-child(1):before
+                    content: '1';
+                &:nth-child(2):before
+                    content: '2';
+                &:nth-child(3):before
+                    content: '3';
+                &:nth-child(4):before
+                    content: '4';
+            &__step
+                height: 40px;
+                line-height: 40px;
+                font-size: 18px;
+                color: #949494;
+                flex-grow: 1;
+                margin: 0 40px 0 0;
+                //height: 100px;
+                padding-left: 50px;
+                align-items: center;
+                display: flex;
+                .title
+                    line-height: 16px
+                    color: #949494;
+                &.isActive
+                    color: #333;
+                    &:before
+                        border: 2px solid #333;
+
+                    .title
+                        color: #333;
+            &__content
+                color: #333;
+                p
+                    color: #333;
+            &__step
+                +sm
+                    display: none
+                &.isActive
+                    +sm
+                        display: flex;
+    .ordernow-steps__content
+        h6
+            font-size: 18px;
+            margin-bottom: 1em;
+        .b-ordernow
+            border: 1px solid #bdbdbd;
+            border-radius: 5px;
+            padding: 20px;
+            font-size: 16px;
+            margin-right: 1em;
+            margin-bottom: 1em;
+        .promocode
+            display: flex;
+            .form-control
+                border-bottom-right-radius: 0;
+                border-top-right-radius: 0;
+                margin: 0;
+            .btn
+                border-bottom-left-radius: 0;
+                border-top-left-radius: 0;
+                padding: 0 15px;
+        .usebonus
+            padding: 1em 0
+            margin-top: 2em
+            border-top: 1px solid #BDBDBD;
+
+    .ordernow-steps__content
+        display: flex;
+        font-size: 14px;
+        +sm
+            flex-direction: column
+        .col1, .col2
+            width: 38%
+            margin-right: 1%
+            +md
+                width: 100%!important;
+        &.ordernow-step0
+            display: block
+        &.ordernow-step1
+            display: block
+            .b-ordernow
+                width: 68%
+                +sm
+                    width: 100%
+                .ordernow-row
+                    display: flex;
+                    .col1
+                        width: 38%
+                    .col2
+                        width: 68%
+
+        &.ordernow-step2
+            .col1
+                width: 28%
+            .col2
+                width: 68%
+        &.ordernow-step3
+            .col1
+                width: 48%
+            .col2
+                width: 48%
+        &.ordernow-step4
+            display: block
+    .ordernow-steps__content
+        dt
+            float: left;
+            width: 180px;
+            margin-right: 10px;
+            //clear: left;
+            text-align: left;
+            //overflow: hidden;
+            //text-overflow: ellipsis;
+            //white-space: nowrap;
+    .ordernow-steps__content
+        &.ordernow
+            &-step1
+                .ordernow-row
+                    display: flex;
+                    +sm
+                        flex-direction: column
+                    .ordernow-step1__fio
+
+                    .ordernow-step1__phone
+                        .input-inline
+                            width: 100%;
+                            flex-wrap: wrap;
+                            margin-bottom: 1em;
+                            position: relative;
+                            &::last-child
+                                margin-bottom: 0;
+                            +sm
+                                flex-direction: column
+                        .input
+                            width: 150px;
+                            margin-right: 10px;
+                            +sm
+                                width: 100%
+                        .btn
+                            margin-top: 21px;
+                        .noti
+                            // width: 50%;
+                            // position: absolute;
+                            // top: 10px;
+                            // left: 165px;
+                            margin-top: 1em;
+                            +sm
+                                position: initial;
+                                width: 100%;
+                                margin: 1em;
+                        .resend
+                            margin-top: -1em;
+                            margin-bottom: 2em;
+                dt
+                    width: 80px;
+                dt, dd
+                    margin-bottom: .5em;
+                .ordernow-step1__tip
+                    position: absolute;
+                    right: 100px;
+                    top: 50%;
+                    width: 200px;
+                    color: #ABABAB;
+                    +md
+                        right: 0
+                    +sm
+                        position: initial;
+                        width: 100%;
+                        margin: 1em;
+
+            &-step2
+                .summary small
+                    font-size: 90%
+                    color: #949494;
+                    display: block;
+            &-step3
+                .ordernow-step3__itogoShip,
+                .ordernow-step3__itogoPrice
+                    +clr
+                    font-size: 16px;
+                    line-height: 14px;
+                    margin-bottom: 1em;
+                    margin-left: 0;
+                    padding-left: 1.5em;
+                    border-left: 1px solid #E0E0E0;
+                    dt
+                        width: 70%;
+                    dt, dd
+                        margin-bottom: 1em;
+                    small
+                        color: #949494;
+                        font-size: 90%;
+                .ordernow-step3__itogoPrice
+                    dt
+                        // +pseudo
+                        // &::after
+                        //     bottom: 1px;
+                        //     background: 0 0;
+                        //     width: 100%;
+                        //     height: 2px;
+                        //     top: initial;
+                        //     z-index: -1;
+                        //     border-bottom: 1px dashed #ccc;
+                        span
+                            background: #fff;
+                            padding-right: 5px;
+                .ordernow-step3__itogoShip
+                    border-bottom: 1px solid #E0E0E0;
+                .ordernow-step3__itogoBonus
+                    font-weight: bold;
+                    font-size: 16px;
+            &-step4

@@ -9,7 +9,8 @@ isLogged: true
 {% block content %}
     <main class="innerPage pageShopcart">
         {{mixins.pageTitle(title, 'back')}}
-        <form class="order">
+        <form>
+        <div class="order">
             <div class="order-full">
                 <div class="page__row">
                     <div class="order-full__items">
@@ -86,8 +87,6 @@ isLogged: true
                             {% endfor -%}
                         </ul>
                     </div>
-                </div>
-                <div class="page__row total">
                     <div class="itemtotal__col col1">
                       <dl class="itemtotal__list">
                         <dt class="itemtotal__title black">Общая стоимость товаров без скидки:</dt>
@@ -121,14 +120,14 @@ isLogged: true
                 <div class="b-promocode">
                     <h6>Промокод</h6>
                     <div class="form-group check_card">
-                      <input class="form-control" type="text" name="discount-number" placeholder="Введите промокод">
+                      <input class="form-control" type="text" name="discount-number" placeholder="Введите промокод" />
                       <button class="btn btn-ok btn_sm"><i class="fa fa-check"></i></button>
                     </div>
                 </div>
                 <div class="b-promocode isDisabled">
                     <h6>Промокод</h6>
                     <div class="form-group check_card">
-                      <input class="form-control" type="text" name="discount-number" placeholder="Введите промокод">
+                      <input class="form-control" type="text" name="discount-number" placeholder="Введите промокод" />
                       <button class="btn btn-ok btn_sm"><i class="fa fa-check"></i></button>
                     </div>
                 </div>
@@ -172,6 +171,7 @@ isLogged: true
                     <a href="#" class="btn btn-ok">Понятно</a>
                 </div>
             </div>
+        </div>
         </form>
     </main>
 

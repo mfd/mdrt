@@ -7,8 +7,15 @@
         .order-full
             flex-grow: 1;
             margin-right: 20px;
+            display: block;
+            .page__row
+                flex-direction: column;
+                .itemtotal__col
+                    width: initial;
         .order-submenu
             width: 300px;
+            +sm
+                width: 95%;
         &__title
             font-size: 24px;
             color: #333333;
@@ -33,11 +40,15 @@
         .total
             justify-content: flex-end;
             .itemtotal__col
+                +clr
                 width: 60%
+
             .itemtotal__list
                 margin-bottom: 1.5em;
             .btn
                 font-size: 16px;
+                +sm
+                padding: 0 30px;
 
         .b-promocode,
         .b-vipcard,

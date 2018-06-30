@@ -1,0 +1,68 @@
+---
+title: Оформление заказа
+breadCrumbsItems: ['Главная','Оформление заказа']
+footerWide: true
+isLogged: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+    <main class="innerPage pageOrdernow">
+        {{mixins.pageTitle(title)}}
+      <div class="ordernow">
+        <div class="ordernow-steps">
+           <div class="ordernow-steps__step isActive"><a href="18-1_ordernow.html" class="title">Информация о покупателе</a></div>
+           <div class="ordernow-steps__step"><a href="18-2_ordernow.html" class="title">Доставка</a></div>
+           <div class="ordernow-steps__step"><a href="18-3_ordernow.html" class="title">Оплата</a></div>
+           <div class="ordernow-steps__step"><a href="18-4_ordernow.html" class="title">Завершение</a></div>
+        </div>
+        <div class="ordernow-steps__content ordernow-step1">
+            <div class="b-ordernow">
+              <h6>Данные получателя</h6>
+                <div class="ordernow-row">
+                  <div class="col1">
+                    <dl class="ordernow-step1__fio">
+                      <dt>Имя:</dt>
+                      <dd>Руслан</dd>
+                      <dt>Фамилия:</dt>
+                      <dd>Габидуллин</dd>
+                      <dt>Отчество:</dt>
+                      <dd>Руслан</dd>
+                      <dt>E-mail:</dt>
+                      <dd>rusik85@mail.ru</dd>
+                    </dl>
+                  </div>
+
+                  <div class="col2">
+                    <div class="ordernow-step1__phone">
+                      <div class="input-inline">
+                        <div class="input">
+                          <label for="phone">Номер телефона*</label>
+                          <input type="text" name="phone" placeholder="+7 ___-___-__-__" />
+                        </div>
+                        <a href="#" class="btn">Выслать код</a>
+                      </div>
+                      <div class="input-inline">
+                        <div class="input">
+                          <label for="sms">Введите код из SMS:</label>
+                          <input type="text" name="sms" placeholder="" />
+                        </div>
+                        <span class="noti">Вам отправлено SMS  с кодом подтверждения. Сообщение придет в течение нескольких минут. <br/><span class="countdown">01:47</span></span>
+                      </div>
+                      <a href="#" class="underline resend">Выслать повторно</a>
+
+                    </div>
+                    <div class="ordernow-step1__tip">
+                      Проверка номера нужна для того чтобы мы могли автоматически удостовериться в актуальности вашего номера и потом по нему перезвонить.
+                    </div>
+                  </div>
+                </div>
+            </div>
+              <button class="btn next-step">Перейти к доставке</button>
+
+        </div>
+
+      </div>
+    </main>
+
+{% endblock %}

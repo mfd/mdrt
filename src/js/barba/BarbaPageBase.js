@@ -77,6 +77,7 @@ class BarbaPageBase {
     if($('.shareFacebook').length) this.share = new Share();
     if($('.tabs').length) this.tabs = new Tabs(this.view);
 
+
     //if($('.partner').length) this.carousel = new Carousel();
     //if($('.startPlayer').length) this.videoApi = new VideoApi();
     //if($('.playerPopup').length) this.popup = new Popup(this.view);
@@ -87,7 +88,8 @@ class BarbaPageBase {
     this.resize();
 
     //$('html title').html($('.barba-container').attr('data-title')+'Pastel Fluo');
-
+    $('body').removeClass('isLoginform');
+    $('body').removeClass('isLocationSwitch');
     if($('body .wysiwyg iframe').length) $('body .wysiwyg iframe').height(($('body .wysiwyg iframe').width()*9)/16);
   }
 
@@ -100,6 +102,7 @@ class BarbaPageBase {
 
     //Destroy Partial Modules
     //if(this.header) this.header.destroy();
+    debugger;
     if(this.carousel) this.carousel.destroy();
     if(this.tabs) this.tabs.destroy();
     // if(this.videoApi) this.videoApi.destroy();

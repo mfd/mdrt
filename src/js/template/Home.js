@@ -18,7 +18,7 @@ class Home extends BarbaPageBase {
     //this.changeBg();
   }
   onEnterCompleted() {
-    //super.onEnterCompleted();
+    super.onEnterCompleted();
 
     //TweenMax.set($('aside.sidebar'), {css:{top:-100}});
     //if($('.partner').length) this.carousel = new Carousel();
