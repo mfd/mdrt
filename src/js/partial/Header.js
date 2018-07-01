@@ -26,12 +26,14 @@ class Header {
   }
 
   hidePanels(event) {
-    console.log('hide Panels');
+    //console.log('hide Panels');
+    this.$body.removeClass('isLocationSwitch');
+    this.$body.removeClass('isLoginform');
   }
   showLogin(event) {
     let $body = this.$body;
     event.preventDefault();
-    $body.removeClass('isLoginform');
+    $body.removeClass('isLocationSwitch');
     if ($body.hasClass('isLoginform')) {
       $body.removeClass('isLoginform');
     } else {
@@ -42,7 +44,7 @@ class Header {
   showLocation(event) {
     let $body = $('body');
     event.preventDefault();
-    $body.removeClass('isLocationSwitch');
+    $body.removeClass('isLoginform');
     if ($body.hasClass('isLocationSwitch')) {
       $body.removeClass('isLocationSwitch');
     } else {

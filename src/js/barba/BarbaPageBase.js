@@ -1,11 +1,11 @@
 import ResizeManager from '../managers/ResizeManager';
 import Tools from '../tools/Tools';
-import Banner from '../partial/Banner';
+
 import Tabs from '../partial/Tabs';
-import Share from '../partial/Share';
-import VideoApi from '../partial/VideoApi';
+import Basket from '../partial/Basket';
+
 import Popup from '../partial/Popup';
-import Header from '../partial/Header';
+//import Header from '../partial/Header';
 import owlCarousel from '../partial/owlCarousel';
 
 /**
@@ -61,8 +61,9 @@ class BarbaPageBase {
         document.title = this.view.getAttribute('data-title');
       }
     }
-
     // Custom code should be added after super.
+
+
   }
 
   /**
@@ -73,13 +74,9 @@ class BarbaPageBase {
     // Custom code should be added before super.
 
     //Init Partial Modules
-    //if($('.bannerHead').length) this.banner = new Banner();
-    if($('.shareFacebook').length) this.share = new Share();
+    if($('.add_to_cart').length) this.basket = new Basket();
     if($('.tabs').length) this.tabs = new Tabs(this.view);
 
-
-    //if($('.partner').length) this.carousel = new Carousel();
-    //if($('.startPlayer').length) this.videoApi = new VideoApi();
     //if($('.playerPopup').length) this.popup = new Popup(this.view);
 
     //if($('header').length) this.header = new Header();
@@ -88,8 +85,6 @@ class BarbaPageBase {
     this.resize();
 
     //$('html title').html($('.barba-container').attr('data-title')+'Pastel Fluo');
-    $('body').removeClass('isLoginform');
-    $('body').removeClass('isLocationSwitch');
     if($('body .wysiwyg iframe').length) $('body .wysiwyg iframe').height(($('body .wysiwyg iframe').width()*9)/16);
   }
 
@@ -100,15 +95,20 @@ class BarbaPageBase {
     console.log('leave',this.id);
     ResizeManager.unbind( this.id );
 
+
+    $('body').removeClass('isLoginform');
+    $('body').removeClass('isLocationSwitch');
+
     //Destroy Partial Modules
     //if(this.header) this.header.destroy();
     debugger;
     if(this.carousel) this.carousel.destroy();
     if(this.tabs) this.tabs.destroy();
-    // if(this.videoApi) this.videoApi.destroy();
+    if(this.basket) this.basket.destroy();
+
+
     // if(this.popup) this.popup.destroy();
     //if(this.header) this.header.destroy();
-    //if(this.carousel) this.carousel.destroy();
   }
 
   /**
