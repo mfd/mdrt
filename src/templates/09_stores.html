@@ -101,7 +101,21 @@ barbaNameSpace: stores
                         ]
                     %}
 
-                    <ul class="b-stores">
+              <div class="select-store">
+                <div class="fake-select filter__select" data-fake-select>
+                  <div class="form-control fake-select__button">
+                    <span data-fake-label>Все города</span>
+                  </div>
+                  <select>
+                      <option value="0">Все города</option>
+                      {% for item in items %}
+                          <option value="{{loop.index+1}}">{{item.name}}</option>
+                      {% endfor %}
+                  </select>
+                </div>
+              </div> <!-- //.select -->
+                  <div class="b-stores">
+                    <ul class="b-stores-list">
                         {% for item in items %}
                           {% set city = item.name %}
                             <li class="store__item{% if loop.last %} is-active{% endif %}">
@@ -126,6 +140,7 @@ barbaNameSpace: stores
 
 
                     </ul>
+                  </div>
                 {% endmacro %}
 
                 {{stores()}}

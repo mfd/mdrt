@@ -23,9 +23,16 @@ class Page extends BarbaPageBase {
   onEnter() {
     super.onEnter();
 
+    // this.gridItems = new TimelineLite();
+    // this.gridItems.set(this.view.querySelectorAll('.grid__catalog .item'), {
+    //   opacity: 0,
+    //   y: 20,
+    // });
+
+
     this.tips = [];
 
-    document.querySelectorAll('[data-tippy]').forEach(el => {
+    this.view.querySelectorAll('[data-tippy]').forEach(el => {
       this.tips.push(
         tippy(el)
       );
@@ -54,17 +61,31 @@ class Page extends BarbaPageBase {
   onEnterCompleted() {
     super.onEnterCompleted();
 
+  }
 
+  display() {
+    // this.gridItems.staggerTo(
+    //   this.view.querySelectorAll('.grid__catalog .item'),
+    //   10,
+    //   {
+    //     opacity: 1,
+    //     y: 0,
+    //     ease: Power4.easeOut,
+    //   },
+    //   0.1
+    // );
+
+    //debugger;
   }
   hide(container, promise) {
     super.hide(container,promise);
-    debugger;
+
     this.tips = null;
     // const first = this.tips[0];
     // first.destroy(first.store[0].popper);
 
-    // this.listEpisode.kill();
-    // this.listEpisode = null;
+    //this.gridItems.kill();
+    //this.gridItems = null;
 
   }
 }

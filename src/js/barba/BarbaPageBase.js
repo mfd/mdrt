@@ -2,6 +2,7 @@ import ResizeManager from '../managers/ResizeManager';
 import Tools from '../tools/Tools';
 
 import Tabs from '../partial/Tabs';
+import fakeSelect from '../partial/fakeSelect';
 import Basket from '../partial/Basket';
 
 import Popup from '../partial/Popup';
@@ -77,6 +78,13 @@ class BarbaPageBase {
     if($('.add_to_cart').length) this.basket = new Basket();
     if($('.tabs').length) this.tabs = new Tabs(this.view);
 
+
+    if($('[data-fake-select]').length) {
+      this.select = new fakeSelect(
+        this.view.querySelector('[data-fake-select]'),
+        //this.mobileSelectChange.bind(this),
+      ).init();
+    }
     //if($('.playerPopup').length) this.popup = new Popup(this.view);
 
     //if($('header').length) this.header = new Header();
@@ -101,14 +109,14 @@ class BarbaPageBase {
 
     //Destroy Partial Modules
     //if(this.header) this.header.destroy();
-    debugger;
+    //debugger;
     if(this.carousel) this.carousel.destroy();
     if(this.tabs) this.tabs.destroy();
     if(this.basket) this.basket.destroy();
 
 
     // if(this.popup) this.popup.destroy();
-    //if(this.header) this.header.destroy();
+    // if(this.header) this.header.destroy();
   }
 
   /**
@@ -152,6 +160,12 @@ class BarbaPageBase {
     if($('body .wysiwyg iframe').length) $('body .wysiwyg iframe').height(($('body .wysiwyg iframe').width()*9)/16);
     console.log('resize',this.id);
   }
+
+  mobileSelectChange(option) {
+    // location.href = option.value;
+    Barba.Pjax.goTo(option.value);
+  }
+
 }
 
 export default BarbaPageBase;

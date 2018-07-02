@@ -1,18 +1,31 @@
-select.form-control
-    border: 1px solid #BDBDBD;
-    padding: 4px 6px;
+.fake-select
+    position: relative;
     width: 100%;
-    // border: 1px solid #6A708B;
-    // background-position: right center;
-    // background-repeat: no-repeat;
-    // background-size: 18px auto;
-    // height: 36px;
-    // padding-bottom: 0;
-    // padding-right: 18px;
-    // padding-top: 0;
-    // border-width: 0 0 2px 0;
-    // border-radius: 0;
-    // box-shadow: none;
-    // background: #f8f8f8;
-    // width: 100%;
-//    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='512'%20height='512'%20viewBox='0%200%20512%20512'%3E%3Cpath%20class='lexicon-icon-outline'%20d='M347.913%20199.336l-81.538-85c-5.413-5.642-14.188-5.642-19.6%200l-81.538%2085c-8.731%209.101-2.548%2024.664%209.8%2024.664h163.077c12.348%200%2018.531-15.563%209.8-24.664zM165.236%20312.664l81.538%2085c5.412%205.642%2014.188%205.642%2019.6%200l81.538-85c8.731-9.101%202.548-24.664-9.8-24.664H175.035c-12.347%200-18.531%2015.563-9.8%2024.664z'%20fill='%236A708B'/%3E%3C/svg%3E")
+
+.fake-select__button
+    border: 1px solid #BDBDBD;
+    cursor: pointer;
+    padding: 9px 12px;
+    border-radius: 5px;
+    +pseudo
+    &:after
+        width: 30px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: initial;
+        border-left: 1px solid #BDBDBD;
+        background-image: url("data:image/svg+xml,%3Csvg width='13' height='8' viewBox='0 0 13 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L5.736 6L11.472 0' transform='translate%280.835938 1%29' stroke='%23BDBDBD' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center;
+
+.fake-select select
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+

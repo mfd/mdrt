@@ -159,7 +159,7 @@
             <div class="b-login-form">
               <div class="b-login-form-wrap">
                 <h3 class="b-login-form__title">Вход</h3>
-                <a href="16-1_cabinet_myprofile.html" class="b-login-form--register">У меня нет учетной записи</a>
+                <a href="17-3_cabinet_reg.html" class="b-login-form--register">У меня нет учетной записи</a>
                 <form action="16-1_cabinet_myprofile.html">
                   <div class="input">
                     <label>Email:</label>
@@ -168,7 +168,7 @@
                     <label>Пароль:</label>
                     <input type="text" placeholder="Введите пароль" /> </div>
                   <div class="row b-login-form-btn">
-                    <a href="16-1_cabinet_myprofile.html" class="lostpass">Забыли пароль?</a>
+                    <a href="17-1_cabinet_recovery.html" class="lostpass">Забыли пароль?</a>
                     <button class="btn">Вход</button>
                   </div>
                 </form>
@@ -317,174 +317,195 @@
             <!-- //.page__title -->
             <div class="page__row">
               <div class="col col-sidebar">
-                <ul class="b-stores">
-                  <li class="store__item">
-                    <div class="ac">
-                      <input class="ac-input" id="city_1" name="city_1" type="checkbox" checked />
-                      <label class="ac-label" for="city_1">Уфа</label>
-                      <article class="ac-text">
-                        <div class="ac-sub store-city">
-                          <a href="#" class="store-city__item" data-latlng="54.7577387,56.0364898" data-addr="Уфа, ул. Энтузиастов, 20 8 (347) 216-31-75">
-                            <div class="store-city__name">ТРЦ «Планета»</div>
-                            <div class="store-city__addr">ул. Энтузиастов, 20
-                              <br/> т.8 (347) 216-31-75</div>
-                          </a>
-                          <a href="#" class="store-city__item" data-latlng="54.741026,55.9878358" data-addr="Уфа, просп. Октября, 4/1 8 (347) 274-26-05">
-                            <div class="store-city__name">ТЦ «Мир»</div>
-                            <div class="store-city__addr">просп. Октября, 4/1
-                              <br/> т.8 (347) 274-26-05</div>
-                          </a>
-                          <a href="#" class="store-city__item" data-latlng="54.7370888,55.9577693" data-addr="Уфа, ул. Цюрупы, 97, 2 этаж 8 (347) 246-23-85">
-                            <div class="store-city__name">ТРЦ «Центральный»</div>
-                            <div class="store-city__addr">ул. Цюрупы, 97, 2 этаж
-                              <br/> т.8 (347) 246-23-85</div>
-                          </a>
-                          <a href="#" class="store-city__item" data-latlng="54.783083,56.0318839" data-addr="Уфа, просп. Октября, 107/3  8 (987) 254-54-84">
-                            <div class="store-city__name">Madyart, ООО &quot;Статус&quot;</div>
-                            <div class="store-city__addr">просп. Октября, 107/3
-                              <br/> т. 8 (987) 254-54-84</div>
-                          </a>
-                        </div>
-                      </article>
-                      <!--/ac-text-->
+                <div class="select-store">
+                  <div class="fake-select filter__select" data-fake-select>
+                    <div class="form-control fake-select__button">
+                      <span data-fake-label>Все города</span>
                     </div>
-                    <!--/ac-->
-                  </li>
-                  <li class="store__item">
-                    <div class="ac">
-                      <input class="ac-input" id="city_2" name="city_2" type="checkbox" />
-                      <label class="ac-label" for="city_2">Екатеринбург</label>
-                      <article class="ac-text">
-                        <div class="ac-sub store-city">
-                          <a href="#" class="store-city__item" data-latlng="" data-addr="Екатеринбург, ул. Ленина, 50 т.378-73-81">
-                            <div class="store-city__name">СИТИ-ЦЕНТР</div>
-                            <div class="store-city__addr">ул. Ленина, 50
-                              <br/> т.т.378-73-81</div>
-                          </a>
-                          <a href="#" class="store-city__item" data-latlng="" data-addr="Екатеринбург, ул. Ленина, 50 т.378-73-81">
-                            <div class="store-city__name">ТРЦ «Гринвич»</div>
-                            <div class="store-city__addr">ул. Ленина, 50
-                              <br/> т.т.378-73-81</div>
-                          </a>
-                          <a href="#" class="store-city__item" data-latlng="" data-addr="Екатеринбург, ул.Халтурина, 55 8 (343) 253-84-50">
-                            <div class="store-city__name">ТРЦ «Карнавал»</div>
-                            <div class="store-city__addr">ул.Халтурина, 55
-                              <br/> т.8 (343) 253-84-50</div>
-                          </a>
-                          <a href="#" class="store-city__item" data-latlng="" data-addr="Екатеринбург, ул. Ленина, 50 т.378-73-81">
-                            <div class="store-city__name">Молл Парк-Хаус</div>
-                            <div class="store-city__addr">ул. Ленина, 50
-                              <br/> т.т.378-73-81</div>
-                          </a>
-                        </div>
-                      </article>
-                      <!--/ac-text-->
-                    </div>
-                    <!--/ac-->
-                  </li>
-                  <li class="store__item">
-                    <div class="ac">
-                      <input class="ac-input" id="city_3" name="city_3" type="checkbox" />
-                      <label class="ac-label" for="city_3">Москва</label>
-                      <article class="ac-text">
-                        <div class="ac-sub store-city">
-                          <a href="#" class="store-city__item" data-latlng="" data-addr="Москва,  ">
-                            <div class="store-city__name"></div>
-                            <div class="store-city__addr">
-                              <br/> т.</div>
-                          </a>
-                        </div>
-                      </article>
-                      <!--/ac-text-->
-                    </div>
-                    <!--/ac-->
-                  </li>
-                  <li class="store__item">
-                    <div class="ac">
-                      <input class="ac-input" id="city_4" name="city_4" type="checkbox" />
-                      <label class="ac-label" for="city_4">Нижний Новгород</label>
-                      <article class="ac-text">
-                        <div class="ac-sub store-city">
-                          <a href="#" class="store-city__item" data-latlng="" data-addr="Нижний Новгород,  ">
-                            <div class="store-city__name"></div>
-                            <div class="store-city__addr">
-                              <br/> т.</div>
-                          </a>
-                        </div>
-                      </article>
-                      <!--/ac-text-->
-                    </div>
-                    <!--/ac-->
-                  </li>
-                  <li class="store__item">
-                    <div class="ac">
-                      <input class="ac-input" id="city_5" name="city_5" type="checkbox" />
-                      <label class="ac-label" for="city_5">Пермь</label>
-                      <article class="ac-text">
-                        <div class="ac-sub store-city">
-                          <a href="#" class="store-city__item" data-latlng="" data-addr="Пермь,  ">
-                            <div class="store-city__name"></div>
-                            <div class="store-city__addr">
-                              <br/> т.</div>
-                          </a>
-                        </div>
-                      </article>
-                      <!--/ac-text-->
-                    </div>
-                    <!--/ac-->
-                  </li>
-                  <li class="store__item">
-                    <div class="ac">
-                      <input class="ac-input" id="city_6" name="city_6" type="checkbox" />
-                      <label class="ac-label" for="city_6">Ростов-на-Дону</label>
-                      <article class="ac-text">
-                        <div class="ac-sub store-city">
-                          <a href="#" class="store-city__item" data-latlng="" data-addr="Ростов-на-Дону,  ">
-                            <div class="store-city__name"></div>
-                            <div class="store-city__addr">
-                              <br/> т.</div>
-                          </a>
-                        </div>
-                      </article>
-                      <!--/ac-text-->
-                    </div>
-                    <!--/ac-->
-                  </li>
-                  <li class="store__item">
-                    <div class="ac">
-                      <input class="ac-input" id="city_7" name="city_7" type="checkbox" />
-                      <label class="ac-label" for="city_7">Самара</label>
-                      <article class="ac-text">
-                        <div class="ac-sub store-city">
-                          <a href="#" class="store-city__item" data-latlng="" data-addr="Самара,  ">
-                            <div class="store-city__name"></div>
-                            <div class="store-city__addr">
-                              <br/> т.</div>
-                          </a>
-                        </div>
-                      </article>
-                      <!--/ac-text-->
-                    </div>
-                    <!--/ac-->
-                  </li>
-                  <li class="store__item is-active">
-                    <div class="ac">
-                      <input class="ac-input" id="city_8" name="city_8" type="checkbox" />
-                      <label class="ac-label" for="city_8">Стерлитамак</label>
-                      <article class="ac-text">
-                        <div class="ac-sub store-city">
-                          <a href="#" class="store-city__item" data-latlng="" data-addr="Стерлитамак,  ">
-                            <div class="store-city__name"></div>
-                            <div class="store-city__addr">
-                              <br/> т.</div>
-                          </a>
-                        </div>
-                      </article>
-                      <!--/ac-text-->
-                    </div>
-                    <!--/ac-->
-                  </li>
-                </ul>
+                    <select>
+                      <option value="0">Все города</option>
+                      <option value="2">Уфа</option>
+                      <option value="3">Екатеринбург</option>
+                      <option value="4">Москва</option>
+                      <option value="5">Нижний Новгород</option>
+                      <option value="6">Пермь</option>
+                      <option value="7">Ростов-на-Дону</option>
+                      <option value="8">Самара</option>
+                      <option value="9">Стерлитамак</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- //.select -->
+                <div class="b-stores">
+                  <ul class="b-stores-list">
+                    <li class="store__item">
+                      <div class="ac">
+                        <input class="ac-input" id="city_1" name="city_1" type="checkbox" checked />
+                        <label class="ac-label" for="city_1">Уфа</label>
+                        <article class="ac-text">
+                          <div class="ac-sub store-city">
+                            <a href="#" class="store-city__item" data-latlng="54.7577387,56.0364898" data-addr="Уфа, ул. Энтузиастов, 20 8 (347) 216-31-75">
+                              <div class="store-city__name">ТРЦ «Планета»</div>
+                              <div class="store-city__addr">ул. Энтузиастов, 20
+                                <br/> т.8 (347) 216-31-75</div>
+                            </a>
+                            <a href="#" class="store-city__item" data-latlng="54.741026,55.9878358" data-addr="Уфа, просп. Октября, 4/1 8 (347) 274-26-05">
+                              <div class="store-city__name">ТЦ «Мир»</div>
+                              <div class="store-city__addr">просп. Октября, 4/1
+                                <br/> т.8 (347) 274-26-05</div>
+                            </a>
+                            <a href="#" class="store-city__item" data-latlng="54.7370888,55.9577693" data-addr="Уфа, ул. Цюрупы, 97, 2 этаж 8 (347) 246-23-85">
+                              <div class="store-city__name">ТРЦ «Центральный»</div>
+                              <div class="store-city__addr">ул. Цюрупы, 97, 2 этаж
+                                <br/> т.8 (347) 246-23-85</div>
+                            </a>
+                            <a href="#" class="store-city__item" data-latlng="54.783083,56.0318839" data-addr="Уфа, просп. Октября, 107/3  8 (987) 254-54-84">
+                              <div class="store-city__name">Madyart, ООО &quot;Статус&quot;</div>
+                              <div class="store-city__addr">просп. Октября, 107/3
+                                <br/> т. 8 (987) 254-54-84</div>
+                            </a>
+                          </div>
+                        </article>
+                        <!--/ac-text-->
+                      </div>
+                      <!--/ac-->
+                    </li>
+                    <li class="store__item">
+                      <div class="ac">
+                        <input class="ac-input" id="city_2" name="city_2" type="checkbox" />
+                        <label class="ac-label" for="city_2">Екатеринбург</label>
+                        <article class="ac-text">
+                          <div class="ac-sub store-city">
+                            <a href="#" class="store-city__item" data-latlng="" data-addr="Екатеринбург, ул. Ленина, 50 т.378-73-81">
+                              <div class="store-city__name">СИТИ-ЦЕНТР</div>
+                              <div class="store-city__addr">ул. Ленина, 50
+                                <br/> т.т.378-73-81</div>
+                            </a>
+                            <a href="#" class="store-city__item" data-latlng="" data-addr="Екатеринбург, ул. Ленина, 50 т.378-73-81">
+                              <div class="store-city__name">ТРЦ «Гринвич»</div>
+                              <div class="store-city__addr">ул. Ленина, 50
+                                <br/> т.т.378-73-81</div>
+                            </a>
+                            <a href="#" class="store-city__item" data-latlng="" data-addr="Екатеринбург, ул.Халтурина, 55 8 (343) 253-84-50">
+                              <div class="store-city__name">ТРЦ «Карнавал»</div>
+                              <div class="store-city__addr">ул.Халтурина, 55
+                                <br/> т.8 (343) 253-84-50</div>
+                            </a>
+                            <a href="#" class="store-city__item" data-latlng="" data-addr="Екатеринбург, ул. Ленина, 50 т.378-73-81">
+                              <div class="store-city__name">Молл Парк-Хаус</div>
+                              <div class="store-city__addr">ул. Ленина, 50
+                                <br/> т.т.378-73-81</div>
+                            </a>
+                          </div>
+                        </article>
+                        <!--/ac-text-->
+                      </div>
+                      <!--/ac-->
+                    </li>
+                    <li class="store__item">
+                      <div class="ac">
+                        <input class="ac-input" id="city_3" name="city_3" type="checkbox" />
+                        <label class="ac-label" for="city_3">Москва</label>
+                        <article class="ac-text">
+                          <div class="ac-sub store-city">
+                            <a href="#" class="store-city__item" data-latlng="" data-addr="Москва,  ">
+                              <div class="store-city__name"></div>
+                              <div class="store-city__addr">
+                                <br/> т.</div>
+                            </a>
+                          </div>
+                        </article>
+                        <!--/ac-text-->
+                      </div>
+                      <!--/ac-->
+                    </li>
+                    <li class="store__item">
+                      <div class="ac">
+                        <input class="ac-input" id="city_4" name="city_4" type="checkbox" />
+                        <label class="ac-label" for="city_4">Нижний Новгород</label>
+                        <article class="ac-text">
+                          <div class="ac-sub store-city">
+                            <a href="#" class="store-city__item" data-latlng="" data-addr="Нижний Новгород,  ">
+                              <div class="store-city__name"></div>
+                              <div class="store-city__addr">
+                                <br/> т.</div>
+                            </a>
+                          </div>
+                        </article>
+                        <!--/ac-text-->
+                      </div>
+                      <!--/ac-->
+                    </li>
+                    <li class="store__item">
+                      <div class="ac">
+                        <input class="ac-input" id="city_5" name="city_5" type="checkbox" />
+                        <label class="ac-label" for="city_5">Пермь</label>
+                        <article class="ac-text">
+                          <div class="ac-sub store-city">
+                            <a href="#" class="store-city__item" data-latlng="" data-addr="Пермь,  ">
+                              <div class="store-city__name"></div>
+                              <div class="store-city__addr">
+                                <br/> т.</div>
+                            </a>
+                          </div>
+                        </article>
+                        <!--/ac-text-->
+                      </div>
+                      <!--/ac-->
+                    </li>
+                    <li class="store__item">
+                      <div class="ac">
+                        <input class="ac-input" id="city_6" name="city_6" type="checkbox" />
+                        <label class="ac-label" for="city_6">Ростов-на-Дону</label>
+                        <article class="ac-text">
+                          <div class="ac-sub store-city">
+                            <a href="#" class="store-city__item" data-latlng="" data-addr="Ростов-на-Дону,  ">
+                              <div class="store-city__name"></div>
+                              <div class="store-city__addr">
+                                <br/> т.</div>
+                            </a>
+                          </div>
+                        </article>
+                        <!--/ac-text-->
+                      </div>
+                      <!--/ac-->
+                    </li>
+                    <li class="store__item">
+                      <div class="ac">
+                        <input class="ac-input" id="city_7" name="city_7" type="checkbox" />
+                        <label class="ac-label" for="city_7">Самара</label>
+                        <article class="ac-text">
+                          <div class="ac-sub store-city">
+                            <a href="#" class="store-city__item" data-latlng="" data-addr="Самара,  ">
+                              <div class="store-city__name"></div>
+                              <div class="store-city__addr">
+                                <br/> т.</div>
+                            </a>
+                          </div>
+                        </article>
+                        <!--/ac-text-->
+                      </div>
+                      <!--/ac-->
+                    </li>
+                    <li class="store__item is-active">
+                      <div class="ac">
+                        <input class="ac-input" id="city_8" name="city_8" type="checkbox" />
+                        <label class="ac-label" for="city_8">Стерлитамак</label>
+                        <article class="ac-text">
+                          <div class="ac-sub store-city">
+                            <a href="#" class="store-city__item" data-latlng="" data-addr="Стерлитамак,  ">
+                              <div class="store-city__name"></div>
+                              <div class="store-city__addr">
+                                <br/> т.</div>
+                            </a>
+                          </div>
+                        </article>
+                        <!--/ac-text-->
+                      </div>
+                      <!--/ac-->
+                    </li>
+                  </ul>
+                </div>
               </div>
               <div class="col col-content">
                 <div id="gmap"></div>
