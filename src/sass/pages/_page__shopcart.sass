@@ -37,6 +37,24 @@
                     width: 180px;
                 &:hover::after
                     display: none;
+            &-delete
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                width: 15px;
+                height: 15px;
+                color: #949494;
+                //background: red;
+                overflow: hidden;
+            .input-quantity
+                background: #FFFFFF;
+                border: 1px solid #949494;
+                border-radius: 5px;
+                padding: 0 5px;
+                font-size: 12px;
+                height: 20px;
+                line-height: 20px;
+
         .total
             justify-content: flex-end;
             .itemtotal__col
@@ -49,6 +67,7 @@
                 font-size: 16px;
                 +sm
                 padding: 0 30px;
+
 
         .b-promocode,
         .b-vipcard,
