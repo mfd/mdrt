@@ -2,6 +2,8 @@
     .menu
         font-size: 24px;
         margin-bottom: 80px;
+        @media screen and (max-height: 850px)
+            //margin-bottom: 30px;
     .phone
         float: left;
         margin-right: 2em;
@@ -46,22 +48,22 @@
                 .menu__item-subMenuBlock
                     position: absolute;
                     top: -90px;
-                    left: -12px;
-                    padding: 20px;
+                    left: 130px;
                     background: #fff;
                     color: #ed4e6e;
 
                     opacity: 0;
                     pointer-events: none;
                     backface-visibility: hidden;
-                    transition: opacity 0.3s, height 0.3s, box-shadow 0.3s;
-                    box-shadow: 0 0 0 0px #2c3f52;
-
+                    transition: opacity 0.3s, height 0.3s;
+                    //box-shadow: 0 0 0 0px #2c3f52;
+                    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
                     border-radius: 2px;
-                    padding: 20px;
-                    padding-left: 140px;
+                    padding: 30px 50px;
                     padding-bottom: 0;
-                    width: 500px;
+                    //padding-left: 140px;
+                    padding-bottom: 30px;
+                    width: 450px;
                     ul
                         width: 50%;
                         float: left;
@@ -73,6 +75,44 @@
                             margin-bottom: 12px;
                             a
                                 color: #333333;
+                    .submenu
+                        margin-bottom: 25px;
+                        padding-bottom: 15px;
+                        +pseudo
+                        &:before
+                            background: #949494;
+                            height: 1px;
+                            width: 100%;
+                            top: initial;
+                            bottom: 0;
+                        &:nth-child(3), &:nth-child(4)
+                            margin: 0
+                            padding: 0
+                            &:before
+                                display: none;
+
+                .menu__item-subMenuBlock
+                    &:after,
+                    &:before
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        left: 30px;
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                    &:after
+                        top: 95px;
+                        left: -18px;
+                        border-color: transparent #fff transparent transparent;
+                        border-width: 9px;
+                    &:before
+                        top: 96px;
+                        left: -18px;
+                        border-color: transparent #e0e0e0 transparent transparent;
+                        border-width: 9px;
+                        display: none
+
             .menu__item-subMenuWrap
                 > .menu__item-link
                     z-index: 110;
@@ -83,12 +123,14 @@
                 .menu__item-subMenuBlock
                     pointer-events: auto;
                     opacity: 1;
-                    height: 270px;
-                    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
-                    background: rgba(255, 255, 255, 0.95);
+                    //height: 270px;
+
+                    background: rgba(255, 255, 255, 0.9);
                     z-index: 109;
 
     .smenu
+        @media screen and (max-height: 850px)
+            margin-bottom: 30px;
         li ul
             display: block
             margin-top: 1em;
@@ -99,34 +141,33 @@
             .smenu__item-subMenuWrap
                 position: relative;
                 display: block;
-                -webkit-box-sizing: border-box;
                 box-sizing: border-box;
                 > .smenu__item-link
                     z-index: 10;
                 .smenu__item-subMenuBlock
                     position: absolute;
-                    top: -70px;
-                    left: -12px;
-                    padding: 20px;
+                    top: -80px;
+                    left: 130px;
                     background: #fff;
                     color: #ed4e6e;
 
                     opacity: 0;
                     pointer-events: none;
                     backface-visibility: hidden;
-                    transition: opacity 0.3s, height 0.3s, box-shadow 0.3s;
-                    box-shadow: 0 0 0 0px #2c3f52;
+                    transition: opacity 0.3s, height 0.3s;
+                    //box-shadow: 0 0 0 0px #2c3f52;
+                    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
 
                     border-radius: 2px;
-                    padding: 20px;
-                    padding-left: 140px;
+                    padding: 20px 40px;
+                    //padding-left: 140px;
                     padding-bottom: 0;
-                    width: 500px;
+                    width: 250px;
                     ul
-                        width: 50%;
+                        width: 100%;
                         float: left;
                         margin: 0;
-                        margin-bottom: 15px;
+                        margin-bottom: 20px;
                         li
                             display: block;
                             font-size: 16px;
@@ -137,7 +178,29 @@
                 .smenu__item-subMenuBlock
                     pointer-events: auto;
                     opacity: 1;
-                    height: 170px;;
-                    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
-                    background: rgba(255, 255, 255, 0.95);
+                    //height: 170px;
+                    //box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+                    background: rgba(255, 255, 255, 0.9);
                     z-index: 9;
+
+            .smenu__item-subMenuBlock
+                &:after,
+                &:before
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 30px;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                &:after
+                    top: 85px;
+                    left: -18px;
+                    border-color: transparent #fff transparent transparent;
+                    border-width: 9px;
+                &:before
+                    top: 96px;
+                    left: -18px;
+                    border-color: transparent #e0e0e0 transparent transparent;
+                    border-width: 9px;
+                    display: none

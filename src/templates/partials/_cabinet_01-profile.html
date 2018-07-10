@@ -15,10 +15,21 @@
       <label for="surname" class="control-label">Отчество</label>
     </div>
     <div class="form-group">
-        <select class="form-control">
-            <option>Уфа</option>
-            <option>Москва</option>
-        </select>
+                    {%
+                    set cities = [Уфа, Мск]
+                    %}
+              <div class="select">
+                <div class="fake-select filter__select" data-fake-select>
+                  <div class="form-control fake-select__button">
+                    <span data-fake-label>{{cities[0]}}</span>
+                  </div>
+                  <select>
+                      {% for item in cities %}
+                          <option value="{{loop.index}}" {% if loop.first %} selected{% endif %}>{{item}}</option>
+                      {% endfor %}
+                  </select>
+                </div>
+              </div> <!-- //.select -->
     </div>
     <div class="form-group">
       <input class="form-control" type="text" name="email" placeholder="k@k.ru" disabled     />

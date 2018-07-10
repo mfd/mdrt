@@ -36,26 +36,10 @@ class Page extends BarbaPageBase {
       this.tips.push(
         tippy(el)
       );
-      this.tips.push(
-        tippy('#catalog-sort', {
-          html: document.querySelector('#catalog-sort__dropdown'),
-          theme: 'mdrt',
-          placement: 'bottom',
-          arrow: true,
-          trigger: 'click',
-          interactive: true
-        })
-      );
     });
-    // this.tips = tippy(document.querySelectorAll('[data-tippy]'));
-    // this.tipCatalogSort = tippy('#catalog-sort', {
-    //   html: document.querySelector('#catalog-sort__dropdown'),
-    //   theme: 'mdrt',
-    //   placement: 'bottom',
-    //   arrow: true,
-    //   trigger: 'click',
-    //   interactive: true
-    // });
+
+
+
   }
 
   onEnterCompleted() {

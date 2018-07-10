@@ -66,20 +66,72 @@
     {% if(titleMenu==='catalog') %}
         <div class="page__title-right">
           <ul class="catalog__sort">
-            <li>
-              <a href="#" id="catalog-sort">Все предметы одежды</a>
-              <div id="catalog-sort__dropdown" class="tippy-dropdown">
-                <ul>
-                  <li><a href="#">По новизне</a></li>
-                  <li class="is-active"><a href="#">По популярности</a></li>
+            <li class="catalog__sort-item">
+              <div class="js-dropdown dropdown-xs">
+                <a href="#" class="js-toggle" aria-expanded="false" aria-controls="catalog-sort2">
+                  Все предметы одежды
+                </a>
+                <ul id="catalog-sort2" class="js-toggle-dropdown">
+                  <li class="isActive">
+                    <a href="02-2_catalog.html">Платья</a>
+                  </li>
+                  <li>
+                    <a href="02-2_catalog.html">Жакеты</a>
+                  </li>
+                  <li>
+                    <a href="02-2_catalog.html">Юбки</a>
+                  </li>
+                  <li>
+                    <a href="02-2_catalog.html">Блузки</a>
+                  </li>
+                  <li>
+                    <a href="02-2_catalog.html">Брюки</a>
+                  </li>
+                  <li>
+                    <a href="02-2_catalog.html">Джемперы Джемперы </a>
+                  </li>
+                  <li>
+                    <a href="02-2_catalog.html">Пальто</a>
+                  </li>
+                  <li>
+                    <a href="02-2_catalog.html">Сумки</a>
+                  </li>
+                  <li>
+                    <a href="02-2_catalog.html">Аксессуары</a>
+                  </li>
+                  <li>
+                    <a href="02-2_catalog.html">Бижутерия</a>
+                  </li>
                 </ul>
               </div>
             </li>
-            <li class="active"><a href="#" data-tippy title="test">Размеры</a></li>
-            <li><a href="#">Цена</a></li>
-            <li><a href="#" class="clear">Сбросить</a></li>
+            <li class="catalog__sort-item"><a href="#">Цена</a></li>
+            <li class="catalog__sort-item"><a href="#" class="clear">Сбросить</a></li>
           </ul>
-        </div>
+      </div>
+    {% endif %}
+    {% if(titleMenu==='catalog2') %}
+        <div class="page__title-right">
+          <ul class="catalog__sort">
+            <li class="catalog__sort-item">
+              <div class="js-dropdown dropdown-xs">
+                <a href="#" class="js-toggle" aria-expanded="false" aria-controls="catalog-sort2">
+                  Все предметы одежды2
+                </a>
+                <ul id="catalog-sort2" class="js-toggle-dropdown">
+                  <li class="isActive">
+                    <a href="02_catalog.html">Платья</a>
+                  </li>
+                  <li>
+                    <a href="02_catalog.html">Жакеты</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="catalog__sort-item"><a href="#">Цена</a></li>
+            <li class="catalog__sort-item"><a href="#" class="clear">Сбросить</a></li>
+          </ul>
+      </div>
     {% endif %}
     {% if(titleMenu==='novelty') %}
         <div class="page__title-right">

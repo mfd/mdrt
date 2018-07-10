@@ -5,6 +5,8 @@ import Tabs from '../partial/Tabs';
 import fakeSelect from '../partial/fakeSelect';
 import Basket from '../partial/Basket';
 
+import Dropdown from '../partial/Dropdown';
+
 import Popup from '../partial/Popup';
 //import Header from '../partial/Header';
 import owlCarousel from '../partial/owlCarousel';
@@ -85,9 +87,16 @@ class BarbaPageBase {
         //this.mobileSelectChange.bind(this),
       ).init();
     }
-    //if($('.playerPopup').length) this.popup = new Popup(this.view);
 
-    //if($('header').length) this.header = new Header();
+    if ($('.js-dropdown').length) {
+      const dropdowns = this.view.querySelectorAll('.js-dropdown');
+      this.dropdowns = [];
+      for (let i = 0; i < dropdowns.length; i++) {
+        let $el = dropdowns[i];
+        this.dropdowns[i] = new Dropdown('dropdown-' + i, $el);
+      }
+    }
+
     if($('.owl-gallery')) this.carousel = new owlCarousel();
 
     this.resize();
@@ -114,6 +123,15 @@ class BarbaPageBase {
     if(this.tabs) this.tabs.destroy();
     if(this.basket) this.basket.destroy();
 
+    //Dropdowns
+    if (this.dropdowns) {
+      debugger;
+      console.log(this.dropdowns.length);
+      for ( let i = 0; i < this.dropdowns.length; i++ ) {
+        this.dropdowns[i].destroy();
+      }
+      this.dropdowns = null;
+    }
 
     // if(this.popup) this.popup.destroy();
     // if(this.header) this.header.destroy();

@@ -150,12 +150,34 @@
         </ul>
         <div class="header__right">
           <div class="userArea">
-            <a href="16-1_cabinet_myprofile.html" class="userArea__sign">
-              <svg class="icon icon-sign">
-                <use xlink:href="img/sprite.svg#icon-sign"></use>
-              </svg>
-              <span class="userArea__sign-title">Личный кабинет</span>
-            </a>
+            <div class="userArea__sign js-dropdown">
+              <a href="#" class="js-toggle" aria-expanded="false" aria-controls="dropdown-userarea">
+                <svg class="icon icon-sign">
+                  <use xlink:href="img/sprite.svg#icon-sign"></use>
+                </svg>
+                <span class="userArea__sign-title">Личный кабинет</span>
+              </a>
+              <ul id="dropdown-userarea" class="js-toggle-dropdown">
+                <li>
+                  <a href="16-1_cabinet_myprofile.html">Мой профиль</a>
+                </li>
+                <li>
+                  <a href="16-1_cabinet_myprofile.html#tab-2">Состояние заказов</a>
+                </li>
+                <li>
+                  <a href="16-1_cabinet_myprofile.html#tab-3">История заказов</a>
+                </li>
+                <li>
+                  <a href="16-1_cabinet_myprofile.html#tab-4">Адреса доставки</a>
+                </li>
+                <li>
+                  <a href="16-1_cabinet_myprofile.html#tab-5">Система лояльности</a>
+                </li>
+                <li class="exitLink">
+                  <a href="16-1_cabinet_myprofile.html">Выйти</a>
+                </li>
+              </ul>
+            </div>
             <a href="16-4_cabinet_isbrannoe.html" class="userArea__like">
               <span class="userArea__like-title">Избранное</span>
               <svg class="icon icon-like">
