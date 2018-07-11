@@ -23,7 +23,7 @@
     <ul class="breadcrumbs">
         {% for item in items %}
             <li class="breadcrumbs-item{% if loop.last %} is-active{% endif %}">
-              <a href="#" class="breadcrumbs-link">{{item}}</a>
+              <a href="{% if loop.first %}01_home.html{% else %}08_opt.html{% endif %}" class="breadcrumbs-link">{{item}}</a>
             </li>
         {% else %}
           <li>Null breadcrumbs</li>
@@ -105,7 +105,21 @@
                 </ul>
               </div>
             </li>
-            <li class="catalog__sort-item"><a href="#">Цена</a></li>
+            <li class="catalog__sort-item">
+              <div class="js-dropdown dropdown-xs">
+                <a href="#" class="js-toggle" aria-expanded="false" aria-controls="catalog-sort3">
+                  Цена
+                </a>
+                <ul id="catalog-sort3" class="js-toggle-dropdown">
+                  <li class="isActive">
+                    <a href="02-2_catalog.html">По возрастанию</a>
+                  </li>
+                  <li>
+                    <a href="02-2_catalog.html">По убыванию</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
             <li class="catalog__sort-item"><a href="#" class="clear">Сбросить</a></li>
           </ul>
       </div>
@@ -128,7 +142,21 @@
                 </ul>
               </div>
             </li>
-            <li class="catalog__sort-item"><a href="#">Цена</a></li>
+            <li class="catalog__sort-item">
+              <div class="js-dropdown dropdown-xs">
+                <a href="#" class="js-toggle" aria-expanded="false" aria-controls="catalog-sort3">
+                  Цена
+                </a>
+                <ul id="catalog-sort3" class="js-toggle-dropdown">
+                  <li>
+                    <a href="02_catalog.html">По возрастанию</a>
+                  </li>
+                  <li class="isActive">
+                    <a href="02_catalog.html">По убыванию</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
             <li class="catalog__sort-item"><a href="#" class="clear">Сбросить</a></li>
           </ul>
       </div>

@@ -7,6 +7,7 @@ export default class Dropdown {
     this.expanded = this.$toggle.getAttribute('aria-expanded') === 'true' || false;
     this.$target = document.getElementById(id);
     this.init();
+
   }
 
   init() {
@@ -16,7 +17,7 @@ export default class Dropdown {
     } else {
       this.$toggle.addEventListener('click', this.toggle.bind(this));
       //click
-      window.addEventListener('click', this.outsideClick.bind(this));
+      document.addEventListener('click', this.outsideClick.bind(this));
     }
   }
   toggle(e) {
@@ -28,7 +29,6 @@ export default class Dropdown {
 
     } else {
       //this.$target.hidden = false;
-      debugger;
       this.$toggle.setAttribute('aria-expanded', 'true');
       $(this.$target).addClass('isVisible');
 
@@ -52,6 +52,9 @@ export default class Dropdown {
     }
   }
   outsideClick(e) {
+    //console.log();
+    if (e.target.closest('.radio')) return;
+    if (e.target.closest('.btn')) return;
     if (
       this.expanded &&
         !isSameOrDescendant(this.$toggle, e.target) &&
@@ -79,8 +82,13 @@ export default class Dropdown {
 }
 
 function isSameOrDescendant(parent, child) {
+
   if (parent === child) return true; // same
+
+  if (child.closest('.xxxx')) return false;
   var node = child.parentNode;
+  //console.log('node',node,'parent', parent);
+  //debugger;
   while (node != null) {
     if (node === parent) {
       return true;

@@ -1,11 +1,11 @@
-export default class fakeSelect {
-  constructor(el, callback) {
+export default class FakeSelect {
+  constructor(name, el, callback) {
     this.el = el;
     this.el.classList.add('fake-select');
     this.select = this.el.querySelector('select');
     this.label = this.el.querySelector('[data-fake-label]');
     this.callback = callback || function() {};
-    //this.init();
+    this.init();
   }
 
   bind() {

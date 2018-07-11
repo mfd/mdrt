@@ -50,10 +50,32 @@
                 background: #FFFFFF;
                 border: 1px solid #949494;
                 border-radius: 5px;
-                padding: 0 5px;
+                padding: 0;
                 font-size: 12px;
+                width: 20px
                 height: 20px;
                 line-height: 20px;
+                &.js-input
+                    border: 0;
+                    background: transparent
+                    text-align: center;
+                    font-size: 13px;
+                    color: #949494;
+                    appearance: none;
+
+
+                &.is-disabled
+                    opacity: .25;
+                &.js-decrement
+                    background-image: url("data:image/svg+xml,%3Csvg width='7' height='12' viewBox='0 0 7 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L5 5L10 0' transform='translate%286 1%29 rotate%2890%29' stroke='%23949494' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                    background-position: 50% 50%;
+                    background-repeat: no-repeat;
+                    text-indent: -1984px;
+                &.js-increment
+                    background-image: url("data:image/svg+xml,%3Csvg width='7' height='12' viewBox='0 0 7 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L5 5L10 0' transform='translate%281 11%29 rotate%28-90%29' stroke='%23949494' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+                    background-position: 50% 50%;
+                    background-repeat: no-repeat;
+                    text-indent: -1984px;
 
         .total
             justify-content: flex-end;

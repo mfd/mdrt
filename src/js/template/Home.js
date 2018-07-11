@@ -17,6 +17,9 @@ class Home extends BarbaPageBase {
     console.log('Start Home');
     //this.changeBg();
   }
+  onEnter() {
+    super.onEnter();
+  }
   onEnterCompleted() {
     super.onEnterCompleted();
 

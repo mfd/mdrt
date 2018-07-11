@@ -58,14 +58,24 @@
 
         .checkbox
             font-size: 16px;
-        .form-control
+
+        .form-control.fake-select__button
+            font-size: 16px;
+            color: #333;
+        .form-control, .fake-select
             width: 250px;
             +md
                 width: 200px;
             +sm
                 width: 100%;
-        .date .form-control
+        .date .form-control,
             width: initial;
+        .form-group.date
+            display: flex;
+            .fake-select
+                flex-grow: 1
+                width: 80px
+                margin-right: 5px;
         .btn__row
             +clr
             margin-left: 0

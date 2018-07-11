@@ -2,7 +2,7 @@ import ResizeManager from '../managers/ResizeManager';
 import Tools from '../tools/Tools';
 
 import Tabs from '../partial/Tabs';
-import fakeSelect from '../partial/fakeSelect';
+import FakeSelect from '../partial/fakeSelect';
 import Basket from '../partial/Basket';
 
 import Dropdown from '../partial/Dropdown';
@@ -11,6 +11,7 @@ import Popup from '../partial/Popup';
 //import Header from '../partial/Header';
 import owlCarousel from '../partial/owlCarousel';
 
+import BasketIncr from '../partial/BasketIncrement';
 /**
  * BARBA
  * PAGE
@@ -62,6 +63,7 @@ class BarbaPageBase {
 
         this.view = container;
         document.title = this.view.getAttribute('data-title');
+        //$('header .breadcrumbs').html($(this.view).find('.breadcrumbs__mobile ul').html());
       }
     }
     // Custom code should be added after super.
@@ -80,14 +82,21 @@ class BarbaPageBase {
     if($('.add_to_cart').length) this.basket = new Basket();
     if($('.tabs').length) this.tabs = new Tabs(this.view);
 
-
+    // FAKE SELECT
     if($('[data-fake-select]').length) {
-      this.select = new fakeSelect(
-        this.view.querySelector('[data-fake-select]'),
-        //this.mobileSelectChange.bind(this),
-      ).init();
+      const fakeselect = this.view.querySelectorAll('[data-fake-select]');
+      this.fakeselect = [];
+      for (let i = 0; i < fakeselect.length; i++) {
+        let $el = fakeselect[i];
+        this.fakeselect[i] = new FakeSelect('FakeSelect-' + i, $el);
+      }
+      // this.fakeselect = new fakeSelect(
+      //   this.view.querySelector('[data-fake-select]'),
+      //   //this.mobileSelectChange.bind(this),
+      // ).init();
     }
 
+    // DROPDOWN
     if ($('.js-dropdown').length) {
       const dropdowns = this.view.querySelectorAll('.js-dropdown');
       this.dropdowns = [];
@@ -97,11 +106,25 @@ class BarbaPageBase {
       }
     }
 
+    // OWLGALLERY
     if($('.owl-gallery')) this.carousel = new owlCarousel();
+
+
+
+    if ($('[data-module="incrementer"]').length) {
+      const basketincr = this.view.querySelectorAll('[data-module="incrementer"]');
+      this.basketincr = [];
+      for (let i = 0; i < basketincr.length; i++) {
+        let $el = basketincr[i];
+        this.basketincr[i] = new BasketIncr('BasketIncr-' + i, $el);
+      }
+    }
+
 
     this.resize();
 
-    //$('html title').html($('.barba-container').attr('data-title')+'Pastel Fluo');
+    $('header .breadcrumbs').html($(this.view).find('.breadcrumbs__mobile ul').html());
+    //$('html title').html($('.barba-container').attr('data-title')+'');
     if($('body .wysiwyg iframe').length) $('body .wysiwyg iframe').height(($('body .wysiwyg iframe').width()*9)/16);
   }
 
@@ -123,10 +146,16 @@ class BarbaPageBase {
     if(this.tabs) this.tabs.destroy();
     if(this.basket) this.basket.destroy();
 
+
+    //fakeselect
+    if (this.fakeselect) {
+      for ( let i = 0; i < this.fakeselect.length; i++ ) {
+        this.fakeselect[i].destroy();
+      }
+      this.fakeselect = null;
+    }
     //Dropdowns
     if (this.dropdowns) {
-      debugger;
-      console.log(this.dropdowns.length);
       for ( let i = 0; i < this.dropdowns.length; i++ ) {
         this.dropdowns[i].destroy();
       }
