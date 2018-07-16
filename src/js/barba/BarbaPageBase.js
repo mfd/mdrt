@@ -68,6 +68,103 @@ class BarbaPageBase {
     }
     // Custom code should be added after super.
 
+    (function($) {
+      // добавление товара в корзину
+      let addToCartButton = '.add_to_cart';
+      let $addToCartButton = $(addToCartButton);
+      $addToCartButton.click(function(e) {
+        let url = $(this).attr('href');
+        $.ajax({
+          type: 'GET',
+          url: url,
+          dataType: 'html',
+          success: function() {
+            BX.onCustomEvent('OnBasketChange');
+            alert('Добавлено');
+          },
+          error: function() {
+            alert('Не добавлено');
+          }
+        });
+        e.preventDefault();
+      });
+    })(jQuery);
+    (function($) {
+    //регистрация
+      let regStepOne = '#reg-step-1';
+      let regStepTwo = '#reg-step-2';
+      let $regStepOne = $(regStepOne);
+      let $regStepTwo = $(regStepTwo);
+      $regStepOne.submit(function(e) {
+        $.ajax({
+          data: $regStepOne.serialize(),
+          url : 'http://' + location.host + '/local/templates/madyart/includes/registration.php',
+          type: 'POST',
+          success: function(result) {
+            let response = JSON.parse(result);
+            if (response['REGISTER_MESSAGE']['TYPE'] === 'ERROR') {
+              $('.error').html(response['REGISTER_MESSAGE']['MESSAGE']);
+            } else {
+              $regStepOne.fadeOut('fast');
+              $regStepTwo.fadeIn('fast').submit(function() {
+                $.ajax({
+                  data: $regStepTwo.serialize(),
+                  url: 'http://' + location.host + '/local/templates/madyart/includes/registration.php',
+                  type: 'POST',
+                  success: function() {
+                    document.location = 'http://' + location.host + '/personal/';
+                  },
+                  error: function() {
+                    return false;
+                  }
+                });              
+              });          
+            }
+          },
+          error: function() {
+            console.log('Нет регистрации. Проверить AJAX URL');
+          }
+        });
+        e.preventDefault();
+      });    
+    })(jQuery);
+
+    (function($) {
+      //обзор луков
+      $('.get_look').click(function(e) {
+        let item_id = $(this).attr('data-look');
+        $.ajax({
+          type: 'POST',
+          url: 'http://' + location.host + '/local/templates/madyart/includes/get_look.php',
+          data: {
+            'arItemID': item_id
+          },
+          success: function(result) {
+            let response = JSON.parse(result);
+            
+            $('.js-look__title').text(response['NAME']);
+            $('.js-look__image').html(response['IMAGE']);
+            
+            $('.look__parts').empty();
+            let itemsWearArray = response['ITEM_WEAR'];
+            for (var i = itemsWearArray.length - 1; i >= 0; i--) {
+              let elem = '<li class="look__parts-element"><div class="look__parts-element-pic">';
+              elem += '<figure class="img-block js-item__image">' + itemsWearArray[i]['IMAGE'] + '</figure>';
+              elem += '<div class="look__parts-element-title js-item__title">' + itemsWearArray[i]['NAME'];
+              elem += '<p class="price js-item__price">' + itemsWearArray[i]['PRICE'] + '</p>';
+              elem += '</li>';
+              console.log(elem);
+              $('.look__parts').append(elem);
+            }
+          },
+          error: function(result) {
+            console.log(result);
+          }
+        });
+        e.preventDefault();
+      });
+    })(jQuery);
+
 
   }
 
