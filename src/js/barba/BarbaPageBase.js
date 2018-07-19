@@ -12,6 +12,7 @@ import Popup from '../partial/Popup';
 import owlCarousel from '../partial/owlCarousel';
 
 import BasketIncr from '../partial/BasketIncrement';
+import PriceSlider from '../partial/PriceSlider';
 /**
  * BARBA
  * PAGE
@@ -117,8 +118,8 @@ class BarbaPageBase {
                   error: function() {
                     return false;
                   }
-                });              
-              });          
+                });
+              });
             }
           },
           error: function() {
@@ -126,7 +127,7 @@ class BarbaPageBase {
           }
         });
         e.preventDefault();
-      });    
+      });
     })(jQuery);
 
     (function($) {
@@ -141,10 +142,10 @@ class BarbaPageBase {
           },
           success: function(result) {
             let response = JSON.parse(result);
-            
+
             $('.js-look__title').text(response['NAME']);
             $('.js-look__image').html(response['IMAGE']);
-            
+
             $('.look__parts').empty();
             let itemsWearArray = response['ITEM_WEAR'];
             for (var i = itemsWearArray.length - 1; i >= 0; i--) {
@@ -217,6 +218,15 @@ class BarbaPageBase {
       }
     }
 
+    if ($('[data-module="priceSlider"]').length) {
+      const priceslider = this.view.querySelectorAll('[data-module="priceSlider"]');
+      this.priceslider = [];
+      for (let i = 0; i < priceslider.length; i++) {
+        let $el = priceslider[i];
+        this.priceslider[i] = new PriceSlider('PriceSlider-' + i, $el);
+      }
+    }
+
 
     this.resize();
 
@@ -257,6 +267,13 @@ class BarbaPageBase {
         this.dropdowns[i].destroy();
       }
       this.dropdowns = null;
+    }
+
+    if (this.priceslider) {
+      for ( let i = 0; i < this.priceslider.length; i++ ) {
+        this.priceslider[i].destroy();
+      }
+      this.priceslider = null;
     }
 
     // if(this.popup) this.popup.destroy();

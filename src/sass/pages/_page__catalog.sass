@@ -255,6 +255,34 @@
                 border-color: #333333
 
 
+.catalog__sizes
+    +clr
+    @import page__oneitem-sizes
+    &-item
+        float: left;
+        list-style: none;
+        margin: 0
+        margin-right: 5px;
+        margin-bottom: 10px;
+        .input-group
+            margin-bottom: 0;
+.catalog__sizes
+    display: flex
+    flex-wrap: wrap
+    &-item
+        flex-grow: 1;
+        width: 33%;
+        height: 100px;
+        height: 30px;
+        margin: 0;
+    .btn
+        @extend .btn_sm
+        margin: 1em 0
+        padding: 0 10px;
+        height: 25px;
+        line-height: 25px;
+
+
 .grid__catalog--col3
     .item
         width: 33%

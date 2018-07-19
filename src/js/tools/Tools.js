@@ -71,7 +71,7 @@ class Tools {
   }
 
   static getInnerHeight( element ) {
-		
+
     const styles = window.getComputedStyle(element);
 
     return element.clientHeight - parseFloat(styles.paddingTop) + parseFloat(styles.paddingBottom);
@@ -95,7 +95,7 @@ class Tools {
       time.m = m;
       time.s = remainingTime;
     }
-		
+
 
     return time;
 
@@ -105,17 +105,17 @@ class Tools {
   static getOffsetTop( elem ) {
 
     var offsetTop = 0;
-		
+
     do {
       if ( !isNaN( elem.offsetTop ) ) {
         offsetTop += elem.offsetTop;
       }
     } while( elem = elem.offsetParent );
-		
+
     return offsetTop;
 
   }
-	
+
 }
 
 export default Tools;

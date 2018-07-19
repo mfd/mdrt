@@ -53,8 +53,13 @@ export default class Dropdown {
   }
   outsideClick(e) {
     //console.log();
-    if (e.target.closest('.radio')) return;
-    if (e.target.closest('.btn')) return;
+    if (
+      e.target.closest('.radio') ||
+      e.target.closest('.btn') ||
+      e.target.closest('.form') ||
+      e.target.closest('.ac')
+    ) return;
+
     if (
       this.expanded &&
         !isSameOrDescendant(this.$toggle, e.target) &&

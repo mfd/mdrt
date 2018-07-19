@@ -104,10 +104,10 @@ barbaNameSpace: stores
               <div class="select-store">
                 <div class="fake-select filter__select" data-fake-select>
                   <div class="form-control fake-select__button">
-                    <span data-fake-label>Все города</span>
+                    <span data-fake-label>Все магазины</span>
                   </div>
                   <select>
-                      <option value="0">Все города</option>
+                      <option value="0">Все магазины</option>
                       {% for item in items %}
                           <option value="{{loop.index+1}}">{{item.name}}</option>
                       {% endfor %}
