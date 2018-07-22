@@ -166,7 +166,65 @@ class BarbaPageBase {
       });
     })(jQuery);
 
+    (function($) {
+      $('.item-size_value').click(function(e) {
+        let add_to_basket_path = $(this).prev().val();
+        $('.add_to_cart').attr('href', add_to_basket_path + '&ajax_basket=Y');
+      });
+    })(jQuery);
 
+    (function($) {
+      $('#go-to-step-2').click(function(e) {
+        $('#js-step-1-block').hide();
+        $('#js-step-2-block').fadeIn();
+        $('#js-step-1').removeClass('isActive');
+        $('#js-step-2').addClass('isActive');
+        e.preventDefault();
+      });
+      $('#js-go-step-3').click(function(e) {
+        $('#js-step-2-block').hide();
+        $('#js-step-3-block').fadeIn();
+        $('#js-step-2').removeClass('isActive');
+        $('#js-step-3').addClass('isActive');
+        e.preventDefault();
+      });
+      $('#change_delivery_type').change(function() {
+        let delivery_id = $(this).val();
+        $.ajax({
+          url: 'http://' + location.host + '/local/templates/madyart/includes/get_delivery_point.php',
+          type: 'POST',
+          data: {
+            'select_delivery' : delivery_id
+          },
+          success: function(result) {
+            $('#js-step-2-block .col2 .b-ordernow, #js-step-2-block .summary, .delivery_cost_input').remove();
+            $('#js-step-2-block .col2').prepend(result);
+          },
+          error: function() {
+            alert('Хуюшки');
+          }
+        });
+      });
+      $('#confirm-order').on('click', function(e) {
+        let form = $('#ORDER_FORM').serialize();
+        console.log(form);
+        $.ajax({
+          url: 'http://' + location.host + '/local/templates/madyart/includes/order.php',
+          type: 'POST',
+          data: form,
+          success: function(result) {
+            $('#js-step-4-block').append(result).show();
+            $('#js-step-3-block').hide();
+            $('#js-step-3').removeClass('isActive');
+            $('#js-step-4').addClass('isActive');
+          },
+          error: function() {
+            console.log('Хуюшки');
+          }
+        });
+        e.preventDefault();
+      });
+    })(jQuery);
   }
 
   /**

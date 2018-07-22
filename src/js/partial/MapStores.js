@@ -146,10 +146,9 @@ export default class MapStores {
     console.log(this.map);
 
     $(document).on('click', '.store-city__item', function(e) {
-      e.preventDefault();
 
       var position, lat, lng, $index;
-      debugger;
+      // debugger;
       $index = $(this).data('marker-index');
 
       //position = map.markers[$index].getPosition();
@@ -159,7 +158,8 @@ export default class MapStores {
       lat = this.getAttribute('data-latlng').split(',').map(Number)[0];
       lng = this.getAttribute('data-latlng').split(',').map(Number)[1];
 
-      selfMap.map.setCenter(lat, lng);
+      selfMap.setCenter(lat, lng);
+      e.preventDefault();
     });
   }
   destroy() {
