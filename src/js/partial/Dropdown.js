@@ -56,6 +56,7 @@ export default class Dropdown {
     if (
       e.target.closest('.radio') ||
       e.target.closest('.btn') ||
+      e.target.closest('[type="submit"]') ||
       e.target.closest('.form') ||
       e.target.closest('.ac')
     ) return;
