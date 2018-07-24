@@ -4,6 +4,7 @@ import Tools from '../tools/Tools';
 import Tabs from '../partial/Tabs';
 import FakeSelect from '../partial/fakeSelect';
 import Basket from '../partial/Basket';
+import Favourites from '../partial/Favourites';
 
 import Dropdown from '../partial/Dropdown';
 
@@ -225,6 +226,8 @@ class BarbaPageBase {
         e.preventDefault();
       });
     })(jQuery);
+
+    this.favourites = new Favourites();
   }
 
   /**
