@@ -32,7 +32,11 @@
           </div>
           <!-- BEGIN footer -->
           {% block footer %}
+    {% if barbaNameSpace==='homepage'%}
+
+    {% else %}
           {% include "partials/_footer.html" %}
+    {% endif %}
           {% endblock %}
           <!-- END footer -->
         </div>

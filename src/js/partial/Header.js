@@ -62,8 +62,8 @@ class Header {
   }
   initAnimations() {
 
-    this.controller = new ScrollMagic.Controller();
-    this.head = new TimelineLite();
+    //this.controller = new ScrollMagic.Controller();
+    //this.head = new TimelineLite();
     //this.head.fromTo($('header'), 0.4, {css:{autoAlpha:0, x: 200}}, {css:{autoAlpha:1, x: -200}, delay: 0.1, ease:'Power1.easeOut'});
     //this.head.staggerFrom($('.footer__in > div'), 1, {y:60, opacity:0, ease:Power3.easeOut}, 0.1, 0.25);
     //

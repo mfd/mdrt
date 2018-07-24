@@ -32,6 +32,14 @@ class Home extends BarbaPageBase {
     this.initHomePromo();
     this.scrollBG = new HomeBG();
 
+
+    this.myFullpage = new fullpage('#fullpage', {
+      licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+      scrollOverflow: true,
+    });
+    //debugger;
+
+
   }
   initHomePromo() {
     let $owl = $('.owl-oneslide');
@@ -70,6 +78,7 @@ class Home extends BarbaPageBase {
     if(this.carousel) this.carousel.destroy();
 
     this.scrollBG.destroy();
+    this.myFullpage.destroy();
 
     //$(window).off('scroll', this.changeBg);
     //this.controller.destroy();

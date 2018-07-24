@@ -54,7 +54,8 @@ export default class HomeBG {
     $('body').removeClass('body--smoke');
     $('body').removeClass('body--gray');
     if ($('html').hasClass( 'fp-enabled' ) ) {
-      $.fn.fullpage.destroy('all');
+      //$.fn.fullpage.destroy('all');
+      fullpage_api.destroy('all');
     }
     //this.windowResize = null;
   }
