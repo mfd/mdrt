@@ -32,7 +32,7 @@ class Home extends BarbaPageBase {
     this.initHomePromo();
     this.scrollBG = new HomeBG();
 
-
+    //debugger
     this.myFullpage = new fullpage('#fullpage', {
       licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
       scrollOverflow: true,
