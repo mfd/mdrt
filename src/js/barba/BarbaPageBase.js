@@ -227,6 +227,42 @@ class BarbaPageBase {
       });
     })(jQuery);
 
+    (function($) {
+      $('.stg__other a, .stg__prev, .stg__next').click(function() {
+        let item_id = $(this).attr('data-look'); 
+
+        $.ajax({
+          type: 'POST',
+          url: 'http://' + location.host + '/local/templates/madyart/includes/get_look.php',
+          data: {
+            'arItemID': item_id
+          },
+          success: function(result) {
+            let response = JSON.parse(result);
+            //console.log(response)
+            
+            $('.stg__full .img-block').html(response['IMAGE']);
+                    
+            $('.stg__parts').empty();
+            let itemsWearArray = response['ITEM_WEAR'];
+            for (var i = itemsWearArray.length - 1; i >= 0; i--) {
+              let elem = '<li class="stg__parts-element"><div class="look__parts-element-pic">';
+              elem += '<figure class="img-block">' + itemsWearArray[i]['IMAGE'] + '</figure>';
+              elem += '<div class="stg__parts-element-title">' + itemsWearArray[i]['NAME'];
+              elem += '<p class="price">' + itemsWearArray[i]['PRICE'] + '</p>';
+              elem += '</li>';
+              //console.log(elem);
+              $('.stg__parts').append(elem);
+            }
+            $('html, body').animate({ scrollTop: $('.stg__element').offset().top - 80 }, 500);
+          },
+          error: function(result) {
+            console.log(result);
+          }
+        });
+      });
+    })(jQuery);
+
     this.favourites = new Favourites();
   }
 
