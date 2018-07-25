@@ -18,6 +18,24 @@ export default class Favourites {
       $(this.favouritesButtons[i]).on('click',$.proxy(this.setFavourite,this));
     }
   }
+  loginFormShow()
+  {
+    this.loginForm.classList.add(this.loginFormVisibleClass);
+    $(document).on('click',$.proxy(this.loginFormHide,this));
+  }
+  loginFormHide(event)
+  {
+    var flyoutElement = document.querySelector(this.loginFormClass),
+      targetElement = event.target; 
+    do {
+      if (targetElement === flyoutElement) {
+        return;
+      }
+      targetElement = targetElement.parentNode;
+    } while (targetElement);
+
+    this.loginForm.classList.remove(this.loginFormVisibleClass);
+  }
   setFavourite(event) {
     var target = event.target,
       item = target,
