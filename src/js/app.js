@@ -1,9 +1,9 @@
 import 'babel-polyfill';
 
-import $ from 'jquery';
-import jQuery from 'jquery';
-window.$ = $;
-window.jQuery = jQuery;
+// import $ from 'jquery';
+// import jQuery from 'jquery';
+// window.$ = $;
+// window.jQuery = jQuery;
 
 // import 'TweenMax';
 // import ScrollMagic from 'scrollmagic/scrollmagic/uncompressed/ScrollMagic';
@@ -34,6 +34,7 @@ import owlCarousel from './partial/owlCarousel';
 
 import Home from './template/Home';
 import Page from './template/Page';
+import OneItem from './template/OneItem';
 import Stores from './template/Stores';
 
 class Main {
@@ -57,17 +58,16 @@ class Main {
     // INIT VIEWS
     this.home = new Home();
     this.page = new Page();
+    this.oneitem = new OneItem();
     this.stores = new Stores();
-
 
     this.header = new Header();
     this.menu = new Menu();
 
     BarbaController.register(this.home);
     BarbaController.register(this.page);
+    BarbaController.register(this.oneitem);
     BarbaController.register(this.stores);
-
-
 
     // $(document).on({
     //   mouseenter: function() {
@@ -129,23 +129,8 @@ class Main {
       console.log('changeNamespace');
       $body.addClass('page-'+currentStatus.namespace);
 
-      // $(container).find('a.popuplink').magnificPopup({
-      //   type: 'ajax',
-      //   removalDelay: 1000,
-      //   closeBtnInside:true,
-      //   fixedContentPos:true,
-      //   closeMarkup :
-      //   `<button title="%title%" type="button" class="mfp-close">
-      //     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 29.41 29.41">
-      //       <polygon points="29.41 1.41 28 0 14.71 13.29 1.41 0 0 1.41 13.29 14.71 0 28 1.41 29.41 14.71 16.12 28 29.41 29.41 28 16.12 14.71 29.41 1.41"/>
-      //     </svg>
-      //   </button>`,
-      //   callbacks: {
-      //     parseAjax: function(mfpResponse) {
-      //       mfpResponse.data = $(mfpResponse.data).find('.ajaxcontent');
-      //     },
-      //   }
-      // });
+
+
 
 
     });

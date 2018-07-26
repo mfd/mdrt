@@ -11,7 +11,7 @@ export default class OneItem extends BarbaPageBase {
   }
 
   display(container) {
-    console.log('Start One page');
+    console.log('Start One Item page');
 
   }
   onEnter() {
@@ -90,10 +90,11 @@ export default class OneItem extends BarbaPageBase {
         gallery: {
           enabled: true,
           navigateByImgClick: true,
+          tCounter: '<span class="mfp-counter">%curr% из %total%</span>',
           preload: [0,1] // Will preload 0 - before current, and 1 after the current image
         },
         image: {
-          tError: '<a href="%url%">The image #%curr%</a> не может быть загружена',
+          tError: '<a href="%url%">Изображение #%curr%</a> не может быть загружено',
           titleSrc: function(item) {
             //return item.el.attr('title') + '<small></small>';
             return $('.oneitem__title').html();
@@ -119,7 +120,6 @@ export default class OneItem extends BarbaPageBase {
         </button>`,
       callbacks: {
         parseAjax: function(mfpResponse) {
-          debugger;
           mfpResponse.data = $(mfpResponse.data).find('.ajaxcontent');
         },
       }
