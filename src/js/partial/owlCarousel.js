@@ -1,7 +1,7 @@
 //import ResizeManager from '../managers/ResizeManager';
 //import 'owlCarousel';
 import DeviceInfo from '../tools/DeviceInfo';
-import PerfectScrollbar from 'perfect-scrollbar';
+
 class Carousel {
 
   constructor() {
@@ -23,7 +23,7 @@ class Carousel {
     var isGalleryLook = $this.hasClass('owl-gallery-look');
 
     if ($('.oneitem__gallery-carousel').length > 0) {
-      this.initOneItemGallery();
+      //this.initOneItemGallery();
     }
 
 
@@ -66,55 +66,9 @@ class Carousel {
 
   }
   initOneItemGallery() {
-    $('.oneitem__gallery-carousel .owl-carousel').owlCarousel({
-      loop:true,
-      items:1,
-      margin:0,
-      stagePadding: 0,
-      autoplay:false
-    });
-
-    if (this.win > 768) {
-      var dotcount = 1;
-
-      $('.oneitem__gallery-carousel .owl-dot').each(function() {
-        $( this ).addClass( 'dotnumber' + dotcount);
-        $( this ).attr('data-info', dotcount);
-        dotcount=dotcount+1;
-      });
-      var slidecount = 1;
-
-      $('.owl-item').not('.cloned').each(function() {
-        $(this).addClass( 'slidenumber' + slidecount);
-        slidecount=slidecount+1;
-      });
-
-      $('.owl-dot').each(function() {
-        var grab = $(this).data('info');
-        var slidegrab = $('.slidenumber'+ grab +' img').attr('src');
-        $(this).css('background-image', 'url('+slidegrab+')');
-      });
-
-      var amount = $('.owl-dot').length;
-      var gotowidth = 100/amount;
-      $('.owl-dot').css('height', gotowidth+'%');
-
-      //$('.owl-dots').wrapInner( "<div class='scroll-wrap'></div>");
-      //$('.owl-dots').find('.scroll-wrap').css({ height: $('.oneitem__gallery-carousel').height()});
-      const owlDotScroll = new PerfectScrollbar('.oneitem__gallery-carousel .owl-dots',{
-        wheelSpeed: 2,
-        wheelPropagation: true,
-        minScrollbarLength: 10,
-        suppressScrollX: true,
-        useBothWheelAxes: true
-      });
-    }
-
-
-
-
 
   }
+
   cleanup() {
 
   }

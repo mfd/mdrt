@@ -2,7 +2,6 @@ import BarbaPageBase from '../barba/BarbaPageBase';
 import owlCarousel from '../partial/owlCarousel';
 import HomeBG from '../partial/homebg';
 
-
 //import changeBg from
 class Home extends BarbaPageBase {
 
@@ -28,15 +27,9 @@ class Home extends BarbaPageBase {
     //if($('.owl-gallery').length) this.sliderGallery();
     if($('.owl-gallery')) this.carousel = new owlCarousel(this.view);
 
-    //this.initFullPage();
     this.initHomePromo();
     this.scrollBG = new HomeBG();
 
-    //debugger
-    this.myFullpage = new fullpage('#fullpage', {
-      licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-      scrollOverflow: true,
-    });
     //debugger;
 
 
@@ -78,7 +71,6 @@ class Home extends BarbaPageBase {
     if(this.carousel) this.carousel.destroy();
 
     this.scrollBG.destroy();
-    this.myFullpage.destroy();
 
     //$(window).off('scroll', this.changeBg);
     //this.controller.destroy();

@@ -4,6 +4,7 @@ opinNames: ['Евлампий Петрович','Алевтина Иннокен
 breadCrumbsItems: ['Главная','Каталог','Яркое платье']
 footerWide: true
 isLogged: true
+barbaNameSpace: oneitem
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -50,25 +51,6 @@ isLogged: true
 				</p>
 			</dd>
 		</dl>
-		{#
-		<!--
-		<table class="opinion">
-			<tr>
-				<td class="opinion__author">
-					<div class="opin__authName">{{name}}</div>
-					<time>12.11.2017</time>
-					{{mixins.rating()}}
-				</td>
-				<td class="opinion__text">
-					<p>
-						Абстрактный принт по популярности может посоперничать с цветами и геометрией: этим летом он повсюду. Особенно хорошо такие рисунки смотрятся на деловой одежде: например, на платье фасона "футляр". Ткань - испанский набивной бифлекс.
-					</p>
-				</td>
-			</tr>
-		</table>
-		-->
-		 #}
-
 
 	{% endfor %}
 {% endmacro %}
@@ -82,15 +64,15 @@ isLogged: true
 					<div class="oneitem__gallery">
 						<div class="oneitem__gallery-carousel">
 						  <div class="owl-carousel">
-						    <!-- <div> </div> -->
-						    <div class="oneitem__itemPic"><img src="img/assets/item01.jpg" /><a href="#" class="oneitem__itemPic-more">Увеличить</a></div>
-						    <div class="oneitem__itemPic"><img src="img/assets/item02.jpg" /><a href="#" class="oneitem__itemPic-more">Увеличить</a></div>
-						    <div class="oneitem__itemPic"><img src="img/assets/item03.jpg" /><a href="#" class="oneitem__itemPic-more">Увеличить</a></div>
-						    <div class="oneitem__itemPic"><img src="img/assets/item01.jpg" /><a href="#" class="oneitem__itemPic-more">Увеличить</a></div>
-						    <div class="oneitem__itemPic"><img src="img/assets/item02.jpg" /><a href="#" class="oneitem__itemPic-more">Увеличить</a></div>
-						    <div class="oneitem__itemPic"><img src="img/assets/item03.jpg" /><a href="#" class="oneitem__itemPic-more">Увеличить</a></div>
-						    <div class="oneitem__itemPic"><img src="https://dummyimage.com/800x600/cccccc/b09c6d.png&text=Madyart" /><a href="#" class="oneitem__itemPic-more">Увеличить</a></div>
-						    <div class="oneitem__itemPic"><img src="https://dummyimage.com/640x4:3/" /><a href="#" class="oneitem__itemPic-more">Увеличить</a></div>
+		                    {%
+		                    set items =
+		                        [
+		                        '01', '02', '01', '02', '03','01', '02', '01', '02', '03','01', '02', '01', '02', '03'
+		                        ]
+		                    %}
+		                    {% for item in items %}
+		                        <div class="oneitem__itemPic"><img src="img/assets/item{{item}}.jpg" /><a href="/img/assets/item{{item}}.jpg" class="oneitem__itemPic-more no-barba">Увеличить</a></div>
+		                    {% endfor %}
 						  </div>
 						</div>
 					</div>
@@ -114,7 +96,7 @@ isLogged: true
 						</dl>
 						<dl>
 							<dt>&nbsp;</dt>
-							<dd><a href="#" class="link_modal no-barba">Таблица размеров</a></dd>
+							<dd><a href="11-2_error500.html" class="popuplink no-barba">Таблица размеров</a></dd>
 						</dl>
 						<div class="oneitem__price">5200 р. <span class="bonus">+52 бонуса</span></div>
 						<button class="btn btn-incart">В корзину</button>

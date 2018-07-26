@@ -11,22 +11,42 @@ export default class HomeBG {
       this.initFullPage();
     }
 
-    this.changeBg();
+    //this.initFullPage();
+
+    //this.changeBg();
     $(window).on('scroll', this.changeBg);
 
 
   }
   initFullPage() {
     console.log('init fullpage');
-    $(document).ready(function() {
-      // $('#fullpage').fullpage({
-      //   //sectionsColor: ['#eee', '#939FAA', '#ffffff'],
-      //   scrollOverflow: true,
-      //   navigation: true,
-      //   //navigationTooltips: ['home', 'second']
-      // });
+    let self = this;
+    let colors = ['body--smoke','body--gray', 'body--white'];
+
+    this.myFullpage = new fullpage('#fullpage', {
+      licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+      scrollOverflow: true,
+      onLeave: function(section, origin, destination, direction) {
+        if (origin.index === 0) {
+          $('body').addClass(colors[0]);
+        } else {
+          $('body').removeClass(colors[0]);
+        }
+        if (origin.index === 1) {
+          $('body').addClass(colors[1]);
+        } else {
+          $('body').removeClass(colors[1]);
+        }
+        if (origin.index === 2) {
+          $('body').addClass(colors[2]);
+        } else {
+          $('body').removeClass(colors[2]);
+        }
+      }
     });
+    $('body').addClass(colors[0]);
   }
+
   changeBg() {
     //console.log('start changeBg');
     let $st = $(window).scrollTop();
@@ -54,9 +74,7 @@ export default class HomeBG {
     $('body').removeClass('body--smoke');
     $('body').removeClass('body--gray');
     if ($('html').hasClass( 'fp-enabled' ) ) {
-      //$.fn.fullpage.destroy('all');
       fullpage_api.destroy('all');
     }
-    //this.windowResize = null;
   }
 }

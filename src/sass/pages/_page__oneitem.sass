@@ -93,9 +93,16 @@
                             border-color: #333
                             background: #333!important
 
+        &__itemPic
+            max-height: 550px
         &__itemPic-more
             position: absolute;
-            right: 30px;
+            // left: 50%;
+            // top: 50%;
+            // transform: translate(-50%, -50%)
+            left: 85%;
+            bottom: 8%;
+
             height: 30px;
             width: 30px;
             text-indent: -1984px;
@@ -107,10 +114,14 @@
             &:hover
                 //opacity: .5
                 transform: scale(1.3);
-            top: 88%;
+            &:active
+                transform: scale(.9);
             +md
-                top: 85%
-                right: 30%;
+                left: 90%;
+                bottom: 10%;
+            +sm
+                left: 60%;
+                bottom: 10%;
 
         &__desc
 
