@@ -5,6 +5,22 @@ import BarbaPageBase from '../barba/BarbaPageBase';
 // const find = require('lodash/find');
 import MapStores from '../partial/MapStores.js';
 
+(function($) {
+  $(document).on('change', '.select-store select', function() {
+    var val = Number(this.value);
+    if (val !== 0) {
+      $('ul.b-stores-list li.store__item').each(function() {
+        if ((Number($(this).data('select'))) !== val)
+          $(this).hide();
+        else $(this).show();
+      });       
+    } else {
+      $('ul.b-stores-list li.store__item').each(function() {
+        $(this).show();
+      });
+    }     
+  });
+})(jQuery);
 
 export default class Stores extends BarbaPageBase {
   constructor() {

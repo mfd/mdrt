@@ -75,6 +75,13 @@ class BarbaPageBase {
       let addToCartButton = '.add_to_cart';
       let $addToCartButton = $(addToCartButton);
       $addToCartButton.click(function(e) {
+        if (!$('.select_size:checked').val()) {
+          $('#notifications').append('<div class="notification-item"><h5>Внимание!</h5><p>Выберите размер</p><a href="#" class="close_note">&#215;</a></div>');
+          $('.close_note').click(function(e) {
+            $('#notifications').empty();
+          });
+          return false;
+        }
         let url = $(this).attr('href');
         $.ajax({
           type: 'GET',
@@ -82,10 +89,16 @@ class BarbaPageBase {
           dataType: 'html',
           success: function() {
             BX.onCustomEvent('OnBasketChange');
-            alert('Добавлено');
+            let item_name = $('.oneitem__title').text();
+            let item_price = $('.oneitem__price span.js-price-value').text();
+            $('#notifications').append('<div class="notification-item"><h5>Товар добавлен в корзину!</h5><p>'+item_name+' - '+item_price+'</p><a href="#" class="close_note">&#215;</a></div>');
+            $('.close_note').click(function(e) {
+              $('#notifications').empty();
+              e.preventDefault();
+            });
           },
           error: function() {
-            alert('Не добавлено');
+            console.error('Товар не добавлен. Ошибка сервера.');
           }
         });
         e.preventDefault();
@@ -183,11 +196,15 @@ class BarbaPageBase {
         e.preventDefault();
       });
       $('#js-go-step-3').click(function(e) {
-        $('#js-step-2-block').hide();
-        $('#js-step-3-block').fadeIn();
-        $('#js-step-2').removeClass('isActive');
-        $('#js-step-3').addClass('isActive');
-        e.preventDefault();
+        if ($('input[name="shiploc"]').val()) {
+          $('#js-step-2-block').hide();
+          $('#js-step-3-block').fadeIn();
+          $('#js-step-2').removeClass('isActive');
+          $('#js-step-3').addClass('isActive');
+          e.preventDefault();
+        } else {
+          alert('Выберите адрес доставки');
+        }
       });
       $('#change_delivery_type').change(function() {
         let delivery_id = $(this).val();

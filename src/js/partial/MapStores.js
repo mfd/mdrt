@@ -14,7 +14,7 @@ export default class MapStores {
     //mapStyle: [{'featureType':'water','elementType':'geometry','stylers':[{'color':'#e9e9e9'},{'lightness':17}]},{'featureType':'landscape','elementType':'geometry','stylers':[{'color':'#f5f5f5'},{'lightness':20}]},{'featureType':'road.highway','elementType':'geometry.fill','stylers':[{'color':'#ffffff'},{'lightness':17}]},{'featureType':'road.highway','elementType':'geometry.stroke','stylers':[{'color':'#ffffff'},{'lightness':29},{'weight':0.2}]},{'featureType':'road.arterial','elementType':'geometry','stylers':[{'color':'#ffffff'},{'lightness':18}]},{'featureType':'road.local','elementType':'geometry','stylers':[{'color':'#ffffff'},{'lightness':16}]},{'featureType':'poi','elementType':'geometry','stylers':[{'color':'#f5f5f5'},{'lightness':21}]},{'featureType':'poi.park','elementType':'geometry','stylers':[{'color':'#dedede'},{'lightness':21}]},{'elementType':'labels.text.stroke','stylers':[{'visibility':'on'},{'color':'#ffffff'},{'lightness':16}]},{'elementType':'labels.text.fill','stylers':[{'saturation':36},{'color':'#333333'},{'lightness':40}]},{'elementType':'labels.icon','stylers':[{'visibility':'off'}]},{'featureType':'transit','elementType':'geometry','stylers':[{'color':'#f2f2f2'},{'lightness':19}]},{'featureType':'administrative','elementType':'geometry.fill','stylers':[{'color':'#fefefe'},{'lightness':20}]},{'featureType':'administrative','elementType':'geometry.stroke','stylers':[{'color':'#fefefe'},{'lightness':17},{'weight':1.2}]}]
     };
     this.dom = {
-      stores: this.view .querySelectorAll('.store-city__item'),
+      stores: this.view.querySelectorAll('.store-city__item'),
       locations: this.view.querySelectorAll('.store-city__item')
     };
     this.map;
@@ -117,6 +117,7 @@ export default class MapStores {
         address: elems[i].querySelector('.store-city__addr').innerHTML,
         lat: elems[i].getAttribute('data-latlng').split(',').map(Number)[0],
         lng: elems[i].getAttribute('data-latlng').split(',').map(Number)[1],
+        city: elems[i].getAttribute('data-select'),//city 24/07/18
         icon : {
 
           //url: '/img/map-marker.png', // url
@@ -143,7 +144,7 @@ export default class MapStores {
     this.map.addMarkers(markers_data);
     this.map.fitLatLngBounds(markers_data);
     debugger;
-    console.log(this.map);
+    console.log('map', this.map);
 
     $(document).on('click', '.store-city__item', function(e) {
 
@@ -159,8 +160,31 @@ export default class MapStores {
       lng = this.getAttribute('data-latlng').split(',').map(Number)[1];
 
       selfMap.setCenter(lat, lng);
+      selfMap.setZoom(15);
       e.preventDefault();
     });
+
+  
+    $(document).on('change', '.select-store select', function() {
+      var val = this.value;
+      console.log('val', val);
+      if (val !== '0') {
+        for (let i = 0; i < markers_data.length; i++) {         
+          let marker = markers_data[i];
+      
+          if(marker.city === val) {
+            selfMap.setCenter(marker.lat, marker.lng);
+            selfMap.setZoom(12);
+            //marker.setVisible(true);
+          }
+        }   
+      } else {
+        selfMap.setZoom(4);
+      }
+    });
+  
+
+    
   }
   destroy() {
     console.log('destroy map');

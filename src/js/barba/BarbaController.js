@@ -23,6 +23,7 @@ class BarbaController {
 
     // Barba
     Barba.Pjax.getTransition = BarbaController.getTransition;
+    Barba.Pjax.cacheEnabled = false;
     Barba.Pjax.start();
   }
 
