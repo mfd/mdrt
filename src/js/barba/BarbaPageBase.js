@@ -280,6 +280,21 @@ class BarbaPageBase {
       });
     })(jQuery);
 
+    let checkboxes = document.getElementsByClassName('checkbox');
+    for(var i=0; i<checkboxes.length; i++) {
+      let elem = document.getElementsByClassName('checkbox')[i];
+
+      elem.onclick = function() {
+        if (this.children[0].checked) {
+          this.children[0].checked = false;
+          this.children[2].value = 'Y';
+        } else {
+          this.children[0].checked = true;
+          this.children[2].value = 'Y';
+        }
+      };
+    }
+
     this.favourites = new Favourites();
   }
 
