@@ -1,4 +1,3 @@
-import BarbaController from '../barba/BarbaController';
 //import PerfectScrollbar from 'perfect-scrollbar';
 import FixBody from 'js-util/FixBody';
 
@@ -6,7 +5,6 @@ import FixBody from 'js-util/FixBody';
 class Menu {
 
   constructor() {
-    BarbaController.addCallBack(this.hide.bind(this),'before');
     $('body').on('click', 'js-toggle-nav', this.menu.bind(this));
     //$('body').on('click', '.menu-item', this.itemNav.bind(this));
     //$('body').on('click', '.logoMenu', this.cancelActive.bind(this));

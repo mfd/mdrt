@@ -52,7 +52,7 @@ export default class HomeBG {
     let $st = $(window).scrollTop();
     let $bg1 = $('#fullpage .section').height() + 30;
     let $bg2 = ($('#fullpage .section').height() * 2) + 100;
-    console.log('scroll', $st, $bg1);
+    //console.log('scroll', $st, $bg1);
 
     if ( $st >= 0 && $st < $bg1) {
       console.log('show1');

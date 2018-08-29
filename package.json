@@ -58,6 +58,7 @@
     "gulp-svgstore": "^5.0.5",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.7",
+    "gulp-size": "^3.0.0",
     "htmlhint": "^0.9.13",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.4",
@@ -72,23 +73,16 @@
     "webpack-bundle-analyzer": "^2.11.1"
   },
   "dependencies": {
-    "barba.js": "^1.0.0",
     "eventemitter3": "^3.1.0",
     "fastclick": "^1.0.6",
-    "fullpage.js": "^2.9.7",
     "gsap": "^2.0.1",
-    "gulp-size": "^3.0.0",
+    "inputmask": "^4.0.0",
     "jquery": "^3.1.1",
     "js-util": "git://github.com/ykob/js-util.git",
     "magnific-popup": "^1.1.0",
     "object-fit-images": "^3.2.3",
     "owl.carousel": "^2.3.4",
     "perfect-scrollbar": "^1.3.0",
-    "scrollmagic": "^2.0.5",
-    "sticky-js": "^1.2.0",
-    "stickybits": "^3.3.0",
-    "swiper": "^4.2.2",
-    "tippy.js": "^2.5.2",
-    "webfontloader": "^1.6.28"
+    "tippy.js": "^2.5.2"
   }
 }

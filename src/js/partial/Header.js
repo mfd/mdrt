@@ -1,4 +1,5 @@
-import Dropdown from '../partial/Dropdown';
+//import Dropdown from '../partial/Dropdown';
+import Menubar from '../partial/Menubar';
 class Header {
   constructor(view) {
     //this.$el = options.$el;
@@ -11,55 +12,12 @@ class Header {
 
     let $body = this.$body;
     console.log('init Header');
-    //$('body').on('click', '.js-sign, .b-login-form--close', this.showLogin.bind(this));
-    $('body').on('click', '.location--change, .location__choose-close', this.showLocation.bind(this));
-    //$body.on('click', this.hidePanels.bind(this));
 
-    const dropdowns = document.querySelectorAll('header .js-dropdown');
-    this.dropdowns = [];
-    for (let i = 0; i < dropdowns.length; i++) {
-      let $el = dropdowns[i];
-      this.dropdowns[i] = new Dropdown('dropdown-' + i, $el);
-    }
-
-
-    $('.location--change label.radio').on('click', function(e) {
-      e.stopPropagation();
-    });
-
-    // $('.location__choose-close').on('click', (event) => {
-    //   event.preventDefault();
-    //   $body.removeClass('isLocationSwitch');
-    // });
+    this.menubar = new Menubar();
     this.initAnimations();
   }
 
-  hidePanels(event) {
-    //console.log('hide Panels');
-    this.$body.removeClass('isLocationSwitch');
-    this.$body.removeClass('isLoginform');
-  }
-  showLogin(event) {
-    let $body = this.$body;
-    event.preventDefault();
-    $body.removeClass('isLocationSwitch');
-    if ($body.hasClass('isLoginform')) {
-      $body.removeClass('isLoginform');
-    } else {
-      $body.addClass('isLoginform');
-    }
-  }
 
-  showLocation(event) {
-    let $body = $('body');
-    event.preventDefault();
-    $body.removeClass('isLoginform');
-    if ($body.hasClass('isLocationSwitch')) {
-      $body.removeClass('isLocationSwitch');
-    } else {
-      $body.addClass('isLocationSwitch');
-    }
-  }
   initAnimations() {
 
     //this.controller = new ScrollMagic.Controller();

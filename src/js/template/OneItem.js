@@ -1,13 +1,13 @@
-import BarbaPageBase from '../barba/BarbaPageBase';
 import PerfectScrollbar from 'perfect-scrollbar';
 import 'magnific-popup';
 
-export default class OneItem extends BarbaPageBase {
+export default class OneItem {
 
   constructor() {
-    super('oneitem');
     this.win = $(window).width();
-
+    this.view = document;
+    this.onEnter();
+    this.onEnterCompleted();
   }
 
   display(container) {
@@ -15,15 +15,12 @@ export default class OneItem extends BarbaPageBase {
 
   }
   onEnter() {
-    super.onEnter();
 
   }
 
   onEnterCompleted() {
-    super.onEnterCompleted();
     this.gallery = $(this.view).find('.oneitem__gallery-carousel');
     this.itemGallery();
-    this.initModal();
   }
 
   itemGallery() {
@@ -73,7 +70,7 @@ export default class OneItem extends BarbaPageBase {
       });
 
       $gallery.magnificPopup({
-        delegate: '.owl-item:not(.cloned) a',
+        delegate: '.owl-item:not(.cloned) .oneitem__itemPic-more',
         type: 'image',
         //removalDelay: 500, //delay removal by X to allow out-animation
         callbacks: {
@@ -106,25 +103,6 @@ export default class OneItem extends BarbaPageBase {
     }
   }
 
-  initModal() {
-    $(this.view).find('a.popuplink').magnificPopup({
-      type: 'ajax',
-      removalDelay: 1000,
-      closeBtnInside:true,
-      fixedContentPos:true,
-      closeMarkup :
-        `<button title="%title%" type="button" class="mfp-close">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 29.41 29.41">
-            <polygon points="29.41 1.41 28 0 14.71 13.29 1.41 0 0 1.41 13.29 14.71 0 28 1.41 29.41 14.71 16.12 28 29.41 29.41 28 16.12 14.71 29.41 1.41"/>
-          </svg>
-        </button>`,
-      callbacks: {
-        parseAjax: function(mfpResponse) {
-          mfpResponse.data = $(mfpResponse.data).find('.ajaxcontent');
-        },
-      }
-    });
-  }
   display() {
 
   }

@@ -5,7 +5,7 @@ import DeviceInfo from '../tools/DeviceInfo';
 class Carousel {
 
   constructor() {
-    console.log('owlCar', $('.owl-gallery').length);
+    //console.log('owlCar', $('.owl-gallery').length, $('.owl-gallery')[0]);
     this.el = $('.owl-gallery');
     this.win = $(window).width();
     this.init();

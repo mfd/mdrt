@@ -64,6 +64,25 @@
       {% if(subTitle) %} <a href="#" class="title__viewAll">{{subTitle}}}</a>{% endif %}
     </h1>
     {% if(titleMenu==='catalog') %}
+        <div class="page__title-left">
+          <ul class="catalog__sort">
+            <li class="catalog__sort-item">
+              <div class="input"><input type="text" placeholder="Поиск по артикулу" data-inputmask="'mask': '99-999-9999*9'" /></div>
+              <!--
+               <div class="js-dropdown dropdown-xs">
+                <a href="#" class="js-toggle" aria-expanded="false" aria-controls="catalog-sku">
+                  Поиск по артикулу
+                </a>
+                <div id="catalog-sku" class="js-toggle-dropdown">
+                  <form class="b-catalog-sku">
+                    <input type="number" name="min" value="678" data-min="0" class="form-control" />
+                    <button class="btn" type="submit">Показать</button>
+                  </form>
+                </div>
+              </div> -->
+          </li>
+        </ul>
+        </div>
         <div class="page__title-right">
           <ul class="catalog__sort">
             <li class="catalog__sort-item">
@@ -75,9 +94,9 @@
                   <form class="js-priceSlider" data-module="priceSlider">
                     <div class="slider-labels">
                       <span>Цена от:</span>
-                      <input type="number" name="min" value="678" />
+                      <input type="number" name="min" value="678" data-min="0" />
                       <span>до:</span>
-                      <input type="number" name="max" value="5000" />
+                      <input type="number" name="max" value="5000" data-max="10000" />
                     </div>
                     <div id="slider-range" class="slider-ui"></div>
                     <button class="btn" type="submit">Показать</button>
@@ -372,8 +391,8 @@
 
 
 
-{% macro orders() %}
-    {% for i in range(0, 30) -%}
+{% macro orders(n=29) %}
+    {% for i in range(0, n) -%}
         <div class="b-order-card">
             <div class="b-order-card__header">Заказ #{{ loop.index }} <span>20.15.2016</span></div>
             <dl class="b-order-card__desc">

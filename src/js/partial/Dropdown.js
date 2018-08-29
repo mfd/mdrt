@@ -1,6 +1,7 @@
 export default class Dropdown {
   constructor($name, $toggle, hover = false) {
     this.$toggle = $toggle.querySelector('.js-toggle');
+    this.$toggleClose = $toggle.querySelector('.js-dropdown-close');
     const id = this.$toggle.getAttribute('aria-controls');
     if (!id) return;
     this.hover = hover;
@@ -16,31 +17,41 @@ export default class Dropdown {
       document.addEventListener('mousemove', this.outsideMove.bind(this));
     } else {
       this.$toggle.addEventListener('click', this.toggle.bind(this));
+      if(this.$toggleClose) {
+        this.$toggleClose.addEventListener('click', this.toggle2.bind(this));
+      }
       //click
       document.addEventListener('click', this.outsideClick.bind(this));
+
+    }
+  }
+  toggle2(e) {
+
+    if (this.expanded) {
+      console.log(this.$toggle, e.target);
+      this.toggle(e);
     }
   }
   toggle(e) {
     if (this.expanded) {
+      if (e) e.preventDefault();
       //this.$target.hidden = true;
       this.$toggle.setAttribute('aria-expanded', 'false');
-
       $(this.$target).removeClass('isVisible');
 
     } else {
       //this.$target.hidden = false;
       this.$toggle.setAttribute('aria-expanded', 'true');
       $(this.$target).addClass('isVisible');
-
-
+      e.preventDefault();
       //click
-      $(this.$target).find('a').on('click', e => {
-        this.toggle();
-      });
+      // $(this.$target).find('a').on('click', e => {
+      //   this.toggle();
+      // });
 
     }
-
     this.expanded = !this.expanded;
+
   }
   outsideMove() {
     if (
@@ -52,7 +63,7 @@ export default class Dropdown {
     }
   }
   outsideClick(e) {
-    //console.log();
+    //console.log(e);
     if (
       e.target.closest('.radio') ||
       e.target.closest('.btn') ||
@@ -68,7 +79,7 @@ export default class Dropdown {
     ) {
       this.toggle();
     }
-    e.preventDefault();
+    //e.preventDefault();
   }
   destroy() {
     if (this.hover) {

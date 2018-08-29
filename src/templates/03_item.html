@@ -71,7 +71,11 @@ barbaNameSpace: oneitem
 		                        ]
 		                    %}
 		                    {% for item in items %}
-		                        <div class="oneitem__itemPic"><img src="img/assets/item{{item}}.jpg" /><a href="img/assets/item{{item}}.jpg" class="oneitem__itemPic-more no-barba">Увеличить</a></div>
+		                        <div class="oneitem__itemPic"><img src="img/assets/item{{item}}.jpg" />
+		                        	<a href="img/assets/item{{item}}.jpg" class="oneitem__itemPic-more no-barba">Увеличить</a>
+									<a href="#" class="oneitem__itemPic-like">Добавить в избранное</a>
+		                        </div>
+
 		                    {% endfor %}
 						  </div>
 						</div>
@@ -96,11 +100,11 @@ barbaNameSpace: oneitem
 						</dl>
 						<dl>
 							<dt>&nbsp;</dt>
-							<dd><a href="30-modal_sizes.html" class="popuplink no-barba">Таблица размеров</a></dd>
+							<dd><a href="30-modal_sizes.html" class="js-popuplink">Таблица размеров</a></dd>
 						</dl>
 						<div class="oneitem__price">5200 р. <span class="bonus">+52 бонуса</span></div>
 						<button class="btn btn-incart">В корзину</button>
-						<button class="btn btn-buyexpress">Быстрая покупка</button>
+						<a href="31-modal_quickbuy.html" class="btn btn-buyexpress js-popuplink">Быстрая покупка</a>
 						<div class="tabs oneitem__desc-tabs">
 						  <ul class="tabs__caption">
 						    <li class="active"><a href="#desc_tab-1">Описание</a></li>
@@ -132,7 +136,7 @@ barbaNameSpace: oneitem
 			<div class="row">
 				<div class="oneitem__whereBuy">
 					<a href="#">Где купить?</a>
-					<table class="oneitem__whereBuy-table">
+					<table class="oneitem__whereBuy-table js-table">
 					  <tr>
 					    <th class="place">Место хранения \ Размер</th>
 					    <th>42</th>
@@ -211,13 +215,82 @@ barbaNameSpace: oneitem
 					  <div class="tabs__content active" id="opin_tab">
 						<div class="b-opinions">
 							{{opinion()}}
-							<button class="btn">Добавить отзыв</button>
+		                    <div class="js-dropdown addOpinion">
+		                        <a href="#" class="btn js-toggle" aria-expanded="false" aria-controls="addOpin">Добавить отзыв
+		                        </a>
+		                        <div id="addOpin" class="js-toggle-dropdown js-dropdown-form addOpition__form">
+		                        	<a href="#" class="js-dropdown-close"></a>
+		                        	<form class="form">
+			                        	<h5 class="js-dropdown-form__title">Оставить отзыв</h5>
+		                        		<div class="b-form">
+			                        		<div class="col1">
+												<div class="form-group">
+						                          <input class="form-control" type="text" name="name" placeholder="Введите имя" />
+						                          <label for="name" class="control-label">Имя</label>
+						                        </div>
+												<div class="form-group">
+						                          <input class="form-control" type="text" name="email" placeholder="k@k.ru" />
+						                          <label for="email" class="control-label">Email</label>
+						                        </div>
+												{{mixins.rating()}}
+			                        		</div>
+											<div class="col2">
+												<div class="form-group">
+						                          <textarea class="form-control textarea" name="text" placeholder="Ваш отзыв"></textarea>
+						                          <label for="text" class="control-label"></label>
+						                        </div>
+												<div class="input-group">
+							                        <label class="checkbox">
+							                          <input type="checkbox" checked="" />
+							                          <span>Согласен с политикой конфиденциальности</span>
+							                        </label>
+							                      </div>
+												<button class="btn">Добавить отзыв</button>
+											</div>
+										</div>
+		                        	</form>
+		                        </div>
+		                    </div>
 						</div>
 					  </div>
 
 					  <div class="tabs__content" id="q_tab">
 						<div class="b-opinions">
-							{{opinion()}}
+		                    <div class="js-dropdown addOpinion">
+		                        <a href="#" class="btn js-toggle" aria-expanded="false" aria-controls="addQuest">Добавить вопрос
+		                        </a>
+		                        <div id="addQuest" class="js-toggle-dropdown js-dropdown-form addOpition__form">
+		                        	<a href="#" class="js-dropdown-close"></a>
+		                        	<form class="form">
+			                        	<h5 class="js-dropdown-form__title">Оставить отзыв</h5>
+		                        		<div class="b-form">
+			                        		<div class="col1">
+												<div class="form-group">
+						                          <input class="form-control" type="text" name="name" placeholder="Введите имя" />
+						                          <label for="name" class="control-label">Имя</label>
+						                        </div>
+												<div class="form-group">
+						                          <input class="form-control" type="text" name="email" placeholder="k@k.ru" />
+						                          <label for="email" class="control-label">Email</label>
+						                        </div>
+			                        		</div>
+											<div class="col2">
+												<div class="form-group">
+						                          <textarea class="form-control textarea" name="text" placeholder="Текст вашего вопроса"></textarea>
+						                          <label for="text" class="control-label"></label>
+						                        </div>
+												<div class="input-group">
+							                        <label class="checkbox">
+							                          <input type="checkbox" checked="" />
+							                          <span>Согласен с политикой конфиденциальности</span>
+							                        </label>
+							                      </div>
+												<button class="btn">Добавить вопрос</button>
+											</div>
+										</div>
+		                        	</form>
+		                        </div>
+		                    </div>
 						</div>
 					  </div>
 

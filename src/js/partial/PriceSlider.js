@@ -23,8 +23,8 @@ export default class PriceSlider {
       start: [parseInt(min.val()), parseInt(max.val())],
       step: 1,
       range: {
-        'min': [parseInt(min.val())],
-        'max': [parseInt(max.val())]
+        'min': [parseInt(min.data('min'))],
+        'max': [parseInt(max.data('max'))]
       },
       format: moneyFormat,
       connect: true

@@ -25,117 +25,119 @@
           <span>Madyart</span>
           <small>Интернет-магазин женской одежды</small>
         </a>
-        <div class="location"> Выбор города:
-          <a href="#" class="location--change">
+        <div class="js-dropdown location"> Выбор города:
+          <a href="#" class="js-toggle location--change" aria-expanded="false" aria-controls="locationSelector">
             <i class="fa fa-map-marker"></i>
             <span class="location__name">Москва и Московская область</span>
           </a>
-          <div class="location__choose">
-            <h5 class="location__choose-title">Выберите свой город</h5>
-            <ul class="location__choose-location">
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" checked name="selectLocation" />
-                    <span>Москва</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Екатеринбург</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Уфа</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Нижний Новгород</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Пермь</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Ростов-на-Дону</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Самара</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Стерлитамак</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Сургут</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Тольятти</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Тюмень</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item is-active">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Челябинск</span>
-                  </label>
-                </div>
-              </li>
-            </ul>
-            <h5 class="location__choose-title">Или укажите в поле</h5>
-            <div class="input">
-              <input type="text" class="input__short" placeholder="Введите название города" />
-              <button class="btn">Выбрать</button>
-            </div>
-            <div class="location__choose-close btn-close">Закрыть</div>
+          <div id="locationSelector" class="js-toggle-dropdown js-dropdown-form location__choose">
+            <a href="#" class="js-dropdown-close"></a>
+            <form class="form">
+              <h5 class="js-dropdown-form__title location__choose-title">Выберите свой город</h5>
+              <ul class="location__choose-location">
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" checked name="selectLocation" />
+                      <span>Москва</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Екатеринбург</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Уфа</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Нижний Новгород</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Пермь</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Ростов-на-Дону</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Самара</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Стерлитамак</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Сургут</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Тольятти</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Тюмень</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item is-active">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Челябинск</span>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+              <h5 class="location__choose-title">Или укажите в поле</h5>
+              <div class="input">
+                <input type="text" class="input__short" placeholder="Введите название города" />
+                <button class="btn">Выбрать</button>
+              </div>
+            </form>
           </div>
         </div>
         <ul class="breadcrumbs">
@@ -179,7 +181,7 @@
                 </li>
               </ul>
             </div>
-            <a href="16-4_cabinet_isbrannoe.html" class="userArea__like">
+            <a href="16-3_cabinet_isbrannoe.html" class="userArea__like">
               <span class="userArea__like-title">Избранное</span>
               <svg class="icon icon-like">
                 <use xlink:href="img/sprite.svg#icon-like"></use>
@@ -188,7 +190,7 @@
             </a>
           </div>
           <div class="basket">
-            <a href="#" class="basket--order">
+            <a href="19-1_basket.html" class="basket--order">
               <span class="basket-title">Оформить заказ</span>
               <span class="basket--count">15</span>
             </a>
@@ -338,62 +340,77 @@
                         <div class="oneitem__itemPic">
                           <img src="img/assets/item01.jpg" />
                           <a href="img/assets/item01.jpg" class="oneitem__itemPic-more no-barba">Увеличить</a>
+                          <a href="#" class="oneitem__itemPic-like">Добавить в избранное</a>
                         </div>
                         <div class="oneitem__itemPic">
                           <img src="img/assets/item02.jpg" />
                           <a href="img/assets/item02.jpg" class="oneitem__itemPic-more no-barba">Увеличить</a>
+                          <a href="#" class="oneitem__itemPic-like">Добавить в избранное</a>
                         </div>
                         <div class="oneitem__itemPic">
                           <img src="img/assets/item01.jpg" />
                           <a href="img/assets/item01.jpg" class="oneitem__itemPic-more no-barba">Увеличить</a>
+                          <a href="#" class="oneitem__itemPic-like">Добавить в избранное</a>
                         </div>
                         <div class="oneitem__itemPic">
                           <img src="img/assets/item02.jpg" />
                           <a href="img/assets/item02.jpg" class="oneitem__itemPic-more no-barba">Увеличить</a>
+                          <a href="#" class="oneitem__itemPic-like">Добавить в избранное</a>
                         </div>
                         <div class="oneitem__itemPic">
                           <img src="img/assets/item03.jpg" />
                           <a href="img/assets/item03.jpg" class="oneitem__itemPic-more no-barba">Увеличить</a>
+                          <a href="#" class="oneitem__itemPic-like">Добавить в избранное</a>
                         </div>
                         <div class="oneitem__itemPic">
                           <img src="img/assets/item01.jpg" />
                           <a href="img/assets/item01.jpg" class="oneitem__itemPic-more no-barba">Увеличить</a>
+                          <a href="#" class="oneitem__itemPic-like">Добавить в избранное</a>
                         </div>
                         <div class="oneitem__itemPic">
                           <img src="img/assets/item02.jpg" />
                           <a href="img/assets/item02.jpg" class="oneitem__itemPic-more no-barba">Увеличить</a>
+                          <a href="#" class="oneitem__itemPic-like">Добавить в избранное</a>
                         </div>
                         <div class="oneitem__itemPic">
                           <img src="img/assets/item01.jpg" />
                           <a href="img/assets/item01.jpg" class="oneitem__itemPic-more no-barba">Увеличить</a>
+                          <a href="#" class="oneitem__itemPic-like">Добавить в избранное</a>
                         </div>
                         <div class="oneitem__itemPic">
                           <img src="img/assets/item02.jpg" />
                           <a href="img/assets/item02.jpg" class="oneitem__itemPic-more no-barba">Увеличить</a>
+                          <a href="#" class="oneitem__itemPic-like">Добавить в избранное</a>
                         </div>
                         <div class="oneitem__itemPic">
                           <img src="img/assets/item03.jpg" />
                           <a href="img/assets/item03.jpg" class="oneitem__itemPic-more no-barba">Увеличить</a>
+                          <a href="#" class="oneitem__itemPic-like">Добавить в избранное</a>
                         </div>
                         <div class="oneitem__itemPic">
                           <img src="img/assets/item01.jpg" />
                           <a href="img/assets/item01.jpg" class="oneitem__itemPic-more no-barba">Увеличить</a>
+                          <a href="#" class="oneitem__itemPic-like">Добавить в избранное</a>
                         </div>
                         <div class="oneitem__itemPic">
                           <img src="img/assets/item02.jpg" />
                           <a href="img/assets/item02.jpg" class="oneitem__itemPic-more no-barba">Увеличить</a>
+                          <a href="#" class="oneitem__itemPic-like">Добавить в избранное</a>
                         </div>
                         <div class="oneitem__itemPic">
                           <img src="img/assets/item01.jpg" />
                           <a href="img/assets/item01.jpg" class="oneitem__itemPic-more no-barba">Увеличить</a>
+                          <a href="#" class="oneitem__itemPic-like">Добавить в избранное</a>
                         </div>
                         <div class="oneitem__itemPic">
                           <img src="img/assets/item02.jpg" />
                           <a href="img/assets/item02.jpg" class="oneitem__itemPic-more no-barba">Увеличить</a>
+                          <a href="#" class="oneitem__itemPic-like">Добавить в избранное</a>
                         </div>
                         <div class="oneitem__itemPic">
                           <img src="img/assets/item03.jpg" />
                           <a href="img/assets/item03.jpg" class="oneitem__itemPic-more no-barba">Увеличить</a>
+                          <a href="#" class="oneitem__itemPic-like">Добавить в избранное</a>
                         </div>
                       </div>
                     </div>
@@ -491,14 +508,14 @@
                     <dl>
                       <dt>&nbsp;</dt>
                       <dd>
-                        <a href="30-modal_sizes.html" class="popuplink no-barba">Таблица размеров</a>
+                        <a href="30-modal_sizes.html" class="js-popuplink">Таблица размеров</a>
                       </dd>
                     </dl>
                     <div class="oneitem__price">5200 р.
                       <span class="bonus">+52 бонуса</span>
                     </div>
                     <button class="btn btn-incart">В корзину</button>
-                    <button class="btn btn-buyexpress">Быстрая покупка</button>
+                    <a href="31-modal_quickbuy.html" class="btn btn-buyexpress js-popuplink">Быстрая покупка</a>
                     <div class="tabs oneitem__desc-tabs">
                       <ul class="tabs__caption">
                         <li class="active">
@@ -545,7 +562,7 @@
               <div class="row">
                 <div class="oneitem__whereBuy">
                   <a href="#">Где купить?</a>
-                  <table class="oneitem__whereBuy-table">
+                  <table class="oneitem__whereBuy-table js-table">
                     <tr>
                       <th class="place">Место хранения \ Размер</th>
                       <th>42</th>
@@ -749,137 +766,110 @@
                               бифлекс. </p>
                           </dd>
                         </dl>
-                        <button class="btn">Добавить отзыв</button>
+                        <div class="js-dropdown addOpinion">
+                          <a href="#" class="btn js-toggle" aria-expanded="false" aria-controls="addOpin">Добавить отзыв </a>
+                          <div id="addOpin" class="js-toggle-dropdown js-dropdown-form addOpition__form">
+                            <a href="#" class="js-dropdown-close"></a>
+                            <form class="form">
+                              <h5 class="js-dropdown-form__title">Оставить отзыв</h5>
+                              <div class="b-form">
+                                <div class="col1">
+                                  <div class="form-group">
+                                    <input class="form-control" type="text" name="name" placeholder="Введите имя" />
+                                    <label for="name" class="control-label">Имя</label>
+                                  </div>
+                                  <div class="form-group">
+                                    <input class="form-control" type="text" name="email" placeholder="k@k.ru" />
+                                    <label for="email" class="control-label">Email</label>
+                                  </div>
+                                  <fieldset class="rating">
+                                    <input type="radio" id="star5" name="rating" value="5" />
+                                    <label for="star5" title="Rocks!">
+                                      <svg class="icon icon-star">
+                                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                                      </svg>
+                                    </label>
+                                    <input type="radio" id="star4" name="rating" value="4" />
+                                    <label for="star4" title="Pretty good">
+                                      <svg class="icon icon-star">
+                                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                                      </svg>
+                                    </label>
+                                    <input type="radio" id="star3" name="rating" value="3" />
+                                    <label for="star3" title="Meh">
+                                      <svg class="icon icon-star">
+                                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                                      </svg>
+                                    </label>
+                                    <input type="radio" id="star2" name="rating" value="2" />
+                                    <label for="star2" title="Kinda bad">
+                                      <svg class="icon icon-star">
+                                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                                      </svg>
+                                    </label>
+                                    <input type="radio" id="star1" name="rating" value="1" />
+                                    <label for="star1" title="Sucks big time">
+                                      <svg class="icon icon-star">
+                                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                                      </svg>
+                                    </label>
+                                  </fieldset>
+                                </div>
+                                <div class="col2">
+                                  <div class="form-group">
+                                    <textarea class="form-control textarea" name="text" placeholder="Ваш отзыв"></textarea>
+                                    <label for="text" class="control-label"></label>
+                                  </div>
+                                  <div class="input-group">
+                                    <label class="checkbox">
+                                      <input type="checkbox" checked="" />
+                                      <span>Согласен с политикой конфиденциальности</span>
+                                    </label>
+                                  </div>
+                                  <button class="btn">Добавить отзыв</button>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="tabs__content" id="q_tab">
                       <div class="b-opinions">
-                        <dl class="opinion">
-                          <dt class="opinion__author">
-                            <div class="opin__authName">Евлампий Петрович</div>
-                            <time>12.11.2017</time>
-                            <fieldset class="rating">
-                              <input type="radio" id="star5" name="rating" value="5" />
-                              <label for="star5" title="Rocks!">
-                                <svg class="icon icon-star">
-                                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                                </svg>
-                              </label>
-                              <input type="radio" id="star4" name="rating" value="4" />
-                              <label for="star4" title="Pretty good">
-                                <svg class="icon icon-star">
-                                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                                </svg>
-                              </label>
-                              <input type="radio" id="star3" name="rating" value="3" />
-                              <label for="star3" title="Meh">
-                                <svg class="icon icon-star">
-                                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                                </svg>
-                              </label>
-                              <input type="radio" id="star2" name="rating" value="2" />
-                              <label for="star2" title="Kinda bad">
-                                <svg class="icon icon-star">
-                                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                                </svg>
-                              </label>
-                              <input type="radio" id="star1" name="rating" value="1" />
-                              <label for="star1" title="Sucks big time">
-                                <svg class="icon icon-star">
-                                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                                </svg>
-                              </label>
-                            </fieldset>
-                          </dt>
-                          <dd class="opinion__text">
-                            <p> Абстрактный принт по популярности может посоперничать с цветами и геометрией: этим летом он повсюду. Особенно хорошо такие рисунки смотрятся на деловой одежде: например, на платье фасона "футляр". Ткань - испанский набивной
-                              бифлекс. </p>
-                          </dd>
-                        </dl>
-                        <dl class="opinion">
-                          <dt class="opinion__author">
-                            <div class="opin__authName">Алевтина Иннокентиевна</div>
-                            <time>12.11.2017</time>
-                            <fieldset class="rating">
-                              <input type="radio" id="star5" name="rating" value="5" />
-                              <label for="star5" title="Rocks!">
-                                <svg class="icon icon-star">
-                                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                                </svg>
-                              </label>
-                              <input type="radio" id="star4" name="rating" value="4" />
-                              <label for="star4" title="Pretty good">
-                                <svg class="icon icon-star">
-                                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                                </svg>
-                              </label>
-                              <input type="radio" id="star3" name="rating" value="3" />
-                              <label for="star3" title="Meh">
-                                <svg class="icon icon-star">
-                                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                                </svg>
-                              </label>
-                              <input type="radio" id="star2" name="rating" value="2" />
-                              <label for="star2" title="Kinda bad">
-                                <svg class="icon icon-star">
-                                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                                </svg>
-                              </label>
-                              <input type="radio" id="star1" name="rating" value="1" />
-                              <label for="star1" title="Sucks big time">
-                                <svg class="icon icon-star">
-                                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                                </svg>
-                              </label>
-                            </fieldset>
-                          </dt>
-                          <dd class="opinion__text">
-                            <p> Абстрактный принт по популярности может посоперничать с цветами и геометрией: этим летом он повсюду. Особенно хорошо такие рисунки смотрятся на деловой одежде: например, на платье фасона "футляр". Ткань - испанский набивной
-                              бифлекс. </p>
-                          </dd>
-                        </dl>
-                        <dl class="opinion">
-                          <dt class="opinion__author">
-                            <div class="opin__authName">Константин Констаниновский</div>
-                            <time>12.11.2017</time>
-                            <fieldset class="rating">
-                              <input type="radio" id="star5" name="rating" value="5" />
-                              <label for="star5" title="Rocks!">
-                                <svg class="icon icon-star">
-                                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                                </svg>
-                              </label>
-                              <input type="radio" id="star4" name="rating" value="4" />
-                              <label for="star4" title="Pretty good">
-                                <svg class="icon icon-star">
-                                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                                </svg>
-                              </label>
-                              <input type="radio" id="star3" name="rating" value="3" />
-                              <label for="star3" title="Meh">
-                                <svg class="icon icon-star">
-                                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                                </svg>
-                              </label>
-                              <input type="radio" id="star2" name="rating" value="2" />
-                              <label for="star2" title="Kinda bad">
-                                <svg class="icon icon-star">
-                                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                                </svg>
-                              </label>
-                              <input type="radio" id="star1" name="rating" value="1" />
-                              <label for="star1" title="Sucks big time">
-                                <svg class="icon icon-star">
-                                  <use xlink:href="img/sprite.svg#icon-star"></use>
-                                </svg>
-                              </label>
-                            </fieldset>
-                          </dt>
-                          <dd class="opinion__text">
-                            <p> Абстрактный принт по популярности может посоперничать с цветами и геометрией: этим летом он повсюду. Особенно хорошо такие рисунки смотрятся на деловой одежде: например, на платье фасона "футляр". Ткань - испанский набивной
-                              бифлекс. </p>
-                          </dd>
-                        </dl>
+                        <div class="js-dropdown addOpinion">
+                          <a href="#" class="btn js-toggle" aria-expanded="false" aria-controls="addQuest">Добавить вопрос </a>
+                          <div id="addQuest" class="js-toggle-dropdown js-dropdown-form addOpition__form">
+                            <a href="#" class="js-dropdown-close"></a>
+                            <form class="form">
+                              <h5 class="js-dropdown-form__title">Оставить отзыв</h5>
+                              <div class="b-form">
+                                <div class="col1">
+                                  <div class="form-group">
+                                    <input class="form-control" type="text" name="name" placeholder="Введите имя" />
+                                    <label for="name" class="control-label">Имя</label>
+                                  </div>
+                                  <div class="form-group">
+                                    <input class="form-control" type="text" name="email" placeholder="k@k.ru" />
+                                    <label for="email" class="control-label">Email</label>
+                                  </div>
+                                </div>
+                                <div class="col2">
+                                  <div class="form-group">
+                                    <textarea class="form-control textarea" name="text" placeholder="Текст вашего вопроса"></textarea>
+                                    <label for="text" class="control-label"></label>
+                                  </div>
+                                  <div class="input-group">
+                                    <label class="checkbox">
+                                      <input type="checkbox" checked="" />
+                                      <span>Согласен с политикой конфиденциальности</span>
+                                    </label>
+                                  </div>
+                                  <button class="btn">Добавить вопрос</button>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -905,228 +895,57 @@
                       <div class="row grid__catalog">
                         <div class="owl-carousel owl-theme owl-gallery" data-count="1|3|4">
                           <div class="item">
-                            <a href="03_item.html" class="item__link">Пальто утепленное</a>
-                            <div class="item__row">
-                              <figure class="img-block">
-                                <img src="img/assets/item05.jpg" alt="" />
-                              </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item04.jpg" alt="" /></figure> -->
-                              <div class="item__type new">Распродажа</div>
-                              <a href="#" class="item__like">Добавить в избранное</a>
-                            </div>
-                            <div class="item__row">
-                              <h3 class="item__title">
-                                <a href="#">Пальто утепленное</a>
-                              </h3>
-                              <p class="item__price"> 1995р </p>
-                            </div>
-                            <div class="item__actions">
-                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                              <a href="03_item.html" class="btn btn-info">В корзину</a>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <a href="03_item.html" class="item__link">Яркое платье</a>
-                            <div class="item__row">
-                              <figure class="img-block">
-                                <img src="img/assets/item06.jpg" alt="" />
-                              </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item04.jpg" alt="" /></figure> -->
-                              <div class="item__type hit">Хит!</div>
-                              <a href="#" class="item__like">Добавить в избранное</a>
-                            </div>
-                            <div class="item__row">
-                              <h3 class="item__title">
-                                <a href="#">Яркое платье</a>
-                              </h3>
-                              <p class="item__price"> 995р </p>
-                            </div>
-                            <div class="item__actions">
-                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                              <a href="03_item.html" class="btn btn-info">В корзину</a>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <a href="03_item.html" class="item__link">Юбка с высокой талией</a>
-                            <div class="item__row">
-                              <figure class="img-block">
-                                <img src="img/assets/item01.jpg" alt="" />
-                              </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item02.jpg" alt="" /></figure> -->
-                              <a href="#" class="item__like">Добавить в избранное</a>
-                            </div>
-                            <div class="item__row">
-                              <h3 class="item__title">
-                                <a href="#">Юбка с высокой талией</a>
-                              </h3>
-                              <p class="item__price"> 6995р </p>
-                            </div>
-                            <div class="item__actions">
-                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                              <a href="03_item.html" class="btn btn-info">В корзину</a>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <a href="03_item.html" class="item__link">Юбка с высокой талией</a>
-                            <div class="item__row">
-                              <figure class="img-block">
-                                <img src="img/assets/item04.jpg" alt="" />
-                              </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item04.jpg" alt="" /></figure> -->
-                              <a href="#" class="item__like">Добавить в избранное</a>
-                            </div>
-                            <div class="item__row">
-                              <h3 class="item__title">
-                                <a href="#">Юбка с высокой талией</a>
-                              </h3>
-                              <p class="item__price"> 6995р </p>
-                            </div>
-                            <div class="item__actions">
-                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                              <a href="03_item.html" class="btn btn-info">В корзину</a>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <a href="03_item.html" class="item__link">Пальто утепленное</a>
-                            <div class="item__row">
-                              <figure class="img-block">
-                                <img src="img/assets/item02.jpg" alt="" />
-                              </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item01.jpg" alt="" /></figure> -->
-                              <div class="item__type new">Распродажа</div>
-                              <a href="#" class="item__like">Добавить в избранное</a>
-                            </div>
-                            <div class="item__row">
-                              <h3 class="item__title">
-                                <a href="#">Пальто утепленное</a>
-                              </h3>
-                              <p class="item__price">
-                                <s>1995р</s>
-                                <span class="item__price--sale">9995р -30%</span>
-                              </p>
-                            </div>
-                            <div class="item__actions">
-                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                              <a href="03_item.html" class="btn btn-info">В корзину</a>
-                            </div>
-                          </div>
-                          <div class="item">
                             <a href="03_item.html" class="item__link">Яркое платье</a>
                             <div class="item__row">
                               <figure class="img-block">
                                 <img src="img/assets/item03.jpg" alt="" />
-                              </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item02.jpg" alt="" /></figure> -->
-                              <div class="item__type hit">Хит!</div>
-                              <a href="#" class="item__like">Добавить в избранное</a>
-                            </div>
-                            <div class="item__row">
-                              <h3 class="item__title">
-                                <a href="#">Яркое платье</a>
-                              </h3>
-                              <p class="item__price">
-                                <s>995р</s>
-                                <span class="item__price--sale">195р -90%</span>
-                              </p>
-                            </div>
-                            <div class="item__actions">
-                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                              <a href="03_item.html" class="btn btn-info">В корзину</a>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <a href="03_item.html" class="item__link">Яркое платье</a>
-                            <div class="item__row">
-                              <figure class="img-block">
-                                <img src="img/assets/item06.jpg" alt="" />
-                              </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item02.jpg" alt="" /></figure> -->
-                              <div class="item__type hit">Хит!</div>
-                              <a href="#" class="item__like">Добавить в избранное</a>
-                            </div>
-                            <div class="item__row">
-                              <h3 class="item__title">
-                                <a href="#">Яркое платье</a>
-                              </h3>
-                              <p class="item__price"> 995р </p>
-                            </div>
-                            <div class="item__actions">
-                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                              <a href="03_item.html" class="btn btn-info">В корзину</a>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <a href="03_item.html" class="item__link">Пальто утепленное</a>
-                            <div class="item__row">
-                              <figure class="img-block">
-                                <img src="img/assets/item02.jpg" alt="" />
-                              </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item04.jpg" alt="" /></figure> -->
-                              <div class="item__type new">Распродажа</div>
-                              <a href="#" class="item__like">Добавить в избранное</a>
-                            </div>
-                            <div class="item__row">
-                              <h3 class="item__title">
-                                <a href="#">Пальто утепленное</a>
-                              </h3>
-                              <p class="item__price">
-                                <s>1995р</s>
-                                <span class="item__price--sale">9995р -30%</span>
-                              </p>
-                            </div>
-                            <div class="item__actions">
-                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                              <a href="03_item.html" class="btn btn-info">В корзину</a>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <a href="03_item.html" class="item__link">Пальто утепленное</a>
-                            <div class="item__row">
-                              <figure class="img-block">
-                                <img src="img/assets/item05.jpg" alt="" />
-                              </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item01.jpg" alt="" /></figure> -->
-                              <div class="item__type new">Распродажа</div>
-                              <a href="#" class="item__like">Добавить в избранное</a>
-                            </div>
-                            <div class="item__row">
-                              <h3 class="item__title">
-                                <a href="#">Пальто утепленное</a>
-                              </h3>
-                              <p class="item__price"> 1995р </p>
-                            </div>
-                            <div class="item__actions">
-                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                              <a href="03_item.html" class="btn btn-info">В корзину</a>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <a href="03_item.html" class="item__link">Юбка с высокой талией</a>
-                            <div class="item__row">
-                              <figure class="img-block">
-                                <img src="img/assets/item04.jpg" alt="" />
-                              </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item01.jpg" alt="" /></figure> -->
-                              <a href="#" class="item__like">Добавить в избранное</a>
-                            </div>
-                            <div class="item__row">
-                              <h3 class="item__title">
-                                <a href="#">Юбка с высокой талией</a>
-                              </h3>
-                              <p class="item__price"> 6995р </p>
-                            </div>
-                            <div class="item__actions">
-                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                              <a href="03_item.html" class="btn btn-info">В корзину</a>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <a href="03_item.html" class="item__link">Юбка с высокой талией</a>
-                            <div class="item__row">
-                              <figure class="img-block">
-                                <img src="img/assets/item01.jpg" alt="" />
                               </figure>
                               <!-- <figure class="img-block"><img src="img/assets/item03.jpg" alt="" /></figure> -->
+                              <div class="item__type hit">Хит!</div>
+                              <a href="#" class="item__like">Добавить в избранное</a>
+                            </div>
+                            <div class="item__row">
+                              <h3 class="item__title">
+                                <a href="#">Яркое платье</a>
+                              </h3>
+                              <p class="item__price">
+                                <s>995р</s>
+                                <span class="item__price--sale">195р -90%</span>
+                              </p>
+                            </div>
+                            <div class="item__actions">
+                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                              <a href="03_item.html" class="btn btn-info">В корзину</a>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <a href="03_item.html" class="item__link">Пальто утепленное</a>
+                            <div class="item__row">
+                              <figure class="img-block">
+                                <img src="img/assets/item05.jpg" alt="" />
+                              </figure>
+                              <!-- <figure class="img-block"><img src="img/assets/item04.jpg" alt="" /></figure> -->
+                              <div class="item__type new">Распродажа</div>
+                              <a href="#" class="item__like">Добавить в избранное</a>
+                            </div>
+                            <div class="item__row">
+                              <h3 class="item__title">
+                                <a href="#">Пальто утепленное</a>
+                              </h3>
+                              <p class="item__price"> 1995р </p>
+                            </div>
+                            <div class="item__actions">
+                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                              <a href="03_item.html" class="btn btn-info">В корзину</a>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <a href="03_item.html" class="item__link">Юбка с высокой талией</a>
+                            <div class="item__row">
+                              <figure class="img-block">
+                                <img src="img/assets/item01.jpg" alt="" />
+                              </figure>
+                              <!-- <figure class="img-block"><img src="img/assets/item02.jpg" alt="" /></figure> -->
                               <a href="#" class="item__like">Добавить в избранное</a>
                             </div>
                             <div class="item__row">
@@ -1144,9 +963,119 @@
                             <a href="03_item.html" class="item__link">Яркое платье</a>
                             <div class="item__row">
                               <figure class="img-block">
-                                <img src="img/assets/item03.jpg" alt="" />
+                                <img src="img/assets/item06.jpg" alt="" />
+                              </figure>
+                              <!-- <figure class="img-block"><img src="img/assets/item02.jpg" alt="" /></figure> -->
+                              <div class="item__type hit">Хит!</div>
+                              <a href="#" class="item__like">Добавить в избранное</a>
+                            </div>
+                            <div class="item__row">
+                              <h3 class="item__title">
+                                <a href="#">Яркое платье</a>
+                              </h3>
+                              <p class="item__price"> 995р </p>
+                            </div>
+                            <div class="item__actions">
+                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                              <a href="03_item.html" class="btn btn-info">В корзину</a>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <a href="03_item.html" class="item__link">Пальто утепленное</a>
+                            <div class="item__row">
+                              <figure class="img-block">
+                                <img src="img/assets/item02.jpg" alt="" />
+                              </figure>
+                              <!-- <figure class="img-block"><img src="img/assets/item02.jpg" alt="" /></figure> -->
+                              <div class="item__type new">Распродажа</div>
+                              <a href="#" class="item__like">Добавить в избранное</a>
+                            </div>
+                            <div class="item__row">
+                              <h3 class="item__title">
+                                <a href="#">Пальто утепленное</a>
+                              </h3>
+                              <p class="item__price">
+                                <s>1995р</s>
+                                <span class="item__price--sale">9995р -30%</span>
+                              </p>
+                            </div>
+                            <div class="item__actions">
+                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                              <a href="03_item.html" class="btn btn-info">В корзину</a>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <a href="03_item.html" class="item__link">Юбка с высокой талией</a>
+                            <div class="item__row">
+                              <figure class="img-block">
+                                <img src="img/assets/item04.jpg" alt="" />
+                              </figure>
+                              <!-- <figure class="img-block"><img src="img/assets/item05.jpg" alt="" /></figure> -->
+                              <a href="#" class="item__like">Добавить в избранное</a>
+                            </div>
+                            <div class="item__row">
+                              <h3 class="item__title">
+                                <a href="#">Юбка с высокой талией</a>
+                              </h3>
+                              <p class="item__price"> 6995р </p>
+                            </div>
+                            <div class="item__actions">
+                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                              <a href="03_item.html" class="btn btn-info">В корзину</a>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <a href="03_item.html" class="item__link">Пальто утепленное</a>
+                            <div class="item__row">
+                              <figure class="img-block">
+                                <img src="img/assets/item02.jpg" alt="" />
                               </figure>
                               <!-- <figure class="img-block"><img src="img/assets/item04.jpg" alt="" /></figure> -->
+                              <div class="item__type new">Распродажа</div>
+                              <a href="#" class="item__like">Добавить в избранное</a>
+                            </div>
+                            <div class="item__row">
+                              <h3 class="item__title">
+                                <a href="#">Пальто утепленное</a>
+                              </h3>
+                              <p class="item__price">
+                                <s>1995р</s>
+                                <span class="item__price--sale">9995р -30%</span>
+                              </p>
+                            </div>
+                            <div class="item__actions">
+                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                              <a href="03_item.html" class="btn btn-info">В корзину</a>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <a href="03_item.html" class="item__link">Яркое платье</a>
+                            <div class="item__row">
+                              <figure class="img-block">
+                                <img src="img/assets/item06.jpg" alt="" />
+                              </figure>
+                              <!-- <figure class="img-block"><img src="img/assets/item02.jpg" alt="" /></figure> -->
+                              <div class="item__type hit">Хит!</div>
+                              <a href="#" class="item__like">Добавить в избранное</a>
+                            </div>
+                            <div class="item__row">
+                              <h3 class="item__title">
+                                <a href="#">Яркое платье</a>
+                              </h3>
+                              <p class="item__price"> 995р </p>
+                            </div>
+                            <div class="item__actions">
+                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                              <a href="03_item.html" class="btn btn-info">В корзину</a>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <a href="03_item.html" class="item__link">Яркое платье</a>
+                            <div class="item__row">
+                              <figure class="img-block">
+                                <img src="img/assets/item03.jpg" alt="" />
+                              </figure>
+                              <!-- <figure class="img-block"><img src="img/assets/item05.jpg" alt="" /></figure> -->
                               <div class="item__type hit">Хит!</div>
                               <a href="#" class="item__like">Добавить в избранное</a>
                             </div>
@@ -1158,6 +1087,67 @@
                                 <s>995р</s>
                                 <span class="item__price--sale">195р -90%</span>
                               </p>
+                            </div>
+                            <div class="item__actions">
+                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                              <a href="03_item.html" class="btn btn-info">В корзину</a>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <a href="03_item.html" class="item__link">Юбка с высокой талией</a>
+                            <div class="item__row">
+                              <figure class="img-block">
+                                <img src="img/assets/item04.jpg" alt="" />
+                              </figure>
+                              <!-- <figure class="img-block"><img src="img/assets/item01.jpg" alt="" /></figure> -->
+                              <a href="#" class="item__like">Добавить в избранное</a>
+                            </div>
+                            <div class="item__row">
+                              <h3 class="item__title">
+                                <a href="#">Юбка с высокой талией</a>
+                              </h3>
+                              <p class="item__price"> 6995р </p>
+                            </div>
+                            <div class="item__actions">
+                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                              <a href="03_item.html" class="btn btn-info">В корзину</a>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <a href="03_item.html" class="item__link">Пальто утепленное</a>
+                            <div class="item__row">
+                              <figure class="img-block">
+                                <img src="img/assets/item05.jpg" alt="" />
+                              </figure>
+                              <!-- <figure class="img-block"><img src="img/assets/item04.jpg" alt="" /></figure> -->
+                              <div class="item__type new">Распродажа</div>
+                              <a href="#" class="item__like">Добавить в избранное</a>
+                            </div>
+                            <div class="item__row">
+                              <h3 class="item__title">
+                                <a href="#">Пальто утепленное</a>
+                              </h3>
+                              <p class="item__price"> 1995р </p>
+                            </div>
+                            <div class="item__actions">
+                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                              <a href="03_item.html" class="btn btn-info">В корзину</a>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <a href="03_item.html" class="item__link">Юбка с высокой талией</a>
+                            <div class="item__row">
+                              <figure class="img-block">
+                                <img src="img/assets/item01.jpg" alt="" />
+                              </figure>
+                              <!-- <figure class="img-block"><img src="img/assets/item02.jpg" alt="" /></figure> -->
+                              <a href="#" class="item__like">Добавить в избранное</a>
+                            </div>
+                            <div class="item__row">
+                              <h3 class="item__title">
+                                <a href="#">Юбка с высокой талией</a>
+                              </h3>
+                              <p class="item__price"> 6995р </p>
                             </div>
                             <div class="item__actions">
                               <a href="03_item.html" class="btn btn-default">Подробнее</a>
@@ -1171,160 +1161,10 @@
                       <div class="row grid__catalog">
                         <div class="owl-carousel owl-theme owl-gallery" data-count="1|3|4">
                           <div class="item">
-                            <a href="03_item.html" class="item__link">Юбка с высокой талией</a>
-                            <div class="item__row">
-                              <figure class="img-block">
-                                <img src="img/assets/item01.jpg" alt="" />
-                              </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item01.jpg" alt="" /></figure> -->
-                              <a href="#" class="item__like">Добавить в избранное</a>
-                            </div>
-                            <div class="item__row">
-                              <h3 class="item__title">
-                                <a href="#">Юбка с высокой талией</a>
-                              </h3>
-                              <p class="item__price"> 6995р </p>
-                            </div>
-                            <div class="item__actions">
-                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                              <a href="03_item.html" class="btn btn-info">В корзину</a>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <a href="03_item.html" class="item__link">Яркое платье</a>
-                            <div class="item__row">
-                              <figure class="img-block">
-                                <img src="img/assets/item03.jpg" alt="" />
-                              </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item02.jpg" alt="" /></figure> -->
-                              <div class="item__type hit">Хит!</div>
-                              <a href="#" class="item__like">Добавить в избранное</a>
-                            </div>
-                            <div class="item__row">
-                              <h3 class="item__title">
-                                <a href="#">Яркое платье</a>
-                              </h3>
-                              <p class="item__price">
-                                <s>995р</s>
-                                <span class="item__price--sale">195р -90%</span>
-                              </p>
-                            </div>
-                            <div class="item__actions">
-                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                              <a href="03_item.html" class="btn btn-info">В корзину</a>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <a href="03_item.html" class="item__link">Яркое платье</a>
-                            <div class="item__row">
-                              <figure class="img-block">
-                                <img src="img/assets/item06.jpg" alt="" />
-                              </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item05.jpg" alt="" /></figure> -->
-                              <div class="item__type hit">Хит!</div>
-                              <a href="#" class="item__like">Добавить в избранное</a>
-                            </div>
-                            <div class="item__row">
-                              <h3 class="item__title">
-                                <a href="#">Яркое платье</a>
-                              </h3>
-                              <p class="item__price"> 995р </p>
-                            </div>
-                            <div class="item__actions">
-                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                              <a href="03_item.html" class="btn btn-info">В корзину</a>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <a href="03_item.html" class="item__link">Пальто утепленное</a>
-                            <div class="item__row">
-                              <figure class="img-block">
-                                <img src="img/assets/item02.jpg" alt="" />
-                              </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item05.jpg" alt="" /></figure> -->
-                              <div class="item__type new">Распродажа</div>
-                              <a href="#" class="item__like">Добавить в избранное</a>
-                            </div>
-                            <div class="item__row">
-                              <h3 class="item__title">
-                                <a href="#">Пальто утепленное</a>
-                              </h3>
-                              <p class="item__price">
-                                <s>1995р</s>
-                                <span class="item__price--sale">9995р -30%</span>
-                              </p>
-                            </div>
-                            <div class="item__actions">
-                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                              <a href="03_item.html" class="btn btn-info">В корзину</a>
-                            </div>
-                          </div>
-                          <div class="item">
                             <a href="03_item.html" class="item__link">Пальто утепленное</a>
                             <div class="item__row">
                               <figure class="img-block">
                                 <img src="img/assets/item05.jpg" alt="" />
-                              </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item03.jpg" alt="" /></figure> -->
-                              <div class="item__type new">Распродажа</div>
-                              <a href="#" class="item__like">Добавить в избранное</a>
-                            </div>
-                            <div class="item__row">
-                              <h3 class="item__title">
-                                <a href="#">Пальто утепленное</a>
-                              </h3>
-                              <p class="item__price"> 1995р </p>
-                            </div>
-                            <div class="item__actions">
-                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                              <a href="03_item.html" class="btn btn-info">В корзину</a>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <a href="03_item.html" class="item__link">Юбка с высокой талией</a>
-                            <div class="item__row">
-                              <figure class="img-block">
-                                <img src="img/assets/item04.jpg" alt="" />
-                              </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item05.jpg" alt="" /></figure> -->
-                              <a href="#" class="item__like">Добавить в избранное</a>
-                            </div>
-                            <div class="item__row">
-                              <h3 class="item__title">
-                                <a href="#">Юбка с высокой талией</a>
-                              </h3>
-                              <p class="item__price"> 6995р </p>
-                            </div>
-                            <div class="item__actions">
-                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                              <a href="03_item.html" class="btn btn-info">В корзину</a>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <a href="03_item.html" class="item__link">Юбка с высокой талией</a>
-                            <div class="item__row">
-                              <figure class="img-block">
-                                <img src="img/assets/item01.jpg" alt="" />
-                              </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item01.jpg" alt="" /></figure> -->
-                              <a href="#" class="item__like">Добавить в избранное</a>
-                            </div>
-                            <div class="item__row">
-                              <h3 class="item__title">
-                                <a href="#">Юбка с высокой талией</a>
-                              </h3>
-                              <p class="item__price"> 6995р </p>
-                            </div>
-                            <div class="item__actions">
-                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                              <a href="03_item.html" class="btn btn-info">В корзину</a>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <a href="03_item.html" class="item__link">Пальто утепленное</a>
-                            <div class="item__row">
-                              <figure class="img-block">
-                                <img src="img/assets/item02.jpg" alt="" />
                               </figure>
                               <!-- <figure class="img-block"><img src="img/assets/item04.jpg" alt="" /></figure> -->
                               <div class="item__type new">Распродажа</div>
@@ -1334,6 +1174,27 @@
                               <h3 class="item__title">
                                 <a href="#">Пальто утепленное</a>
                               </h3>
+                              <p class="item__price"> 1995р </p>
+                            </div>
+                            <div class="item__actions">
+                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                              <a href="03_item.html" class="btn btn-info">В корзину</a>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <a href="03_item.html" class="item__link">Пальто утепленное</a>
+                            <div class="item__row">
+                              <figure class="img-block">
+                                <img src="img/assets/item02.jpg" alt="" />
+                              </figure>
+                              <!-- <figure class="img-block"><img src="img/assets/item03.jpg" alt="" /></figure> -->
+                              <div class="item__type new">Распродажа</div>
+                              <a href="#" class="item__like">Добавить в избранное</a>
+                            </div>
+                            <div class="item__row">
+                              <h3 class="item__title">
+                                <a href="#">Пальто утепленное</a>
+                              </h3>
                               <p class="item__price">
                                 <s>1995р</s>
                                 <span class="item__price--sale">9995р -30%</span>
@@ -1350,7 +1211,7 @@
                               <figure class="img-block">
                                 <img src="img/assets/item03.jpg" alt="" />
                               </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item01.jpg" alt="" /></figure> -->
+                              <!-- <figure class="img-block"><img src="img/assets/item04.jpg" alt="" /></figure> -->
                               <div class="item__type hit">Хит!</div>
                               <a href="#" class="item__like">Добавить в избранное</a>
                             </div>
@@ -1374,7 +1235,7 @@
                               <figure class="img-block">
                                 <img src="img/assets/item06.jpg" alt="" />
                               </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item03.jpg" alt="" /></figure> -->
+                              <!-- <figure class="img-block"><img src="img/assets/item02.jpg" alt="" /></figure> -->
                               <div class="item__type hit">Хит!</div>
                               <a href="#" class="item__like">Добавить в избранное</a>
                             </div>
@@ -1390,12 +1251,120 @@
                             </div>
                           </div>
                           <div class="item">
+                            <a href="03_item.html" class="item__link">Юбка с высокой талией</a>
+                            <div class="item__row">
+                              <figure class="img-block">
+                                <img src="img/assets/item01.jpg" alt="" />
+                              </figure>
+                              <!-- <figure class="img-block"><img src="img/assets/item01.jpg" alt="" /></figure> -->
+                              <a href="#" class="item__like">Добавить в избранное</a>
+                            </div>
+                            <div class="item__row">
+                              <h3 class="item__title">
+                                <a href="#">Юбка с высокой талией</a>
+                              </h3>
+                              <p class="item__price"> 6995р </p>
+                            </div>
+                            <div class="item__actions">
+                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                              <a href="03_item.html" class="btn btn-info">В корзину</a>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <a href="03_item.html" class="item__link">Юбка с высокой талией</a>
+                            <div class="item__row">
+                              <figure class="img-block">
+                                <img src="img/assets/item04.jpg" alt="" />
+                              </figure>
+                              <!-- <figure class="img-block"><img src="img/assets/item05.jpg" alt="" /></figure> -->
+                              <a href="#" class="item__like">Добавить в избранное</a>
+                            </div>
+                            <div class="item__row">
+                              <h3 class="item__title">
+                                <a href="#">Юбка с высокой талией</a>
+                              </h3>
+                              <p class="item__price"> 6995р </p>
+                            </div>
+                            <div class="item__actions">
+                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                              <a href="03_item.html" class="btn btn-info">В корзину</a>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <a href="03_item.html" class="item__link">Пальто утепленное</a>
+                            <div class="item__row">
+                              <figure class="img-block">
+                                <img src="img/assets/item02.jpg" alt="" />
+                              </figure>
+                              <!-- <figure class="img-block"><img src="img/assets/item02.jpg" alt="" /></figure> -->
+                              <div class="item__type new">Распродажа</div>
+                              <a href="#" class="item__like">Добавить в избранное</a>
+                            </div>
+                            <div class="item__row">
+                              <h3 class="item__title">
+                                <a href="#">Пальто утепленное</a>
+                              </h3>
+                              <p class="item__price">
+                                <s>1995р</s>
+                                <span class="item__price--sale">9995р -30%</span>
+                              </p>
+                            </div>
+                            <div class="item__actions">
+                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                              <a href="03_item.html" class="btn btn-info">В корзину</a>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <a href="03_item.html" class="item__link">Яркое платье</a>
+                            <div class="item__row">
+                              <figure class="img-block">
+                                <img src="img/assets/item03.jpg" alt="" />
+                              </figure>
+                              <!-- <figure class="img-block"><img src="img/assets/item05.jpg" alt="" /></figure> -->
+                              <div class="item__type hit">Хит!</div>
+                              <a href="#" class="item__like">Добавить в избранное</a>
+                            </div>
+                            <div class="item__row">
+                              <h3 class="item__title">
+                                <a href="#">Яркое платье</a>
+                              </h3>
+                              <p class="item__price">
+                                <s>995р</s>
+                                <span class="item__price--sale">195р -90%</span>
+                              </p>
+                            </div>
+                            <div class="item__actions">
+                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                              <a href="03_item.html" class="btn btn-info">В корзину</a>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <a href="03_item.html" class="item__link">Юбка с высокой талией</a>
+                            <div class="item__row">
+                              <figure class="img-block">
+                                <img src="img/assets/item01.jpg" alt="" />
+                              </figure>
+                              <!-- <figure class="img-block"><img src="img/assets/item04.jpg" alt="" /></figure> -->
+                              <a href="#" class="item__like">Добавить в избранное</a>
+                            </div>
+                            <div class="item__row">
+                              <h3 class="item__title">
+                                <a href="#">Юбка с высокой талией</a>
+                              </h3>
+                              <p class="item__price"> 6995р </p>
+                            </div>
+                            <div class="item__actions">
+                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                              <a href="03_item.html" class="btn btn-info">В корзину</a>
+                            </div>
+                          </div>
+                          <div class="item">
                             <a href="03_item.html" class="item__link">Пальто утепленное</a>
                             <div class="item__row">
                               <figure class="img-block">
                                 <img src="img/assets/item05.jpg" alt="" />
                               </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item01.jpg" alt="" /></figure> -->
+                              <!-- <figure class="img-block"><img src="img/assets/item05.jpg" alt="" /></figure> -->
                               <div class="item__type new">Распродажа</div>
                               <a href="#" class="item__like">Добавить в избранное</a>
                             </div>
@@ -1411,12 +1380,33 @@
                             </div>
                           </div>
                           <div class="item">
+                            <a href="03_item.html" class="item__link">Яркое платье</a>
+                            <div class="item__row">
+                              <figure class="img-block">
+                                <img src="img/assets/item06.jpg" alt="" />
+                              </figure>
+                              <!-- <figure class="img-block"><img src="img/assets/item04.jpg" alt="" /></figure> -->
+                              <div class="item__type hit">Хит!</div>
+                              <a href="#" class="item__like">Добавить в избранное</a>
+                            </div>
+                            <div class="item__row">
+                              <h3 class="item__title">
+                                <a href="#">Яркое платье</a>
+                              </h3>
+                              <p class="item__price"> 995р </p>
+                            </div>
+                            <div class="item__actions">
+                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                              <a href="03_item.html" class="btn btn-info">В корзину</a>
+                            </div>
+                          </div>
+                          <div class="item">
                             <a href="03_item.html" class="item__link">Юбка с высокой талией</a>
                             <div class="item__row">
                               <figure class="img-block">
                                 <img src="img/assets/item04.jpg" alt="" />
                               </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item01.jpg" alt="" /></figure> -->
+                              <!-- <figure class="img-block"><img src="img/assets/item03.jpg" alt="" /></figure> -->
                               <a href="#" class="item__like">Добавить в избранное</a>
                             </div>
                             <div class="item__row">
@@ -1437,19 +1427,20 @@
                       <div class="row grid__catalog">
                         <div class="owl-carousel owl-theme owl-gallery" data-count="1|4|4">
                           <div class="item">
-                            <a href="03_item.html" class="item__link">Юбка с высокой талией</a>
+                            <a href="03_item.html" class="item__link">Пальто утепленное</a>
                             <div class="item__row">
                               <figure class="img-block">
-                                <img src="img/assets/item04.jpg" alt="" />
+                                <img src="img/assets/item05.jpg" alt="" />
                               </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item02.jpg" alt="" /></figure> -->
+                              <!-- <figure class="img-block"><img src="img/assets/item04.jpg" alt="" /></figure> -->
+                              <div class="item__type new">Распродажа</div>
                               <a href="#" class="item__like">Добавить в избранное</a>
                             </div>
                             <div class="item__row">
                               <h3 class="item__title">
-                                <a href="#">Юбка с высокой талией</a>
+                                <a href="#">Пальто утепленное</a>
                               </h3>
-                              <p class="item__price"> 6995р </p>
+                              <p class="item__price"> 1995р </p>
                             </div>
                             <div class="item__actions">
                               <a href="03_item.html" class="btn btn-default">Подробнее</a>
@@ -1462,7 +1453,7 @@
                               <figure class="img-block">
                                 <img src="img/assets/item02.jpg" alt="" />
                               </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item03.jpg" alt="" /></figure> -->
+                              <!-- <figure class="img-block"><img src="img/assets/item04.jpg" alt="" /></figure> -->
                               <div class="item__type new">Распродажа</div>
                               <a href="#" class="item__like">Добавить в избранное</a>
                             </div>
@@ -1505,20 +1496,19 @@
                             </div>
                           </div>
                           <div class="item">
-                            <a href="03_item.html" class="item__link">Пальто утепленное</a>
+                            <a href="03_item.html" class="item__link">Юбка с высокой талией</a>
                             <div class="item__row">
                               <figure class="img-block">
-                                <img src="img/assets/item05.jpg" alt="" />
+                                <img src="img/assets/item04.jpg" alt="" />
                               </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item01.jpg" alt="" /></figure> -->
-                              <div class="item__type new">Распродажа</div>
+                              <!-- <figure class="img-block"><img src="img/assets/item05.jpg" alt="" /></figure> -->
                               <a href="#" class="item__like">Добавить в избранное</a>
                             </div>
                             <div class="item__row">
                               <h3 class="item__title">
-                                <a href="#">Пальто утепленное</a>
+                                <a href="#">Юбка с высокой талией</a>
                               </h3>
-                              <p class="item__price"> 1995р </p>
+                              <p class="item__price"> 6995р </p>
                             </div>
                             <div class="item__actions">
                               <a href="03_item.html" class="btn btn-default">Подробнее</a>
@@ -1531,7 +1521,7 @@
                               <figure class="img-block">
                                 <img src="img/assets/item01.jpg" alt="" />
                               </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item03.jpg" alt="" /></figure> -->
+                              <!-- <figure class="img-block"><img src="img/assets/item02.jpg" alt="" /></figure> -->
                               <a href="#" class="item__like">Добавить в избранное</a>
                             </div>
                             <div class="item__row">
@@ -1560,6 +1550,50 @@
                                 <a href="#">Яркое платье</a>
                               </h3>
                               <p class="item__price"> 995р </p>
+                            </div>
+                            <div class="item__actions">
+                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                              <a href="03_item.html" class="btn btn-info">В корзину</a>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <a href="03_item.html" class="item__link">Пальто утепленное</a>
+                            <div class="item__row">
+                              <figure class="img-block">
+                                <img src="img/assets/item02.jpg" alt="" />
+                              </figure>
+                              <!-- <figure class="img-block"><img src="img/assets/item02.jpg" alt="" /></figure> -->
+                              <div class="item__type new">Распродажа</div>
+                              <a href="#" class="item__like">Добавить в избранное</a>
+                            </div>
+                            <div class="item__row">
+                              <h3 class="item__title">
+                                <a href="#">Пальто утепленное</a>
+                              </h3>
+                              <p class="item__price">
+                                <s>1995р</s>
+                                <span class="item__price--sale">9995р -30%</span>
+                              </p>
+                            </div>
+                            <div class="item__actions">
+                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                              <a href="03_item.html" class="btn btn-info">В корзину</a>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <a href="03_item.html" class="item__link">Юбка с высокой талией</a>
+                            <div class="item__row">
+                              <figure class="img-block">
+                                <img src="img/assets/item04.jpg" alt="" />
+                              </figure>
+                              <!-- <figure class="img-block"><img src="img/assets/item03.jpg" alt="" /></figure> -->
+                              <a href="#" class="item__like">Добавить в избранное</a>
+                            </div>
+                            <div class="item__row">
+                              <h3 class="item__title">
+                                <a href="#">Юбка с высокой талией</a>
+                              </h3>
+                              <p class="item__price"> 6995р </p>
                             </div>
                             <div class="item__actions">
                               <a href="03_item.html" class="btn btn-default">Подробнее</a>
@@ -1591,6 +1625,27 @@
                             </div>
                           </div>
                           <div class="item">
+                            <a href="03_item.html" class="item__link">Яркое платье</a>
+                            <div class="item__row">
+                              <figure class="img-block">
+                                <img src="img/assets/item06.jpg" alt="" />
+                              </figure>
+                              <!-- <figure class="img-block"><img src="img/assets/item02.jpg" alt="" /></figure> -->
+                              <div class="item__type hit">Хит!</div>
+                              <a href="#" class="item__like">Добавить в избранное</a>
+                            </div>
+                            <div class="item__row">
+                              <h3 class="item__title">
+                                <a href="#">Яркое платье</a>
+                              </h3>
+                              <p class="item__price"> 995р </p>
+                            </div>
+                            <div class="item__actions">
+                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                              <a href="03_item.html" class="btn btn-info">В корзину</a>
+                            </div>
+                          </div>
+                          <div class="item">
                             <a href="03_item.html" class="item__link">Пальто утепленное</a>
                             <div class="item__row">
                               <figure class="img-block">
@@ -1612,77 +1667,12 @@
                             </div>
                           </div>
                           <div class="item">
-                            <a href="03_item.html" class="item__link">Пальто утепленное</a>
-                            <div class="item__row">
-                              <figure class="img-block">
-                                <img src="img/assets/item02.jpg" alt="" />
-                              </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item03.jpg" alt="" /></figure> -->
-                              <div class="item__type new">Распродажа</div>
-                              <a href="#" class="item__like">Добавить в избранное</a>
-                            </div>
-                            <div class="item__row">
-                              <h3 class="item__title">
-                                <a href="#">Пальто утепленное</a>
-                              </h3>
-                              <p class="item__price">
-                                <s>1995р</s>
-                                <span class="item__price--sale">9995р -30%</span>
-                              </p>
-                            </div>
-                            <div class="item__actions">
-                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                              <a href="03_item.html" class="btn btn-info">В корзину</a>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <a href="03_item.html" class="item__link">Юбка с высокой талией</a>
-                            <div class="item__row">
-                              <figure class="img-block">
-                                <img src="img/assets/item04.jpg" alt="" />
-                              </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item05.jpg" alt="" /></figure> -->
-                              <a href="#" class="item__like">Добавить в избранное</a>
-                            </div>
-                            <div class="item__row">
-                              <h3 class="item__title">
-                                <a href="#">Юбка с высокой талией</a>
-                              </h3>
-                              <p class="item__price"> 6995р </p>
-                            </div>
-                            <div class="item__actions">
-                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                              <a href="03_item.html" class="btn btn-info">В корзину</a>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <a href="03_item.html" class="item__link">Яркое платье</a>
-                            <div class="item__row">
-                              <figure class="img-block">
-                                <img src="img/assets/item06.jpg" alt="" />
-                              </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item03.jpg" alt="" /></figure> -->
-                              <div class="item__type hit">Хит!</div>
-                              <a href="#" class="item__like">Добавить в избранное</a>
-                            </div>
-                            <div class="item__row">
-                              <h3 class="item__title">
-                                <a href="#">Яркое платье</a>
-                              </h3>
-                              <p class="item__price"> 995р </p>
-                            </div>
-                            <div class="item__actions">
-                              <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                              <a href="03_item.html" class="btn btn-info">В корзину</a>
-                            </div>
-                          </div>
-                          <div class="item">
                             <a href="03_item.html" class="item__link">Юбка с высокой талией</a>
                             <div class="item__row">
                               <figure class="img-block">
                                 <img src="img/assets/item01.jpg" alt="" />
                               </figure>
-                              <!-- <figure class="img-block"><img src="img/assets/item05.jpg" alt="" /></figure> -->
+                              <!-- <figure class="img-block"><img src="img/assets/item04.jpg" alt="" /></figure> -->
                               <a href="#" class="item__like">Добавить в избранное</a>
                             </div>
                             <div class="item__row">

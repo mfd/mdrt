@@ -122,6 +122,51 @@
             +sm
                 left: 60%;
                 bottom: 10%;
+        $like_btn: 40px;
+        &__itemPic-like
+            position: absolute;
+            left: 85%;
+            top: 3%;
+            +md
+                left: 90%;
+                top: 5%;
+            +sm
+                left: 60%;
+                top: 5%;
+        &__itemPic-like
+            text-indent: -1984px;
+            width: $like_btn;
+            height: $like_btn;
+            overflow: hidden;
+            z-index: 100;
+            +pseudo
+            &:before, &:after
+                width: $like_btn;
+                height: $like_btn;
+
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: 50%;
+                transition: opacity .35s cubic-bezier(0, 0, 0.58, 1), transform 500ms cubic-bezier(.17,.67,.6,1.3);
+
+            &:before
+                background-image: url("data:image/svg+xml,%3Csvg width='15' height='14' viewBox='0 0 15 14' fill='%23000' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.4773 4.21974L14.4788 4.2366L14.4814 4.25331C14.4893 4.3029 14.56 4.7992 14.3607 5.64617L14.3607 5.64632C14.074 6.86614 13.4109 7.98083 12.4355 8.86873L7.45798 13.3263L2.56602 8.86988L2.56574 8.86962C1.5897 7.98186 0.926112 6.86644 0.639271 5.64629L0.639249 5.6462C0.439827 4.79863 0.510762 4.30267 0.518597 4.25427L0.521408 4.23691L0.522992 4.21938C0.723332 2.00297 2.2601 0.5 4.08423 0.5C5.29411 0.5 6.38394 1.14777 7.02646 2.25144L7.45384 2.98554L7.88824 2.25558C8.53472 1.16925 9.67722 0.500286 10.9157 0.500286C12.7401 0.500286 14.2766 2.00326 14.4773 4.21974Z' transform='translate%2815%29 scale%28-1 1%29' stroke='%23333333'/%3E%3C/svg%3E%0A");
+            &:after
+                background-image: url("data:image/svg+xml,%3Csvg width='15' height='14' viewBox='0 0 15 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.4773 4.21974L14.4788 4.2366L14.4814 4.25331C14.4893 4.3029 14.56 4.7992 14.3607 5.64617L14.3607 5.64632C14.074 6.86614 13.4109 7.98083 12.4355 8.86873L7.45798 13.3263L2.56602 8.86988L2.56574 8.86962C1.5897 7.98186 0.926112 6.86644 0.639271 5.64629L0.639249 5.6462C0.439827 4.79863 0.510762 4.30267 0.518597 4.25427L0.521408 4.23691L0.522992 4.21938C0.723332 2.00297 2.2601 0.5 4.08423 0.5C5.29411 0.5 6.38394 1.14777 7.02646 2.25144L7.45384 2.98554L7.88824 2.25558C8.53472 1.16925 9.67722 0.500286 10.9157 0.500286C12.7401 0.500286 14.2766 2.00326 14.4773 4.21974Z' transform='translate%2815%29 scale%28-1 1%29' stroke='%23333333'/%3E%3C/svg%3E%0A");
+            &:before
+                opacity: 0;
+            &.active:before,
+            &:hover:before
+                opacity: 1;
+            &.active:after,
+            &:hover:after
+                opacity: 0;
+
+            &:active:before
+                transform: scale(.6);
+            &:active:after
+                //transform: scale(9);
+                opacity: 0
 
         &__desc
 
@@ -177,6 +222,7 @@
                     padding-right: 15px;
                     padding-left: 35px;
                     min-width: initial;
+                    text-transform: initial;
                 &:active
                     transform: scale(0.95);
 
@@ -220,6 +266,8 @@
             padding: 1em;
             color: #ABABAB;
             font-size: 14px;
+            +sm
+                margin: 0
             th, td
                 border: 1px solid #ccc;
                 padding: .25em .5em;
@@ -277,8 +325,3 @@
                     width: 100%
                     margin-left: 0;
 
-        .btn
-            float: right;
-            +sm
-                float: none;
-                margin: 0 auto;

@@ -4,14 +4,26 @@
         +md
             flex-wrap: wrap
             flex-direction: column;
+            //display: block;
         .order-full
             flex-grow: 1;
             margin-right: 20px;
-            display: block;
+            display: flex;
+            +md
+                margin-right: 0;
             .page__row
                 flex-direction: column;
+                width: 100%;
                 .itemtotal__col
                     width: initial;
+                .item__totalWrap
+                    width: 50%;
+                    float: right;
+                    +md
+                        margin-top: -1em
+                    +sm
+                        width: 100%;
+                        margin-top: 0
         .order-submenu
             width: 300px;
             +sm
@@ -101,13 +113,7 @@
             margin: 10px 0;
             font-size: 16px;
             .btn
-                margin: 10px 0;
-                margin-bottom: 0;
-                padding: 10px 15px;
-                font-size: 16px;
-                line-height: initial;
-                height: initial;
-                float: right;
+
             &.isDisabled
                 +nosel
                 +pseudo
@@ -118,6 +124,9 @@
                     right: -1;
                     bottom: -1;
                     z-index: 10;
+        .b-growl
+            +sm
+                display: none
         .b-promocode
             h6
                 font-size: 16px;
@@ -173,8 +182,6 @@
                                     margin-top: 10px;
                                     font-weight: normal;
                                     display: none
-
-
                             &:checked
                                 + span
                                     .vipcart-item__title
@@ -182,12 +189,45 @@
                                     .vipcard__bonuses
                                         display: block
                                         font-weight: normal;
+                                    .vipcard__bonuses
+                                        display: flex
+                                        flex-wrap: wrap
+                                        flex-direction: column;
+                                        width: 220px;
+                                        +md
+                                            width: 200px;
+                                        .bon-total,
+                                        .bon-slider,
+                                        .bon-use
+                                            margin-bottom: 1em;
+                                        .bon-slider
+                                            margin-bottom: 1em;
+                                        .bon-use
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-between;
+                                            justify-content: flex-end;
+                                            align-content: flex-start;
+                                            .bon-current
+                                                margin-right: 10px;
+                                                width: 100px;
+                                                +sm
+                                                    font-size: 13px;
+                                            .btn
+                                                //font-size: 16px;
+                                                padding: 0 15px;
+                                                margin: 10px -15px -5px 0
+                                                +sm
+                                                    margin: 10px;
 
         .b-growl
             color: #fff;
             background: #333333;
             box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.5);
-            margin: 100px 0;
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            width: 300px;
             h6, p
                 color: #fff;
                 font-weight: 300

@@ -136,11 +136,13 @@
 
   .b-stores-list
       .store-city
-          padding: .5em 1em;
+          padding: 0;
           &__item
-              //padding: 0 1em;
-              margin-bottom: 1em;
+              padding: .5em 1em;
+              //margin-bottom: 1em;
               display: block;
+              &.isActive
+                background: #f5f5f5;
           &__name
               font-size: 16px;
               font-weight: normal;

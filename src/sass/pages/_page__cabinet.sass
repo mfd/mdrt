@@ -79,10 +79,11 @@
         .btn__row
             +clr
             margin-left: 0
+            display: flex;
             +md
                 margin: 0;
 
-        
+
 
 .pageCabinet .tabs-cabinet,
 .ordernow .ordernow-steps__content
@@ -150,7 +151,7 @@
         flex-wrap: wrap;
         margin-top: 20px;
         .b-order-card
-            flex: 1 48%;
+            flex: 0 48%;
             min-width: 0;
             margin: 2%;
             margin-top: 0;
@@ -204,9 +205,10 @@
                     font-size: 14px;
                     padding: 0 10px;
                     margin: 0
-                    width: 50px
+                    min-width: 50px
                     +sm
-                        width: initial;
+                        width: 320px;
+                        text-transform: initial;
 
 // Состояние заказов - Подробнее
 .order-full
@@ -314,8 +316,21 @@
     &__item-tovarprice
         display: flex;
         flex-direction: row
+        div:nth-child(1)
+            flex: 0 0 80px;
+        div:nth-child(2)
+           flex: 0 0 160px;
+           margin: 0 5% 0 0;
+           @media (min-width: 1150px)
+             flex: 0 0 220px;
+           +md
+            margin: 10px 0;
+        div:nth-child(3)
+           flex: 0 0 100px;
         +md
             flex-direction: column
+            div
+                flex-basis: 0!important;
 
     &__item
         &-col
@@ -396,6 +411,7 @@
             display: flex;
             align-items: flex-start;
             flex-direction: row
+            justify-content: flex-end;
 
             color: #949494;
             font-size: 16px;
@@ -405,16 +421,25 @@
         &__title
             margin-right: 10px;
             //width: 120px;
-            width: 60%;
+            width: 30%;
             +sm
                 text-align: right;
                 width: 50%;
+            .btn
+                //padding: 0 20px;
+                &-buyexpress
+                    @extend .btn_default
+                    color: #333333;
+                    border-color: #333;
+                    &:hover
+                        color: #333333;
         &__value
             color: #333333;
             +sm
                 text-align: left;
                 width: 50%;
-
+            .btn
+                padding: 0 20px;
 
         &__col.col1
             .itemtotal__list
@@ -424,18 +449,18 @@
             .itemtotal__title
                 margin-right: 10px;
                 text-align: right;
-                width: 50%;
+                //width: 80%;
                 padding-right: 5px;
                 +sm
                     width: 50%;
             .itemtotal__value
-                width: 50%
+                flex: 0 0 125px;
                 +sm
                     width: initial;
                     width: 50%;
                 .btn
                     +md
-                        padding: 0;
+                        padding: 0 10px;
         &__col
             .black
                 color: #333333;
@@ -447,38 +472,44 @@
             .bold
                 font-weight: 700
     // Лояльность
-    .loyalty
-        .check_card
-            display: flex;
-            .form-control
-                border: 1px solid #BDBDBD;
-                border-top-right-radius: 0;
-                border-bottom-right-radius: 0;
-                border-radius: 5px 0 0 5px;
-                margin: 0;
-                font-size: 14px;
-                width: 220px;
-                +sm
-                    width: 150px;
-                &:focus
-                    padding: 0 10px;
-            .btn
-                margin-left: -10px;
-                border-radius: 0 5px 5px 0;
+.loyalty
+    .check_card
+        display: flex;
+        .form-control
+            border: 1px solid #BDBDBD;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-radius: 5px 0 0 5px;
+            margin: 0;
+            font-size: 14px;
+            width: 220px;
+            +sm
+                width: 150px;
+            &:focus
                 padding: 0 10px;
-                font-size: 12px;
-        .table
-            caption
-                font-size: 16px;
-                color: #333333;
-                span.bonus-count
-                    float: right;
-                    display: block;
-                    margin-bottom: 1em;
-                    +sm
-                        float: none;
-            th
-                text-align: left;
-                font-weight: normal;
-            td
-                font-size: 14px;
+        .form-control
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+        .btn
+            margin-left: -10px;
+            border-radius: 0 5px 5px 0;
+            padding: 0 10px;
+            font-size: 12px;
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+            padding: 0 15px;
+    .table
+        caption
+            font-size: 16px;
+            color: #333333;
+            span.bonus-count
+                float: right;
+                display: block;
+                margin-bottom: 1em;
+                +sm
+                    float: none;
+        th
+            text-align: left;
+            font-weight: normal;
+        td
+            font-size: 14px;

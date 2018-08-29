@@ -212,8 +212,8 @@
 .grid__catalog
     .owl-gallery
         .item
-            //width: 100%
-            width: 290px;
+            width: 100%
+            //width: 290px;
             //height: 250px;
     .owl-carousel .owl-nav
         bottom: initial;
@@ -227,29 +227,34 @@
     font-size: 16px;
     margin-top: .5em;
     margin-left: -10px
-    .catalog__sort-item
+    .page__title-left &
         float: left;
-        margin-right: 2em;
-        list-style: none;
-        margin-bottom: 0;
-        a
-            color: #ABABAB;
-            +pseudo
+        margin-left: 10px;
+.catalog__sort-item
+    float: left;
+    margin-left: 5px;
+    margin-right: 2em;
+    list-style: none;
+    margin-bottom: 0;
+    a
+        color: #ABABAB;
+        +pseudo
+        &:after
+            +menuArrow
+            transform: rotate(45deg) scale(.6);
+            border-color: #ABABAB
+        &.clear
             &:after
-                +menuArrow
-                transform: rotate(45deg) scale(.6);
-                border-color: #ABABAB
-            &.clear
-                &:after
-                    display: none;
-        .js-toggle-dropdown
-            a
-                font-size: 90%;
-                color: #333;
-                &:after
-                    display: none;
-
-
+                display: none;
+        &[aria-expanded="true"]:after
+            transform: rotate(-135deg) scale(.6);
+    .js-toggle-dropdown
+        a
+            font-size: 90%;
+            color: #333;
+            &:after
+                display: none;
+.catalog__sort
     .active
         a
             color: #333333;
@@ -277,12 +282,6 @@
         height: 100px;
         height: 30px;
         margin: 0;
-    .btn
-        @extend .btn_sm
-        margin: 1em 0
-        padding: 0 10px;
-        height: 25px;
-        line-height: 25px;
 
 
 .grid__catalog--col3
@@ -291,3 +290,26 @@
 .grid__catalog--col2
     .item
         width: 49%
+
+
+.catalog__sort
+    .input
+        input
+            font-size: 12px;
+            padding: 0 10px;
+            line-height: 35px;
+            height: 35px;
+            margin-top: -7px;
+            &::placeholder
+                color: #ABABAB;
+    .btn
+        @extend .btn_sm
+        margin: 1em 0
+        padding: 0 10px;
+        height: 25px;
+        line-height: 25px;
+
+.page__title-left
+    .catalog__sort
+        &-item
+            margin: 0;

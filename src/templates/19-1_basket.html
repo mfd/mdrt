@@ -3,6 +3,7 @@ title: Корзина
 breadCrumbsItems: ['Главная','Корзина']
 footerWide: true
 isLogged: true
+barbaNameSpace: basket
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -55,7 +56,7 @@ isLogged: true
                                         <dd class="item__value">
                                             <div class="order-full__item-quantity" data-module="incrementer">
                                                 <button class="input-quantity js-decrement is-disabled" type="button">&lsaquo;</button>
-                                                <input class="input-quantity js-input" type="text" value="1" min="1" max="10">
+                                                <input class="input-quantity js-input" type="text" value="1" min="1" max="10" />
                                                 <button class="input-quantity js-increment" type="button">&rsaquo;</button>
                                             </div>
                                         </dd>
@@ -95,30 +96,31 @@ isLogged: true
                         </ul>
                     </div>
                     <div class="itemtotal__col col1">
-                      <dl class="itemtotal__list">
-                        <dt class="itemtotal__title black">Общая стоимость товаров без скидки:</dt>
-                        <dd class="itemtotal__value">25 995 р.</dd>
-                      </dl>
-                      <dl class="itemtotal__list">
-                        <dt class="itemtotal__title"><a href="#" class="dotted">Сумма скидок:</a></dt>
-                        <dd class="itemtotal__value gray">1 102 р.</dd>
-                      </dl>
-                      <dl class="itemtotal__list">
-                        <dt class="itemtotal__title black">Оплата бонусами:</dt>
-                        <dd class="itemtotal__value">24 995 р.</dd>
-                      </dl>
-                      <dl class="itemtotal__list">
-                        <dt class="itemtotal__title black">Итого:</dt>
-                        <dd class="itemtotal__value bold">24 995 р.</dd>
-                      </dl>
-                      <dl class="itemtotal__list">
-                          <dt class="itemtotal__title">
-                            <a href="#" class="btn btn_default">Быстрая покупка</a>
-                          </dt>
-                          <dd class="itemtotal__value">
-                            <a href="#" class="btn btn-ok">Оформить заказ</a>
-                          </dd>
-                        </dl>
+                          <dl class="itemtotal__list">
+                            <dt class="itemtotal__title black">Общая стоимость товаров без скидки:</dt>
+                            <dd class="itemtotal__value">25 995 р.</dd>
+                          </dl>
+                          <dl class="itemtotal__list">
+                            <dt class="itemtotal__title"><a href="#" class="dotted">Сумма скидок:</a></dt>
+                            <dd class="itemtotal__value gray">1 102 р.</dd>
+                          </dl>
+                          <dl class="itemtotal__list">
+                            <dt class="itemtotal__title black">Оплата бонусами:</dt>
+                            <dd class="itemtotal__value">24 995 р.</dd>
+                          </dl>
+                          <dl class="itemtotal__list">
+                            <dt class="itemtotal__title black">Итого:</dt>
+                            <dd class="itemtotal__value bold">24 995 р.</dd>
+                          </dl>
+                          <dl class="itemtotal__list">
+                              <dt class="itemtotal__title">
+                                <a href="31-modal_quickbuy.html" class="btn quickbuy btn-buyexpress js-popuplink">Быстрая покупка</a>
+                              </dt>
+                              <dd class="itemtotal__value">
+                                <a href="#" class="btn btn-ok">Оформить заказ</a>
+                              </dd>
+                            </dl>
+
                     </div>
                 </div>
             </div>
@@ -146,10 +148,12 @@ isLogged: true
                             <input type="radio" name="card" value="1" checked />
                             <span>
                                 <span class="vipcart-item__title">Использовать скидку по VIP-карте</span>
-                                <span class="vipcard__bonuses">
-                                    15% от суммы заказа кроме товаров со скидкой
-                                    <a href="#" class="btn btn-ok">Использовать</a>
-                                </span>
+                                <div class="vipcard__bonuses">
+                                    <div class="bon-total">15% от суммы заказа кроме товаров со скидкой</div>
+                                    <div class="bon-use">
+                                        <a href="#" class="btn btn-ok">Использовать</a>
+                                    </div>
+                                </div>
 
                             </span>
                           </label>
@@ -161,10 +165,14 @@ isLogged: true
                             <input type="radio" name="card" value="2" />
                             <span>
                                 <span class="vipcart-item__title">Использовать бонусы</span>
-                                <span class="vipcard__bonuses">
-                                    У вас есть: 1200 бонусов
-                                    <a href="#" class="btn btn-ok">Использовать</a>
-                                </span>
+                                <div id="bonus-slider" class="vipcard__bonuses" data-total="1200">
+                                    <div class="bon-total">У вас есть: 1200 бонусов</div>
+                                    <div class="bon-slider"><div class="slider-ui"></div></div>
+                                    <div class="bon-use">
+                                        <span class="bon-current">1200</span>
+                                        <a href="#" class="btn btn-ok">Использовать</a>
+                                    </div>
+                                </div>
                             </span>
                           </label>
                         </div>

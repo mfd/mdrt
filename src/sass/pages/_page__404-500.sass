@@ -33,3 +33,42 @@
                 top: initial;
         h1
             line0height
+
+.p404
+    margin-bottom: 0;
+    padding-bottom: 0;
+    //height: 100%;
+    position: relative;
+    &__wrap
+        height: 50%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        +sm
+            width: 100%;
+    +pseudo
+    &:after
+        background: url('../img/assets/model01_alpha.png') no-repeat;
+        position: absolute;
+        top: initial;
+        left: initial;
+        bottom: 0;
+        right: 5%;
+        width: 370px
+        height: 540px
+        opacity: .5
+        +md
+            width: 260px
+            height: 440px
+            background-size: cover
+            right: 0
+        +sm
+            display: none;
+    &__title
+        font-size: 36px;
+        font-weight: bold;
+    &__lead
+        font-size: 24px;
+        color: #333333;
+        font-weight: normal;

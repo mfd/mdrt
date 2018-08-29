@@ -143,7 +143,6 @@ export default class MapStores {
     };
     this.map.addMarkers(markers_data);
     this.map.fitLatLngBounds(markers_data);
-    debugger;
     console.log('map', this.map);
 
     $(document).on('click', '.store-city__item', function(e) {
@@ -151,7 +150,7 @@ export default class MapStores {
       var position, lat, lng, $index;
       // debugger;
       $index = $(this).data('marker-index');
-
+      $(this).addClass('isActive').siblings().removeClass('isActive');
       //position = map.markers[$index].getPosition();
 
       //lat = position.lat();
@@ -164,27 +163,27 @@ export default class MapStores {
       e.preventDefault();
     });
 
-  
+
     $(document).on('change', '.select-store select', function() {
       var val = this.value;
       console.log('val', val);
       if (val !== '0') {
-        for (let i = 0; i < markers_data.length; i++) {         
+        for (let i = 0; i < markers_data.length; i++) {
           let marker = markers_data[i];
-      
+
           if(marker.city === val) {
             selfMap.setCenter(marker.lat, marker.lng);
             selfMap.setZoom(12);
             //marker.setVisible(true);
           }
-        }   
+        }
       } else {
         selfMap.setZoom(4);
       }
     });
-  
 
-    
+
+
   }
   destroy() {
     console.log('destroy map');

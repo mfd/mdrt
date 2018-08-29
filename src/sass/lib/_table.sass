@@ -1,0 +1,48 @@
+/* Mobile */
++sm
+  table.js-table
+    margin-bottom: 0
+
+  .pinned
+    position: absolute
+    left: 0
+    top: 0
+    background: #fff
+    width: 35%
+    overflow: hidden
+    overflow-x: scroll
+    border-right: 1px solid #ccc
+    //border-left: 1px solid #ccc
+    table
+      border-right: none
+      border-left: none
+      width: 100%
+      th, td
+        white-space: nowrap
+    td:last-child
+      border-bottom: 0
+  div.table-wrapper
+    position: relative
+    margin-bottom: 20px
+    overflow: hidden
+    border-right: 1px solid #ccc
+    div.scrollable
+      table
+        margin-left: 35%
+      overflow: scroll
+      overflow-y: hidden
+
+
+  .scrollable table
+    td
+      position: relative
+      white-space: nowrap
+      overflow: hidden
+    th
+      position: relative
+      white-space: nowrap
+      overflow: hidden
+      &:first-child
+        display: none
+    td:first-child, &.pinned td
+      display: none
