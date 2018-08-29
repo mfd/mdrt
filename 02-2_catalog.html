@@ -25,117 +25,119 @@
           <span>Madyart</span>
           <small>Интернет-магазин женской одежды</small>
         </a>
-        <div class="location"> Выбор города:
-          <a href="#" class="location--change">
+        <div class="js-dropdown location"> Выбор города:
+          <a href="#" class="js-toggle location--change" aria-expanded="false" aria-controls="locationSelector">
             <i class="fa fa-map-marker"></i>
             <span class="location__name">Москва и Московская область</span>
           </a>
-          <div class="location__choose">
-            <h5 class="location__choose-title">Выберите свой город</h5>
-            <ul class="location__choose-location">
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" checked name="selectLocation" />
-                    <span>Москва</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Екатеринбург</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Уфа</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Нижний Новгород</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Пермь</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Ростов-на-Дону</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Самара</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Стерлитамак</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Сургут</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Тольятти</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Тюмень</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item is-active">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Челябинск</span>
-                  </label>
-                </div>
-              </li>
-            </ul>
-            <h5 class="location__choose-title">Или укажите в поле</h5>
-            <div class="input">
-              <input type="text" class="input__short" placeholder="Введите название города" />
-              <button class="btn">Выбрать</button>
-            </div>
-            <div class="location__choose-close btn-close">Закрыть</div>
+          <div id="locationSelector" class="js-toggle-dropdown js-dropdown-form location__choose">
+            <a href="#" class="js-dropdown-close"></a>
+            <form class="form">
+              <h5 class="js-dropdown-form__title location__choose-title">Выберите свой город</h5>
+              <ul class="location__choose-location">
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" checked name="selectLocation" />
+                      <span>Москва</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Екатеринбург</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Уфа</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Нижний Новгород</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Пермь</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Ростов-на-Дону</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Самара</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Стерлитамак</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Сургут</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Тольятти</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Тюмень</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item is-active">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Челябинск</span>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+              <h5 class="location__choose-title">Или укажите в поле</h5>
+              <div class="input">
+                <input type="text" class="input__short" placeholder="Введите название города" />
+                <button class="btn">Выбрать</button>
+              </div>
+            </form>
           </div>
         </div>
         <ul class="breadcrumbs">
@@ -149,13 +151,13 @@
         <div class="header__right">
           <div class="userArea">
             <div class="userArea__sign js-dropdown">
-              <a href="#" class="js-toggle" aria-expanded="false" aria-controls="dropdown-userarea">
+              <a href="#" class="js-toggle" aria-expanded="false" aria-controls="dropdown-userarea2">
                 <svg class="icon icon-sign">
                   <use xlink:href="img/sprite.svg#icon-sign"></use>
                 </svg>
                 <span class="userArea__sign-title">Вход / Регистрация</span>
               </a>
-              <div class="b-login-form" id="dropdown-userarea">
+              <div class="b-login-form" id="dropdown-userarea2">
                 <div class="b-login-form-wrap">
                   <h3 class="b-login-form__title">Вход</h3>
                   <a href="17-3_cabinet_reg.html" class="b-login-form--register">У меня нет учетной записи</a>
@@ -175,9 +177,6 @@
                 </div>
               </div>
             </div>
-            <!--
-
-                    -->
             <a href="16-4_cabinet_isbrannoe.html" class="userArea__like">
               <span class="userArea__like-title">Избранное</span>
               <svg class="icon icon-like">
@@ -187,7 +186,7 @@
             </a>
           </div>
           <div class="basket">
-            <a href="#" class="basket--order">
+            <a href="19-1_basket.html" class="basket--order">
               <span class="basket-title">Оформить заказ</span>
               <span class="basket--count">15</span>
             </a>
@@ -418,6 +417,116 @@
                 <a href="03_item.html" class="item__link">Юбка с высокой талией</a>
                 <div class="item__row">
                   <figure class="img-block">
+                    <img src="img/assets/item04.jpg" alt="" />
+                  </figure>
+                  <!-- <figure class="img-block"><img src="img/assets/item02.jpg" alt="" /></figure> -->
+                  <a href="#" class="item__like">Добавить в избранное</a>
+                </div>
+                <div class="item__row">
+                  <h3 class="item__title">
+                    <a href="#">Юбка с высокой талией</a>
+                  </h3>
+                  <p class="item__price"> 6995р </p>
+                </div>
+                <div class="item__actions">
+                  <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                  <a href="03_item.html" class="btn btn-info">В корзину</a>
+                </div>
+              </div>
+              <div class="item">
+                <a href="03_item.html" class="item__link">Яркое платье</a>
+                <div class="item__row">
+                  <figure class="img-block">
+                    <img src="img/assets/item03.jpg" alt="" />
+                  </figure>
+                  <!-- <figure class="img-block"><img src="img/assets/item02.jpg" alt="" /></figure> -->
+                  <div class="item__type hit">Хит!</div>
+                  <a href="#" class="item__like">Добавить в избранное</a>
+                </div>
+                <div class="item__row">
+                  <h3 class="item__title">
+                    <a href="#">Яркое платье</a>
+                  </h3>
+                  <p class="item__price">
+                    <s>995р</s>
+                    <span class="item__price--sale">195р -90%</span>
+                  </p>
+                </div>
+                <div class="item__actions">
+                  <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                  <a href="03_item.html" class="btn btn-info">В корзину</a>
+                </div>
+              </div>
+              <div class="item">
+                <a href="03_item.html" class="item__link">Пальто утепленное</a>
+                <div class="item__row">
+                  <figure class="img-block">
+                    <img src="img/assets/item02.jpg" alt="" />
+                  </figure>
+                  <!-- <figure class="img-block"><img src="img/assets/item01.jpg" alt="" /></figure> -->
+                  <div class="item__type new">Распродажа</div>
+                  <a href="#" class="item__like">Добавить в избранное</a>
+                </div>
+                <div class="item__row">
+                  <h3 class="item__title">
+                    <a href="#">Пальто утепленное</a>
+                  </h3>
+                  <p class="item__price">
+                    <s>1995р</s>
+                    <span class="item__price--sale">9995р -30%</span>
+                  </p>
+                </div>
+                <div class="item__actions">
+                  <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                  <a href="03_item.html" class="btn btn-info">В корзину</a>
+                </div>
+              </div>
+              <div class="item">
+                <a href="03_item.html" class="item__link">Пальто утепленное</a>
+                <div class="item__row">
+                  <figure class="img-block">
+                    <img src="img/assets/item05.jpg" alt="" />
+                  </figure>
+                  <!-- <figure class="img-block"><img src="img/assets/item04.jpg" alt="" /></figure> -->
+                  <div class="item__type new">Распродажа</div>
+                  <a href="#" class="item__like">Добавить в избранное</a>
+                </div>
+                <div class="item__row">
+                  <h3 class="item__title">
+                    <a href="#">Пальто утепленное</a>
+                  </h3>
+                  <p class="item__price"> 1995р </p>
+                </div>
+                <div class="item__actions">
+                  <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                  <a href="03_item.html" class="btn btn-info">В корзину</a>
+                </div>
+              </div>
+              <div class="item">
+                <a href="03_item.html" class="item__link">Яркое платье</a>
+                <div class="item__row">
+                  <figure class="img-block">
+                    <img src="img/assets/item06.jpg" alt="" />
+                  </figure>
+                  <!-- <figure class="img-block"><img src="img/assets/item01.jpg" alt="" /></figure> -->
+                  <div class="item__type hit">Хит!</div>
+                  <a href="#" class="item__like">Добавить в избранное</a>
+                </div>
+                <div class="item__row">
+                  <h3 class="item__title">
+                    <a href="#">Яркое платье</a>
+                  </h3>
+                  <p class="item__price"> 995р </p>
+                </div>
+                <div class="item__actions">
+                  <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                  <a href="03_item.html" class="btn btn-info">В корзину</a>
+                </div>
+              </div>
+              <div class="item">
+                <a href="03_item.html" class="item__link">Юбка с высокой талией</a>
+                <div class="item__row">
+                  <figure class="img-block">
                     <img src="img/assets/item01.jpg" alt="" />
                   </figure>
                   <!-- <figure class="img-block"><img src="img/assets/item05.jpg" alt="" /></figure> -->
@@ -480,32 +589,12 @@
                 </div>
               </div>
               <div class="item">
-                <a href="03_item.html" class="item__link">Юбка с высокой талией</a>
-                <div class="item__row">
-                  <figure class="img-block">
-                    <img src="img/assets/item04.jpg" alt="" />
-                  </figure>
-                  <!-- <figure class="img-block"><img src="img/assets/item01.jpg" alt="" /></figure> -->
-                  <a href="#" class="item__like">Добавить в избранное</a>
-                </div>
-                <div class="item__row">
-                  <h3 class="item__title">
-                    <a href="#">Юбка с высокой талией</a>
-                  </h3>
-                  <p class="item__price"> 6995р </p>
-                </div>
-                <div class="item__actions">
-                  <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                  <a href="03_item.html" class="btn btn-info">В корзину</a>
-                </div>
-              </div>
-              <div class="item">
                 <a href="03_item.html" class="item__link">Яркое платье</a>
                 <div class="item__row">
                   <figure class="img-block">
                     <img src="img/assets/item03.jpg" alt="" />
                   </figure>
-                  <!-- <figure class="img-block"><img src="img/assets/item05.jpg" alt="" /></figure> -->
+                  <!-- <figure class="img-block"><img src="img/assets/item03.jpg" alt="" /></figure> -->
                   <div class="item__type hit">Хит!</div>
                   <a href="#" class="item__like">Добавить в избранное</a>
                 </div>
@@ -517,117 +606,6 @@
                     <s>995р</s>
                     <span class="item__price--sale">195р -90%</span>
                   </p>
-                </div>
-                <div class="item__actions">
-                  <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                  <a href="03_item.html" class="btn btn-info">В корзину</a>
-                </div>
-              </div>
-              <div class="item">
-                <a href="03_item.html" class="item__link">Яркое платье</a>
-                <div class="item__row">
-                  <figure class="img-block">
-                    <img src="img/assets/item06.jpg" alt="" />
-                  </figure>
-                  <!-- <figure class="img-block"><img src="img/assets/item04.jpg" alt="" /></figure> -->
-                  <div class="item__type hit">Хит!</div>
-                  <a href="#" class="item__like">Добавить в избранное</a>
-                </div>
-                <div class="item__row">
-                  <h3 class="item__title">
-                    <a href="#">Яркое платье</a>
-                  </h3>
-                  <p class="item__price"> 995р </p>
-                </div>
-                <div class="item__actions">
-                  <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                  <a href="03_item.html" class="btn btn-info">В корзину</a>
-                </div>
-              </div>
-              <div class="item">
-                <a href="03_item.html" class="item__link">Пальто утепленное</a>
-                <div class="item__row">
-                  <figure class="img-block">
-                    <img src="img/assets/item02.jpg" alt="" />
-                  </figure>
-                  <!-- <figure class="img-block"><img src="img/assets/item04.jpg" alt="" /></figure> -->
-                  <div class="item__type new">Распродажа</div>
-                  <a href="#" class="item__like">Добавить в избранное</a>
-                </div>
-                <div class="item__row">
-                  <h3 class="item__title">
-                    <a href="#">Пальто утепленное</a>
-                  </h3>
-                  <p class="item__price">
-                    <s>1995р</s>
-                    <span class="item__price--sale">9995р -30%</span>
-                  </p>
-                </div>
-                <div class="item__actions">
-                  <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                  <a href="03_item.html" class="btn btn-info">В корзину</a>
-                </div>
-              </div>
-              <div class="item">
-                <a href="03_item.html" class="item__link">Яркое платье</a>
-                <div class="item__row">
-                  <figure class="img-block">
-                    <img src="img/assets/item03.jpg" alt="" />
-                  </figure>
-                  <!-- <figure class="img-block"><img src="img/assets/item04.jpg" alt="" /></figure> -->
-                  <div class="item__type hit">Хит!</div>
-                  <a href="#" class="item__like">Добавить в избранное</a>
-                </div>
-                <div class="item__row">
-                  <h3 class="item__title">
-                    <a href="#">Яркое платье</a>
-                  </h3>
-                  <p class="item__price">
-                    <s>995р</s>
-                    <span class="item__price--sale">195р -90%</span>
-                  </p>
-                </div>
-                <div class="item__actions">
-                  <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                  <a href="03_item.html" class="btn btn-info">В корзину</a>
-                </div>
-              </div>
-              <div class="item">
-                <a href="03_item.html" class="item__link">Пальто утепленное</a>
-                <div class="item__row">
-                  <figure class="img-block">
-                    <img src="img/assets/item05.jpg" alt="" />
-                  </figure>
-                  <!-- <figure class="img-block"><img src="img/assets/item05.jpg" alt="" /></figure> -->
-                  <div class="item__type new">Распродажа</div>
-                  <a href="#" class="item__like">Добавить в избранное</a>
-                </div>
-                <div class="item__row">
-                  <h3 class="item__title">
-                    <a href="#">Пальто утепленное</a>
-                  </h3>
-                  <p class="item__price"> 1995р </p>
-                </div>
-                <div class="item__actions">
-                  <a href="03_item.html" class="btn btn-default">Подробнее</a>
-                  <a href="03_item.html" class="btn btn-info">В корзину</a>
-                </div>
-              </div>
-              <div class="item">
-                <a href="03_item.html" class="item__link">Яркое платье</a>
-                <div class="item__row">
-                  <figure class="img-block">
-                    <img src="img/assets/item06.jpg" alt="" />
-                  </figure>
-                  <!-- <figure class="img-block"><img src="img/assets/item05.jpg" alt="" /></figure> -->
-                  <div class="item__type hit">Хит!</div>
-                  <a href="#" class="item__like">Добавить в избранное</a>
-                </div>
-                <div class="item__row">
-                  <h3 class="item__title">
-                    <a href="#">Яркое платье</a>
-                  </h3>
-                  <p class="item__price"> 995р </p>
                 </div>
                 <div class="item__actions">
                   <a href="03_item.html" class="btn btn-default">Подробнее</a>
@@ -640,7 +618,7 @@
                   <figure class="img-block">
                     <img src="img/assets/item01.jpg" alt="" />
                   </figure>
-                  <!-- <figure class="img-block"><img src="img/assets/item05.jpg" alt="" /></figure> -->
+                  <!-- <figure class="img-block"><img src="img/assets/item03.jpg" alt="" /></figure> -->
                   <a href="#" class="item__like">Добавить в избранное</a>
                 </div>
                 <div class="item__row">
@@ -668,6 +646,27 @@
                     <a href="#">Юбка с высокой талией</a>
                   </h3>
                   <p class="item__price"> 6995р </p>
+                </div>
+                <div class="item__actions">
+                  <a href="03_item.html" class="btn btn-default">Подробнее</a>
+                  <a href="03_item.html" class="btn btn-info">В корзину</a>
+                </div>
+              </div>
+              <div class="item">
+                <a href="03_item.html" class="item__link">Яркое платье</a>
+                <div class="item__row">
+                  <figure class="img-block">
+                    <img src="img/assets/item06.jpg" alt="" />
+                  </figure>
+                  <!-- <figure class="img-block"><img src="img/assets/item01.jpg" alt="" /></figure> -->
+                  <div class="item__type hit">Хит!</div>
+                  <a href="#" class="item__like">Добавить в избранное</a>
+                </div>
+                <div class="item__row">
+                  <h3 class="item__title">
+                    <a href="#">Яркое платье</a>
+                  </h3>
+                  <p class="item__price"> 995р </p>
                 </div>
                 <div class="item__actions">
                   <a href="03_item.html" class="btn btn-default">Подробнее</a>

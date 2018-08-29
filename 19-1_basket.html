@@ -25,117 +25,119 @@
           <span>Madyart</span>
           <small>Интернет-магазин женской одежды</small>
         </a>
-        <div class="location"> Выбор города:
-          <a href="#" class="location--change">
+        <div class="js-dropdown location"> Выбор города:
+          <a href="#" class="js-toggle location--change" aria-expanded="false" aria-controls="locationSelector">
             <i class="fa fa-map-marker"></i>
             <span class="location__name">Москва и Московская область</span>
           </a>
-          <div class="location__choose">
-            <h5 class="location__choose-title">Выберите свой город</h5>
-            <ul class="location__choose-location">
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" checked name="selectLocation" />
-                    <span>Москва</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Екатеринбург</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Уфа</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Нижний Новгород</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Пермь</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Ростов-на-Дону</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Самара</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Стерлитамак</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Сургут</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Тольятти</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Тюмень</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item is-active">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Челябинск</span>
-                  </label>
-                </div>
-              </li>
-            </ul>
-            <h5 class="location__choose-title">Или укажите в поле</h5>
-            <div class="input">
-              <input type="text" class="input__short" placeholder="Введите название города" />
-              <button class="btn">Выбрать</button>
-            </div>
-            <div class="location__choose-close btn-close">Закрыть</div>
+          <div id="locationSelector" class="js-toggle-dropdown js-dropdown-form location__choose">
+            <a href="#" class="js-dropdown-close"></a>
+            <form class="form">
+              <h5 class="js-dropdown-form__title location__choose-title">Выберите свой город</h5>
+              <ul class="location__choose-location">
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" checked name="selectLocation" />
+                      <span>Москва</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Екатеринбург</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Уфа</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Нижний Новгород</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Пермь</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Ростов-на-Дону</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Самара</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Стерлитамак</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Сургут</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Тольятти</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Тюмень</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item is-active">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Челябинск</span>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+              <h5 class="location__choose-title">Или укажите в поле</h5>
+              <div class="input">
+                <input type="text" class="input__short" placeholder="Введите название города" />
+                <button class="btn">Выбрать</button>
+              </div>
+            </form>
           </div>
         </div>
         <ul class="breadcrumbs">
@@ -176,7 +178,7 @@
                 </li>
               </ul>
             </div>
-            <a href="16-4_cabinet_isbrannoe.html" class="userArea__like">
+            <a href="16-3_cabinet_isbrannoe.html" class="userArea__like">
               <span class="userArea__like-title">Избранное</span>
               <svg class="icon icon-like">
                 <use xlink:href="img/sprite.svg#icon-like"></use>
@@ -185,7 +187,7 @@
             </a>
           </div>
           <div class="basket">
-            <a href="#" class="basket--order">
+            <a href="19-1_basket.html" class="basket--order">
               <span class="basket-title">Оформить заказ</span>
               <span class="basket--count">15</span>
             </a>
@@ -195,7 +197,7 @@
       </div>
     </header>
     <div id="barba-wrapper">
-      <div class="barba-container homeContainer" data-namespace="page" data-title="Корзина">
+      <div class="barba-container homeContainer" data-namespace="basket" data-title="Корзина">
         <div class="container">
           <!-- begin breadcrumbs  -->
           <div class="breadcrumbs__mobile">
@@ -352,7 +354,7 @@
                               <dd class="item__value">
                                 <div class="order-full__item-quantity" data-module="incrementer">
                                   <button class="input-quantity js-decrement is-disabled" type="button">&lsaquo;</button>
-                                  <input class="input-quantity js-input" type="text" value="1" min="1" max="10">
+                                  <input class="input-quantity js-input" type="text" value="1" min="1" max="10" />
                                   <button class="input-quantity js-increment" type="button">&rsaquo;</button>
                                 </div>
                               </dd>
@@ -412,7 +414,7 @@
                               <dd class="item__value">
                                 <div class="order-full__item-quantity" data-module="incrementer">
                                   <button class="input-quantity js-decrement is-disabled" type="button">&lsaquo;</button>
-                                  <input class="input-quantity js-input" type="text" value="1" min="1" max="10">
+                                  <input class="input-quantity js-input" type="text" value="1" min="1" max="10" />
                                   <button class="input-quantity js-increment" type="button">&rsaquo;</button>
                                 </div>
                               </dd>
@@ -472,7 +474,7 @@
                               <dd class="item__value">
                                 <div class="order-full__item-quantity" data-module="incrementer">
                                   <button class="input-quantity js-decrement is-disabled" type="button">&lsaquo;</button>
-                                  <input class="input-quantity js-input" type="text" value="1" min="1" max="10">
+                                  <input class="input-quantity js-input" type="text" value="1" min="1" max="10" />
                                   <button class="input-quantity js-increment" type="button">&rsaquo;</button>
                                 </div>
                               </dd>
@@ -532,7 +534,7 @@
                               <dd class="item__value">
                                 <div class="order-full__item-quantity" data-module="incrementer">
                                   <button class="input-quantity js-decrement is-disabled" type="button">&lsaquo;</button>
-                                  <input class="input-quantity js-input" type="text" value="1" min="1" max="10">
+                                  <input class="input-quantity js-input" type="text" value="1" min="1" max="10" />
                                   <button class="input-quantity js-increment" type="button">&rsaquo;</button>
                                 </div>
                               </dd>
@@ -593,7 +595,7 @@
                       </dl>
                       <dl class="itemtotal__list">
                         <dt class="itemtotal__title">
-                          <a href="#" class="btn btn_default">Быстрая покупка</a>
+                          <a href="31-modal_quickbuy.html" class="btn quickbuy btn-buyexpress js-popuplink">Быстрая покупка</a>
                         </dt>
                         <dd class="itemtotal__value">
                           <a href="#" class="btn btn-ok">Оформить заказ</a>
@@ -630,9 +632,12 @@
                             <input type="radio" name="card" value="1" checked />
                             <span>
                               <span class="vipcart-item__title">Использовать скидку по VIP-карте</span>
-                              <span class="vipcard__bonuses"> 15% от суммы заказа кроме товаров со скидкой
-                                <a href="#" class="btn btn-ok">Использовать</a>
-                              </span>
+                              <div class="vipcard__bonuses">
+                                <div class="bon-total">15% от суммы заказа кроме товаров со скидкой</div>
+                                <div class="bon-use">
+                                  <a href="#" class="btn btn-ok">Использовать</a>
+                                </div>
+                              </div>
                             </span>
                           </label>
                         </div>
@@ -643,9 +648,16 @@
                             <input type="radio" name="card" value="2" />
                             <span>
                               <span class="vipcart-item__title">Использовать бонусы</span>
-                              <span class="vipcard__bonuses"> У вас есть: 1200 бонусов
-                                <a href="#" class="btn btn-ok">Использовать</a>
-                              </span>
+                              <div id="bonus-slider" class="vipcard__bonuses" data-total="1200">
+                                <div class="bon-total">У вас есть: 1200 бонусов</div>
+                                <div class="bon-slider">
+                                  <div class="slider-ui"></div>
+                                </div>
+                                <div class="bon-use">
+                                  <span class="bon-current">1200</span>
+                                  <a href="#" class="btn btn-ok">Использовать</a>
+                                </div>
+                              </div>
                             </span>
                           </label>
                         </div>

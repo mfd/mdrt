@@ -25,117 +25,119 @@
           <span>Madyart</span>
           <small>Интернет-магазин женской одежды</small>
         </a>
-        <div class="location"> Выбор города:
-          <a href="#" class="location--change">
+        <div class="js-dropdown location"> Выбор города:
+          <a href="#" class="js-toggle location--change" aria-expanded="false" aria-controls="locationSelector">
             <i class="fa fa-map-marker"></i>
             <span class="location__name">Москва и Московская область</span>
           </a>
-          <div class="location__choose">
-            <h5 class="location__choose-title">Выберите свой город</h5>
-            <ul class="location__choose-location">
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" checked name="selectLocation" />
-                    <span>Москва</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Екатеринбург</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Уфа</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Нижний Новгород</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Пермь</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Ростов-на-Дону</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Самара</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Стерлитамак</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Сургут</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Тольятти</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item ">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Тюмень</span>
-                  </label>
-                </div>
-              </li>
-              <li class="location__choose-location-item is-active">
-                <div class="input-group">
-                  <label class="radio">
-                    <input type="radio" name="selectLocation" />
-                    <span>Челябинск</span>
-                  </label>
-                </div>
-              </li>
-            </ul>
-            <h5 class="location__choose-title">Или укажите в поле</h5>
-            <div class="input">
-              <input type="text" class="input__short" placeholder="Введите название города" />
-              <button class="btn">Выбрать</button>
-            </div>
-            <div class="location__choose-close btn-close">Закрыть</div>
+          <div id="locationSelector" class="js-toggle-dropdown js-dropdown-form location__choose">
+            <a href="#" class="js-dropdown-close"></a>
+            <form class="form">
+              <h5 class="js-dropdown-form__title location__choose-title">Выберите свой город</h5>
+              <ul class="location__choose-location">
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" checked name="selectLocation" />
+                      <span>Москва</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Екатеринбург</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Уфа</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Нижний Новгород</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Пермь</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Ростов-на-Дону</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Самара</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Стерлитамак</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Сургут</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Тольятти</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item ">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Тюмень</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="location__choose-location-item is-active">
+                  <div class="input-group">
+                    <label class="radio">
+                      <input type="radio" name="selectLocation" />
+                      <span>Челябинск</span>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+              <h5 class="location__choose-title">Или укажите в поле</h5>
+              <div class="input">
+                <input type="text" class="input__short" placeholder="Введите название города" />
+                <button class="btn">Выбрать</button>
+              </div>
+            </form>
           </div>
         </div>
         <ul class="breadcrumbs">
@@ -176,7 +178,7 @@
                 </li>
               </ul>
             </div>
-            <a href="16-4_cabinet_isbrannoe.html" class="userArea__like">
+            <a href="16-3_cabinet_isbrannoe.html" class="userArea__like">
               <span class="userArea__like-title">Избранное</span>
               <svg class="icon icon-like">
                 <use xlink:href="img/sprite.svg#icon-like"></use>
@@ -185,7 +187,7 @@
             </a>
           </div>
           <div class="basket">
-            <a href="#" class="basket--order">
+            <a href="19-1_basket.html" class="basket--order">
               <span class="basket-title">Оформить заказ</span>
               <span class="basket--count">15</span>
             </a>
@@ -1746,6 +1748,22 @@
                     <div class="page__row total">
                       <div class="itemtotal__col col2">
                         <dl class="itemtotal__list">
+                          <dt class="itemtotal__title">Оплачен:</dt>
+                          <dd class="itemtotal__value">нет</dd>
+                        </dl>
+                        <dl class="itemtotal__list">
+                          <dt class="itemtotal__title">Способ оплаты:</dt>
+                          <dd class="itemtotal__value">При получении</dd>
+                        </dl>
+                        <dl class="itemtotal__list">
+                          <dt class="itemtotal__title">&nbsp;</dt>
+                          <dd class="itemtotal__value">
+                            <a href="#" class="btn btn-ok btn_sm">Оплатить сейчас</a>
+                          </dd>
+                        </dl>
+                      </div>
+                      <div class="itemtotal__col col1">
+                        <dl class="itemtotal__list">
                           <dt class="itemtotal__title black">Общая стоимость товаров без скидки:</dt>
                           <dd class="itemtotal__value">25 995 р.</dd>
                         </dl>
@@ -1762,22 +1780,6 @@
                         <dl class="itemtotal__list">
                           <dt class="itemtotal__title black">Итого:</dt>
                           <dd class="itemtotal__value bold">24 995 р.</dd>
-                        </dl>
-                      </div>
-                      <div class="itemtotal__col col1">
-                        <dl class="itemtotal__list">
-                          <dt class="itemtotal__title">Оплачен:</dt>
-                          <dd class="itemtotal__value">нет</dd>
-                        </dl>
-                        <dl class="itemtotal__list">
-                          <dt class="itemtotal__title">Способ оплаты:</dt>
-                          <dd class="itemtotal__value">При получении</dd>
-                        </dl>
-                        <dl class="itemtotal__list">
-                          <dt class="itemtotal__title">&nbsp;</dt>
-                          <dd class="itemtotal__value">
-                            <a href="#" class="btn btn-ok btn_sm">Оплатить сейчас</a>
-                          </dd>
                         </dl>
                       </div>
                     </div>
@@ -2326,25 +2328,6 @@
                         </div>
                         <div class="b-order-card">
                           <div class="b-order-card__header">Заказ #29
-                            <span>20.15.2016</span>
-                          </div>
-                          <dl class="b-order-card__desc">
-                            <dt class="orderDesc__label">Сумма к оплате:</dt>
-                            <dd class="orderDesc__value">14 999 р</dd>
-                            <dt class="orderDesc__label">Оплачен:</dt>
-                            <dd class="orderDesc__value">нет</dd>
-                            <dt class="orderDesc__label">Способ оплаты:</dt>
-                            <dd class="orderDesc__value">наличными курьеру</dd>
-                            <dt class="orderDesc__label">Способ доставки:</dt>
-                            <dd class="orderDesc__value">300 р</dd>
-                          </dl>
-                          <div class="b-order-card__footer">
-                            <div class="orderStatus">Получен, ожидает оплаты</div>
-                            <a href="16-2_cabinet_order-full.html" class="btn btn-ok">Подробнее о заказе</a>
-                          </div>
-                        </div>
-                        <div class="b-order-card">
-                          <div class="b-order-card__header">Заказ #30
                             <span>20.15.2016</span>
                           </div>
                           <dl class="b-order-card__desc">
