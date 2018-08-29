@@ -5,18 +5,15 @@ export default class HomeBG {
 
   constructor(view) {
 
-    this.view = view;
+    this.view = document;
 
-    if (!$('body').hasClass('mobile')) {
+    if ($('html').hasClass('_desktop')) {
       this.initFullPage();
+      $(window).on('scroll', this.changeBg);
     }
 
     //this.initFullPage();
-
     //this.changeBg();
-    $(window).on('scroll', this.changeBg);
-
-
   }
   initFullPage() {
     console.log('init fullpage');

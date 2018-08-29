@@ -117,10 +117,10 @@ header
         float: left;
         //margin-right: 1em;
         position: relative;
-        display: flex;
-        align-items: center;
-        height: 100%;
         +sm
+            display: flex;
+            align-items: center;
+            height: 100%;
             margin-top: 0
             +pseudo
             &::after
@@ -132,6 +132,7 @@ header
                 left: initial;
         > *
             margin-right: 25px;
+            float: left;
         > a
             +sm
                 margin-right: 45px;

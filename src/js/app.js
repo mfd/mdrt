@@ -1,4 +1,5 @@
 import 'babel-polyfill';
+var env = require('./utils/env');
 // import $ from 'jquery';
 // import jQuery from 'jquery';
 // window.$ = $;
